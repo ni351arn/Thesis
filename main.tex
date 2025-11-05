@@ -1,0 +1,62 @@
+\documentclass[german]{htwg-report}
+
+\addbibresource{./bib/report.bib}
+
+\begin{document}
+
+%% Use Roman numerals for the page numbers of the title pages and table of
+%% contents.
+\frontmatter
+
+%% 'reporttype' add background elements to the cover / front page
+%% possible values are:
+%% bachelor	--> B S C
+%% master	--> M S C
+%% other		--> none
+\reporttype{bachelor}
+
+\reporttypetext{Bachelorarbeit}
+
+\title{KI-Integration in Cloud Native Platform Engineering: Eine systematische Analyse aktueller Lösungsansätze und deren praktische Anwendung}
+
+\author{Nils Arnold}
+\studentnumber{307179}
+\studentemail{nils.arnold@htwg-konstanz.de}
+
+\doclocation{Konstanz}
+\docdate{31.01.2026}
+
+\supervisor{Prof. Dr. Johannes Schneider}
+\secondexaminer{Lukas Grodmeier}
+%          
+%% Include an optional title page.
+\input{titlepage}
+
+\input{abstract}
+
+\input{erklaerung}
+
+\tableofcontents
+
+%% Use Arabic numerals for the page numbers of the chapters.
+\mainmatter
+
+\input{chapters/subchapters/01_einleitung/01_einleitung}
+\input{chapters/subchapters/02_grundlagen/02_grundlagen}
+\input{chapters/subchapters/03_methoden/03_methoden}
+\input{chapters/subchapters/04_ergebnisse/04_ergebnisse}
+\input{chapters/subchapters/05_theoretisches_konzept/05_theoretisches_konzept}
+\input{chapters/subchapters/06_analyse_bdmp/06_analyse_bdmp}
+\input{chapters/subchapters/07_diskussion/07_diskussion}
+\input{chapters/subchapters/08_handlungsempfehlung/08_handlungsempfehlung}
+\input{chapters/subchapters/09_zusammenfassung_ausblick/09_zusammenfassung_ausblick}
+
+
+%% Use letters for the chapter numbers of the appendices.
+\appendix
+
+%\input{appendix-a}
+
+\printbibliography[heading=bibintoc]
+
+\end{document}

@@ -1,0 +1,74 @@
+\begin{titlepage}
+    \newgeometry{hscale=0.81,vscale=0.8}
+    
+    \AddToShipoutPicture*{\BackgroundImgTitelPage}
+    
+    \vspace*{12\bigskipamount}
+    
+    
+    %% Print the title in htwg-teal.
+    {\makeatletter
+    \fboxsep=0pt
+    \begin{minipage}[t]{145mm}
+        \begin{flushleft}
+            %% Print Report Type Text
+            \color{htwg-teal}\Huge{\@report@typetext}
+            \\
+            %% Print Report Title
+            \color{htwg-teal}\Huge\textbf{\@title}
+        \end{flushleft}
+    \end{minipage}
+    \makeatother}
+    
+    \bigskip
+    \bigskip
+    
+    von
+    
+    \bigskip
+    \bigskip
+    
+    %% Print the name of the author.
+    {\makeatletter
+    \Large\bfseries\@author
+    \makeatother}
+    
+    \vfill
+    
+    zur Erlangung des akademischen Grades
+    
+    \bigskip
+    \bigskip
+    
+    {\bfseries Bachelor of Science}
+    
+    im Studiengang Wirtschaftsinformatik
+    
+    \bigskip
+    \bigskip
+    
+    an der Hochschule Konstanz Technik, Wirtschaft und Gestaltung,
+    
+    \vfill
+    
+    \begingroup
+    \renewcommand*{\arraystretch}{1}
+    \rowcolors*{2}{}{}
+    {\makeatletter
+    \begin{tabular}{lll}
+        Matrikelnummer: & \@student@number \\ \\
+        Abgabedatum: & \@doc@date \\ \\
+        Erstbetreuer: & \@supervisor \\
+        Zweitbetreuer: & \@second@examiner \\
+    \end{tabular}
+    \makeatother}
+    \endgroup
+    
+    \bigskip
+    \bigskip
+   
+    Eine elektronische Version dieser Arbeit ist verfügbar unter \url{http://repository.tudelft.nl/}.
+    %% reset page margins
+    \newgeometry{hscale=0.7,vscale=0.8}
+    \end{titlepage}
+    
