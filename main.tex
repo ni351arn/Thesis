@@ -1,6 +1,12 @@
 \documentclass[german]{htwg-report}
 
-\addbibresource{./bib/report.bib}
+\usepackage{booktabs}   
+\usepackage{tabularx}   
+\usepackage{array}
+\usepackage{enumitem}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X} 
+
+\addbibresource{./references.bib}
 
 \begin{document}
 
@@ -36,6 +42,9 @@
 
 \input{erklaerung}
 
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\contentsname}
 \tableofcontents
 
 %% Use Arabic numerals for the page numbers of the chapters.
@@ -51,12 +60,18 @@
 \input{chapters/subchapters/08_handlungsempfehlung/08_handlungsempfehlung}
 \input{chapters/subchapters/09_zusammenfassung_ausblick/09_zusammenfassung_ausblick}
 
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+
 
 %% Use letters for the chapter numbers of the appendices.
 \appendix
 
 %\input{appendix-a}
 
+\nocite{*}
 \printbibliography[heading=bibintoc]
 
 \end{document}

@@ -1,12 +1,36 @@
-	hispagestyle{empty}
+\thispagestyle{empty}
 
 \chapter*{Ehrenwörtliche Erklärung}
 \phantomsection
 \addcontentsline{toc}{chapter}{Ehrenwörtliche Erklärung}
 
-Hiermit versichere ich, dass ich die vorliegende Arbeit selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe. Alle Stellen, die wörtlich oder sinngemäß aus veröffentlichten oder nicht veröffentlichten Schriften entnommen wurden, sind als solche kenntlich gemacht.
-Die Arbeit hat in gleicher oder ähnlicher Form noch keiner anderen Prüfungsbehörde vorgelegen.
+% Titel und Betreuer aus der Klasse (vgl. titlepage.tex) verfügbar machen
+\makeatletter
+\newcommand{\thesistitle}{\@title}
+\newcommand{\thesissupervisor}{\@supervisor}
+\newcommand{\thesisSecondExaminer}{\@second@examiner}
+\makeatother
 
+Hiermit erkläre ich, Nils Arnold, geboren am 18. Januar 2003 in Balingen,
+
+\vspace{\baselineskip}
+
+\begin{enumerate}
+  \setlength\itemsep{\baselineskip}
+  \renewcommand{\labelenumi}{(\theenumi)}
+  \item dass ich meine Bachelorarbeit mit dem Titel:
+        \par\medskip
+        \begin{center}
+          \textbf{„\thesistitle“}
+        \end{center}
+        \medskip
+        bei der Robert Bosch GmbH unter Anleitung von \thesissupervisor{} und \thesisSecondExaminer{} selbstständig und ohne fremde Hilfe angefertigt habe und keine anderen als die angeführten Hilfen benutzt habe;
+  \item dass ich die Übernahme wörtlicher Zitate, von Tabellen, Zeichnungen, Bildern und Programmen aus der Literatur oder anderen Quellen (Internet) sowie die Verwendung der Gedanken anderer Autoren an den entsprechenden Stellen innerhalb der Arbeit gekennzeichnet habe.
+\end{enumerate}
+
+\vspace{\baselineskip}
+
+Ich bin mir bewusst, dass eine falsche Erklärung rechtliche Folgen haben wird.
 \vspace{3cm}
 
 \noindent
