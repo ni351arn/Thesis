@@ -87,8 +87,8 @@
 %% BIB
 \RequirePackage[
 	backend=biber,
-	style=alphabetic,
-	sorting=ynt
+	style=numeric,
+	sorting=none
 ]{biblatex}
 \if@german
 \DefineBibliographyStrings{german}{%
