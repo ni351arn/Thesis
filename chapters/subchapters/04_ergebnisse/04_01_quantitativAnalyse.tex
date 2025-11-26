@@ -1,10 +1,58 @@
 \section{Quantitative Analyse}
 \label{sec:quantitativeAnalyse}
 
-Zur Einordnung des untersuchten Forschungsfeldes wurden zunächst grundlegende bibliographische Merkmale der insgesamt 21 Studien analysiert. Abbildung X zeigt die jährliche Verteilung der Publikationen sowie die Zuordnung zu verschiedenen Publikationstypen. Zwischen 2021 und 2023 erscheinen nur wenige Arbeiten (insgesamt fünf), während ab 2024 ein deutlicher Anstieg sichtbar wird: In den Jahren 2024 und 2025 wurden jeweils acht Publikationen identifiziert, überwiegend Journalartikel, ergänzt durch einzelne Konferenzbeiträge, ArXiv-Papers und ein Whitepaper. Dies weist auf ein zunehmendes wissenschaftliches Interesse am Einsatz von KI in Cloud-Native- und Platform-Engineering-Kontexten hin.
+Zur Einordnung des untersuchten Forschungsfeldes wurden zunächst grundlegende Merkmale der insgesamt 21 Studien analysiert. Abbildung \ref{fig:04_01_quantitativeAnalyse} a) zeigt die jährliche Verteilung der Publikationen sowie die Zuordnung zu verschiedenen Publikationstypen. Zwischen 2021 und 2023 erscheinen nur wenige Arbeiten (insgesamt fünf), während ab 2024 ein deutlicher Anstieg sichtbar wird: In den Jahren 2024 und 2025 wurden jeweils acht Publikationen identifiziert, überwiegend Journalartikel, ergänzt durch einzelne Konferenzbeiträge, ArXiv-Papers und ein Whitepaper. Dies weist auf ein zunehmendes wissenschaftliches Interesse am Einsatz von KI in Cloud-Native- und Platform-Engineering-Kontexten hin.
 
-Ergänzend dazu zeigt eine Word Cloud (Abbildung X) die am häufigsten vorkommenden Keywords aus allen Publikationen. Die Visualisierung bietet einen schnellen Überblick über zentrale thematische Schwerpunkte der Literatur und unterstützt die anschließende inhaltliche Analyse.
+Ergänzend dazu zeigt eine Word Cloud (Abbildung \ref{fig:04_01_quantitativeAnalyse} b) die am häufigsten vorkommenden Keywords aus allen Publikationen. Die Visualisierung bietet einen schnellen Überblick über zentrale thematische Schwerpunkte der Literatur und unterstützt die anschließende inhaltliche Analyse.
 
-Abbildung.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_01_quantitativeAnalyse.png}
+    \caption{Jährliche und theamtische verteilung der DevOps AI-Forschung}
+    \label{fig:04_01_quantitativeAnalyse}
+\end{figure}
 
-Diese Betrachtung bildet die Grundlage für die folgenden Unterkapitel, in denne die Studien hinsichtlich ihrere inhaltlichen Merkmale detaillierter ausgewertet werden. 
+Diese Betrachtung bildet die Grundlage für die folgenden Unterkapitel, in denen die Studien hinsichtlich ihrer inhaltlichen Merkmale detaillierter ausgewertet werden.
+
+\subsection{Anwendungsbereiche}
+\label{subsec:anwendungsbereiche}
+Im ersten Schritt der quantitativen Analyse wurden die insgesamt 21 identifizierten Studien hinsichtlich ihrer Hauptanwendungsbereiche untersucht. 
+Dazu wurden die ausgewählten Bereiche in fünf Kategorien zusammengfasst: CI/CD Automatiserung und Pipeline Optimierung, Ressourcen- und Workload Optimierung, Sicherheits- und Bedrohungserkennung, Automatische Fehlerkennung und Systemstabilität sowie Einsatz in verteilten oder leichtgewichtigen Umgebungen (Serverless Deployment).
+
+Die Auswertung zeigt, dass CI/CD-Automatisierung mit 8 Publikationen am häufigsten als primärer Anwendungsbereich beschrieben wird. Darauf folgt die Ressourcen- und Workloadoptimierung mit 5 Publikationen, während Sicherheits- und Bedrohungserkennung in 3 Studien im Mittelpunkt steht. 
+Die Bereiche automatische Fehlererkennung und Systemstabilität sowie verteilte bzw. leichtgewichtige Umgebungen werden jeweils in 2 Publikationen als Hauptanwendungsfall genannt. 
+Abbildung \ref{fig:04_01_01_useCases} zeigt diese Verteilung.
+Zu beachten ist, dass viele Studien mehr als einen Bereich ansprechen. Für die Vergleichbarkeit wurde jedoch jeweils der dominante Use Case pro Publikation ausgewählt. In der Praxis überschneiden sich die Anwendungsbereiche häufig, da KI-Lösungen oft mehrere Aufgaben gleichzeitig unterstützen.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_01_01_useCases.png}
+    \caption{Verteilung der Anwendungsbereiche}
+    \label{fig:04_01_01_useCases}
+\end{figure}
+
+
+\subsection{Herausforderungen}
+\label{subsec:herausforderungen}
+Im nächsten Schritt wurden die in den Publikationen beschriebenen Herausforderungen analysiert, die beim Einsatz von KI im Platform Engineering auftreten. 
+Die erfassten Aussagen wurden fünf Kategorien zugeordnet. Die Auswertung zeigt, dass alle Studien Herausforderungen im Bereich Ressourcenverbrauch und Kosten nennen (100 \%). Ebenfalls häufig angesprochen werden Skalierbarkeit, Latenz und Monitoring (90 \%) sowie AI Governance und Security (90 \%). Auch Datenmanagement und -qualität wird in einem Großteil der Arbeiten thematisiert (95 \%). Etwas seltener, aber dennoch in rund 71 \% der Publikationen, wird die Integrationskomplexität als relevante Herausforderung hervorgehoben.
+Diese Ergebnisse verdeutlichen, dass KI-Anwendungen im Platform Engineering häufig mit mehreren technischen und organisatorischen Hürden verbunden sind. 
+Viele der Herausforderungen treten zudem gleichzeitig auf, da etwa Skalierungsprobleme oft in engem Zusammenhang mit Ressourcenkosten oder Datenqualität stehen. 
+Die prozentuale Verteilung ist in Abbildung \ref{fig:04_01_02_herausforderungen} dargestellt.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_01_02_herausforderungen.png}
+    \caption{Relative Häufigkeit der Herausforderungen}
+    \label{fig:04_01_02_herausforderungen}
+\end{figure}
+
+\subsection{Formen des maschinellen Lernens}
+\label{subsec:formenDesMaschinellenLernens}
+
+\subsection{Methoden / Algorithmen}
+\label{subsec:methodenAlgorithmen}
+    
+
+\subsection{Platform Engineering Bereiche}
+\label{subsec:platformEngineeringBereiche}

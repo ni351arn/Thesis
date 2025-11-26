@@ -6,6 +6,8 @@
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{placeins}
+\usepackage{graphicx}  % Für Abbildungen
+\graphicspath{{./figures/}} 
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X} 
 
 \addbibresource{./references.bib}
@@ -65,6 +67,11 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
 
 
 %% Use letters for the chapter numbers of the appendices.
