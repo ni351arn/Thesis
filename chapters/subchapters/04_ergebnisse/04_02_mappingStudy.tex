@@ -7,9 +7,9 @@ Hierzu wurden die Ergebnisse in Form von Bubble Chart Diagrammen visualisiert, i
 
 \subsection{Zusammenspiel der Anwendungsfelder und Herausforderungen}
 \label{subsec:mappingEins}
-Die Abbildung \ref{fig:04_02_01_mapping} zeigt das Zusammenspiel zwischen den ausgewählten Use cases und zentralen Herausforderungen im Platform Engineering.
-Im Gegensatz zur Abbildung \ref{fig:04_01_01_useCases}, wurden hier alle Anwendungsbereiche pro Paper einbezogen und den angesprochenen Herausforderungen zugeordnet.
-Die in der Mapping Study extrahierten Häufigkeiten verdeutlichen, dass bestimmte Use cases besonders stark mit einer Vielzahl technischer und organisatorischer Herausforderungen zusammenhängen.
+Die Abbildung \ref{fig:04_02_01_mapping} zeigt das Zusammenspiel zwischen den identifizierten Use Cases und den zentralen Herausforderungen im Platform Engineering. 
+Im Gegensatz zur Abbildung \ref{fig:04_01_01_useCases} wurden hier alle in den analysierten Studien genannten Anwendungsbereiche berücksichtigt und den jeweils adressierten Herausforderungen zugeordnet. 
+Die Häufigkeiten geben an, wie oft eine bestimmte Kombination in der Literatur thematisiert wurde.
 
 \begin{figure}[H]
     \centering
@@ -18,22 +18,33 @@ Die in der Mapping Study extrahierten Häufigkeiten verdeutlichen, dass bestimmt
     \label{fig:04_02_01_mapping}
 \end{figure}
 
-Am stärksten ausgeprägt sind die Zusammenhänge in den Use Cases Ressource und Workload Optimierung sowie Self-Healing und Predictive Maintenance, die in allen fünf Herausforderungskategorien hohe Werte erreichen.
-Diese Cluster zeigen, dass beide Anwendungsbereiche eng mit betrieblichen und technischen Anforderungen zusammenhängen und häufig als zentrale Ansatzpunkte für KI-basierte Optimierung diskutiert werden.
+Besonders deutlich wird die starke Verknüpfung der Use Cases Ressourcen- und Workload-Optimierung sowie Resilienz, Self-Healing und Predictive Maintenance mit nahezu allen Herausforderungskategorien. 
+Die Ressourcen- und Workload-Optimierung weist in allen Bereichen hohe Werte auf (n = 17, 16, 14, 15, 13).
+Dieser Anwendungsfall demonstriert ein zentrales Spannungsfeld, das durch hohe Ressourcenkosten, Datenmanagment und Pipeline-Komplexität (aufgrund massiver, heterogener Daten) sowie kritische Trade-Offs in Skalierbarkeit und Latenz gekennzeichnet ist \cite{bajwaCLOUDNATIVEARCHITECTURESLARGESCALE2025}.
+Ähnlich breit ist das Spektrum im Bereich Self-Healing und Predictive Maintenance, der erneut über alle Herausforderungen hinweg hohe Häufigkeiten erreicht (n = 17, 16, 14, 16, 12). 
+Diese Muster verdeutlichen, dass beide Use Cases als Schlüsselbereiche für KI-basierte Optimierungen gelten, da KI-Methoden nachweislich Effizienz, Zuverlässigkeit und Automatisierungsgrad in DevOps-Prozessen erhöhen \cite{kankanalaAIMLDevOps2024} und damit zentrale betriebliche Leistungsziele unterstützen.
 
-Der Anwendungsbereich Security und Threat Detection weist insbesondere in der Hausforderung Governance und Security eine hohe Ausprägung auf, während die übrigen Kategorien leicht geringere, aber dennoch hohe Werte zeigen.
-Dies deuetet darauf hin, dass sicherbetsbezogene KI-Ansätze in der Liiteratur vor allem im Kontext von Compliance, Risikoerkennung und Schutzmechanismen betrachtet werden.
-Allerdings spielt diese Herausforderung auch im Monitoring sowie im Ressourcenmanagemment eine Rolle.
+Der Use Case Sicherheits- und Bedrohungserkennung zeigt erwartungsgemäß seine höchste Ausprägung im Bereich AI Governance, Datenschutz und Compliance (n = 14) sowie bei Ressourcenverbrauch und Kosten (n = 14). 
+Auch die übrigen Herausforderungen weisen hohe Werte auf (n = 13, 11, 10). 
+Dies spiegelt wider, dass sicherheitsbezogene KI-Ansätze nicht nur regulatorische und organisatorische Fragen berühren, sondern ebenso Einfluss auf Monitoring, Ressourcenmanagement und Integrationsprozesse haben.
 
-Vergleichsweise etwas weniger thematisiert, aber dennoch deutlich erkennbar, sind die Werte im Bereich Intelligente Bereitstellung (Edge-AI und Serverless).
-Diese Verteilung spiegelt wider dass diese Use Cases weniger stark im Mittelpunkt der untersuchten Literatur stehen als die zuvor genannten Anwendungsbereiche. 
+Der Use Case CI/CD- und Pipeline-Optimierung zeigt im Vergleich moderate, aber dennoch durchgehend hohe Werte über alle Herausforderungen hinweg (n = 10, 9, 9, 9, 8). 
+Dies deutet darauf hin, dass KI-Anwendungen zur Optimierung von Build-, Test- und Deployment-Prozessen zwar breit diskutiert werden, aber weniger stark im Zentrum systemübergreifender Herausforderungen stehen als andere Anwendungsbereiche.
 
-Insgesamt zeigt die Verteilung der Häufigkeiten, dass KI-Anwendungen im Platform Engineeering vor allem dort adressiert werden, wo Effizienz, Stabilität und Sicherheitsaspekte zusammenspielen.
-Die identifzierten Zahlen verdeutlichen bevorzugte Kombinationen aus Anwendungsbereiche und Herausforderungen und ermöglichen damit eine strukturierte Einordnung besteheneder Forschungsschwerpunkte. 
+Etwas geringer ausgeprägt, aber klar erkennbar, ist die Verteilung im Bereich Intelligente Bereitstellung (Edge-AI und Serverless). 
+Die Häufigkeiten liegen zwischen n = 14 und n = 11 und zeigen damit ein insgesamt konsistentes, jedoch weniger dominantes Muster als in den zuvor genannten Bereichen. 
+Dies legt nahe, dass dieser Use Case im aktuellen Forschungsstand zwar relevant ist, jedoch nicht denselben Schwerpunkt bildet wie die großen Themenfelder Optimierung, Resilienz und Sicherheit.
 
+Insgesamt zeigt die Verteilung der Häufigkeiten, dass KI-Anwendungen im Platform Engineering besonders dort adressiert werden, wo Effizienz, Stabilität, Automatisierung und Sicherheitsaspekte zusammenwirken. 
+Die prägnanten Häufungen in einzelnen Use Cases heben zentrale Forschungsschwerpunkte hervor und ermöglichen eine klare Einordnung der Bereiche, in denen KI-Lösungen derzeit als besonders wirksam oder notwendig betrachtet werden.
 
 \subsection{Zusammenspiel der Lernparadimgen und Algorithmen}
 \label{subsec:mappingzwei}
+Warum SL viele Algorithmen zulässt
+Warum UL fast nur Clustering abdeckt
+Warum RL kaum algorithmisch konkretisiert ist
+Dass die Tabelle deskriptiv, nicht normativ ist
+Kombinationen die nicht gehen, sind mit Wert 0 deklariert bzw. haben keine Blase. 
 
 \begin{figure}[H]
     \centering
