@@ -40,11 +40,21 @@ Die prägnanten Häufungen in einzelnen Use Cases heben zentrale Forschungsschwe
 
 \subsection{Zusammenspiel der Lernparadimgen und Algorithmen}
 \label{subsec:mappingzwei}
-Warum SL viele Algorithmen zulässt
-Warum UL fast nur Clustering abdeckt
-Warum RL kaum algorithmisch konkretisiert ist
-Dass die Tabelle deskriptiv, nicht normativ ist
-Kombinationen die nicht gehen, sind mit Wert 0 deklariert bzw. haben keine Blase. 
+Die Abbildung \ref{fig:04_02_02_mappingZwei} visualisiert die Korrelation zwischen den in den analysierten Studien verwendeten Lernparadigmen des maschinellen Lernens und den eingesetzten Algorithmen.
+Hierfür wurden mögliche Kombinationen die nicht gehen, mit dem Wert 0 bzw. ohne Blase deklariert. 
+Supervised Learning weist die größte Bandbreite an möglichen Algorithmen auf. 
+Dies liegt daran, dass überwachte Lernverfahren sowohl tiefen neuronalen Netzen als auch klassischen Klassifikations- und Regressionsmodellen sowie ensemblebasierten Ansätzen zugrunde liegen. 
+Der hohe Anteil an SL-Kombinationen (14 DL/NN, 8 Klassifikation/Regression, 7 Ensemble und Baum-basiert) zeigt, dass SL sehr flexibel einsetbar ist.
+Solange gelabelte Daten vorliegen, können verschiedene Algorithmen angwendet werden. 
+
+Unsupervised Learning zeigt hingegen ein wesentlich engeres Spektrum. Die Ergebnisse verdeutlichen, dass UL hauptsächlich mit Clustering-Methoden oder Deep Learning kombiniert werden (n = 5). 
+Das ist erwartungskonform, da UL in den untersuchten Studien vor allem zur Mustererkennung sowie Anomalieanalyse eingesetzt wird und Clustering hierbei eine zentrale Rolle einnimmt \cite{enemosahEnhancingDevOpsEfficiency2025}.
+
+Reinforcement Learning tritt zwar in mehreren Studien auf, wird jedoch selten algorithmisch konkretisiert. 
+RL wird vor allem für dynamische Optimierungsaufgaben eingesetzt. 
+Durch kontinuierliches Lernen aus vergangenen Systemzuständen können RL-Modelle optimale Aktionen auswählen und damit Ausfälle reduzieren sowie die Systemleistung verbessern. 
+Einzelne Arbeiten nutzen hierfür Deep-RL-Ansätze wie Deep Q-Networks, insbesondere wenn komplexe Zustandsräume berücksichtigt werden müssen. 
+Insgesamt bleibt die Zuordnung zu spezifischen Algorithmen jedoch begrenzt, weshalb viele Kombinationen in der Tabelle nicht belegt sind.
 
 \begin{figure}[H]
     \centering
@@ -54,10 +64,8 @@ Kombinationen die nicht gehen, sind mit Wert 0 deklariert bzw. haben keine Blase
 \end{figure}
 
 
-
-\subsection{Mapping von Anwendungsfelder und Lernparadigmen}
+\subsection{Zusammenspiel von Anwendungsbereiche und Lernparadigmen}
 \label{subsec:mappingDrei}
-
 
 \begin{figure}[H]
     \centering
@@ -66,7 +74,7 @@ Kombinationen die nicht gehen, sind mit Wert 0 deklariert bzw. haben keine Blase
     \label{fig:04_02_03_mappingDrei}
 \end{figure}
 
-\subsection{Mapping von Herausforderungen und Lernparadigmen}
+\subsection{Mapping der zentralen Dimensionen}
 \label{subsec:mappingVier}
 
 \begin{figure}[H]
