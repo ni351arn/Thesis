@@ -1,7 +1,9 @@
 \section{Ergebnisse der Mapping Study}
 \label{sec:mapping-study-ergebnisse}
 
-Die Ergebnisse der Mapping Studie wurden in 
+Um die Beziehung innerhalb der DevOps AI-Forschung weiter zu verdeutlichen, baut dieser Abschnitt auf den vorgangegegangen Erkenntnissen auf und präsentiert detaillierte Kreuztabellenanalysen.
+Diese mehrdimensionalen Zuordnungen untersuchen Beziehungen zwischen Aspekten wie Anwendungsfelder und Herausforderungen (Abschnitt 4.2.1), Lernparadigmen und Algorithmen (Abschnitt 4.2.2),
+
 Hierzu wurden die Ergebnisse in Form von Bubble Chart Diagrammen visualisiert, in denen Blasengröße die Häufigkeit der entsprechenden Zuordnung widerspieglt.
 
 
@@ -19,20 +21,20 @@ Die Häufigkeiten geben an, wie oft eine bestimmte Kombination in der Literatur 
 \end{figure}
 
 Besonders deutlich wird die starke Verknüpfung der Use Cases Ressourcen- und Workload-Optimierung sowie Resilienz, Self-Healing und Predictive Maintenance mit nahezu allen Herausforderungskategorien. 
-Die Ressourcen- und Workload-Optimierung weist in allen Bereichen hohe Werte auf (n = 17, 16, 14, 15, 13).
+Die Ressourcen- und Workload-Optimierung weist in allen Bereichen hohe Werte auf (n=17, 16, 14, 15, 13).
 Dieser Anwendungsfall demonstriert ein zentrales Spannungsfeld, das durch hohe Ressourcenkosten, Datenmanagment und Pipeline-Komplexität (aufgrund massiver, heterogener Daten) sowie kritische Trade-Offs in Skalierbarkeit und Latenz gekennzeichnet ist \cite{bajwaCLOUDNATIVEARCHITECTURESLARGESCALE2025}.
-Ähnlich breit ist das Spektrum im Bereich Self-Healing und Predictive Maintenance, der erneut über alle Herausforderungen hinweg hohe Häufigkeiten erreicht (n = 17, 16, 14, 16, 12). 
+Ähnlich breit ist das Spektrum im Bereich Self-Healing und Predictive Maintenance, der erneut über alle Herausforderungen hinweg hohe Häufigkeiten erreicht (n=17, 16, 14, 16, 12). 
 Diese Muster verdeutlichen, dass beide Use Cases als Schlüsselbereiche für KI-basierte Optimierungen gelten, da KI-Methoden nachweislich Effizienz, Zuverlässigkeit und Automatisierungsgrad in DevOps-Prozessen erhöhen \cite{kankanalaAIMLDevOps2024} und damit zentrale betriebliche Leistungsziele unterstützen.
 
-Der Use Case Sicherheits- und Bedrohungserkennung zeigt erwartungsgemäß seine höchste Ausprägung im Bereich AI Governance, Datenschutz und Compliance (n = 14) sowie bei Ressourcenverbrauch und Kosten (n = 14). 
-Auch die übrigen Herausforderungen weisen hohe Werte auf (n = 13, 11, 10). 
+Der Use Case Sicherheits- und Bedrohungserkennung zeigt erwartungsgemäß seine höchste Ausprägung im Bereich AI Governance, Datenschutz und Compliance (n=14) sowie bei Ressourcenverbrauch und Kosten (n=14). 
+Auch die übrigen Herausforderungen weisen hohe Werte auf (n=13, 11, 10). 
 Dies spiegelt wider, dass sicherheitsbezogene KI-Ansätze nicht nur regulatorische und organisatorische Fragen berühren, sondern ebenso Einfluss auf Monitoring, Ressourcenmanagement und Integrationsprozesse haben.
 
-Der Use Case CI/CD- und Pipeline-Optimierung zeigt im Vergleich moderate, aber dennoch durchgehend hohe Werte über alle Herausforderungen hinweg (n = 10, 9, 9, 9, 8). 
+Der Use Case CI/CD- und Pipeline-Optimierung zeigt im Vergleich moderate, aber dennoch durchgehend hohe Werte über alle Herausforderungen hinweg (n=10, 9, 9, 9, 8). 
 Dies deutet darauf hin, dass KI-Anwendungen zur Optimierung von Build-, Test- und Deployment-Prozessen zwar breit diskutiert werden, aber weniger stark im Zentrum systemübergreifender Herausforderungen stehen als andere Anwendungsbereiche.
 
 Etwas geringer ausgeprägt, aber klar erkennbar, ist die Verteilung im Bereich Intelligente Bereitstellung (Edge-AI und Serverless). 
-Die Häufigkeiten liegen zwischen n = 14 und n = 11 und zeigen damit ein insgesamt konsistentes, jedoch weniger dominantes Muster als in den zuvor genannten Bereichen. 
+Die Häufigkeiten liegen zwischen n=14 und n=11 und zeigen damit ein insgesamt konsistentes, jedoch weniger dominantes Muster als in den zuvor genannten Bereichen. 
 Dies legt nahe, dass dieser Use Case im aktuellen Forschungsstand zwar relevant ist, jedoch nicht denselben Schwerpunkt bildet wie die großen Themenfelder Optimierung, Resilienz und Sicherheit.
 
 Insgesamt zeigt die Verteilung der Häufigkeiten, dass KI-Anwendungen im Platform Engineering besonders dort adressiert werden, wo Effizienz, Stabilität, Automatisierung und Sicherheitsaspekte zusammenwirken. 
@@ -47,7 +49,7 @@ Dies liegt daran, dass überwachte Lernverfahren sowohl tiefen neuronalen Netzen
 Der hohe Anteil an SL-Kombinationen (14 DL/NN, 8 Klassifikation/Regression, 7 Ensemble und Baum-basiert) zeigt, dass SL sehr flexibel einsetbar ist.
 Solange gelabelte Daten vorliegen, können verschiedene Algorithmen angwendet werden. 
 
-Unsupervised Learning zeigt hingegen ein wesentlich engeres Spektrum. Die Ergebnisse verdeutlichen, dass UL hauptsächlich mit Clustering-Methoden oder Deep Learning kombiniert werden (n = 5). 
+Unsupervised Learning zeigt hingegen ein wesentlich engeres Spektrum. Die Ergebnisse verdeutlichen, dass UL hauptsächlich mit Clustering-Methoden oder Deep Learning kombiniert werden (n=5). 
 Das ist erwartungskonform, da UL in den untersuchten Studien vor allem zur Mustererkennung sowie Anomalieanalyse eingesetzt wird und Clustering hierbei eine zentrale Rolle einnimmt \cite{enemosahEnhancingDevOpsEfficiency2025}.
 
 Reinforcement Learning tritt zwar in mehreren Studien auf, wird jedoch selten algorithmisch konkretisiert. 
@@ -63,17 +65,40 @@ Insgesamt bleibt die Zuordnung zu spezifischen Algorithmen jedoch begrenzt, wesh
     \label{fig:04_02_02_mappingZwei}
 \end{figure}
 
-
-\subsection{Zusammenspiel von Herausforderungen und Lernparadigmen}
+\subsection{Zusammenspiel von Herausforderungen und KI-Technologien (Tools und Frameworks)}
 \label{subsec:mappingDrei}
+Im Folgenden wird das Zusammenspiel von Herausforderungen und KI-Technologien (Tools \& Frameowrks) anhand der Abbildung \ref{fig:04_02_03_mappingDrei} analysiert.
+Die Werte geben an, in wie vielen Publikationen (n) eine bestimmte Herausforderung gemeinsam mit einer Tool- bzw. Technologiekategorie adressiert wird.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_02_mapping/04_02_03_mappingDrei.png}
-    \caption{Korrelation zwischen Herausforderungen und Lernparadigmen}
+    \caption{Korrelation zwischen Herausforderungen und KI-Technologie}
     \label{fig:04_02_03_mappingDrei}
 \end{figure}
+Deutlich wird, dass vor allem MLOps Tools \& Orchestrierung über alle Herausforderungskategorien hinweg am stärksten vertreten ist (n=14, 13, 12, 12, 11).
+Dies deutet darauf hin, dass MLOps-nahe Technologien in den betrachteten Publikationen als zentrale technische Ebene zur Bewältigung der Herausforderungen diskutiert werden.
 
+Für Ressourcenverbrauch und Kosten sowie Skalierbarkeit, Latenz und Monitoring ergeben sich die höchsten Gesamtwerte über alle Tool-Kategorien hinweg (jeweils n=41).
+In beiden Fällen treten zudem ML/DL Frameworks und Bibliotheken sowie Monitoring ebenfalls vergleichbar häufig auf (jeweils n=11).
+Dies weist darauf hin, dass diese Herausforderungen häufig in Kombination mit Entwicklungs- und Betriebsaspekten betrachtet werden.
+
+Bei AI Governance, Datenschutz und Compliance zeigt sich ein ähnliches Muster.
+MLOps Tools \& Orchestrierung werden hier am häufigsten gemeinsam genannt (n=12), gefolgt von Monitoring (n=10).
+ML/DL Frameworks \& Bibliotheken treten im Vergleich etwas seltener auf (n=8).
+Dies deutet darauf hin, dass Governance- und Compliance-Themen in den Studien weniger als reine Modell- oder Trainingsfrage diskutiert werden.
+
+Die Herausforderung Integrationskomplexität \& Abhängigkeiten weist über alle Tool-Kategorien hinweg die geringsten Gesamthäufigkeiten auf.
+Dennoch bleibt auch hier ein klarer Schwerpunkt auf MLOps Tools \& Orchestrierung erkennbar (n=12).
+Monitoring wird ebenfalls häufig genannt (n=9), während ML/DL Frameworks \& Bibliotheken (n=8) und Vektordatenbanken (n=4) seltener auftreten.
+Insgesamt spricht dies dafür, dass Integrations- und Abhängigkeitsfragen vor allem auf System- und Pipeline-Ebene adressiert werden.
+
+Für Datenqualität, Datenverfügbarkeit und Heterogenität ergeben sich insgesamt mittlere Ausprägungen.
+MLOps wird am häufigsten gemeinsam adressiert (n=11), während ML/DL Frameworks und Monitoring jeweils bei n = 9 liegen.
+Vektordatenbanken sind hier vergleichsweise stärker vertreten (n=6).
+
+Zusammenfassend zeigt sich MLOps als dominante Tool-Kategorie über alle Herausforderungen hinweg.
+Vektordatenbanken treten insgesamt seltener auf, sind jedoch insbesondere in datenbezogenen Kontexten sichtbar.
 
 \subsection{Mapping der zentralen Dimensionen}
 \label{subsec:mappingVier}
