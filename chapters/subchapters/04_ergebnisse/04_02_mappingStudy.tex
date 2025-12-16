@@ -1,11 +1,10 @@
 \section{Ergebnisse der Mapping Study}
 \label{sec:mapping-study-ergebnisse}
 
-Um die Beziehung innerhalb der DevOps AI-Forschung weiter zu verdeutlichen, baut dieser Abschnitt auf den vorgangegegangen Erkenntnissen auf und präsentiert detaillierte Kreuztabellenanalysen.
-Diese mehrdimensionalen Zuordnungen untersuchen Beziehungen zwischen Aspekten wie Anwendungsfelder und Herausforderungen (Abschnitt 4.2.1), Lernparadigmen und Algorithmen (Abschnitt 4.2.2),
-
+Um die Beziehung innerhalb der KI-Forschung in Cloud Native Umgebungen weiter zu verdeutlichen, baut dieser Abschnitt auf den vorherigen Erkenntnissen auf und präsentiert detaillierte Kreuztabellenanalysen.
+Diese mehrdimensionalen Zuordnungen untersuchen Beziehungen zwischen Aspekten wie Anwendungsfelder und Herausforderungen (Abschnitt 4.2.1), Lernparadigmen und Algorithmen (Abschnitt 4.2.2), Herausforderungen und KI-Technologien (Abschnitt 4.2.3) sowie Herausforderungen und Lernparadigmen (Abschnitt 4.2.4).
 Hierzu wurden die Ergebnisse in Form von Bubble Chart Diagrammen visualisiert, in denen Blasengröße die Häufigkeit der entsprechenden Zuordnung widerspieglt.
-
+Ziel ist es, durch diese systematischen Mappings tiefere Einblicke in die Struktur und Schwerpunkte der aktuellen Forschung zu gewinnen.
 
 \subsection{Zusammenspiel der Anwendungsfelder und Herausforderungen}
 \label{subsec:mappingEins}
@@ -30,20 +29,29 @@ Der Use Case Sicherheits- und Bedrohungserkennung zeigt erwartungsgemäß seine 
 Auch die übrigen Herausforderungen weisen hohe Werte auf (n=13, 11, 10). 
 Dies spiegelt wider, dass sicherheitsbezogene KI-Ansätze nicht nur regulatorische und organisatorische Fragen berühren, sondern ebenso Einfluss auf Monitoring, Ressourcenmanagement und Integrationsprozesse haben.
 
-Der Use Case CI/CD- und Pipeline-Optimierung zeigt im Vergleich moderate, aber dennoch durchgehend hohe Werte über alle Herausforderungen hinweg (n=10, 9, 9, 9, 8). 
+Die CI/CD- und Pipeline-Optimierung zeigt im Vergleich moderate, aber dennoch durchgehend hohe Werte über alle Herausforderungen hinweg (n=10, 9, 9, 9, 8). 
 Dies deutet darauf hin, dass KI-Anwendungen zur Optimierung von Build-, Test- und Deployment-Prozessen zwar breit diskutiert werden, aber weniger stark im Zentrum systemübergreifender Herausforderungen stehen als andere Anwendungsbereiche.
 
 Etwas geringer ausgeprägt, aber klar erkennbar, ist die Verteilung im Bereich Intelligente Bereitstellung (Edge-AI und Serverless). 
 Die Häufigkeiten liegen zwischen n=14 und n=11 und zeigen damit ein insgesamt konsistentes, jedoch weniger dominantes Muster als in den zuvor genannten Bereichen. 
-Dies legt nahe, dass dieser Use Case im aktuellen Forschungsstand zwar relevant ist, jedoch nicht denselben Schwerpunkt bildet wie die großen Themenfelder Optimierung, Resilienz und Sicherheit.
+Dies legt nahe, dass dieses Anwendungsfeld im aktuellen Forschungsstand zwar relevant ist, jedoch nicht denselben Schwerpunkt bildet wie die großen Themenfelder Optimierung, Resilienz und Sicherheit.
 
 Insgesamt zeigt die Verteilung der Häufigkeiten, dass KI-Anwendungen im Platform Engineering besonders dort adressiert werden, wo Effizienz, Stabilität, Automatisierung und Sicherheitsaspekte zusammenwirken. 
-Die prägnanten Häufungen in einzelnen Use Cases heben zentrale Forschungsschwerpunkte hervor und ermöglichen eine klare Einordnung der Bereiche, in denen KI-Lösungen derzeit als besonders wirksam oder notwendig betrachtet werden.
+Die Häufungen bei einzelnen Anwendungsbereichen zeigen, welche Themen in der Forschung besonders im Fokus stehen.
+Dadurch wird verdeutlicht, in welchen Bereichen KI-Lösungen aktuell als besonder relevant angesehen werden.
+
 
 \subsection{Zusammenspiel der Lernparadimgen und Algorithmen}
 \label{subsec:mappingzwei}
 Die Abbildung \ref{fig:04_02_02_mappingZwei} visualisiert die Korrelation zwischen den in den analysierten Studien verwendeten Lernparadigmen des maschinellen Lernens und den eingesetzten Algorithmen.
 Hierfür wurden mögliche Kombinationen die nicht gehen, mit dem Wert 0 bzw. ohne Blase deklariert. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_02_mapping/04_02_02_mappingZwei.png}
+    \caption{Korrelation zwischen Lernparadigmen und Algorithmen}
+    \label{fig:04_02_02_mappingZwei}
+\end{figure}
+
 Supervised Learning weist die größte Bandbreite an möglichen Algorithmen auf. 
 Dies liegt daran, dass überwachte Lernverfahren sowohl tiefen neuronalen Netzen als auch klassischen Klassifikations- und Regressionsmodellen sowie ensemblebasierten Ansätzen zugrunde liegen. 
 Der hohe Anteil an SL-Kombinationen (14 DL/NN, 8 Klassifikation/Regression, 7 Ensemble und Baum-basiert) zeigt, dass SL sehr flexibel einsetbar ist.
@@ -58,12 +66,6 @@ Durch kontinuierliches Lernen aus vergangenen Systemzuständen können RL-Modell
 Einzelne Arbeiten nutzen hierfür Deep-RL-Ansätze wie Deep Q-Networks, insbesondere wenn komplexe Zustandsräume berücksichtigt werden müssen. 
 Insgesamt bleibt die Zuordnung zu spezifischen Algorithmen jedoch begrenzt, weshalb viele Kombinationen in der Tabelle nicht belegt sind.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_02_mapping/04_02_02_mappingZwei.png}
-    \caption{Korrelation zwischen Lernparadigmen und Algorithmen}
-    \label{fig:04_02_02_mappingZwei}
-\end{figure}
 
 \subsection{Zusammenspiel von Herausforderungen und KI-Technologien (Tools und Frameworks)}
 \label{subsec:mappingDrei}
@@ -76,32 +78,35 @@ Die Werte geben an, in wie vielen Publikationen (n) eine bestimmte Herausforderu
     \caption{Korrelation zwischen Herausforderungen und KI-Technologie}
     \label{fig:04_02_03_mappingDrei}
 \end{figure}
-Deutlich wird, dass vor allem MLOps Tools \& Orchestrierung über alle Herausforderungskategorien hinweg am stärksten vertreten ist (n=14, 13, 12, 12, 11).
-Dies deutet darauf hin, dass MLOps-nahe Technologien in den betrachteten Publikationen als zentrale technische Ebene zur Bewältigung der Herausforderungen diskutiert werden.
+Deutlich wird, dass MLOps Tools \& Orchestrierung über alle Herausforderungen hinweg am stärksten vertreten ist (n=14, 13, 12, 12, 11).
+Damit zeigt sich, dass MLOps-nahe Technologien in den betrachteten Publikationen besonders häufig im Zusammenhang mit den Herausforderungen adressiert werden.
 
 Für Ressourcenverbrauch und Kosten sowie Skalierbarkeit, Latenz und Monitoring ergeben sich die höchsten Gesamtwerte über alle Tool-Kategorien hinweg (jeweils n=41).
-In beiden Fällen treten zudem ML/DL Frameworks und Bibliotheken sowie Monitoring ebenfalls vergleichbar häufig auf (jeweils n=11).
-Dies weist darauf hin, dass diese Herausforderungen häufig in Kombination mit Entwicklungs- und Betriebsaspekten betrachtet werden.
+In beiden Fällen treten ML/DL Frameworks \& Bibliotheken sowie Monitoring vergleichbar häufig auf (jeweils n=11).
+Das spricht dafür, dass diese Herausforderungen häufig zusammen mit Entwicklungs- und Betriebsaspekten diskutiert werden.
 
-Bei AI Governance, Datenschutz und Compliance zeigt sich ein ähnliches Muster.
-MLOps Tools \& Orchestrierung werden hier am häufigsten gemeinsam genannt (n=12), gefolgt von Monitoring (n=10).
-ML/DL Frameworks \& Bibliotheken treten im Vergleich etwas seltener auf (n=8).
-Dies deutet darauf hin, dass Governance- und Compliance-Themen in den Studien weniger als reine Modell- oder Trainingsfrage diskutiert werden.
+Bei AI Governance, Datenschutz und Compliance zeigt sich ein ähnlicher Schwerpunkt.
+MLOps Tools \& Orchestrierung werden hier am häufigsten zusammen mit dieser Herausforderung genannt (n=12), gefolgt von Monitoring (n=10).
+ML/DL Frameworks \& Bibliotheken treten etwas seltener auf (n=8).
+Insgesamt werden Governance- und Compliance-Themen damit eher auf Betriebs- als nur auf Modell- oder Trainingsebene verortet.
 
-Die Herausforderung Integrationskomplexität \& Abhängigkeiten weist über alle Tool-Kategorien hinweg die geringsten Gesamthäufigkeiten auf.
-Dennoch bleibt auch hier ein klarer Schwerpunkt auf MLOps Tools \& Orchestrierung erkennbar (n=12).
-Monitoring wird ebenfalls häufig genannt (n=9), während ML/DL Frameworks \& Bibliotheken (n=8) und Vektordatenbanken (n=4) seltener auftreten.
-Insgesamt spricht dies dafür, dass Integrations- und Abhängigkeitsfragen vor allem auf System- und Pipeline-Ebene adressiert werden.
+Integrationskomplexität \& Abhängigkeiten weist über alle Tool-Kategorien hinweg die geringsten Gesamthäufigkeiten auf.
+Auch hier liegt der Schwerpunkt bei MLOps Tools \& Orchestrierung (n=12) und Monitoring (n=9).
+ML/DL Frameworks \& Bibliotheken (n=8) und Vektordatenbanken (n=4) treten seltener auf.
+Das verweist darauf, dass Integrations- und Abhängigkeitsfragen vor allem auf System- und Pipeline-Ebene diskutiert werden.
 
-Für Datenqualität, Datenverfügbarkeit und Heterogenität ergeben sich insgesamt mittlere Ausprägungen.
-MLOps wird am häufigsten gemeinsam adressiert (n=11), während ML/DL Frameworks und Monitoring jeweils bei n = 9 liegen.
+Für Datenqualität, Datenverfügbarkeit und Heterogenität liegen die Werte im Mittelfeld.
+MLOps wird am häufigsten gemeinsam adressiert (n=11), während ML/DL Frameworks und Monitoring jeweils bei n=9 liegen.
 Vektordatenbanken sind hier vergleichsweise stärker vertreten (n=6).
 
-Zusammenfassend zeigt sich MLOps als dominante Tool-Kategorie über alle Herausforderungen hinweg.
+Zusammenfassend ist MLOps die am häufigsten vertretene Tool-Kategorie über alle Herausforderungen hinweg.
 Vektordatenbanken treten insgesamt seltener auf, sind jedoch insbesondere in datenbezogenen Kontexten sichtbar.
 
 \subsection{Mapping der zentralen Dimensionen}
 \label{subsec:mappingVier}
+In diesem Abschnitt wird das Zusammenspiel von Lernparadigmen, Algorithmen und den identifizierten Anwendungsfeldern betrachtet.
+In der Abbildung \ref{fig:04_02_04_mappingVier} wurden alle Kategorien miteinander dargstellt.
+Da Kombinationen wie z.B. Supervised Learning mit Clustering nicht sinnvoll sind, wurden diese mit dem Wert 0 bzw. ohne Blase deklariert.
 
 \begin{figure}[H]
     \centering
@@ -109,3 +114,23 @@ Vektordatenbanken treten insgesamt seltener auf, sind jedoch insbesondere in dat
     \caption{Mapping von Herausforderungen und Lernparadigmen}
     \label{fig:04_02_04_mappingVier}
 \end{figure}
+
+Im Supervised Learning dominiert die Kombination aus DL \& neuronalen Netzen in allen Anwendungsfeldern. 
+Besonders häufig wird sie bei Ressourcen- und Workload-Optimierung sowie Self-Healing/Predictive Maintenance genannt (jeweils n=12), gefolgt von Sicherheits- und Bedrohungserkennung (n=11) und Intelligenter Bereitstellung (n=10).
+Auch die Optimierung von CI/CD-Pipelines wird häufig mit DL adressiert (n=7). 
+Insgesamt zeigt sich damit, dass Supervised Learning in der betrachteten Literatur vor allem in Verbindung mit DL und neuronalen Netzen eingesetzt wird.
+
+Neben DL werden im Supervised Learning auch Ensemble- und baum-basierte Methoden sowie klassische Klassifikations- und Regressionsverfahren erwähnt, jedoch mit deutlich geringeren Häufigkeiten. 
+Ensemble- und baum-basierte Ansätze liegen je nach Anwendungsfeld zwischen n=3 und n=5, während klassische Klassifikation/Regression insbesondere bei Ressourcen- und Workload-Optimierung (n=6) etwas häufiger vorkommt. 
+Ansonsten sind die Werte ebenfalls geringer und liegen zwischen n=2 und n=5. 
+Clustering wird im Kontext von Supervised Learning nicht beobachtet, sodass diese Zuordnungen nicht belegt sind (n=0).
+
+Für Unsupervised Learning zeigt sich ein anderes Muster. Auch hier wird die Kombination aus DL \& neuronalen Netzen über alle Anwendungsfelder hinweg am häufigsten genannt (n=6–8). 
+Clustering-Verfahren treten als zweite zentrale Kategorie auf, werden jedoch deutlich seltener thematisiert (n=3–5).
+Insgesamt deutet dies darauf hin, dass Unsupervised Learning hauptsächlich dort eingesetzt wird, wo Abweichungen und Muster ohne gelabelte Daten erkannt werden sollen (z. B. bei Anomalien oder Wartungsvorhersagen).
+Andere Algorithmusklassen (z. B. Ensemble- bzw. klassische Klassifikations-/Regressionsverfahren) sind im Unsupervised-Learning-Kontext nicht belegt (n=0), wodurch sich eine klare Fokussierung auf DL/NN und Clustering ergibt.
+
+Im Reinforcement Learning konzentrieren sich die Zuordnungen ausschließlich auf Deep Learning und neuronale Netze. 
+Die Häufigkeiten sind insgesamt geringer als im Supervised- und Unsupervised Learning. 
+Die höchsten Werte zeigen sich bei der Sicherheits- und Bedrohungserkennung (n=7) sowie bei der Ressourcen- und Workload-Optimierung (n=6). Für die Optimierung von CI/CD-Pipelines und Self-Healing/Predictive Maintenance liegen die Werte jeweils bei n=5, während Intelligente Bereitstellung am seltensten genannt wird (n=4). 
+Andere Algorithmusklassen sind im RL-Kontext nicht belegt (n=0), was die enge Kopplung von RL an DL-basierte (Deep-RL) Ansätze in den betrachteten Publikationen unterstreicht.
