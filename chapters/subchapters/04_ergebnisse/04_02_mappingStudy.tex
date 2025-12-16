@@ -1,10 +1,12 @@
 \section{Ergebnisse der Mapping Study}
 \label{sec:mapping-study-ergebnisse}
 
-Um die Beziehung innerhalb der KI-Forschung in Cloud Native Umgebungen weiter zu verdeutlichen, baut dieser Abschnitt auf den vorherigen Erkenntnissen auf und präsentiert detaillierte Kreuztabellenanalysen.
-Diese mehrdimensionalen Zuordnungen untersuchen Beziehungen zwischen Aspekten wie Anwendungsfelder und Herausforderungen (Abschnitt 4.2.1), Lernparadigmen und Algorithmen (Abschnitt 4.2.2), Herausforderungen und KI-Technologien (Abschnitt 4.2.3) sowie Herausforderungen und Lernparadigmen (Abschnitt 4.2.4).
-Hierzu wurden die Ergebnisse in Form von Bubble Chart Diagrammen visualisiert, in denen Blasengröße die Häufigkeit der entsprechenden Zuordnung widerspieglt.
-Ziel ist es, durch diese systematischen Mappings tiefere Einblicke in die Struktur und Schwerpunkte der aktuellen Forschung zu gewinnen.
+Um die Beziehungen innerhalb der KI-Forschung im Platform Engineering weiter zu verdeutlichen, baut dieser Abschnitt auf den vorherigen Erkenntnissen auf und präsentiert detaillierte Kreuztabellenanalysen.
+Diese Zuordnungen untersuchen Beziehungen zwischen Anwendungsfeldern und Herausforderungen (Abschnitt 4.2.1), Lernparadigmen und Algorithmen (Abschnitt 4.2.2), Herausforderungen und KI-Technologien (Abschnitt 4.2.3) sowie Lernparadigmen, Algorithmen und Anwendungsfeldern (Abschnitt 4.2.4).
+Die Ergebnisse werden als Bubble-Chart-Diagramme visualisiert, in denen die Blasengröße die Häufigkeit der jeweiligen Zuordnung (n) widerspiegelt.
+Die Häufigkeiten (n) geben an, in wie vielen der betrachteten Studien die jeweilige Zuordnung vorkommt. 
+Pro Studie wird eine Zuordnung je Kombination höchstens einmal gezählt, unabhängig davon, wie häufig sie im Text erwähnt wird.
+Ziel ist es, durch diese systematischen Mappings tiefere Einblicke in Struktur und Schwerpunkte der aktuellen Forschung zu gewinnen.
 
 \subsection{Zusammenspiel der Anwendungsfelder und Herausforderungen}
 \label{subsec:mappingEins}
@@ -15,24 +17,24 @@ Die Häufigkeiten geben an, wie oft eine bestimmte Kombination in der Literatur 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_02_mapping/04_02_01_mapping.png}
-    \caption{Korrelation zwischen Anwendungsbereichen und Herausforderungen}
+    \caption{Korrelation zwischen Anwendungsfelder (Use Cases) und Herausforderungen}
     \label{fig:04_02_01_mapping}
 \end{figure}
 
 Besonders deutlich wird die starke Verknüpfung der Use Cases Ressourcen- und Workload-Optimierung sowie Resilienz, Self-Healing und Predictive Maintenance mit nahezu allen Herausforderungskategorien. 
 Die Ressourcen- und Workload-Optimierung weist in allen Bereichen hohe Werte auf (n=17, 16, 14, 15, 13).
-Dieser Anwendungsfall demonstriert ein zentrales Spannungsfeld, das durch hohe Ressourcenkosten, Datenmanagment und Pipeline-Komplexität (aufgrund massiver, heterogener Daten) sowie kritische Trade-Offs in Skalierbarkeit und Latenz gekennzeichnet ist \cite{bajwaCLOUDNATIVEARCHITECTURESLARGESCALE2025}.
-Ähnlich breit ist das Spektrum im Bereich Self-Healing und Predictive Maintenance, der erneut über alle Herausforderungen hinweg hohe Häufigkeiten erreicht (n=17, 16, 14, 16, 12). 
-Diese Muster verdeutlichen, dass beide Use Cases als Schlüsselbereiche für KI-basierte Optimierungen gelten, da KI-Methoden nachweislich Effizienz, Zuverlässigkeit und Automatisierungsgrad in DevOps-Prozessen erhöhen \cite{kankanalaAIMLDevOps2024} und damit zentrale betriebliche Leistungsziele unterstützen.
+Dieser Anwendungsfall verdeutlicht ein Spannungsfeld zwischen hohem Ressourcenbedarf, Datenmanagement und Pipeline-Komplexität (bedingt durch große und heterogene Datenmengen) sowie Trade-offs zwischen Skalierbarkeit und Latenz, wie es auch in \cite{bajwaCLOUDNATIVEARCHITECTURESLARGESCALE2025} beschrieben wird.
+Ein ähnlich breites Muster zeigt sich im Bereich Self-Healing und Predictive Maintenance, der über alle Herausforderungskategorien hinweg hohe Häufigkeiten erreicht (n=17, 16, 14, 16, 12).
+Insgesamt deutet dies darauf hin, dass beide Use Cases in der Literatur als besonders relevante Einsatzfelder für KI-basierte Optimierungen betrachtet werden, da sie auf zentrale betriebliche Ziele wie Effizienz, Zuverlässigkeit und einen höheren Automatisierungsgrad in DevOps-Prozessen einzahlen \cite{kankanalaAIMLDevOps2024}.
 
-Der Use Case Sicherheits- und Bedrohungserkennung zeigt erwartungsgemäß seine höchste Ausprägung im Bereich AI Governance, Datenschutz und Compliance (n=14) sowie bei Ressourcenverbrauch und Kosten (n=14). 
+Der Use Case Sicherheits- und Bedrohungserkennung zeigt seine höchste Ausprägung im Bereich AI Governance, Datenschutz und Compliance (n=14) sowie bei Ressourcenverbrauch und Kosten (n=14). 
 Auch die übrigen Herausforderungen weisen hohe Werte auf (n=13, 11, 10). 
 Dies spiegelt wider, dass sicherheitsbezogene KI-Ansätze nicht nur regulatorische und organisatorische Fragen berühren, sondern ebenso Einfluss auf Monitoring, Ressourcenmanagement und Integrationsprozesse haben.
 
 Die CI/CD- und Pipeline-Optimierung zeigt im Vergleich moderate, aber dennoch durchgehend hohe Werte über alle Herausforderungen hinweg (n=10, 9, 9, 9, 8). 
 Dies deutet darauf hin, dass KI-Anwendungen zur Optimierung von Build-, Test- und Deployment-Prozessen zwar breit diskutiert werden, aber weniger stark im Zentrum systemübergreifender Herausforderungen stehen als andere Anwendungsbereiche.
 
-Etwas geringer ausgeprägt, aber klar erkennbar, ist die Verteilung im Bereich Intelligente Bereitstellung (Edge-AI und Serverless). 
+Etwas weniger dominant, aber klar erkennbar, ist die Verteilung im Bereich Intelligente Bereitstellung (Edge-AI und Serverless). 
 Die Häufigkeiten liegen zwischen n=14 und n=11 und zeigen damit ein insgesamt konsistentes, jedoch weniger dominantes Muster als in den zuvor genannten Bereichen. 
 Dies legt nahe, dass dieses Anwendungsfeld im aktuellen Forschungsstand zwar relevant ist, jedoch nicht denselben Schwerpunkt bildet wie die großen Themenfelder Optimierung, Resilienz und Sicherheit.
 
@@ -41,10 +43,11 @@ Die Häufungen bei einzelnen Anwendungsbereichen zeigen, welche Themen in der Fo
 Dadurch wird verdeutlicht, in welchen Bereichen KI-Lösungen aktuell als besonder relevant angesehen werden.
 
 
-\subsection{Zusammenspiel der Lernparadimgen und Algorithmen}
+\subsection{Zusammenspiel der Lernparadigmen und Algorithmen}
 \label{subsec:mappingzwei}
 Die Abbildung \ref{fig:04_02_02_mappingZwei} visualisiert die Korrelation zwischen den in den analysierten Studien verwendeten Lernparadigmen des maschinellen Lernens und den eingesetzten Algorithmen.
-Hierfür wurden mögliche Kombinationen die nicht gehen, mit dem Wert 0 bzw. ohne Blase deklariert. 
+Einige Kombinationen werden in der Darstellung nicht ausgewiesen (n=0 bzw. ohne Blase), da sie in den betrachteten Studien nicht eindeutig als eigenständige Zuordnung berichtet wurden.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_02_mapping/04_02_02_mappingZwei.png}
@@ -55,7 +58,7 @@ Hierfür wurden mögliche Kombinationen die nicht gehen, mit dem Wert 0 bzw. ohn
 Supervised Learning weist die größte Bandbreite an möglichen Algorithmen auf. 
 Dies liegt daran, dass überwachte Lernverfahren sowohl tiefen neuronalen Netzen als auch klassischen Klassifikations- und Regressionsmodellen sowie ensemblebasierten Ansätzen zugrunde liegen. 
 Der hohe Anteil an SL-Kombinationen (14 DL/NN, 8 Klassifikation/Regression, 7 Ensemble und Baum-basiert) zeigt, dass SL sehr flexibel einsetbar ist.
-Solange gelabelte Daten vorliegen, können verschiedene Algorithmen angwendet werden. 
+Solange gelabelte Daten vorliegen, können verschiedene Algorithmen angewendet werden. 
 
 Unsupervised Learning zeigt hingegen ein wesentlich engeres Spektrum. Die Ergebnisse verdeutlichen, dass UL hauptsächlich mit Clustering-Methoden oder Deep Learning kombiniert werden (n=5). 
 Das ist erwartungskonform, da UL in den untersuchten Studien vor allem zur Mustererkennung sowie Anomalieanalyse eingesetzt wird und Clustering hierbei eine zentrale Rolle einnimmt \cite{enemosahEnhancingDevOpsEfficiency2025}.
@@ -69,7 +72,7 @@ Insgesamt bleibt die Zuordnung zu spezifischen Algorithmen jedoch begrenzt, wesh
 
 \subsection{Zusammenspiel von Herausforderungen und KI-Technologien (Tools und Frameworks)}
 \label{subsec:mappingDrei}
-Im Folgenden wird das Zusammenspiel von Herausforderungen und KI-Technologien (Tools \& Frameowrks) anhand der Abbildung \ref{fig:04_02_03_mappingDrei} analysiert.
+Im Folgenden wird das Zusammenspiel von Herausforderungen und KI-Technologien (Tools \& Frameworks) anhand der Abbildung \ref{fig:04_02_03_mappingDrei} analysiert.
 Die Werte geben an, in wie vielen Publikationen (n) eine bestimmte Herausforderung gemeinsam mit einer Tool- bzw. Technologiekategorie adressiert wird.
 
 \begin{figure}[H]
@@ -81,8 +84,7 @@ Die Werte geben an, in wie vielen Publikationen (n) eine bestimmte Herausforderu
 Deutlich wird, dass MLOps Tools \& Orchestrierung über alle Herausforderungen hinweg am stärksten vertreten ist (n=14, 13, 12, 12, 11).
 Damit zeigt sich, dass MLOps-nahe Technologien in den betrachteten Publikationen besonders häufig im Zusammenhang mit den Herausforderungen adressiert werden.
 
-Für Ressourcenverbrauch und Kosten sowie Skalierbarkeit, Latenz und Monitoring ergeben sich die höchsten Gesamtwerte über alle Tool-Kategorien hinweg.
-Besonders deutlich zeigt sich dies bei MLOps Tool \& Orchestrierung, die in den betrachteten Publikationen am häufigsten genannt werden (n=14 bzw. n=13).
+Für Ressourcenverbrauch und Kosten sowie Skalierbarkeit, Latenz und Monitoring ergeben sich die höchsten Gesamtwerte über alle Tool-Kategorien hinweg (jeweils n=41).
 In beiden Fällen treten ML/DL Frameworks \& Bibliotheken sowie Monitoring vergleichbar häufig auf (jeweils n=11).
 Das spricht dafür, dass diese Herausforderungen häufig zusammen mit Entwicklungs- und Betriebsaspekten diskutiert werden.
 
@@ -106,13 +108,13 @@ Vektordatenbanken treten insgesamt seltener auf, sind jedoch insbesondere in dat
 \subsection{Mapping der zentralen Dimensionen}
 \label{subsec:mappingVier}
 In diesem Abschnitt wird das Zusammenspiel von Lernparadigmen, Algorithmen und den identifizierten Anwendungsfeldern betrachtet.
-In der Abbildung \ref{fig:04_02_04_mappingVier} wurden alle Kategorien miteinander dargstellt.
-Da Kombinationen wie z.B. Supervised Learning mit Clustering nicht sinnvoll sind, wurden diese mit dem Wert 0 bzw. ohne Blase deklariert.
+In der Abbildung \ref{fig:04_02_04_mappingVier} wurden alle Kategorien miteinander dargestellt.
+Kombinationen ohne Nachweis in den betrachteten Studien werden als n=0 dargestellt (ohne Blase)
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_02_mapping/04_02_04_mappingVier.png}
-    \caption{Mapping von Lernparadigmen/Algorithmen und Anwendungsfelder}
+    \caption{Mapping von Lernparadigmen, Algorithmen und Anwendungsfeldern}
     \label{fig:04_02_04_mappingVier}
 \end{figure}
 
@@ -133,5 +135,9 @@ Andere Algorithmusklassen (z. B. Ensemble- bzw. klassische Klassifikations-/Regr
 
 Im Reinforcement Learning konzentrieren sich die Zuordnungen ausschließlich auf Deep Learning und neuronale Netze. 
 Die Häufigkeiten sind insgesamt geringer als im Supervised- und Unsupervised Learning. 
-Die höchsten Werte zeigen sich bei der Sicherheits- und Bedrohungserkennung (n=7) sowie bei der Ressourcen- und Workload-Optimierung (n=6). Für die Optimierung von CI/CD-Pipelines und Self-Healing/Predictive Maintenance liegen die Werte jeweils bei n=5, während Intelligente Bereitstellung am seltensten genannt wird (n=4). 
+Die höchsten Werte zeigen sich bei der Sicherheits- und Bedrohungserkennung (n=7) sowie bei der Ressourcen- und Workload-Optimierung (n=6). Für die Optimierung von CI/CD-Pipelines und Self-Healing/Predictive Maintenance liegen die Werte jeweils bei n=5, während Intelligente Bereitstellung am seltensten genannt wird (n=4).
 Andere Algorithmusklassen sind im RL-Kontext nicht belegt (n=0), was die enge Kopplung von RL an DL-basierte (Deep-RL) Ansätze in den betrachteten Publikationen unterstreicht.
+
+Die Kreuztabellenanalysen machen sichtbar, welche Zusammenhänge in der Forschung wiederkehrend sind.
+Darauf aufbauend wird in Abschnitt 4.3 ein Matching-Framework abgeleitet, das die Ergebnisse strukturiert zusammenfasst.
+Ziel ist es, daraus eine nachvollziehbare Grundlage für die Bewertung bzw. Einordnung von KI-Ansätzen im Platform Engineering zu schaffen.

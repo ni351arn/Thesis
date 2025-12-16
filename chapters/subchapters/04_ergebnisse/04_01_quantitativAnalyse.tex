@@ -18,9 +18,10 @@ Diese Betrachtung bildet die Grundlage für die folgenden Unterkapitel, in denen
 \subsection{Anwendungsbereiche der KI im Platform Engineering}
 \label{subsec:anwendungsbereiche}
 Im ersten Schritt der quantitativen Analyse wurden die insgesamt 21 identifizierten Studien hinsichtlich ihrer Hauptanwendungsbereiche untersucht. 
-Dazu wurden die ausgewählten Bereiche in fünf Kategorien zusammengfasst: Optimierung von CI/CD Pipelines, Ressourcen- und Workload Optimierung, Sicherheits- und Bedrohungserkennung, Resilienz, Self-Healing und Predictive Maintenance sowie Intelligente Bereitstellung (Edge-AI und Serverless Deployment).
+Dazu wurden die ausgewählten Bereiche in fünf Kategorien unterteilt: Optimierung von CI/CD Pipelines, Ressourcen- und Workload Optimierung, Sicherheits- und Bedrohungserkennung, Resilienz, Self-Healing und Predictive Maintenance sowie Intelligente Bereitstellung (Edge-AI und Serverless Deployment).
 
-Die Auswertung zeigt, dass CI/CD-Automatisierung mit acht Publikationen am häufigsten als primärer Anwendungsbereich beschrieben wird. Darauf folgt die Ressourcen- und Workloadoptimierung, was in vier Paper als primärerer Anwendun identifiziert wurde.
+Die Auswertung zeigt, dass CI/CD-Automatisierung mit acht Publikationen am häufigsten als primärer Anwendungsbereich beschrieben wird. 
+An zweiter Stelle folgt die Ressourcen- und Workload-Optimierung, die in vier Studien als primärer Anwendungsbereich genannt wird.
 Ebenfalls wird die intelligente Bereitstellung mittels Edge-AI oder Serverless Deployment in vier Publikationen als zentraler Anwendungsbereich beschrieben.
 Der vierte Bereich, Resilienz, Self-Healing und Predictive Maintenance wird insgesamt drei mal als Hauptanwendungsbereich definiert.
 Sicherheits- und Bedrohungserkennung steht in zwei Studien im Mittelpunkt. 
@@ -38,10 +39,10 @@ Zu beachten ist, dass viele Studien mehr als einen Bereich ansprechen. Für die 
 \subsection{Herausforderungen der KI-Integration im Platform Engineering}
 \label{subsec:herausforderungen}
 Im nächsten Schritt wurden die in den Publikationen beschriebenen Herausforderungen analysiert, die beim Einsatz von KI im Platform Engineering auftreten. 
-Die analysierten Paper wurden fünf Kategorien zugeordnet. Die Auswertung zeigt, dass 95 \% der Studien Herausforderungen im Bereich Ressourcenverbrauch und Kosten nennen. 
-Ebenfalls häufig angesprochen werden Skalierbarkeit, Latenz und Monitoring mit 90 \%. 
-AI Governance, Datenschutz und Compliance findet sich in 81 \% der Arbeiten wieder, ebenso wie die Kategorie Integrationskomplexität  und Abhängigkeiten.
-Die fünfte Kategorie, Datenqualität, Datenverfügbarkeit und Heterogenität, wird in insgesamt 71 \% der Arbeiten als Herausforderung thematisiert.  
+Die analysierten Paper wurden fünf Kategorien zugeordnet. Die Auswertung zeigt, dass 95 \% (20/21) der Studien Herausforderungen im Bereich Ressourcenverbrauch und Kosten nennen. 
+Ebenfalls häufig angesprochen werden Skalierbarkeit, Latenz und Monitoring mit 90 \% (19/21). 
+AI Governance, Datenschutz und Compliance findet sich in 81 \% (17/21) der Arbeiten wieder, ebenso wie die Kategorie Integrationskomplexität  und Abhängigkeiten.
+Die fünfte Kategorie, Datenqualität, Datenverfügbarkeit und Heterogenität, wird in insgesamt 71 \% (15/21) der Arbeiten als Herausforderung thematisiert.  
 
 Diese Ergebnisse verdeutlichen, dass KI-Anwendungen im Platform Engineering häufig mit mehreren technischen, operativen und organisatorischen Hürden verbunden sind. 
 Viele der Herausforderungen treten zudem gleichzeitig auf, da beispielswiese Skalierungsprobleme oft in engem Zusammenhang mit Ressourcenkosten oder Datenqualität stehen. 
@@ -58,16 +59,16 @@ Die prozentuale Verteilung ist in Abbildung \ref{fig:04_01_02_herausforderungen}
 \subsection{Formen des maschinellen Lernens}
 \label{subsec:formenDesMaschinellenLernens}
 Ein weiterer Bestandteil der quantitativen Analyse umfasst die in den Publikationen verwendeten Formen bzw. Lernparadigmen des maschinellen Lernens. 
-Dabei wurde unterschieden, ob die jeweilige Form explizit, implizit genannt oder explizit erwähnt wird ohne tiefer einzugehen.
+Dabei wurde unterschieden zwischen (1) explizit benannt, (2) implizit anhand der beschriebenen Methode ableitbar und (3) nur kurz erwähnt ohne weitere methodische Ausführung.
 Insgesamt wurden die drei grundlegenden Paradigmen identifiziert: Supervised Learning, Unsupervised Learning und Reinforcement Learning.
-In Kapitel \ref{subsec:lernparadigmen} werden diese Paradigmen detaillierter erläutert und durch typische Einsatzformen und Methoden veranschaulicht. 
 
-Die Auswertung zeigt, dass Supervised Learning in den meisten Arbeiten eine zentrale Rolle spielt. Es wird es in sechs Publikationen ausdrücklich beschrieben, in  elf Arbeiten erkennbar und in zwei kurz erwähnt. 
-Reinforcement Learning wird insgesamt sieben mal explizit genannt und in vier weiteren Arbeiten erwähnt. 
+Die Auswertung zeigt, dass Supervised Learning in den meisten Arbeiten eine zentrale Rolle spielt. 
+Es wird in sechs Publikationen ausdrücklich beschrieben, in  elf Arbeiten erkennbar und in zwei kurz erwähnt. 
+Reinforcement Learning wird insgesamt siebenmal explizit genannt und in vier weiteren Arbeiten erwähnt. 
 Unsupervised Learning tritt mit drei expliziten und acht impliziten Nennungen seltener auf, ist jedoch ebenfalls präsent.
 
 
-Die Verteilung ist in der folgenden Abbildung \ref{subsec:lernparadigmen} dargestellt.
+Die Verteilung ist in der folgenden Abbildung \ref{fig:04_01_03_lernparadigmen} dargestellt.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_01_quantitativ/04_01_03_lernparadigmen.png}
@@ -104,3 +105,7 @@ Diese Verteilung ist in der Abbildung \ref{fig:04_01_04_algorithmen} dargestellt
     \caption{Verteilung der Algorithmen und angesporchenen Methoden}
     \label{fig:04_01_04_algorithmen}
 \end{figure}
+
+Die Ergebnisse aus Abschnitt 4.1 zeigen die zentralen Schwerpunkte der betrachteten Studien.
+Darauf aufbauend wird in Abschnitt 4.2 untersucht, welche Kombinationen zwischen den Kategorien besonders häufig gemeinsam auftreten.
+Dadurch werden typische Muster innerhalb der Literatur deutlicher sichtbar.
