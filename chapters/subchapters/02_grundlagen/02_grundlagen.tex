@@ -16,29 +16,35 @@ Kubernetes hat sich dabei als zentrale Plattform etabliert. Es dient als portabl
 
 Im Platform Engineering werden diese Grundlagen genutzt, um Entwicklerteams über eine interne Plattform (Internal Developer Platform) standardisierte, sichere Self-Service-Capabilities bereitzustellen und damit Lieferfähigkeit, Compliance und Betrieb zu verbessern \cite{juliakmWhatPlatformEngineering}.
 
-\subsection{DevOps, CI/CD und Plattformbetrieb}
-\label{subsec:devops-ci-cd-und-plattformbetrieb}
+\subsection{DevOps und CI/CD}
+\label{subsec:devops-ci-cd}
 Development und Operations (DevOps) ist ein kultureller und organisatorischer Ansatz, bei dem Entwicklung und Betrieb gemeinsam Verantwortung für den gesamten Software-Lebenszyklus tragen. 
-Ziel ist es, Zusammenarbeit und Kommunikation zwischen den beteiligten Rollen zu stärken und Abläufe so zu unterstützen, dass Änderungen zuverlässig und kontinuierlich bereitgestellt werden können.
+Ziel ist es, Zusammenarbeit und Kommunikation zwischen den beteiligten Rollen zu stärken und Abläufe so zu unterstützen, dass Änderungen zuverlässig und kontinuierlich bereitgestellt werden können \cite{WasIstDevOps,atlassianWasIstDevOps}.
+
+Continuous Integration (CI) und Continuous Delivery/Deployment (CD) sind zentrale Praktiken innerhalb von DevOps.
+CI beschreibt die regelmäßige und automatisierte Integration von Codeänderungen in ein gemeinsames Repository inklusive Build und Tests.
+CD baut darauf auf und automatisiert die Auslieferung. 
+Continuous Delivery endet vor dem automatischen Produktiv-Deployment, während Continuous Deployment diesen Schritt ebenfalls automatisiert \cite{WasIstCI,rzigEmpiricalAnalysisCI2024}.
 
 
 \subsection{Lernparadigmen des maschinellen Lernens}
 \label{subsec:lernparadigmen}
-Die drei Formen des maschinellen Lernens setzen sich aus Supervised Learning (SL), Unsupervised Learning (UL) und Reinforcement Learning (RL) zusammen.
-Diese drei Lernparadigmen werden nachfolgend genauer beschrieben auf Basis der Defintionen von \textcite{enemosahEnhancingDevOpsEfficiency2025}.
+Die grundlegenden Lernparadigmen des maschinellen Lernens lassen sich in Supervised Learning (SL), Unsupervised Learning (UL) und Reinforcement Learning (RL) einteilen.
 
-Supervised Learning beschreibt Verfahren, bei denen Modelle anhand markierter Daten (labeled data) trainiert werden. 
-Ziel ist es, auf Basis bekannter Eingabe-Ausgabe-Paare präzise Vorhersagen zu treffen, etwa für Klassifikations- oder Priorisierungsaufgaben.
+SL trainiert ein Modell anhand gelabelter Daten, sodass es eine Abbildung von Eingaben auf eine Ziel- bzw. Antwortvariable lernt \cite{enemosahEnhancingDevOpsEfficiency2025,valkenborgSupervisedLearning2023}.
 
-Unsupervised Learning arbeitet mit unmarkierten Daten und dient der Erkennung verborgener Muster oder Strukturen. 
-Typische Verfahren wie Clustering gruppieren ähnliche Datenpunkte und unterstützen so beispielsweise die Analyse von Systemlogs oder die Identifikation von Anomalien.
+UL arbeitet mit ungelabelten Daten und zielt darauf ab, darin Strukturen, Cluster oder Auffälligkeiten zu erkennen, ohne dass eine explizite Zielvariable vorgegeben ist \cite{enemosahEnhancingDevOpsEfficiency2025,valkenborgUnsupervisedLearning2023}.
 
-Reinforcement Learning nutzt ein belohnungsbasiertes Lernprinzip, bei dem ein Agent durch Interaktion mit seiner Umgebung optimale Strategien erlernt. 
-Im Kontext der betrachteten Literatur wird RL u. a. zur dynamischen Optimierung von Ressourcenallokationen eingesetzt, beispielsweise für adaptive Skalierungs- oder Rollback-Entscheidungen \cite{enemosahEnhancingDevOpsEfficiency2025}.
+RL beschreibt Verfahren, bei denen ein Agent durch Interaktion mit einer Umgebung Handlungen lernt, um eine langfristige (kumulative) Belohnung zu maximieren \cite{enemosahEnhancingDevOpsEfficiency2025,ghasemiIntroductionReinforcementLearning2024}.
 
-\input{tables/04_ergebnisse/04_01_04_algorithmen.tex}
+Die drei Lernparadigmen bilden die Grundlage, während die konkrete Umsetzung in der Praxis typischerweise über spezifische Algorithmen und Methoden erfolgt.
+Tabelle \ref{tab:tabelleMethodenAlgorithmen} fasst die in dieser Arbeit betrachteten Algorithmusklassen zusammen und schafft damit eine einheitliche begriffliche Grundlage für die spätere Auswertung.
+
+\input{tables/02_grundlagen/02_01_03_algorithmen.tex}
 \FloatBarrier 
 
+In der Analyse wurden Lernparadigmen zudem auch dann zugeordnet, wenn sie in den Publikationen nicht explizit benannt waren, sondern nur über typische Aufgabenstellungen erkennbar wurden. 
+Solche Aufgabenstellungen werden in den in diesem Abschnitt zitierten Quellen ausführlicher beschrieben.
 
 \subsection{AIOps und verwandte Konzepte}
 \label{subsec:aiops}
