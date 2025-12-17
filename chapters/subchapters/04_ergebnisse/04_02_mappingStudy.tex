@@ -17,14 +17,14 @@ Die Häufigkeiten geben an, wie oft eine bestimmte Kombination in der Literatur 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_02_mapping/04_02_01_mapping.png}
-    \caption{Korrelation zwischen Anwendungsfelder (Use Cases) und Herausforderungen}
+    \caption{Korrelation zwischen Anwendungsfelderen (Use Cases) und Herausforderungen}
     \label{fig:04_02_01_mapping}
 \end{figure}
 
 Besonders deutlich wird die starke Verknüpfung der Use Cases Ressourcen- und Workload-Optimierung sowie Resilienz, Self-Healing und Predictive Maintenance mit nahezu allen Herausforderungskategorien. 
-Die Ressourcen- und Workload-Optimierung weist in allen Bereichen hohe Werte auf (n=17, 16, 14, 15, 13).
+Die Ressourcen- und Workload-Optimierung weist in allen Bereichen hohe Werte auf, je nach Herausforderung liegen diese zwischen n=13 und n=17.
 Dieser Anwendungsfall verdeutlicht ein Spannungsfeld zwischen hohem Ressourcenbedarf, Datenmanagement und Pipeline-Komplexität (bedingt durch große und heterogene Datenmengen) sowie Trade-offs zwischen Skalierbarkeit und Latenz, wie es auch in \cite{bajwaCLOUDNATIVEARCHITECTURESLARGESCALE2025} beschrieben wird.
-Ein ähnlich breites Muster zeigt sich im Bereich Self-Healing und Predictive Maintenance, der über alle Herausforderungskategorien hinweg hohe Häufigkeiten erreicht (n=17, 16, 14, 16, 12).
+Ein ähnlich breites Muster zeigt sich im Bereich Self-Healing und Predictive Maintenance, der über alle Herausforderungskategorien hinweg hohe Häufigkeiten erreicht (zwischen n= 12 und n=17).
 Insgesamt deutet dies darauf hin, dass beide Use Cases in der Literatur als besonders relevante Einsatzfelder für KI-basierte Optimierungen betrachtet werden, da sie auf zentrale betriebliche Ziele wie Effizienz, Zuverlässigkeit und einen höheren Automatisierungsgrad in DevOps-Prozessen einzahlen \cite{kankanalaAIMLDevOps2024}.
 
 Der Use Case Sicherheits- und Bedrohungserkennung zeigt seine höchste Ausprägung im Bereich AI Governance, Datenschutz und Compliance (n=14) sowie bei Ressourcenverbrauch und Kosten (n=14). 
@@ -40,7 +40,7 @@ Dies legt nahe, dass dieses Anwendungsfeld im aktuellen Forschungsstand zwar rel
 
 Insgesamt zeigt die Verteilung der Häufigkeiten, dass KI-Anwendungen im Platform Engineering besonders dort adressiert werden, wo Effizienz, Stabilität, Automatisierung und Sicherheitsaspekte zusammenwirken. 
 Die Häufungen bei einzelnen Anwendungsbereichen zeigen, welche Themen in der Forschung besonders im Fokus stehen.
-Dadurch wird verdeutlicht, in welchen Bereichen KI-Lösungen aktuell als besonder relevant angesehen werden.
+Dadurch wird verdeutlicht, in welchen Bereichen KI-Lösungen aktuell als besonders relevant angesehen werden.
 
 
 \subsection{Zusammenspiel der Lernparadigmen und Algorithmen}
@@ -57,16 +57,18 @@ Einige Kombinationen werden in der Darstellung nicht ausgewiesen (n=0 bzw. ohne 
 
 Supervised Learning weist die größte Bandbreite an möglichen Algorithmen auf. 
 Dies liegt daran, dass überwachte Lernverfahren sowohl tiefen neuronalen Netzen als auch klassischen Klassifikations- und Regressionsmodellen sowie ensemblebasierten Ansätzen zugrunde liegen. 
-Der hohe Anteil an SL-Kombinationen (14 DL/NN, 8 Klassifikation/Regression, 7 Ensemble und Baum-basiert) zeigt, dass SL sehr flexibel einsetbar ist.
+Der hohe Anteil an SL-Kombinationen (n=14 DL/NN, n=8 Klassifikation/Regression, n=7 Ensemble/baum-basiert) zeigt, dass SL sehr flexibel einsetbar ist.
 Solange gelabelte Daten vorliegen, können verschiedene Algorithmen angewendet werden. 
 
-Unsupervised Learning zeigt hingegen ein wesentlich engeres Spektrum. Die Ergebnisse verdeutlichen, dass UL hauptsächlich mit Clustering-Methoden oder Deep Learning kombiniert werden (n=5). 
-Das ist erwartungskonform, da UL in den untersuchten Studien vor allem zur Mustererkennung sowie Anomalieanalyse eingesetzt wird und Clustering hierbei eine zentrale Rolle einnimmt \cite{enemosahEnhancingDevOpsEfficiency2025}.
+Unsupervised Learning zeigt hingegen ein engeres Spektrum. 
+Die Ergebnisse verdeutlichen, dass UL hauptsächlich in Kombination mit Deep Learning eingesetzt wird (n=9) oder mit Clustering-Methoden (n=6). 
+Dies ist erwartungsgemäß, da UL in den untersuchten Studien vor allem zur Mustererkennung und Anomalieanalyse eingesetzt wird und Clustering hierbei eine zentrale Rolle einnimmt, wie in \cite{enemosahEnhancingDevOpsEfficiency2025} beschrieben.
 
 Reinforcement Learning tritt zwar in mehreren Studien auf, wird jedoch selten algorithmisch konkretisiert. 
 RL wird vor allem für dynamische Optimierungsaufgaben eingesetzt. 
-Durch kontinuierliches Lernen aus vergangenen Systemzuständen können RL-Modelle optimale Aktionen auswählen und damit Ausfälle reduzieren sowie die Systemleistung verbessern. 
-Einzelne Arbeiten nutzen hierfür Deep-RL-Ansätze wie Deep Q-Networks, insbesondere wenn komplexe Zustandsräume berücksichtigt werden müssen. 
+Durch das Lernen auf Basis beobachteter Systemzustände und Feedback können RL-Modelle geeignete Aktionen auswählen. 
+Dadurch können sie zur Stabilisierung des Betriebs und zur Verbesserung der Systemleistung beitragen.
+Einzelne Arbeiten nutzen hierfür Deep-RL-Ansätze wie Deep Q-Networks \cite{jossonpaulkalapparambathAdvancingDistributedSystems2025}, insbesondere wenn komplexe Zustandsräume berücksichtigt werden müssen. 
 Insgesamt bleibt die Zuordnung zu spezifischen Algorithmen jedoch begrenzt, weshalb viele Kombinationen in der Tabelle nicht belegt sind.
 
 
@@ -81,20 +83,20 @@ Die Werte geben an, in wie vielen Publikationen (n) eine bestimmte Herausforderu
     \caption{Korrelation zwischen Herausforderungen und KI-Technologie}
     \label{fig:04_02_03_mappingDrei}
 \end{figure}
-Deutlich wird, dass MLOps Tools \& Orchestrierung über alle Herausforderungen hinweg am stärksten vertreten ist (n=14, 13, 12, 12, 11).
+Deutlich wird, dass MLOps-Tools \& Orchestrierung über alle Herausforderungen hinweg am stärksten vertreten ist (zwischen n=11 und n=14).
 Damit zeigt sich, dass MLOps-nahe Technologien in den betrachteten Publikationen besonders häufig im Zusammenhang mit den Herausforderungen adressiert werden.
 
-Für Ressourcenverbrauch und Kosten sowie Skalierbarkeit, Latenz und Monitoring ergeben sich die höchsten Gesamtwerte über alle Tool-Kategorien hinweg (jeweils n=41).
+Für Ressourcenverbrauch und Kosten sowie Skalierbarkeit, Latenz und Monitoring ergeben sich die höchsten Gesamtwerte über alle Tool-Kategorien hinweg.
 In beiden Fällen treten ML/DL Frameworks \& Bibliotheken sowie Monitoring vergleichbar häufig auf (jeweils n=11).
 Das spricht dafür, dass diese Herausforderungen häufig zusammen mit Entwicklungs- und Betriebsaspekten diskutiert werden.
 
 Bei AI Governance, Datenschutz und Compliance zeigt sich ein ähnlicher Schwerpunkt.
-MLOps Tools \& Orchestrierung werden hier am häufigsten zusammen mit dieser Herausforderung genannt (n=12), gefolgt von Monitoring (n=10).
+MLOps-Tools \& Orchestrierung werden hier am häufigsten zusammen mit dieser Herausforderung genannt (n=12), gefolgt von Monitoring (n=10).
 ML/DL Frameworks \& Bibliotheken treten etwas seltener auf (n=8).
 Insgesamt werden Governance- und Compliance-Themen damit eher auf Betriebs- als nur auf Modell- oder Trainingsebene verortet.
 
-Integrationskomplexität \& Abhängigkeiten weist über alle Tool-Kategorien hinweg die geringsten Gesamthäufigkeiten auf.
-Auch hier liegt der Schwerpunkt bei MLOps Tools \& Orchestrierung (n=12) und Monitoring (n=9).
+Integrationskomplexität \& Abhängigkeiten wird zwar häufig als Herausforderung gennant (vgl. \ref{subsec:herausforderungen}), jedoch seltener explizit mit konkreten Toolkategorien in Verbindung gebracht.
+Auch hier liegt der Schwerpunkt bei MLOps-Tools \& Orchestrierung (n=12) und Monitoring (n=9).
 ML/DL Frameworks \& Bibliotheken (n=8) und Vektordatenbanken (n=4) treten seltener auf.
 Das verweist darauf, dass Integrations- und Abhängigkeitsfragen vor allem auf System- und Pipeline-Ebene diskutiert werden.
 
@@ -137,7 +139,7 @@ Im Reinforcement Learning konzentrieren sich die Zuordnungen ausschließlich auf
 Die Häufigkeiten sind insgesamt geringer als im Supervised- und Unsupervised Learning. 
 Die höchsten Werte zeigen sich bei der Sicherheits- und Bedrohungserkennung (n=7) sowie bei der Ressourcen- und Workload-Optimierung (n=6). Für die Optimierung von CI/CD-Pipelines und Self-Healing/Predictive Maintenance liegen die Werte jeweils bei n=5, während Intelligente Bereitstellung am seltensten genannt wird (n=4).
 Andere Algorithmusklassen sind im RL-Kontext nicht belegt (n=0), was die enge Kopplung von RL an DL-basierte (Deep-RL) Ansätze in den betrachteten Publikationen unterstreicht.
-
+\par\bigskip
 Die Kreuztabellenanalysen machen sichtbar, welche Zusammenhänge in der Forschung wiederkehrend sind.
 Darauf aufbauend wird in Abschnitt 4.3 ein Matching-Framework abgeleitet, das die Ergebnisse strukturiert zusammenfasst.
 Ziel ist es, daraus eine nachvollziehbare Grundlage für die Bewertung bzw. Einordnung von KI-Ansätzen im Platform Engineering zu schaffen.
