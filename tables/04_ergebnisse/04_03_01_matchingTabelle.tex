@@ -1,61 +1,68 @@
+% (Im Dokument an der Stelle, wo die Tabelle hin soll)
+
+\clearpage % wichtig: neue Seite starten
+
 \begin{landscape}
 \begin{table}[p]
-  \centering
-  \caption{Matching-Übersicht}
-  \label{tab:matching-usecases}
+\begin{flushleft} % startet links (nicht zentriert)
 
-  \footnotesize
-  \renewcommand{\arraystretch}{1.15}
-  \setlength{\tabcolsep}{3pt}
-  \setlength{\emergencystretch}{2em} % reduziert Overfull/Abschneiden bei langen Wörtern
+\caption{Übersicht der KI-Anwendungsfelder: Tasks, Daten, Methoden und Ziele}
+\label{tab:anwendungsfelder-5x5}
 
-  % Spaltentypen: feste Breite + X-Spalten mit "RaggedRight" (Umbruch + Silbentrennung)
-  \newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}p{#1}}
-  \newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\footnotesize
+\renewcommand{\arraystretch}{1.15}
+\setlength{\tabcolsep}{4pt}
 
-  \begin{tabularx}{\linewidth}{@{}P{0.20\linewidth}YYYYP{0.12\linewidth}@{}}
-    \toprule
-    \textbf{Architekturpattern} &
-    \textbf{Kernkomponenten} &
-    \textbf{Abhängigkeiten} &
-    \textbf{Stärken} &
-    \textbf{Limitationen} &
-    \textbf{Beispielpaper} \\
-    \midrule
+\begin{tabularx}{\linewidth}{p{3.6cm} Y Y Y Y}
+\toprule
+\textbf{Anwendungsfelder} &
+\textbf{Konkrete Plattform-Task} &
+\textbf{Genutzte Daten} &
+\textbf{KI-Methode} &
+\textbf{Ziel} \\
+\midrule
 
+Ressourcenoptimierung
+& \emph{Vorausschauendes Auto-Scaling von Cloud-Ressourcen (z. B. AWS EC2, RDS, oder Kubernetes-Cluster), Dynamische Anpassung der VM-Konfigurationen und Right-sizing.")}
+& \emph{"Datenquelle: Historische Leistungsdaten (CPU-Auslastung, Netzwerk-Traffic, Disk I/O, Speicherkapazität). , Nutzung: Gesammelt über AWS CloudWatch oder Prometheus/Grafana (für Kubernetes). , Die Daten werden zur Vorhersage zukünftiger Ressourcenbedarfstrends und Workload-Muster genutzt."}
+& \emph{Prädiktive Analytik (Zeitreihenanalyse). Spezifische Algorithmen: Long Short-Term Memory (LSTM) neuronale Netze. 
+RL zur dynamischen Anpassung der Ressourcenzuteilung.}
+& \emph{"Reduzierung der Betriebskosten. 
+Steigerung der Ressourceneffizienz und -auslastung (z. B. 25\% Verbesserung der Ressourcenauslastung). 
+Wartung der optimalen Anwendungs-Performance."} \\
+\addlinespace[2pt]
 
-    \makecell[l]{Erkennung von \\Abweichungen} &
-    Vorhersage-/Prognosemodell (Last, Ausfälle, Verhalten)	Prädiktive Analytik, ML-Modelle (Klassifikation, Regression), Historische Daten (Build-Logs, Code-Änderungen). &
-    Qualität/Verfügbarkeit der Trainingsdaten, Geeignete Algorithmusauswahl, Cloud-Native-Architekturen. &
-    Reduziert Build-Fehler/verbessert Pipeline-Effizienz, Intelligente Ressourcenverteilung/Lastoptimierung, Vorhersage von Ausfällen/Deployment-Problemen, Dynamische Anpassung an Traffic-Spitzen. &
-    Umgang mit unstrukturierten Daten ist komplex, Rechenintensiv (bei großen Datensätzen), Risiko des Overfittings (bei Entscheidungsbäumen). &
-    P1, P2, P3, P11, P13, P14, P15, P16, P17, P20, P21 \\
-    \midrule
+Zuverlässigkeit / CI/CD Automation
+& \emph{Prädiktive Fehlererkennung in Build- und Deployment-Pipelines. 
+Automatisierte Rollbacks bei erkannten Anomalien. 
+Adaptive Deployment-Strategien (z. B. dynamische Anpassung von Blue/Green- oder Canary-Rollouts). }
+& \emph{Datenquelle: Historische Build-Logs (mit Zeitstempeln, Fehlermeldungen, Warnungen). 
+Test-Ergebnisse (Pass/Fail-Raten). 
+System-Performance-Metriken (Latenz, Fehlerraten, Ressourcennutzung während des Deployments). 
+Nutzung: Analyse von Mustern, die auf bevorstehende Fehler hindeuten. Kontinuierliches Monitoring zur Auslösung von automatisierten Korrekturmaßnahmen.}
+& \emph{SL für Fehler-Vorhersage(Random Forests, Entscheidungsbäume, Neuronale Netze). 
+UL für Anomalieerkennung ( Autoencoder, Isolation Forests, K-Means Clustering).
+RL für optimierte Rollbacks und Testpriorisierung. (Deep Q-Networks (DQN), PPO, Q-Learning)"}
+& \emph{Reduzierung der Deployment-Zeit (z. B. 40\% Reduzierung der Testzeit). Reduzierung der Fehlerraten (Error Rate Reduction, z. B. 15\%). Minimierung der Downtime (z. B. 30\% Reduzierung durch proaktive Rollbacks). Verbesserung der Software-Zuverlässigkeit.} \\
+\addlinespace[2pt]
 
-    \makecell[l]{Vorhersage-/\\Prognosemodell} &
-    Entscheidungs- und Optimierungsschleife (dynamische Steuerung)	Reinforcement Learning (RL) Algorithmen, Dynamische Ressourcenzuteilung, Autoscaling-Konfigurationen, Feedback-Schleifen.	&
-    Genaue Performance-Metriken (Latenz), Definierte Belohnungs-/Strafmechanismen (für RL), Integration in die CI/CD-Pipeline.	&
-    Dynamisches Skalieren/Optimieren der Ressourcennutzung, Minimierung der Betriebskosten, Optimale Verwaltung dynamischer Workloads, Adaptives Deployment. &
-    Komplex in der Implementierung (RL), Erfordert klar definierte Trainingsmechanismen, Hohe Rechenleistung.	&
-    P2, P3, P11, P12, P13, P14, P15, P16, P17, P19, P20, P21 \\
-    \midrule
+Sicherheit / Bedrohungserkennung
+& \emph{(eintragen: z.B. Detection, Alert Triage, Policy Violations, Secret/Leak Scans)}
+& \emph{(eintragen: z.B. Security-Logs, Netzwerk-Flows, Audit-Logs, IAM-Events)}
+& \emph{(eintragen: z.B. Anomalieerkennung, Clustering, Klassifikation)}
+& \emph{(eintragen: z.B. Angriffe erkennen, False Positives senken, Compliance unterstützen)} \\
+\addlinespace[2pt]
 
-    \makecell[l]{Entscheidungs- \\und Optimierungsschleife} &
-    Betriebs-/Integrationspattern für KI, Workflow-Orchestrierung (Kubeflow, Airflow, MLFlow), CI/CD-Komponente, Monitoring (Prometheus, Grafana), Feedback-Schleifen (für Retraining). &
-    Cloud-Native-Prinzipien (Containerisierung, Microservices), DevOps-Automatisierung, Team-Kollaboration (MLOps-Rollen).	&
-    Erhöhte Reproduzierbarkeit/Verfolgbarkeit (Data, Code, Model), Kontinuierliches Training/Monitoring, Überwachung der Modell-Performance (Model Drift/Verschlechterung), Steigerung der Zuverlässigkeit/Effizienz von ML-Workflows.	&
-    Komplexität der Architektur/Implementierung, Ressourcenintensiv, Benötigt spezialisiertes Fachwissen.	&
-    P2, P6, P7, P11, P14, P15, P16, P18, P19, P20, P21 \\
-    \midrule
+Betrieb / Orchestrierung
+& \emph{(eintragen: z.B. Incident Response, Self-Healing, Runbook Automation, Triage)}
+& \emph{(eintragen: z.B. Alerts, Tickets, SLO/SLI, Logs/Traces, Topologie-Daten)}
+& \emph{(eintragen: z.B. Root-Cause-Ansätze, Empfehlungssysteme, Agenten/Workflow-Automation)}
+& \emph{(eintragen: z.B. Stabilität erhöhen, Operator entlasten, schnellere Entstörung)} \\
+\bottomrule
+\end{tabularx}
 
-    \makecell[l]{Resilienz, Self-Healing\\und Predictive Maintenance} &
-    Governance-/Compliance-orientierter KI-Betrieb	Datenschutz und Sicherheit, Eigentum und Herkunft, Security-Tools (z.B. Snyk, Azure Sentinel), Verschlüsselungsmechanismen, Identitätsmanagement. &
-    Einhaltung von Vorschriften, Transparenz und Erklärbarkeit (XAI), Kontinuierliche Sicherheitsüberwachung.	&
-    Schutz sensibler Daten, Einhaltung gesetzlicher Anforderungen/Compliance, Vertrauensbildung/Zuverlässigkeit, Reduzierung des Risikos.	&
-    Erhöhte Komplexität der Workflows, Interoperabilitätsprobleme (in Multi-Cloud), Schwierigkeiten bei der Erklärbarkeit (XAI) fortgeschrittener Modelle, Hohe Kosten für Compliance. &
-    P3, P4, P9, P11, P12, P14, P15, P16, P17, P18, P19, P20, P21\\
-    \midrule
-    \bottomrule
-  \end{tabularx}
+\end{flushleft}
 \end{table}
 \end{landscape}
+
+\clearpage % wichtig: danach wieder zurück ins Hochformat
