@@ -1,0 +1,68 @@
+\begin{landscape}
+\begin{table}[p]
+  \centering
+  \caption{Matching-Übersicht}
+  \label{tab:matching-usecases}
+
+  \footnotesize
+  \renewcommand{\arraystretch}{1.15}
+  \setlength{\tabcolsep}{3pt}
+  \setlength{\emergencystretch}{2em} % reduziert Overfull/Abschneiden bei langen Wörtern
+
+  % Spaltentypen: feste Breite + X-Spalten mit "RaggedRight" (Umbruch + Silbentrennung)
+  \newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+  \newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+
+  \begin{tabularx}{\linewidth}{@{}P{0.20\linewidth}YYYYP{0.12\linewidth}@{}}
+    \toprule
+    \textbf{Use case} &
+    \textbf{Typische Ziele} &
+    \textbf{Abhängigkeiten} &
+    \textbf{Stärken} &
+    \textbf{Limitationen} &
+    \textbf{Beispielpaper} \\
+    \midrule
+
+
+    \makecell[l]{Optimierung von \\CI/CD-Pipelines} &
+    Build-/ Testzeiten senken, Fehlerraten reduzieren, stabiliere Deployments &
+    Historische CI/CD-Daten, Datenqualität/ Datenmenge, inkonsistente Daten, MLOps-Architekturen &
+    Reduzierte Bereitstellungszeit, Build-Fehler-Vorhersage, Reduzierte Fehlerraten, Erhöhte Automatisierung/Effizienz, Verbesserte Zuverlässigkeit/Qualität, Optimierte Testausführung &
+    Modellkomplexität, hohe Berechnungskosten, Organisatorischer Widerstand, Begrenzte Skalierbarkeit &
+    \cite{enemosahEnhancingDevOpsEfficiency2025}, \cite{kankanalaAIMLDevOps2024}, \cite{sikhaCloudNativeApplicationDevelopment2023}, \cite{MLOpsApproachCloudnative}, \cite{kathiresanCybersecurityRiskModeling2025}, \cite{tamanampudiAIEnhancedContinuousIntegration}, \cite{reddygopireddyIntegratingAIDevOps2022}, \cite{supritpattanayakIntegratingAIDevOps2024}, \cite{jossonpaulkalapparambathAdvancingDistributedSystems2025}, \cite{karthikputhrayaRoleCloudNativeArchitectures2025}, \cite{tamminediAutomatingKubernetesOperations2024} \\
+    \midrule
+
+    \makecell[l]{Ressourcen- und\\Workload-Optimierung} &
+    Dynamische Ressourcenzuweisung, Kostenreduzierung/ Effizienz, Ressourcenauslastung optimieren, prädiktive Skalierung &
+    Echtzeit-Traffic-Daten, Cloud-Plattform-Metriken, GPU/TPU-Leistung, Workload-Anforderungen, Cloud-Native-Elastizität, Historische Nutzungsdaten &
+    Reduzierte Ressourcenverschwendung, Bessere Ressourcennutzung, Automatisierte Skalierung, Minimierte Betriebskosten, Höhere GPU/TPU-Auslastung, Reduzierte Bereitstellungszeit &
+    Vermeidung von Kostenüberschreitungen, Überwachung des Verbrauchs, Verwaltung großer LLM-Workloads, Hohe Datenvielfalt, Latenzempfindlichkeit (Echtzeit) &
+    \cite{bajwaCLOUDNATIVEARCHITECTURESLARGESCALE2025}, \cite{bajwaCLOUDNATIVEARCHITECTURESLARGESCALE2025}, \cite{enemosahEnhancingDevOpsEfficiency2025,zaaloukCLOUDNATIVEARTIFICIAL,sikhaCloudNativeApplicationDevelopment2023} \\
+    \midrule
+
+    \makecell[l]{Sicherheits- und\\Bedrohungserkennung} &
+    Erkennung von Bedrohungen/ Anomalien, Risikoreduktion/ Schwachstellen-Scanning, Echtzeit-Überwachung &
+    Historische Sicherheitsdaten, Ungleichgewicht der Trainingsdaten, Datenschutz, Spezifische ML-Algorithmen, Kontinuierliche Überwachung &
+    Schnellere Bedrohungserkennung, Erhöhte Detektionsraten, Reduzierte False Positives, Hohe Genauigkeit (ML), Verbesserte Systemresilienz &
+    Komplexität des CLoud-Traffics, Unausgewogene Datensätze, Mangel an Open-Source-Daten, Echtzeit-Latenzprobleme &
+    \cite{kankanalaAIMLDevOps2024} \\
+    \midrule
+
+    \makecell[l]{Resilienz, Self-Healing\\und Predictive Maintenance} &
+    Potenzielle Ausfälle vorhersagen, Automatisierte Rollbacks, Fehlertoleranz, Fehlerkorrektur, Self-Healing Systeme &
+    Text &
+    Text &
+    Text &
+    \cite{kankanalaAIMLDevOps2024} \\
+    \midrule
+
+    \makecell[l]{Intelligente Bereitstellung\\(Edge-AI und Serverless)} &
+    Severless Computing/Inferenz, Functions as a Service (Faas), Containerisieurng, Microservices &
+    Text &
+    Text &
+    Text &
+    \cite{jossonpaulkalapparambathAdvancingDistributedSystems2025} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+\end{landscape}

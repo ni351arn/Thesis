@@ -59,6 +59,304 @@
       \endverb
       \keyw{AI,Cloud,Deployment,Machine Learning}
     \endentry
+    \entry{zaaloukCLOUDNATIVEARTIFICIAL}{article}{}{}
+      \name{author}{23}{}{%
+        {{hash=8baa4ca8515285085f32bd1d6d5b5e29}{%
+           family={Zaalouk},
+           familyi={Z\bibinitperiod},
+           given={Adel},
+           giveni={A\bibinitperiod}}}%
+        {{hash=827b9c11231c758e1cc0c05c0eb49a84}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ec8d34a976b8881afe5a05f6d14961b6}{%
+           family={Velichkevich},
+           familyi={V\bibinitperiod},
+           given={Andrey},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2444b75f6dd67d9c6b90e9895a299497}{%
+           family={Kurktchiev},
+           familyi={K\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod}}}%
+        {{hash=3373286ec9393bbb3f59c9d9784d820a}{%
+           family={Chin},
+           familyi={C\bibinitperiod},
+           given={Cassandra},
+           giveni={C\bibinitperiod}}}%
+        {{hash=383de569c79803b1339e4755e4720b25}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Cathy},
+           giveni={C\bibinitperiod}}}%
+        {{hash=59443ee356aa24160bba144a842d9d56}{%
+           family={Misale},
+           familyi={M\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e01ddbdb3b443a2d586abe717ee330e8}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Huamin},
+           giveni={H\bibinitperiod}}}%
+        {{hash=76655833d0fc07f221f27d12a7d5dd2d}{%
+           family={Roberts},
+           familyi={R\bibinitperiod},
+           given={Joel},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2952692044358d1ad1b4f197b2e587b0}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Kai-Hsun},
+           giveni={K\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=b56ce2e02bedd55a1259303ff8d3e3e2}{%
+           family={Bhandaru},
+           familyi={B\bibinitperiod},
+           given={Malini},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1c55a02ee50b59ad1cda6fe6928af29e}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2a208eaa5f9a2739fcaa0245beb18b05}{%
+           family={Raghunath},
+           familyi={R\bibinitperiod},
+           given={Nikhita},
+           giveni={N\bibinitperiod}}}%
+        {{hash=78629182b60f5c148792b56bfc573ea6}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=69046475c66d138ea86c2e3d5a70b49f}{%
+           family={Kakodkar},
+           familyi={K\bibinitperiod},
+           given={Rajas},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b67eadb609ba539aecf75a531b2fa9a5}{%
+           family={Pandey},
+           familyi={P\bibinitperiod},
+           given={Rasik},
+           giveni={R\bibinitperiod}}}%
+        {{hash=013e539d123fe56343ac31e0d6c49d37}{%
+           family={Aravena},
+           familyi={A\bibinitperiod},
+           given={Ricardo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=0bd060eeb33d53c333d0b44f0c342aa1}{%
+           family={Petty},
+           familyi={P\bibinitperiod},
+           given={Ronald},
+           giveni={R\bibinitperiod}}}%
+        {{hash=16160f343d1565fbeed8e034cf9c32d0}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7174b21445da3ee7e0b7fe14edb2c53e}{%
+           family={Sheikh},
+           familyi={S\bibinitperiod},
+           given={Saad},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ec1e1d70c7065a6357484845726109e6}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Shawn},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7681d282e3ca9adada12a2d42376c26e}{%
+           family={Thorley},
+           familyi={T\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=10e7564242f6f7f4d4be3c652b39df8b}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{154407a6eecfb006497ec8964decfca6}
+      \strng{fullhash}{c22582264edda7f1da4f1b430b778feb}
+      \strng{fullhashraw}{c22582264edda7f1da4f1b430b778feb}
+      \strng{bibnamehash}{154407a6eecfb006497ec8964decfca6}
+      \strng{authorbibnamehash}{154407a6eecfb006497ec8964decfca6}
+      \strng{authornamehash}{154407a6eecfb006497ec8964decfca6}
+      \strng{authorfullhash}{c22582264edda7f1da4f1b430b778feb}
+      \strng{authorfullhashraw}{c22582264edda7f1da4f1b430b778feb}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{{{CLOUD NATIVE ARTIFICIAL INTELLIGENCE}}}
+      \verb{file}
+      \verb /Users/nilsarnold/Zotero/storage/JTPD487Y/Zaalouk et al. - NATIVE ARTIFICIAL INTELLIGENCE.pdf
+      \endverb
+    \endentry
+    \entry{Overview}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Kubernetes is a portable, extensible, open source platform for managing containerized workloads and services that facilitate both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available.}
+      \field{howpublished}{https://kubernetes.io/docs/concepts/overview/}
+      \field{journaltitle}{Kubernetes}
+      \field{langid}{english}
+      \field{title}{Overview}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /Users/nilsarnold/Zotero/storage/XKRBZBKI/overview.html
+      \endverb
+    \endentry
+    \entry{juliakmWhatPlatformEngineering}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=a10c5e26f9989d9c0ef44aa590f8f012}{%
+           family={{juliakm}},
+           familyi={j\bibinitperiod}}}%
+      }
+      \strng{namehash}{a10c5e26f9989d9c0ef44aa590f8f012}
+      \strng{fullhash}{a10c5e26f9989d9c0ef44aa590f8f012}
+      \strng{fullhashraw}{a10c5e26f9989d9c0ef44aa590f8f012}
+      \strng{bibnamehash}{a10c5e26f9989d9c0ef44aa590f8f012}
+      \strng{authorbibnamehash}{a10c5e26f9989d9c0ef44aa590f8f012}
+      \strng{authornamehash}{a10c5e26f9989d9c0ef44aa590f8f012}
+      \strng{authorfullhash}{a10c5e26f9989d9c0ef44aa590f8f012}
+      \strng{authorfullhashraw}{a10c5e26f9989d9c0ef44aa590f8f012}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Learn about how platform engineering improves each development team's security, compliance, costs, and time-to-business value.}
+      \field{howpublished}{https://learn.microsoft.com/en-us/platform-engineering/what-is-platform-engineering}
+      \field{langid}{american}
+      \field{title}{What Is {{Platform Engineering}}?}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /Users/nilsarnold/Zotero/storage/EXLSEVGH/what-is-platform-engineering.html
+      \endverb
+    \endentry
+    \entry{WasIstDevOps}{misc}{}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Erfahren Sie, was DevOps ist und wie DevOps-Verfahren und -Rollen die Automatisierung und Zusammenarbeit verbessern, um bessere Produkte für Kunden zu entwickeln.}
+      \field{howpublished}{https://azure.microsoft.com/de-de/resources/cloud-computing-dictionary/what-is-devops}
+      \field{langid}{german}
+      \field{shorttitle}{{Was ist DevOps?}}
+      \field{title}{{Was ist DevOps? Erläuterung zu DevOps |{} Microsoft Azure}}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /Users/nilsarnold/Zotero/storage/ZLGJRHST/what-is-devops.html
+      \endverb
+    \endentry
+    \entry{atlassianWasIstDevOps}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=a8fd8cd0b6d2cfda939a8ef257e60192}{%
+           family={Atlassian},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{fullhash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{fullhashraw}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{bibnamehash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{authorbibnamehash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{authornamehash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{authorfullhash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{authorfullhashraw}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{DevOps ist eine Partnerschaft zwischen Softwareentwicklung und IT-Operations, bei der Kommunikation, Zusammenarbeit und Integration im Mittelpunkt stehen.}
+      \field{howpublished}{https://www.atlassian.com/de/devops}
+      \field{journaltitle}{Atlassian}
+      \field{langid}{ngerman}
+      \field{title}{{Was ist DevOps?}}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /Users/nilsarnold/Zotero/storage/HNDQ9NL9/devops.html
+      \endverb
+    \endentry
+    \entry{WasIstCI}{misc}{}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Erfahren Sie, wie Continuous Integration \& Continuous Deployment funktionieren, was eine CI/CD-Pipeline ist und ihre Bedeutung in der Softwareentwicklung.}
+      \field{howpublished}{https://www.redhat.com/de/topics/devops/what-is-ci-cd}
+      \field{langid}{ngerman}
+      \field{shorttitle}{{Was ist CI/CD?}}
+      \field{title}{{Was ist CI/CD? |{} Automatisierung in der Softwareentwicklung}}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /Users/nilsarnold/Zotero/storage/CVR4D9ZF/what-is-ci-cd.html
+      \endverb
+    \endentry
+    \entry{rzigEmpiricalAnalysisCI2024}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=39fd1011b125e07f685dbc54690ccab0}{%
+           family={Rzig},
+           familyi={R\bibinitperiod},
+           given={Dhia\bibnamedelima Elhaq},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=ec2c3cf91e7f6b58cf630239cdca215a}{%
+           family={Houerbi},
+           familyi={H\bibinitperiod},
+           given={Alaa},
+           giveni={A\bibinitperiod}}}%
+        {{hash=160108dbee836bd671b3ffb9ced49bb4}{%
+           family={Chavan},
+           familyi={C\bibinitperiod},
+           given={Rahul\bibnamedelima Ghanshyam},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=170ef29a1ae10c951e348afe5f3afcfd}{%
+           family={Hassan},
+           familyi={H\bibinitperiod},
+           given={Foyzul},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{bbfdf3b5b03660627e938d614a45b0ae}
+      \strng{fullhash}{2f6d2bf730d1a94e4bdfcf89f380035f}
+      \strng{fullhashraw}{2f6d2bf730d1a94e4bdfcf89f380035f}
+      \strng{bibnamehash}{bbfdf3b5b03660627e938d614a45b0ae}
+      \strng{authorbibnamehash}{bbfdf3b5b03660627e938d614a45b0ae}
+      \strng{authornamehash}{bbfdf3b5b03660627e938d614a45b0ae}
+      \strng{authorfullhash}{2f6d2bf730d1a94e4bdfcf89f380035f}
+      \strng{authorfullhashraw}{2f6d2bf730d1a94e4bdfcf89f380035f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The growing popularity of machine learning (ML) and the integration of ML components with other software artifacts has led to the use of continuous integration and delivery (CI/CD) tools, such as Travis CI, GitHub Actions, etc. that enable faster integration and testing for ML projects. Such CI/CD configurations and services require synchronization during the life cycle of the projects. Several works discussed how CI/CD configuration and services change during their usage in traditional software systems. However, there is very limited knowledge of how CI/CD configuration and services change in ML projects. To fill this knowledge gap, this work presents the first empirical analysis of how CI/CD configuration evolves for ML software systems. We manually analyzed 343 commits collected from 508 open-source ML projects to identify common CI/CD configuration change categories in ML projects and devised a taxonomy of 14 co-changes in CI/CD and ML components. Moreover, we developed a CI/CD configuration change clustering tool that identified frequent CI/CD configuration change patterns in 15,634 commits. Furthermore, we measured the expertise of ML developers who modify CI/CD configurations. Based on this analysis, we found that 61.8\% of commits include a change to the build policy and minimal changes related to performance and maintainability compared to general open-source projects. Additionally, the co-evolution analysis identified that CI/CD configurations, in many cases, changed unnecessarily due to bad practices such as the direct inclusion of dependencies and a lack of usage of standardized testing frameworks. More practices were found through the change patterns analysis consisting of using deprecated settings and reliance on a generic build language. Finally, our developer's expertise analysis suggests that experienced developers are more inclined to modify CI/CD configurations.}
+      \field{howpublished}{https://arxiv.org/abs/2403.12199v4}
+      \field{journaltitle}{arXiv.org}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{title}{Empirical {{Analysis}} on {{CI}}/{{CD Pipeline Evolution}} in {{Machine Learning Projects}}}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /Users/nilsarnold/Zotero/storage/JEZFVN7I/Rzig et al. - 2024 - Empirical Analysis on CICD Pipeline Evolution in Machine Learning Projects.pdf
+      \endverb
+    \endentry
     \entry{enemosahEnhancingDevOpsEfficiency2025}{article}{}{}
       \name{author}{1}{}{%
         {{hash=4e3ed1028610a091d515ed60aa882671}{%
@@ -75,8 +373,8 @@
       \strng{authornamehash}{4e3ed1028610a091d515ed60aa882671}
       \strng{authorfullhash}{4e3ed1028610a091d515ed60aa882671}
       \strng{authorfullhashraw}{4e3ed1028610a091d515ed60aa882671}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The adoption of Artificial Intelligence (AI) in DevOps workflows has transformed traditional Continuous Integration and Deployment (CI/CD) pipelines by enabling predictive modelling to enhance efficiency, reliability, and scalability. As modern software systems grow in complexity, the need for intelligent automation to optimize CI/CD processes has become critical. This paper investigates the integration of AI-driven predictive models in DevOps pipelines, focusing on their ability to forecast build failures, optimize resource allocation, and streamline testing and deployment cycles. The study explores various AI techniques, including machine learning algorithms like regression, clustering, and neural networks, to address specific challenges in CI/CD processes. Predictive models trained on historical pipeline data can identify patterns, detect anomalies, and recommend proactive actions to prevent bottlenecks and failures. Additionally, the use of reinforcement learning enables dynamic resource management, ensuring efficient scaling during peak workloads. Key case studies illustrate the application of AI-driven predictive models in optimizing Jenkins and GitLab pipelines, achieving significant reductions in build times and improving deployment success rates. The research also highlights the role of AI in prioritizing test cases, automating performance monitoring, and enhancing feedback loops for continuous improvement. While emphasizing the benefits of AI integration, this paper also addresses challenges such as data quality, algorithm selection, and organizational readiness for adopting intelligent systems. By synthesizing these advancements, the paper provides a roadmap for leveraging AI to revolutionize DevOps workflows, paving the way for faster, more reliable software delivery in dynamic environments.}
@@ -98,7 +396,178 @@
       \verb 10.55248/gengpi.6.0125.0229
       \endverb
       \verb{file}
-      \verb /Users/nilsarnold/Zotero/storage/YEZWS2C6/Enemosah - 2025 - Enhancing DevOps Efficiency through AI-Driven Predictive Models for Continuous Integration and Deplo.pdf
+      \verb /Users/nilsarnold/Zotero/storage/JRCKUQSR/P3_OnePager.pdf;/Users/nilsarnold/Zotero/storage/YEZWS2C6/Enemosah - 2025 - Enhancing DevOps Efficiency through AI-Driven Predictive Models for Continuous Integration and Deplo.pdf
+      \endverb
+    \endentry
+    \entry{valkenborgSupervisedLearning2023}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=028c662c2910da81f954c3739721d8e2}{%
+           family={Valkenborg},
+           familyi={V\bibinitperiod},
+           given={Dirk},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b3b1ed3caa16232e08c06ba7ddc3f5bc}{%
+           family={Geubbelmans},
+           familyi={G\bibinitperiod},
+           given={Melvin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5153eb451ef2a89b7e6555423b397018}{%
+           family={Rousseau},
+           familyi={R\bibinitperiod},
+           given={Axel-Jan},
+           giveni={A\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=be11bd2fc43878930a2256e1f92c854a}{%
+           family={Burzykowski},
+           familyi={B\bibinitperiod},
+           given={Tomasz},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b773b2e01135ae407102b8807621b38}
+      \strng{fullhash}{a601b59dfab66dfac569b8104a5cce91}
+      \strng{fullhashraw}{a601b59dfab66dfac569b8104a5cce91}
+      \strng{bibnamehash}{1b773b2e01135ae407102b8807621b38}
+      \strng{authorbibnamehash}{1b773b2e01135ae407102b8807621b38}
+      \strng{authornamehash}{1b773b2e01135ae407102b8807621b38}
+      \strng{authorfullhash}{a601b59dfab66dfac569b8104a5cce91}
+      \strng{authorfullhashraw}{a601b59dfab66dfac569b8104a5cce91}
+      \field{extraname}{1}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{08895406}
+      \field{journaltitle}{American Journal of Orthodontics and Dentofacial Orthopedics}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{1}
+      \field{title}{Supervised Learning}
+      \field{urlday}{27}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{volume}{164}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{146\bibrangedash 149}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1016/j.ajodo.2023.04.010
+      \endverb
+      \verb{file}
+      \verb /Users/nilsarnold/Zotero/storage/JVXGPF3Z/Valkenborg et al. - 2023 - Supervised learning.pdf
+      \endverb
+    \endentry
+    \entry{valkenborgUnsupervisedLearning2023}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=028c662c2910da81f954c3739721d8e2}{%
+           family={Valkenborg},
+           familyi={V\bibinitperiod},
+           given={Dirk},
+           giveni={D\bibinitperiod}}}%
+        {{hash=5153eb451ef2a89b7e6555423b397018}{%
+           family={Rousseau},
+           familyi={R\bibinitperiod},
+           given={Axel-Jan},
+           giveni={A\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=b3b1ed3caa16232e08c06ba7ddc3f5bc}{%
+           family={Geubbelmans},
+           familyi={G\bibinitperiod},
+           given={Melvin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=be11bd2fc43878930a2256e1f92c854a}{%
+           family={Burzykowski},
+           familyi={B\bibinitperiod},
+           given={Tomasz},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b773b2e01135ae407102b8807621b38}
+      \strng{fullhash}{064723c019cff824262bc158debdc23e}
+      \strng{fullhashraw}{064723c019cff824262bc158debdc23e}
+      \strng{bibnamehash}{1b773b2e01135ae407102b8807621b38}
+      \strng{authorbibnamehash}{1b773b2e01135ae407102b8807621b38}
+      \strng{authornamehash}{1b773b2e01135ae407102b8807621b38}
+      \strng{authorfullhash}{064723c019cff824262bc158debdc23e}
+      \strng{authorfullhashraw}{064723c019cff824262bc158debdc23e}
+      \field{extraname}{2}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{08895406}
+      \field{journaltitle}{American Journal of Orthodontics and Dentofacial Orthopedics}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{Unsupervised Learning}
+      \field{urlday}{27}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{volume}{163}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{877\bibrangedash 882}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/j.ajodo.2023.04.001
+      \endverb
+      \verb{file}
+      \verb /Users/nilsarnold/Zotero/storage/N5EH2373/Valkenborg et al. - 2023 - Unsupervised learning.pdf
+      \endverb
+    \endentry
+    \entry{ghasemiIntroductionReinforcementLearning2024}{book}{}{}
+      \name{author}{6}{}{%
+        {{hash=e33afd19983d11ac4a0597826981f8a7}{%
+           family={Ghasemi},
+           familyi={G\bibinitperiod},
+           given={Majid},
+           giveni={M\bibinitperiod}}}%
+        {{hash=07b60a07a2b7aadb56d89b89187099ad}{%
+           family={Moosavi},
+           familyi={M\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod}}}%
+        {{hash=09be9696f13712291969319578c605d1}{%
+           family={Sorkhoh},
+           familyi={S\bibinitperiod},
+           given={Ibrahim},
+           giveni={I\bibinitperiod}}}%
+        {{hash=d33639a5d488a1fe511a97e4cfa6f458}{%
+           family={Agrawal},
+           familyi={A\bibinitperiod},
+           given={Anjali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2bd687aaceb7726b2f9ed6acf80d66c9}{%
+           family={Alzhouri},
+           familyi={A\bibinitperiod},
+           given={Fadi},
+           giveni={F\bibinitperiod}}}%
+        {{hash=06756179770f912ae780589f09d63e3c}{%
+           family={Ebrahimi},
+           familyi={E\bibinitperiod},
+           given={Dariush},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{a08fac2c70f6f103cb548d83b6b14cc1}
+      \strng{fullhash}{85b5fccafcd755033f9297f77935d420}
+      \strng{fullhashraw}{85b5fccafcd755033f9297f77935d420}
+      \strng{bibnamehash}{a08fac2c70f6f103cb548d83b6b14cc1}
+      \strng{authorbibnamehash}{a08fac2c70f6f103cb548d83b6b14cc1}
+      \strng{authornamehash}{a08fac2c70f6f103cb548d83b6b14cc1}
+      \strng{authorfullhash}{85b5fccafcd755033f9297f77935d420}
+      \strng{authorfullhashraw}{85b5fccafcd755033f9297f77935d420}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Reinforcement Learning (RL) is a branch of Artificial Intelligence (AI) which focuses on training agents to make decisions by interacting with their environment to maximize cumulative rewards. An overview of RL is provided in this paper, which discusses its core concepts, methodologies, recent trends, and resources for learning. We provide a detailed explanation of key components of RL such as states, actions, policies, and reward signals so that the reader can build a foundational understanding. The paper also provides examples of various RL algorithms, including model-free and model-based methods. In addition, RL algorithms are introduced and resources for learning and implementing them are provided, such as books, courses, and online communities. This paper demystifies a comprehensive yet simple introduction for beginners by offering a structured and clear pathway for acquiring and implementing real-time techniques.}
+      \field{month}{8}
+      \field{shorttitle}{An {{Introduction}} to {{Reinforcement Learning}}}
+      \field{title}{An {{Introduction}} to {{Reinforcement Learning}}: {{Fundamental Concepts}} and {{Practical Applications}}}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2408.07712
+      \endverb
+      \verb{file}
+      \verb /Users/nilsarnold/Zotero/storage/CSDBMLMV/Ghasemi et al. - 2024 - An Introduction to Reinforcement Learning Fundamental Concepts and Practical Applications.pdf
       \endverb
     \endentry
     \entry{petersenGuidelinesConductingSystematic2015}{article}{}{}
@@ -127,8 +596,8 @@
       \strng{authornamehash}{df3d901e4bc28bbd638fddd5b5046ed0}
       \strng{authorfullhash}{df3d901e4bc28bbd638fddd5b5046ed0}
       \strng{authorfullhashraw}{df3d901e4bc28bbd638fddd5b5046ed0}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Context Systematic mapping studies are used to structure a research area, while systematic reviews are focused on gathering and synthesizing evidence. The most recent guidelines for systematic mapping are from 2008. Since that time, many suggestions have been made of how to improve systematic literature reviews (SLRs). There is a need to evaluate how researchers conduct the process of systematic mapping and identify how the guidelines should be updated based on the lessons learned from the existing systematic maps and SLR guidelines. Objective To identify how the systematic mapping process is conducted (including search, study selection, analysis and presentation of data, etc.); to identify improvement potentials in conducting the systematic mapping process and updating the guidelines accordingly. Method We conducted a systematic mapping study of systematic maps, considering some practices of systematic review guidelines as well (in particular in relation to defining the search and to conduct a quality assessment). Results In a large number of studies multiple guidelines are used and combined, which leads to different ways in conducting mapping studies. The reason for combining guidelines was that they differed in the recommendations given. Conclusion The most frequently followed guidelines are not sufficient alone. Hence, there was a need to provide an update of how to conduct systematic mapping studies. New guidelines have been proposed consolidating existing findings.}
@@ -171,8 +640,8 @@
       \strng{authornamehash}{9b6f57dcfb1bad8dcfc0406c516b0bc6}
       \strng{authorfullhash}{9b6f57dcfb1bad8dcfc0406c516b0bc6}
       \strng{authorfullhashraw}{9b6f57dcfb1bad8dcfc0406c516b0bc6}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{PDF |{} The objective of this report is to propose comprehensive guidelines for systematic literature reviews appropriate for software engineering... |{} Find, read and cite all the research you need on ResearchGate}
@@ -210,8 +679,8 @@
       \strng{authornamehash}{e1ce15e2eeb53e3fc8c6035fd761594b}
       \strng{authorfullhash}{e1ce15e2eeb53e3fc8c6035fd761594b}
       \strng{authorfullhashraw}{e1ce15e2eeb53e3fc8c6035fd761594b}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Background: Systematic literature studies have become common in software engineering, and hence it is important to understand how to conduct them efficiently and reliably.Objective: This paper presents guidelines for conducting literature reviews using a snowballing approach, and they are illustrated and evaluated by replicating a published systematic literature review.Method: The guidelines are based on the experience from conducting several systematic literature reviews and experimenting with different approaches.Results: The guidelines for using snowballing as a way to search for relevant literature was successfully applied to a systematic literature review.Conclusions: It is concluded that using snowballing, as a first search strategy, may very well be a good alternative to the use of database searches.}
@@ -289,69 +758,97 @@
       \field{volume}{4}
       \field{year}{2025}
       \field{urldateera}{ce}
-      \true{nocite}
       \field{pages}{207\bibrangedash 221}
       \range{pages}{15}
       \verb{file}
       \verb /Users/nilsarnold/Zotero/storage/UDHVIGCD/Bajwa et al. - 2025 - CLOUD-NATIVE ARCHITECTURES FOR LARGE-SCALE AI-BASED PREDICTIVE MODELING.pdf
       \endverb
     \endentry
-    \entry{ghasemiIntroductionReinforcementLearning2024}{book}{}{}
-      \name{author}{6}{}{%
-        {{hash=e33afd19983d11ac4a0597826981f8a7}{%
-           family={Ghasemi},
-           familyi={G\bibinitperiod},
-           given={Majid},
-           giveni={M\bibinitperiod}}}%
-        {{hash=07b60a07a2b7aadb56d89b89187099ad}{%
-           family={Moosavi},
-           familyi={M\bibinitperiod},
-           given={Amir},
-           giveni={A\bibinitperiod}}}%
-        {{hash=09be9696f13712291969319578c605d1}{%
-           family={Sorkhoh},
-           familyi={S\bibinitperiod},
-           given={Ibrahim},
-           giveni={I\bibinitperiod}}}%
-        {{hash=d33639a5d488a1fe511a97e4cfa6f458}{%
-           family={Agrawal},
+    \entry{kankanalaAIMLDevOps2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=c54637b166ab49a20db11e7f19a0118d}{%
+           family={Kankanala},
+           familyi={K\bibinitperiod},
+           given={Giridhar},
+           giveni={G\bibinitperiod}}}%
+        {{hash=7e161fbd009fd1d88161234ca5a9d5e9}{%
+           family={Amgothu},
            familyi={A\bibinitperiod},
-           given={Anjali},
-           giveni={A\bibinitperiod}}}%
-        {{hash=2bd687aaceb7726b2f9ed6acf80d66c9}{%
-           family={Alzhouri},
-           familyi={A\bibinitperiod},
-           given={Fadi},
-           giveni={F\bibinitperiod}}}%
-        {{hash=06756179770f912ae780589f09d63e3c}{%
-           family={Ebrahimi},
-           familyi={E\bibinitperiod},
-           given={Dariush},
-           giveni={D\bibinitperiod}}}%
+           given={Sudheer},
+           giveni={S\bibinitperiod}}}%
       }
-      \strng{namehash}{a08fac2c70f6f103cb548d83b6b14cc1}
-      \strng{fullhash}{85b5fccafcd755033f9297f77935d420}
-      \strng{fullhashraw}{85b5fccafcd755033f9297f77935d420}
-      \strng{bibnamehash}{a08fac2c70f6f103cb548d83b6b14cc1}
-      \strng{authorbibnamehash}{a08fac2c70f6f103cb548d83b6b14cc1}
-      \strng{authornamehash}{a08fac2c70f6f103cb548d83b6b14cc1}
-      \strng{authorfullhash}{85b5fccafcd755033f9297f77935d420}
-      \strng{authorfullhashraw}{85b5fccafcd755033f9297f77935d420}
+      \strng{namehash}{8f40d10cc145cd5f53126d7d9d86045c}
+      \strng{fullhash}{8f40d10cc145cd5f53126d7d9d86045c}
+      \strng{fullhashraw}{8f40d10cc145cd5f53126d7d9d86045c}
+      \strng{bibnamehash}{8f40d10cc145cd5f53126d7d9d86045c}
+      \strng{authorbibnamehash}{8f40d10cc145cd5f53126d7d9d86045c}
+      \strng{authornamehash}{8f40d10cc145cd5f53126d7d9d86045c}
+      \strng{authorfullhash}{8f40d10cc145cd5f53126d7d9d86045c}
+      \strng{authorfullhashraw}{8f40d10cc145cd5f53126d7d9d86045c}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Reinforcement Learning (RL) is a branch of Artificial Intelligence (AI) which focuses on training agents to make decisions by interacting with their environment to maximize cumulative rewards. An overview of RL is provided in this paper, which discusses its core concepts, methodologies, recent trends, and resources for learning. We provide a detailed explanation of key components of RL such as states, actions, policies, and reward signals so that the reader can build a foundational understanding. The paper also provides examples of various RL algorithms, including model-free and model-based methods. In addition, RL algorithms are introduced and resources for learning and implementing them are provided, such as books, courses, and online communities. This paper demystifies a comprehensive yet simple introduction for beginners by offering a structured and clear pathway for acquiring and implementing real-time techniques.}
-      \field{month}{8}
-      \field{shorttitle}{An {{Introduction}} to {{Reinforcement Learning}}}
-      \field{title}{An {{Introduction}} to {{Reinforcement Learning}}: {{Fundamental Concepts}} and {{Practical Applications}}}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The rapid advancement of Artificial Intelligence (AI) and Machine Learning (ML) is significantly transforming DevOps, particularly in cloud environments, where the need for speed, security, and scalability is paramount. This research investigates how AI/ML enhances automation within DevOps workflows, improves threat detection capabilities, and optimizes workload distribution in cloud-native environments. By integrating AI/ML into Continuous Integration/Continuous Deployment (CI/CD) pipelines, we aim to improve operational efficiency and detect threats with greater precision. We also evaluate the performance of AI-based workload optimization in dynamically scaling resources, reducing latency, and minimizing resource wastage. Our experimental results demonstrate that AI-powered systems can reduce deployment times by up to 30\%, improve threat detection rates by 45\%, and significantly enhance resource management compared to traditional systems.}
+      \field{month}{10}
+      \field{title}{{{AI}}/{{ML}} -- {{DevOps Automation}}}
+      \field{volume}{13}
       \field{year}{2024}
-      \true{nocite}
+      \field{pages}{111\bibrangedash 117}
+      \range{pages}{7}
+      \verb{file}
+      \verb /Users/nilsarnold/Zotero/storage/9WYXFTMW/Kankanala und Amgothu - 2024 - AIML – DevOps Automation.pdf
+      \endverb
+    \endentry
+    \entry{jossonpaulkalapparambathAdvancingDistributedSystems2025}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=c7376b617e12d443d41d9fdb5f8eeaaa}{%
+           family={Kalapparambath},
+           familyi={K\bibinitperiod},
+           given={Josson\bibnamedelima Paul},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=5fd1ead126a81985367f7dbaca3de513}{%
+           family={Suthari},
+           familyi={S\bibinitperiod},
+           given={Yugandhar},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=94c647b98d5a26af384caedf7f3c933b}{%
+           family={Mishra},
+           familyi={M\bibinitperiod},
+           given={Gaurav},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SARC Publisher}%
+      }
+      \strng{namehash}{7e31e7b43b3b0e64328aa1fe8b133f61}
+      \strng{fullhash}{7e31e7b43b3b0e64328aa1fe8b133f61}
+      \strng{fullhashraw}{7e31e7b43b3b0e64328aa1fe8b133f61}
+      \strng{bibnamehash}{7e31e7b43b3b0e64328aa1fe8b133f61}
+      \strng{authorbibnamehash}{7e31e7b43b3b0e64328aa1fe8b133f61}
+      \strng{authornamehash}{7e31e7b43b3b0e64328aa1fe8b133f61}
+      \strng{authorfullhash}{7e31e7b43b3b0e64328aa1fe8b133f61}
+      \strng{authorfullhashraw}{7e31e7b43b3b0e64328aa1fe8b133f61}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The integration of reinforcement learning (RL) into distributed systems represents a transformative advancement in AIintegrated software engineering. This study explores the potential of RL algorithms, including Q-learning, DQN, and PPO, to optimize key aspects of distributed systems such as resource allocation, load balancing, fault tolerance, and system efficiency. Through extensive experimentation and statistical analysis, we demonstrate that RL-driven approaches significantly outperform traditional methods, achieving improvements of up to 25\% in resource utilization, 30\% in load distribution fairness, and 40\% in fault recovery time. The robustness of RL models is further validated under extreme conditions, with only a 10\% degradation in system efficiency compared to 30\% for baseline methods. Additionally, the integration of RL with AI-driven software engineering practices, such as modular code, CI/CD pipelines, and automated testing, reduces development time by 20\% and error rates by 15\%. These findings highlight the adaptability, scalability, and resilience of RL-integrated distributed systems, making them well-suited for dynamic and complex environments. Despite challenges such as computational costs and model interpretability, this research underscores the transformative potential of RL in advancing distributed systems and shaping the future of intelligent, self-optimizing software architectures.}
+      \field{issn}{2945-3585}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{shorttitle}{Advancing {{Distributed Systems}} with {{Reinforcement Learning}}}
+      \field{title}{Advancing {{Distributed Systems}} with {{Reinforcement Learning}}: {{A New Frontier}} in {{AI-Integrated Software Engineering}}}
+      \field{urlday}{2}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
       \verb{doi}
-      \verb 10.48550/arXiv.2408.07712
+      \verb 10.5281/ZENODO.15305618
       \endverb
       \verb{file}
-      \verb /Users/nilsarnold/Zotero/storage/CSDBMLMV/Ghasemi et al. - 2024 - An Introduction to Reinforcement Learning Fundamental Concepts and Practical Applications.pdf
+      \verb /Users/nilsarnold/Zotero/storage/VWLCKH4W/Josson Paul Kalapparambath et al. - 2025 - Advancing Distributed Systems with Reinforcement Learning A New Frontier in AI-Integrated Software.pdf
       \endverb
     \endentry
     \entry{govindarajanMachineLearningBased2025}{book}{}{}
@@ -370,8 +867,8 @@
       \strng{authornamehash}{9226ae4aa1b2f2be99a125a33aff9e37}
       \strng{authorfullhash}{9226ae4aa1b2f2be99a125a33aff9e37}
       \strng{authorfullhashraw}{9226ae4aa1b2f2be99a125a33aff9e37}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{3}
@@ -408,8 +905,8 @@
       \strng{authornamehash}{cadc263c0e900acb7fafa3735cd60efd}
       \strng{authorfullhash}{cadc263c0e900acb7fafa3735cd60efd}
       \strng{authorfullhashraw}{cadc263c0e900acb7fafa3735cd60efd}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{The integration of cloud-native architectures into artificial intelligence (AI) workflows has revolutionized the deployment, scalability, and efficiency of machine learning (ML) solutions. This study explores the design and evaluation of cloud-native ML models within cloud-first infrastructures, emphasizing their performance, cost-effectiveness, and scalability. Leveraging platforms such as AWS, Google Cloud, and Microsoft Azure, the research investigates data pipeline efficiency, model training metrics, inference performance, and economic viability. Statistical analyses reveal consistent accuracy, precision, and recall across models, with distinct trade-offs in resource utilization and latency between batch and real-time inference methods. The findings highlight the transformative potential of cloud-native ML in optimizing AI-driven decision-making, while identifying challenges such as resource allocation and cost management. This study serves as a foundation for advancing AI applications in cloud environments, offering insights for organizations to achieve greater agility and efficiency in AI deployment.}
@@ -455,8 +952,8 @@
       \strng{authornamehash}{c820c3d804b25e5ca97fcb4157c80f9e}
       \strng{authorfullhash}{c820c3d804b25e5ca97fcb4157c80f9e}
       \strng{authorfullhashraw}{c820c3d804b25e5ca97fcb4157c80f9e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Machine learning models are widely recognized for their strong performance in forecasting. To keep that performance in streaming data settings, they have to be monitored and frequently re-trained. This can be done with machine learning operations (MLOps) techniques under supervision of an MLOps engineer. However, in digital platform settings where the number of data streams is typically large and unstable, standard monitoring becomes either suboptimal or too labor intensive for the MLOps engineer. As a consequence, companies often fall back on very simple worse performing ML models without monitoring. We solve this problem by adopting a design science approach and introducing a new monitoring framework, the Machine Learning Monitoring Agent (MLMA), that is designed to work at scale for any ML model with reasonable labor cost. A key feature of our framework concerns test-based automated re-training based on a data-adaptive reference loss batch. The MLOps engineer is kept in the loop via key metrics and also acts, pro-actively or retrospectively, to maintain performance of the ML model in the production stage. We conduct a large-scale test at a last-mile delivery platform to empirically validate our monitoring framework.}
@@ -481,43 +978,6 @@
       \verb /Users/nilsarnold/Zotero/storage/Y7BUH58I/Hu et al. - 2025 - MLOps Monitoring at Scale for Digital Platforms.pdf;/Users/nilsarnold/Zotero/storage/CHRTNYLE/2504.html
       \endverb
       \keyw{Economics - Econometrics,Statistics - Applications}
-    \endentry
-    \entry{kankanalaAIMLDevOps2024}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=c54637b166ab49a20db11e7f19a0118d}{%
-           family={Kankanala},
-           familyi={K\bibinitperiod},
-           given={Giridhar},
-           giveni={G\bibinitperiod}}}%
-        {{hash=7e161fbd009fd1d88161234ca5a9d5e9}{%
-           family={Amgothu},
-           familyi={A\bibinitperiod},
-           given={Sudheer},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{8f40d10cc145cd5f53126d7d9d86045c}
-      \strng{fullhash}{8f40d10cc145cd5f53126d7d9d86045c}
-      \strng{fullhashraw}{8f40d10cc145cd5f53126d7d9d86045c}
-      \strng{bibnamehash}{8f40d10cc145cd5f53126d7d9d86045c}
-      \strng{authorbibnamehash}{8f40d10cc145cd5f53126d7d9d86045c}
-      \strng{authornamehash}{8f40d10cc145cd5f53126d7d9d86045c}
-      \strng{authorfullhash}{8f40d10cc145cd5f53126d7d9d86045c}
-      \strng{authorfullhashraw}{8f40d10cc145cd5f53126d7d9d86045c}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The rapid advancement of Artificial Intelligence (AI) and Machine Learning (ML) is significantly transforming DevOps, particularly in cloud environments, where the need for speed, security, and scalability is paramount. This research investigates how AI/ML enhances automation within DevOps workflows, improves threat detection capabilities, and optimizes workload distribution in cloud-native environments. By integrating AI/ML into Continuous Integration/Continuous Deployment (CI/CD) pipelines, we aim to improve operational efficiency and detect threats with greater precision. We also evaluate the performance of AI-based workload optimization in dynamically scaling resources, reducing latency, and minimizing resource wastage. Our experimental results demonstrate that AI-powered systems can reduce deployment times by up to 30\%, improve threat detection rates by 45\%, and significantly enhance resource management compared to traditional systems.}
-      \field{month}{10}
-      \field{title}{{{AI}}/{{ML}} -- {{DevOps Automation}}}
-      \field{volume}{13}
-      \field{year}{2024}
-      \true{nocite}
-      \field{pages}{111\bibrangedash 117}
-      \range{pages}{7}
-      \verb{file}
-      \verb /Users/nilsarnold/Zotero/storage/9WYXFTMW/Kankanala und Amgothu - 2024 - AIML – DevOps Automation.pdf
-      \endverb
     \endentry
     \entry{karthikputhrayaRoleCloudNativeArchitectures2025}{article}{}{}
       \name{author}{3}{}{%
@@ -548,8 +1008,8 @@
       \strng{authornamehash}{ab2788f55bf0140e7772cfe26e43a4aa}
       \strng{authorfullhash}{ab2788f55bf0140e7772cfe26e43a4aa}
       \strng{authorfullhashraw}{ab2788f55bf0140e7772cfe26e43a4aa}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The rapid advancement of machine learning (ML) necessitates scalable, efficient, and cost-effective computing environments. Traditional ML workflows often face challenges related to long training times, high inference latency, infrastructure costs, and scalability limitations. This study explores the role of cloud-native architectures in accelerating ML workflows through data engineering innovations. By leveraging microservices, containerization, serverless computing, and automated data pipelines, cloud-native environments optimize ML operations while reducing computational overhead. The results indicate a 50\% reduction in training time and inference latency, 50-55\% cost savings, and a threefold increase in scalability compared to traditional ML implementations. Moreover, cloud-native solutions enhance fault tolerance by reducing system recovery time by 80\%, ensuring greater reliability for real-time AI applications. Statistical analyses, including regression modeling, survival analysis, and PCA, confirm the efficiency gains of cloud-based ML workflows. The findings suggest that organizations adopting cloud-native ML architectures can achieve faster model deployment, reduced infrastructure costs, and enhanced system resilience. As cloud-native computing evolves, its integration with machine learning will play a pivotal role in shaping future AI-driven solutions.}
@@ -586,8 +1046,8 @@
       \strng{authornamehash}{05f0d9b4e99970e9335b7116cdfbf44c}
       \strng{authorfullhash}{05f0d9b4e99970e9335b7116cdfbf44c}
       \strng{authorfullhashraw}{05f0d9b4e99970e9335b7116cdfbf44c}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Incremental software development and deployment brought about the much-advertised Continuous Integration and Continuous Deployment (CI/CD) approaches that have changed completely how modern applications are constructed, tested, and launched. But the fast-delivery strategy hugely opened the gates to cyber threats, giving CI/CD pipelines the status of most-sought cyber-hacking targets. Traditional static security models have been frequently experienced to fail in in line with the dynamic nature of CI/CD workflows, hence allowing undetected vulnerabilities to persist and prolonging remediation. This study proposes the utilization of reinforcement learning (RL) for optimizing cybersecurity risk modeling and testing in CI/CD pipelines. The system makes maximum use of real-time threat intelligence, in combination with dynamic test selection techniques, toward maximum detection of vulnerabilities within the smallest possible amount of resource allocation. RL agents are trained to always push severe test scenarios first in a way to better absorb changing attacks and codebase dynamics. Empirical study results show improved detection rates, less test time, and better risk visibility in all stages of the pipeline, marking a major fight toward intelligent and adaptive DevOps security practices.}
@@ -652,8 +1112,8 @@
       \strng{authornamehash}{0dd0b46fc73c6e0789227eca14a62e22}
       \strng{authorfullhash}{4382a5030c18aab78bd0d6c78dcb317f}
       \strng{authorfullhashraw}{4382a5030c18aab78bd0d6c78dcb317f}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{The proliferation of edge computing systems drives the need for comprehensive frameworks that can seamlessly deploy machine learning models across edge, fog, and cloud layers. This work presents a platformagnostic Machine Learning Operations (MLOps) framework tailored for industrial applications. A novel framework enables data scientists in an industrial setting to develop and deploy AI solutions across diverse deployment modes while providing a consistent experience. We evaluate our framework on real-world industrial data by collecting performance metrics and energy measurements on training and prediction runs of two ML workflows. Then, we compare edge, fog, and cloud deployments and highlight the advantages and limitations of each deployment mode. Our results emphasize the relevance of the introduced platform-agnostic MLOps frameworks in enabling flexible and efficient AI deployments.}
@@ -703,8 +1163,8 @@
       \strng{authornamehash}{e31a2d477d0b505e025333557edd0ca3}
       \strng{authorfullhash}{e31a2d477d0b505e025333557edd0ca3}
       \strng{authorfullhashraw}{e31a2d477d0b505e025333557edd0ca3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{The final goal of all industrial machine learning (ML) projects is to develop ML products and rapidly bring them into production. However, it is highly challenging to automate and operationalize ML products and thus many ML endeavors fail to deliver on their expectations. The paradigm of Machine Learning Operations (MLOps) addresses this issue. MLOps includes several aspects, such as best practices, sets of concepts, and development culture. However, MLOps is still a vague term and its consequences for researchers and professionals are ambiguous. To address this gap, we conduct mixed-method research, including a literature review, a tool review, and expert interviews. As a result of these investigations, we contribute to the body of knowledge by providing an aggregated overview of the necessary principles, components, and roles, as well as the associated architecture and workflows. Furthermore, we provide a comprehensive definition of MLOps and highlight open challenges in the field. Finally, this work provides guidance for ML researchers and practitioners who want to automate and operate their ML products with a designated set of technologies.}
@@ -853,8 +1313,8 @@
       \strng{authornamehash}{4683043e9ae887780d7a23552e13be52}
       \strng{authorfullhash}{42ac840e4d1ecf4a8a9d695bb5ece723}
       \strng{authorfullhashraw}{42ac840e4d1ecf4a8a9d695bb5ece723}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{In this paper, we investigate the intersection of large generative AI models and cloud-native computing architectures. Recent large models such as ChatGPT, while revolutionary in their capabilities, face challenges like escalating costs and demand for high-end GPUs. Drawing analogies between large-model-as-a-service (LMaaS) and cloud database-as-a-service (DBaaS), we describe an AI-native computing paradigm that harnesses the power of both cloud-native technologies (e.g., multi-tenancy and serverless computing) and advanced machine learning runtime (e.g., batched LoRA inference). These joint efforts aim to optimize costs-of-goods-sold (COGS) and improve resource accessibility. The journey of merging these two domains is just at the beginning and we hope to stimulate future research and development in this area.}
@@ -882,8 +1342,8 @@
       \keyw{Computer Science - Distributed Parallel and Cluster Computing,Computer Science - Machine Learning}
     \endentry
     \entry{MLOpsApproachCloudnative}{misc}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{howpublished}{https://acta.sze.hu/index.php/acta/article/view/581}
       \field{title}{{{MLOps}} Approach in the Cloud-Native Data Pipeline Design |{} {{Acta Technica Jaurinensis}}}
@@ -915,8 +1375,8 @@
       \strng{authornamehash}{c92fc520e9c468054eb35415061f48cd}
       \strng{authorfullhash}{c92fc520e9c468054eb35415061f48cd}
       \strng{authorfullhashraw}{c92fc520e9c468054eb35415061f48cd}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Artificial Intelligence (AI) has become essential across industries, transforming operations, decision-making, and value creation. As organizations worldwide use AI to address challenges in areas like healthcare, finance, cybersecurity, manufacturing, and infrastructure, the need for reliable and scalable AI systems continues to grow.~This book offers practical guidance for professionals designing and deploying scalable, compliant AI solutions in production environments. It covers modernizing legacy systems, building MLOps pipelines, and addressing ethical aspects of autonomous AI, providing essential insights and patterns for real-world applications.~We cover essential topics for enterprise AI success, such as scalable architectures (cloud-native, edge, hybrid), MLOps for lifecycle management, and governance for compliance and fairness. The text also outlines frameworks for explainable and federated AI in regulated fields, supporting privacy and distributed intelligence.~We demonstrate AI\&\#39;s impact on diagnostics, fraud detection, threat intelligence, and urban planning through case studies, and review how platforms like Azure, AWS, and GCP support scalable AI deployment.~This book highlights the need for ethical AI that upholds human values, privacy, and transparency. As AI shapes society, we must design, deploy, and govern it responsibly.~I invite you to explore these chapters with a mindset of both innovation and accountability---as together, we shape a future powered by intelligent and responsible systems.}
@@ -960,8 +1420,8 @@
       \strng{authornamehash}{16d8609d3a0f0fe104a72df7de486246}
       \strng{authorfullhash}{a13448f39102828a76754dd16559e2a6}
       \strng{authorfullhashraw}{a13448f39102828a76754dd16559e2a6}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This study introduces a predictive, AI-powered auto-scaling framework designed to optimize resource usage in cloud environments, specifically within Amazon Web Services (AWS). Conventional rule-based scaling methods often result in inefficiencies, either wasting resources or degrading performance. To overcome these challenges, this work employs Long Short-Term Memory (LSTM) neural networks that analyze historical performance data collected from AWS CloudWatch. The system forecasts resource demand trends for EC2 and RDS instances and automates scaling actions using the Boto3 SDK. It evaluates multiple metrics-including CPU usage, memory availability, disk I/O, and network traffic-to make accurate, real-time decisions. Operating in a continuous loop, the model updates hourly to adapt to changing workloads. Experimental evaluation confirms that the proposed approach reduces operational costs and enhances performance reliability. This research delivers a scalable, intelligent solution for cloud resource management, suitable for dynamic application environments where responsiveness and efficiency are critical.}
@@ -996,8 +1456,8 @@
       \strng{authornamehash}{d34aa4bbe1e606585042ae9ee034e596}
       \strng{authorfullhash}{d34aa4bbe1e606585042ae9ee034e596}
       \strng{authorfullhashraw}{d34aa4bbe1e606585042ae9ee034e596}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{The convergence of Artificial Intelligence (AI) and DevOps is paving the way for transformative changes in the way software is developed, deployed, and managed, particularly in cloud environments like Microsoft Azure. By integrating AI, specifically Machine Learning (ML), into DevOps practices, organizations can achieve intelligent automation, predictive analytics, anomaly detection, and continuous optimization. This paper explores how AI can be effectively leveraged within Azure's DevOps ecosystem, offering insights into the benefits, challenges, and best practices associated with this integration. The article delves into case studies, provides strategic frameworks, and discusses future trends that will shape the evolution of AI-driven DevOps.}
@@ -1040,8 +1500,8 @@
       \strng{authornamehash}{9c9f99ab2090f7a19c3c1aab144fef5a}
       \strng{authorfullhash}{9c9f99ab2090f7a19c3c1aab144fef5a}
       \strng{authorfullhashraw}{9c9f99ab2090f7a19c3c1aab144fef5a}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The integration of AI technologies into cloud-native application development is reshaping the landscape of software engineering by enhancing scalability, flexibility, and efficiency. This paper explores the evolution of development processes driven by advancements in AI and cloud technologies, emphasizing the importance of adopting an AI mindset. It discusses how cloud-native architectures, characterized by microservices and containerization, align well with AI requirements, enabling organizations to deploy and scale AI-driven applications effectively. Key guidelines for balancing innovation with cost-efficiency are outlined, including leveraging generative AI tools, optimizing resource management, and implementing observability practices. The paper also examines the impact of AI on architectural decision-making, such as data management and real-time processing, and highlights the role of databases in managing extensive data required for AI tasks. Additionally, the paper compares legacy tools with AI-driven tools in accelerating development processes and addresses security considerations in AI-enabled cloud-native applications. The future direction of AI-driven cloud-native development is discussed, focusing on advancements in efficiency, scalability, and security.}
@@ -1076,8 +1536,8 @@
       \strng{authornamehash}{cfb346d1117a551571902e85149949a7}
       \strng{authorfullhash}{cfb346d1117a551571902e85149949a7}
       \strng{authorfullhashraw}{cfb346d1117a551571902e85149949a7}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{This paper explores the transformative role of Artificial Intelligence (AI) in enhancing DevOps pipelines, focusing on Continuous Integration (CI), Continuous Delivery (CD), and automation in infrastructural management. As organizations increasingly adopt DevOps methodologies to streamline software development and delivery processes, the integration of AI technologies offers significant potential for improving efficiency, quality, and responsiveness. This study reviews current practices in CI/CD and examines how AI-driven tools can automate repetitive tasks, optimize resource allocation, and facilitate predictive analytics for proactive decision-making. Additionally, the paper discusses the challenges and considerations associated with AI integration in DevOps, including cultural shifts, data governance, and the need for skilled personnel. Projections for future developments highlight the potential for AI to create smarter, more adaptive DevOps environments that align with evolving industry demands. By identifying key trends and innovations, this research provides a comprehensive overview of the future landscape of DevOps, positioning AI as a critical enabler of agility and performance.}
@@ -1120,8 +1580,8 @@
       \strng{authornamehash}{d33b1fef1fd7925f5e8a0b249c5dfb93}
       \strng{authorfullhash}{d33b1fef1fd7925f5e8a0b249c5dfb93}
       \strng{authorfullhashraw}{d33b1fef1fd7925f5e8a0b249c5dfb93}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The integration of artificial intelligence (AI) and machine learning (ML) into Continuous Integration and Continuous Deployment (CI/CD) pipelines has the potential to significantly enhance the agility, reliability, and efficiency of software development processes. This research paper investigates the application of AI-enhanced methodologies within CI/CD pipelines, focusing on how machine learning models can be utilized to address core challenges in agile software development, particularly in the domains of predictive failure detection, automated rollbacks, and adaptive deployment strategies. The study posits that by embedding intelligent systems into CI/CD workflows, software teams can mitigate risks, reduce downtime, and achieve more reliable and faster releases, while simultaneously improving overall software quality.}
@@ -1152,8 +1612,8 @@
       \strng{authornamehash}{d5201d2d39584770a1570e644bcc3a0c}
       \strng{authorfullhash}{d5201d2d39584770a1570e644bcc3a0c}
       \strng{authorfullhashraw}{d5201d2d39584770a1570e644bcc3a0c}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2582-2160}
@@ -1194,8 +1654,8 @@
       \strng{authornamehash}{9b5fc6aa5f83bad6b0d9b4fcf0df62b7}
       \strng{authorfullhash}{9b5fc6aa5f83bad6b0d9b4fcf0df62b7}
       \strng{authorfullhashraw}{9b5fc6aa5f83bad6b0d9b4fcf0df62b7}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Unlock the future of software development with Integrating Artificial Intelligence with DevOps: Advanced Techniques, Predictive Analytics, and Automation for Real-Time Optimization and Security in Modern Software Development. This comprehensive monograph is a must-read for professionals seeking to revolutionize their DevOps workflows through the power of AI.Dive deep into the intricate integration of Artificial Intelligence within DevOps practices and discover advanced methodologies that enhance every stage of the software development lifecycle. From predictive analytics and intelligent automation to real-time optimization and robust security measures, this book offers a wealth of knowledge for optimizing software delivery.Explore practical applications, in-depth case studies, and best practices that illustrate the transformative potential of AI in DevOps. Each chapter builds on the previous, providing a seamless and cohesive narrative that guides readers through foundational concepts to advanced implementations. Whether you\&\#39;re looking to improve CI/CD pipelines, automate testing and monitoring, manage infrastructure more efficiently, or enhance security with AI-driven techniques, this book equips you with the tools and insights needed to ensure high-quality, secure, and efficient software delivery.Join the vanguard of modern software development with Integrating Artificial Intelligence with DevOps, and harness AI to achieve real-time optimization and unparalleled security in your DevOps processes.}
@@ -1239,8 +1699,8 @@
       \strng{authornamehash}{4a7598a4555e291e5c6b6b4f7d52b779}
       \strng{authorfullhash}{22025700c01e0b1db596ac9da22dd831}
       \strng{authorfullhashraw}{22025700c01e0b1db596ac9da22dd831}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{The rapid adoption of cloud infrastructure has transformed organizational operations, offered scalability and flexibility but also exposed enterprises to sophisticated cyber threats, such as data breaches, ransomware, and insider attacks. AI-based threat detection systems have emerged as a critical solution, leveraging machine learning, deep learning, and behavioral analytics to identify and mitigate threats in real time. This paper proposes novel architecture for AI-based threat detection in cloud infrastructure, addressing the unique challenges of dynamic, distributed environments. Through a systematic literature review and mixed-method evaluation, the study synthesizes insights from cybersecurity, cloud computing, and AI research, drawing on 100 peer-reviewed articles and industry reports from 2015 to 2025. The proposed architecture integrates real-time data ingestion, anomaly detection, threat classification, and automated response, optimized for scalability and resilience. Key findings reveal that architecture achieves 95\% accuracy in detecting advanced threats, reducing false positives by 20\% compared to traditional systems. However, challenges such as computational complexity, data privacy, and integration with legacy systems pose significant hurdles. Opportunities include leveraging federated learning and quantum computing to enhance detection capabilities. The study contributes to cybersecurity literature by offering a scalable, AI-driven architecture that balances performance and practicality, with implications for cloud providers, enterprises, and policymakers. For practitioners, architecture provides a blueprint for securing cloud environments, while researchers can explore future directions, such as AI explainability and zero-trust integration. By addressing architecture design, challenges, and opportunities, this paper underscores the transformative potential of AI-based threat detection in safeguarding cloud infrastructure, fostering resilience, and enabling secure digital transformation in an increasingly threat-prone landscape.}
@@ -1264,259 +1724,6 @@
       \endverb
       \verb{file}
       \verb /Users/nilsarnold/Zotero/storage/CKZTISVG/Uddoh et al. - 2021 - AI-Based Threat Detection Systems for Cloud Infrastructure Architecture, Challenges, and Opportunit.pdf
-      \endverb
-    \endentry
-    \entry{valkenborgSupervisedLearning2023}{article}{}{}
-      \name{author}{4}{}{%
-        {{hash=028c662c2910da81f954c3739721d8e2}{%
-           family={Valkenborg},
-           familyi={V\bibinitperiod},
-           given={Dirk},
-           giveni={D\bibinitperiod}}}%
-        {{hash=b3b1ed3caa16232e08c06ba7ddc3f5bc}{%
-           family={Geubbelmans},
-           familyi={G\bibinitperiod},
-           given={Melvin},
-           giveni={M\bibinitperiod}}}%
-        {{hash=5153eb451ef2a89b7e6555423b397018}{%
-           family={Rousseau},
-           familyi={R\bibinitperiod},
-           given={Axel-Jan},
-           giveni={A\bibinithyphendelim J\bibinitperiod}}}%
-        {{hash=be11bd2fc43878930a2256e1f92c854a}{%
-           family={Burzykowski},
-           familyi={B\bibinitperiod},
-           given={Tomasz},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{1b773b2e01135ae407102b8807621b38}
-      \strng{fullhash}{a601b59dfab66dfac569b8104a5cce91}
-      \strng{fullhashraw}{a601b59dfab66dfac569b8104a5cce91}
-      \strng{bibnamehash}{1b773b2e01135ae407102b8807621b38}
-      \strng{authorbibnamehash}{1b773b2e01135ae407102b8807621b38}
-      \strng{authornamehash}{1b773b2e01135ae407102b8807621b38}
-      \strng{authorfullhash}{a601b59dfab66dfac569b8104a5cce91}
-      \strng{authorfullhashraw}{a601b59dfab66dfac569b8104a5cce91}
-      \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{08895406}
-      \field{journaltitle}{American Journal of Orthodontics and Dentofacial Orthopedics}
-      \field{langid}{english}
-      \field{month}{7}
-      \field{number}{1}
-      \field{title}{Supervised Learning}
-      \field{urlday}{27}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
-      \field{volume}{164}
-      \field{year}{2023}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \field{pages}{146\bibrangedash 149}
-      \range{pages}{4}
-      \verb{doi}
-      \verb 10.1016/j.ajodo.2023.04.010
-      \endverb
-      \verb{file}
-      \verb /Users/nilsarnold/Zotero/storage/JVXGPF3Z/Valkenborg et al. - 2023 - Supervised learning.pdf
-      \endverb
-    \endentry
-    \entry{valkenborgUnsupervisedLearning2023}{article}{}{}
-      \name{author}{4}{}{%
-        {{hash=028c662c2910da81f954c3739721d8e2}{%
-           family={Valkenborg},
-           familyi={V\bibinitperiod},
-           given={Dirk},
-           giveni={D\bibinitperiod}}}%
-        {{hash=5153eb451ef2a89b7e6555423b397018}{%
-           family={Rousseau},
-           familyi={R\bibinitperiod},
-           given={Axel-Jan},
-           giveni={A\bibinithyphendelim J\bibinitperiod}}}%
-        {{hash=b3b1ed3caa16232e08c06ba7ddc3f5bc}{%
-           family={Geubbelmans},
-           familyi={G\bibinitperiod},
-           given={Melvin},
-           giveni={M\bibinitperiod}}}%
-        {{hash=be11bd2fc43878930a2256e1f92c854a}{%
-           family={Burzykowski},
-           familyi={B\bibinitperiod},
-           given={Tomasz},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{1b773b2e01135ae407102b8807621b38}
-      \strng{fullhash}{064723c019cff824262bc158debdc23e}
-      \strng{fullhashraw}{064723c019cff824262bc158debdc23e}
-      \strng{bibnamehash}{1b773b2e01135ae407102b8807621b38}
-      \strng{authorbibnamehash}{1b773b2e01135ae407102b8807621b38}
-      \strng{authornamehash}{1b773b2e01135ae407102b8807621b38}
-      \strng{authorfullhash}{064723c019cff824262bc158debdc23e}
-      \strng{authorfullhashraw}{064723c019cff824262bc158debdc23e}
-      \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{08895406}
-      \field{journaltitle}{American Journal of Orthodontics and Dentofacial Orthopedics}
-      \field{langid}{english}
-      \field{month}{6}
-      \field{number}{6}
-      \field{title}{Unsupervised Learning}
-      \field{urlday}{27}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
-      \field{volume}{163}
-      \field{year}{2023}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \field{pages}{877\bibrangedash 882}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1016/j.ajodo.2023.04.001
-      \endverb
-      \verb{file}
-      \verb /Users/nilsarnold/Zotero/storage/N5EH2373/Valkenborg et al. - 2023 - Unsupervised learning.pdf
-      \endverb
-    \endentry
-    \entry{zaaloukCLOUDNATIVEARTIFICIAL}{article}{}{}
-      \name{author}{23}{}{%
-        {{hash=8baa4ca8515285085f32bd1d6d5b5e29}{%
-           family={Zaalouk},
-           familyi={Z\bibinitperiod},
-           given={Adel},
-           giveni={A\bibinitperiod}}}%
-        {{hash=827b9c11231c758e1cc0c05c0eb49a84}{%
-           family={Jones},
-           familyi={J\bibinitperiod},
-           given={Alex},
-           giveni={A\bibinitperiod}}}%
-        {{hash=ec8d34a976b8881afe5a05f6d14961b6}{%
-           family={Velichkevich},
-           familyi={V\bibinitperiod},
-           given={Andrey},
-           giveni={A\bibinitperiod}}}%
-        {{hash=2444b75f6dd67d9c6b90e9895a299497}{%
-           family={Kurktchiev},
-           familyi={K\bibinitperiod},
-           given={Boris},
-           giveni={B\bibinitperiod}}}%
-        {{hash=3373286ec9393bbb3f59c9d9784d820a}{%
-           family={Chin},
-           familyi={C\bibinitperiod},
-           given={Cassandra},
-           giveni={C\bibinitperiod}}}%
-        {{hash=383de569c79803b1339e4755e4720b25}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Cathy},
-           giveni={C\bibinitperiod}}}%
-        {{hash=59443ee356aa24160bba144a842d9d56}{%
-           family={Misale},
-           familyi={M\bibinitperiod},
-           given={Claudia},
-           giveni={C\bibinitperiod}}}%
-        {{hash=e01ddbdb3b443a2d586abe717ee330e8}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Huamin},
-           giveni={H\bibinitperiod}}}%
-        {{hash=76655833d0fc07f221f27d12a7d5dd2d}{%
-           family={Roberts},
-           familyi={R\bibinitperiod},
-           given={Joel},
-           giveni={J\bibinitperiod}}}%
-        {{hash=2952692044358d1ad1b4f197b2e587b0}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Kai-Hsun},
-           giveni={K\bibinithyphendelim H\bibinitperiod}}}%
-        {{hash=b56ce2e02bedd55a1259303ff8d3e3e2}{%
-           family={Bhandaru},
-           familyi={B\bibinitperiod},
-           given={Malini},
-           giveni={M\bibinitperiod}}}%
-        {{hash=1c55a02ee50b59ad1cda6fe6928af29e}{%
-           family={Yao},
-           familyi={Y\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=2a208eaa5f9a2739fcaa0245beb18b05}{%
-           family={Raghunath},
-           familyi={R\bibinitperiod},
-           given={Nikhita},
-           giveni={N\bibinitperiod}}}%
-        {{hash=78629182b60f5c148792b56bfc573ea6}{%
-           family={Pan},
-           familyi={P\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod}}}%
-        {{hash=69046475c66d138ea86c2e3d5a70b49f}{%
-           family={Kakodkar},
-           familyi={K\bibinitperiod},
-           given={Rajas},
-           giveni={R\bibinitperiod}}}%
-        {{hash=b67eadb609ba539aecf75a531b2fa9a5}{%
-           family={Pandey},
-           familyi={P\bibinitperiod},
-           given={Rasik},
-           giveni={R\bibinitperiod}}}%
-        {{hash=013e539d123fe56343ac31e0d6c49d37}{%
-           family={Aravena},
-           familyi={A\bibinitperiod},
-           given={Ricardo},
-           giveni={R\bibinitperiod}}}%
-        {{hash=0bd060eeb33d53c333d0b44f0c342aa1}{%
-           family={Petty},
-           familyi={P\bibinitperiod},
-           given={Ronald},
-           giveni={R\bibinitperiod}}}%
-        {{hash=16160f343d1565fbeed8e034cf9c32d0}{%
-           family={Taylor},
-           familyi={T\bibinitperiod},
-           given={Ryan},
-           giveni={R\bibinitperiod}}}%
-        {{hash=7174b21445da3ee7e0b7fe14edb2c53e}{%
-           family={Sheikh},
-           familyi={S\bibinitperiod},
-           given={Saad},
-           giveni={S\bibinitperiod}}}%
-        {{hash=ec1e1d70c7065a6357484845726109e6}{%
-           family={Wilson},
-           familyi={W\bibinitperiod},
-           given={Shawn},
-           giveni={S\bibinitperiod}}}%
-        {{hash=7681d282e3ca9adada12a2d42376c26e}{%
-           family={Thorley},
-           familyi={T\bibinitperiod},
-           given={Tom},
-           giveni={T\bibinitperiod}}}%
-        {{hash=10e7564242f6f7f4d4be3c652b39df8b}{%
-           family={Lu},
-           familyi={L\bibinitperiod},
-           given={Victor},
-           giveni={V\bibinitperiod}}}%
-      }
-      \strng{namehash}{154407a6eecfb006497ec8964decfca6}
-      \strng{fullhash}{c22582264edda7f1da4f1b430b778feb}
-      \strng{fullhashraw}{c22582264edda7f1da4f1b430b778feb}
-      \strng{bibnamehash}{154407a6eecfb006497ec8964decfca6}
-      \strng{authorbibnamehash}{154407a6eecfb006497ec8964decfca6}
-      \strng{authornamehash}{154407a6eecfb006497ec8964decfca6}
-      \strng{authorfullhash}{c22582264edda7f1da4f1b430b778feb}
-      \strng{authorfullhashraw}{c22582264edda7f1da4f1b430b778feb}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{title}{{{CLOUD NATIVE ARTIFICIAL INTELLIGENCE}}}
-      \true{nocite}
-      \verb{file}
-      \verb /Users/nilsarnold/Zotero/storage/JTPD487Y/Zaalouk et al. - NATIVE ARTIFICIAL INTELLIGENCE.pdf
       \endverb
     \endentry
   \enddatalist
