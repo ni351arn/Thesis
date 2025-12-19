@@ -1,68 +1,39 @@
-% (Im Dokument an der Stelle, wo die Tabelle hin soll)
-
-\clearpage % wichtig: neue Seite starten
-
-\begin{landscape}
-\begin{table}[p]
-\begin{flushleft} % startet links (nicht zentriert)
-
-\caption{Übersicht der KI-Anwendungsfelder: Tasks, Daten, Methoden und Ziele}
-\label{tab:anwendungsfelder-5x5}
-
+\begin{table}[htbp]
+\caption{Predictive Auto-Scaling \& Resource Optimization}
+\label{tab:predictiveAutoScaling}
 \footnotesize
-\renewcommand{\arraystretch}{1.15}
-\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{6pt}
 
-\begin{tabularx}{\linewidth}{p{3.6cm} Y Y Y Y}
+\begin{tabularx}{\linewidth}{p{4.2cm} Y Y}
 \toprule
-\textbf{Anwendungsfelder} &
-\textbf{Konkrete Plattform-Task} &
-\textbf{Genutzte Daten} &
-\textbf{KI-Methode} &
-\textbf{Ziel} \\
+\textbf{Kategorie} & \textbf{Details} & \textbf{Beispielpaper} \\
 \midrule
 
-Ressourcenoptimierung
-& \emph{Vorausschauendes Auto-Scaling von Cloud-Ressourcen (z. B. AWS EC2, RDS, oder Kubernetes-Cluster), Dynamische Anpassung der VM-Konfigurationen und Right-sizing.")}
-& \emph{"Datenquelle: Historische Leistungsdaten (CPU-Auslastung, Netzwerk-Traffic, Disk I/O, Speicherkapazität). , Nutzung: Gesammelt über AWS CloudWatch oder Prometheus/Grafana (für Kubernetes). , Die Daten werden zur Vorhersage zukünftiger Ressourcenbedarfstrends und Workload-Muster genutzt."}
-& \emph{Prädiktive Analytik (Zeitreihenanalyse). Spezifische Algorithmen: Long Short-Term Memory (LSTM) neuronale Netze. 
-RL zur dynamischen Anpassung der Ressourcenzuteilung.}
-& \emph{"Reduzierung der Betriebskosten. 
-Steigerung der Ressourceneffizienz und -auslastung (z. B. 25\% Verbesserung der Ressourcenauslastung). 
-Wartung der optimalen Anwendungs-Performance."} \\
-\addlinespace[2pt]
+Plattform-Aufgabe &
+\textit{Vorausschauende Skalierung von Instanzen (EC2, RDS) und Pod-Counts basierend auf Lastprognosen} &
+\textit{\cite{poudelAIDrivenIntelligentAutoScaling2025a}, \cite{kankanalaAIMLDevOps2024}} \\
 
-Zuverlässigkeit / CI/CD Automation
-& \emph{Prädiktive Fehlererkennung in Build- und Deployment-Pipelines. 
-Automatisierte Rollbacks bei erkannten Anomalien. 
-Adaptive Deployment-Strategien (z. B. dynamische Anpassung von Blue/Green- oder Canary-Rollouts). }
-& \emph{Datenquelle: Historische Build-Logs (mit Zeitstempeln, Fehlermeldungen, Warnungen). 
-Test-Ergebnisse (Pass/Fail-Raten). 
-System-Performance-Metriken (Latenz, Fehlerraten, Ressourcennutzung während des Deployments). 
-Nutzung: Analyse von Mustern, die auf bevorstehende Fehler hindeuten. Kontinuierliches Monitoring zur Auslösung von automatisierten Korrekturmaßnahmen.}
-& \emph{SL für Fehler-Vorhersage(Random Forests, Entscheidungsbäume, Neuronale Netze). 
-UL für Anomalieerkennung ( Autoencoder, Isolation Forests, K-Means Clustering).
-RL für optimierte Rollbacks und Testpriorisierung. (Deep Q-Networks (DQN), PPO, Q-Learning)"}
-& \emph{Reduzierung der Deployment-Zeit (z. B. 40\% Reduzierung der Testzeit). Reduzierung der Fehlerraten (Error Rate Reduction, z. B. 15\%). Minimierung der Downtime (z. B. 30\% Reduzierung durch proaktive Rollbacks). Verbesserung der Software-Zuverlässigkeit.} \\
-\addlinespace[2pt]
+Datenquellen &
+\textit{Metriken: CPU-Auslastung, Memory, Disk I/O, Netzwerk-Traffic (CloudWatch/Prometheus)} &
+\textit{\cite{poudelAIDrivenIntelligentAutoScaling2025a}, \cite{kankanalaAIMLDevOps2024}} \\
 
-Sicherheit / Bedrohungserkennung
-& \emph{(eintragen: z.B. Detection, Alert Triage, Policy Violations, Secret/Leak Scans)}
-& \emph{(eintragen: z.B. Security-Logs, Netzwerk-Flows, Audit-Logs, IAM-Events)}
-& \emph{(eintragen: z.B. Anomalieerkennung, Clustering, Klassifikation)}
-& \emph{(eintragen: z.B. Angriffe erkennen, False Positives senken, Compliance unterstützen)} \\
-\addlinespace[2pt]
+Datenverwendung &
+\textit{Analyse historischer Zeitreihen zur Identifikation von saisonalen Mustern und Lastspitzen} &
+\textit{\cite{poudelAIDrivenIntelligentAutoScaling2025a}, \cite{kankanalaAIMLDevOps2024}} \\
 
-Betrieb / Orchestrierung
-& \emph{(eintragen: z.B. Incident Response, Self-Healing, Runbook Automation, Triage)}
-& \emph{(eintragen: z.B. Alerts, Tickets, SLO/SLI, Logs/Traces, Topologie-Daten)}
-& \emph{(eintragen: z.B. Root-Cause-Ansätze, Empfehlungssysteme, Agenten/Workflow-Automation)}
-& \emph{(eintragen: z.B. Stabilität erhöhen, Operator entlasten, schnellere Entstörung)} \\
+KI-Methoden &
+\textit{LSTM (Long Short-Term Memory) für Zeitreihen; Reinforcement Learning (Q-Learning, PPO) zur Optimierung der Ressourcenallokation} &
+\textit{\cite{poudelAIDrivenIntelligentAutoScaling2025a}, \cite{jossonpaulkalapparambathAdvancingDistributedSystems2025}} \\
+
+Konkrete Tools &
+\textit{AWS Boto3 SDK, KEDA (Kubernetes Event-driven Autoscaling), TensorFlow/PyTorch für Modelltraining} &
+\textit{\cite{poudelAIDrivenIntelligentAutoScaling2025a}, \cite{kankanalaAIMLDevOps2024}, \cite{zaaloukCLOUDNATIVEARTIFICIAL}} \\
+
+Vorteile (Ziele) &
+\textit{Reduzierung der Cloud-Kosten um bis zu 25-50\%; Vermeidung von Performance-Engpässen durch Skalierung vor dem Erreichen von Schwellenwerten} &
+\textit{\cite{poudelAIDrivenIntelligentAutoScaling2025a}, \cite{karthikputhrayaRoleCloudNativeArchitectures2025}} \\
+
 \bottomrule
 \end{tabularx}
-
-\end{flushleft}
 \end{table}
-\end{landscape}
-
-\clearpage % wichtig: danach wieder zurück ins Hochformat
