@@ -1,10 +1,15 @@
 \section{Quantitative Analyse}
 \label{sec:quantitativeAnalyse}
 
-Zur Einordnung des untersuchten Forschungsfeldes wurden zunächst grundlegende Merkmale der insgesamt 21 Studien analysiert. Abbildung \ref{fig:04_01_quantitativeAnalyse} a) zeigt die jährliche Verteilung der Publikationen sowie die Zuordnung zu verschiedenen Publikationstypen. Zwischen 2021 und 2023 erscheinen nur wenige Arbeiten (insgesamt fünf), während ab 2024 ein deutlicher Anstieg sichtbar wird. 
-In den Jahren 2024 und 2025 wurden jeweils acht Publikationen identifiziert, überwiegend Journalartikel, ergänzt durch einzelne Konferenzbeiträge, ArXiv-Papers und ein Whitepaper. Dies weist auf ein zunehmendes wissenschaftliches Interesse am Einsatz von KI in Cloud-Native- und Platform-Engineering-Kontexten hin.
+Zur Einordnung des untersuchten Forschungsfeldes wurden zunächst grundlegende Merkmale der insgesamt 18 Studien analysiert. 
+Abbildung \ref{fig:04_01_quantitativeAnalyse} a) zeigt die jährliche Verteilung der Publikationen sowie die Zuordnung zu verschiedenen Publikationstypen. 
+Zwischen 2021 und 2023 erscheinen nur wenige Arbeiten (insgesamt drei), während ab 2024 ein deutlicher Anstieg sichtbar wird. 
+Im Jahr 2024 wurden sieben und 2025 wurden acht Publikationen identifiziert, überwiegend Journalartikel, ergänzt durch jeweils ein Konferenzbeitrag, ArXiv-Paper und Whitepaper. 
+Dies weist auf ein zunehmendes wissenschaftliches Interesse am Einsatz von KI in Cloud-Native- und Platform-Engineering-Kontexten hin.
+Das lässt sich auch unter anderem auf Grund des ChatGPT/ GenAI Hype in den letzten beiden Jahren erklären \cite{luComputingEraLarge2024a}. 
 
-Ergänzend dazu zeigt eine Word Cloud (Abbildung \ref{fig:04_01_quantitativeAnalyse} b) die am häufigsten vorkommenden Keywords aus allen Publikationen. Die Visualisierung bietet einen schnellen Überblick über zentrale thematische Schwerpunkte der Literatur und unterstützt die anschließende inhaltliche Analyse.
+Ergänzend dazu zeigt eine Word Cloud (Abbildung \ref{fig:04_01_quantitativeAnalyse} b) die am häufigsten vorkommenden Keywords aus allen Publikationen. 
+Die Visualisierung bietet einen schnellen Überblick über zentrale thematische Schwerpunkte der Literatur und unterstützt die anschließende inhaltliche Analyse.
 
 \begin{figure}[H]
     \centering
@@ -17,16 +22,21 @@ Diese Betrachtung bildet die Grundlage für die folgenden Unterkapitel, in denen
 
 \subsection{Anwendungsbereiche der KI im Platform Engineering}
 \label{subsec:anwendungsbereiche}
-Im ersten Schritt der quantitativen Analyse wurden die insgesamt 21 identifizierten Studien hinsichtlich ihrer Hauptanwendungsbereiche untersucht. 
-Dazu wurden die ausgewählten Bereiche in fünf Kategorien unterteilt: Optimierung von CI/CD-Pipelines, Ressourcen- und Workload-Optimierung, Sicherheits- und Bedrohungserkennung, Resilienz, Self-Healing und Predictive Maintenance sowie Intelligente Bereitstellung (Edge-AI und Serverless Deployment).
+Im ersten Schritt der quantitativen Analyse wurden die insgesamt 18 identifizierten Studien hinsichtlich ihrer Hauptanwendungsbereiche untersucht. 
+Dazu wurden die ausgewählten Bereiche in vier Kategorien unterteilt: 
+Optimierung von CI/CD-Pipelines, Ressourcen- und Workload-Optimierung, Sicherheits- und Bedrohungserkennung sowie Betrieb und Orchestrierung der Plattform (GenOps).
 
-Die Auswertung zeigt, dass CI/CD-Automatisierung mit acht Publikationen am häufigsten als primärer Anwendungsbereich beschrieben wird. 
-An zweiter Stelle folgt die Ressourcen- und Workload-Optimierung, die in vier Studien als primärer Anwendungsbereich genannt wird.
-Ebenfalls wird die intelligente Bereitstellung mittels Edge-AI oder Serverless Deployment in vier Publikationen als zentraler Anwendungsbereich beschrieben.
-Der vierte Bereich, Resilienz, Self-Healing und Predictive Maintenance wird insgesamt dreimal als Hauptanwendungsbereich definiert.
-Sicherheits- und Bedrohungserkennung steht in zwei Studien im Mittelpunkt. 
+Die Auswertung zeigt, dass Ressourcen- und Workload-Optimierung mit sieben Publikationen am häufigsten als dominanter Use Case auftritt.
+Ein plausibler Grund ist, dass Maßnahmen in diesem Bereich häufig einen direkten, messbaren Hebel auf Kosten und Performance haben (z.B. bessere Ressourcen-Auslastung oder stabilere Laufzeiten) \cite{karthikputhrayaRoleCloudNativeArchitectures2025}.
+An zweiter Stelle folgt der Bereich Betrieb und Orchestrierung mit fünf Publikationen.
+Dies deutet darauf hin, dass KI-Ansätze besonders im laufenden Betrieb relevant sind, etwa zur Unterstützung von Monitoring oder der automatisierten Steuerung von Plattformkomponenten. \cite{reddygopireddyIntegratingAIDevOps2022}
+Die Optimierung von CI/CD-Pipelines und Sicherheits- und Bedrohungserkennung sind mit jeweils drei Publikationen vertreten.
+Das lässt sich daraus erklären, dass diese beiden Anwendungsfelder zwar in vielen Publikationen thematisiert werden, jedoch seltener als primärer Fokus der Studie dienen. 
+Die Optimierung der CI/CD-Pipeline wird oft als Teilaspekt in ein größeres Gesamtbild der Infrastruktur-Transformation behandelt \cite{supritpattanayakIntegratingAIDevOps2024}.
 Abbildung \ref{fig:04_01_01_useCases} zeigt diese Verteilung.
-Zu beachten ist, dass viele Studien mehr als einen Bereich ansprechen. Für die Vergleichbarkeit wurde jedoch jeweils der dominante Use Case pro Publikation ausgewählt. In der Praxis überschneiden sich die Anwendungsbereiche häufig, da KI-Lösungen oft mehrere Aufgaben gleichzeitig unterstützen.
+Zu beachten ist, dass viele Studien mehr als einen Bereich ansprechen. 
+Für die Vergleichbarkeit wurde jedoch jeweils der dominante Use Case pro Publikation ausgewählt. 
+In der Praxis überschneiden sich die Anwendungsbereiche häufig, da KI-Lösungen oft mehrere Aufgaben gleichzeitig unterstützen.
 
 \begin{figure}[H]
     \centering
@@ -39,15 +49,16 @@ Zu beachten ist, dass viele Studien mehr als einen Bereich ansprechen. Für die 
 \subsection{Herausforderungen der KI-Integration im Platform Engineering}
 \label{subsec:herausforderungen}
 Im nächsten Schritt wurden die in den Publikationen beschriebenen Herausforderungen analysiert, die beim Einsatz von KI im Platform Engineering auftreten. 
-Die analysierten Paper wurden fünf Kategorien zugeordnet. Die Auswertung zeigt, dass 95 \% (20/21) der Studien Herausforderungen im Bereich Ressourcenverbrauch und Kosten nennen. 
-Ebenfalls häufig angesprochen werden Skalierbarkeit, Latenz und Monitoring mit 90 \% (19/21). 
-AI Governance, Datenschutz und Compliance findet sich in 81 \% (17/21) der Arbeiten wieder, ebenso wie die Kategorie Integrationskomplexität  und Abhängigkeiten.
-Die fünfte Kategorie, Datenqualität, Datenverfügbarkeit und Heterogenität, wird in insgesamt 71 \% (15/21) der Arbeiten als Herausforderung thematisiert.  
+Die analysierten Paper wurden fünf Kategorien zugeordnet. 
+Die prozentuale ist in Abbildung \ref{fig:04_01_02_herausforderungen} dargestellt.
 
-Diese Ergebnisse verdeutlichen, dass KI-Anwendungen im Platform Engineering häufig mit mehreren technischen, operativen und organisatorischen Hürden verbunden sind. 
-Viele der Herausforderungen treten zudem gleichzeitig auf, da beispielsweise Skalierungsprobleme oft in engem Zusammenhang mit Ressourcenkosten oder Datenqualität stehen. 
-Die prozentuale Verteilung ist in Abbildung \ref{fig:04_01_02_herausforderungen} dargestellt.
+Die Auswertung zeigt, dass Ressourcenverbrauch und Kosten mit 94 \% (17/18) am häufigsten als Herausforderung genannt werden. 
+Ebenfalls häufig werden Skalierbarkeit, Latenz und Monitoring mit 83\% (15/18) sowie AI Governance, Datenschutz und Compliance mit 83\% (15/18) adressiert.
+Integrationskomplexität und Abhängigkeiten werden in 78\% (15/18) der Studien thematisiert.
+Die fünfte Kategorie, Datenqualität, Datenverfügbarkeit und Heterogenität, wird in 72\% (13/18) der Arbeiten als Herausforderung genannt.
 
+Diese Ergebnisse deuten auf ein Spannungsfeld hin: KI wird zwar eingesetzt, um Plattformen effizienter und kostengünstiger zu betreiben, erzeugt jedoch durch Training, Inferenz und zusätzliche Observability- und Datenpipelines oft selbst signifikante Ressourcen- und Betriebskosten \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
+Die hohe Nennung von AI Governance, Datenschutz und Compliance legt zudem nahe, dass der produktive KI-Einsatz in Plattformen häufig weniger an der reinen technischen Machbarkeit scheitert, sondern stark durch Anforderungen an Datenzugriff, Nachvollziehbarkeit und Regelkonformität begrenzt wird \cite{tamanampudiAIEnhancedContinuousIntegration}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_01_quantitativ/04_01_02_herausforderungen.png}
@@ -63,9 +74,9 @@ Dabei wurde unterschieden zwischen (1) explizit benannt, (2) implizit anhand der
 Insgesamt wurden die drei grundlegenden Paradigmen identifiziert: Supervised Learning, Unsupervised Learning und Reinforcement Learning.
 
 Die Auswertung zeigt, dass Supervised Learning in den meisten Arbeiten eine zentrale Rolle spielt. 
-Es wird in sechs Publikationen ausdrücklich beschrieben, in  elf Arbeiten erkennbar und in zwei kurz erwähnt. 
+Es wird in vier Publikationen ausdrücklich beschrieben, elfmal implizit erkennbar und in zwei kurz erwähnt. 
 Reinforcement Learning wird insgesamt siebenmal explizit genannt und in vier weiteren Arbeiten erwähnt. 
-Unsupervised Learning tritt mit drei expliziten und acht impliziten Nennungen seltener auf, ist jedoch ebenfalls präsent.
+Unsupervised Learning tritt mit drei expliziten und sieben impliziten Nennungen seltener auf, ist jedoch ebenfalls präsent.
 
 
 Die Verteilung ist in der folgenden Abbildung \ref{fig:04_01_03_lernparadigmen} dargestellt.
@@ -78,25 +89,26 @@ Die Verteilung ist in der folgenden Abbildung \ref{fig:04_01_03_lernparadigmen} 
 
 Auffällig ist die deutliche Differenz zwischen explizit und implizit erkennbaren Anwendungen, insbesondere bei Supervised und Unsupervised Learning. 
 Dies zeigt, dass viele Publikationen die entsprechenden Paradigmen beschreiben, ohne die zugrunde liegende Lernform ausdrücklich zu benennen.
-
-
+Ein möglicher Erklärungsansatz für die Dominanz von Supervised Learning ist, dass in Plattformumgebungen häufig gut messbare Zielgrößen und bereits beschriftete Verlaufsdaten vorliegen (z.,B. Störungsmeldungen, Support-Tickets oder Metriken mit bekanntem Ergebnis), wodurch sich SL-Ansätze besonders gut anwenden und bewerten lassen \cite{tamanampudiAIEnhancedContinuousIntegration}.
 
 \subsection{Verwendete Algorithmen}
 \label{subsec:methodenAlgorithmen}
 Die in den Publikationen verwendeten Algorithmen lassen sich den jeweiligen Lernparadigmen zuordnen. 
 Die Analyse zeigt, dass eine Vielfalt an KI- und ML-Verfahren im Platform-Engineering-Kontext eingesetzt wird. 
 Für eine systematische Bewertung wurde eine eigene Kategorisierung entwickelt.
-Den Ausgangspunkt bildet die Tabelle aus \textcite{enemosahEnhancingDevOpsEfficiency2025}, in der verschiedene AI-Techniken für Testfallpriorisierung beschrieben werden. 
+Den Ausgangspunkt bildet die Tabelle aus \textcite{enemosahEnhancingDevOpsEfficiency2025}, in der verschiedene KI-Techniken für Testfallpriorisierung beschrieben werden. 
 Die Einteilung wurde für den breiteren Kontext dieser Arbeit angepasst.
 
 Auf dieser Basis wurden vier Kategorien definiert, die in Kapitel \ref{tab:tabelleMethodenAlgorithmen} kurz beschrieben sind. 
 Anschließend folgt die quantitative Auswertung der identifizierten Methoden und Algorithmen. 
 Dies zeigt, wie häufig die jeweiligen Verfahren in den Publikationen genannt werden. 
 
-Die Ergebnisse zeigen ein deutliches Übergewicht von Deep-Learning-Verfahren, die in insgesamt 86 \% (18/21) der Publikationen eingesetzt oder thematisiert werden. 
-Klassische Klassifikations- und Regressionsmethoden treten mit 52 \% (11/21) ebenfalls häufig auf. 
-Demgegenüber werden Clustering-Verfahren und Ensemble- bzw. baumbasierte Modelle in 33 \% (7/21) der Arbeiten angesprochen.
-Insgesamt zeigt sich, dass insbesondere neuronale Netze und Deep-Learning-Verfahren die dominierenden Methoden sind.
+Die Ergebnisse zeigen ein deutliches Übergewicht von Deep Learning / neuronalen Netzen, die in 89\% (16/18) der Publikationen eingesetzt oder thematisiert werden. 
+Klassische Klassifikation/Regression tritt mit 44\% (8/18) ebenfalls häufig auf. 
+Ensemble- und baumbasierte Verfahren werden in 39\% (7/18) der Arbeiten genannt. 
+Clustering ist mit 33\% (6/18) vertreten. Insgesamt zeigt sich, dass insbesondere neuronale Netze die dominierende Methodenklasse bilden.
+Die Dominanz von Deep-Learning-Verfahren kann darauf hindeuten, dass in der Forschung häufig komplexere Modelle bevorzugt werden, weil sie mit heterogenen Daten (z.,B. Logs, Metriken, Text) flexibel umgehen können. 
+Gleichzeitig deutet sie auch auf ein Spannungsfeld hin: Für einige Aufgaben könnten einfachere und besser erklärbare Modelle bereits ausreichen, werden in der Literatur aber seltener als Schwerpunkt gesetzt \cite{enemosahEnhancingDevOpsEfficiency2025,tamanampudiAIEnhancedContinuousIntegration}.
 
 Diese Verteilung ist in der Abbildung \ref{fig:04_01_04_algorithmen} dargestellt.
 \begin{figure}[H]
