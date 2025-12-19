@@ -7,9 +7,24 @@ Damit entsteht eine nachvollziehbare Grundlage, um KI-Lösungen später hinsicht
 
 \subsection{Muster 1: Prädiktives Auto-Scaling und Ressourcenoptimierung}
 \label{subsec:muster1-autoscaling-ressourcen}
+Das Muster Prädiktives Auto-Scaling und Ressourcenoptimierung beschreibt KI-gestützte Verfahren, um Ressourcen vorausschauend zu skalieren und damit Kosten sowie Performance-Risiken zu optimieren. 
+Im Unterschied zu klassischem Auto-Scaling auf Basis statischer Schwellenwerte werden historische Betriebsdaten genutzt, um Lastspitzen frühzeitig zu antizipieren und Skalierungsentscheidungen rechtzeitig auszuführen.
+Die Tabelle \ref{tab:predictiveAutoScaling} fasst die charakteristischen Merkmale dieses Musters zusammen.
 
 \input{tables/04_ergebnisse/04_03_01_matchingTabelle.tex}
-\FloatBarrier 
+\FloatBarrier
+
+Die Daten stammen typischerweise aus Cloud- und Cluster-Monitoring, z. B. AWS CloudWatch oder Prometheus. 
+Relevante Metriken sind CPU-Auslastung, Arbeitsspeicher, Disk-I/O und Netzwerkverkehr \cite{poudelAIDrivenIntelligentAutoScaling2025a, zaaloukCLOUDNATIVEARTIFICIAL}.
+
+Die Metriken werden als Zeitreihen ausgewertet. 
+Ziel ist es, wiederkehrende Muster (z. B. tages-/wochenbasierte Zyklen) und Lastspitzen zu erkennen, um daraus Prognosen für den zukünftigen Ressourcenbedarf abzuleiten \cite{poudelAIDrivenIntelligentAutoScaling2025a, zaaloukCLOUDNATIVEARTIFICIAL}.
+
+Für die Prognose kommen vor allem überwachte Lernverfahren zum Einsatz, insbesondere LSTM für Zeitreihen-Vorhersagen. 
+Ergänzend wird Reinforcement Learning genutzt (z. B. Q-Learning, PPO), um eine Strategie zu lernen, welche Skalierungsaktion unter bestimmten Zuständen langfristig am besten ist \cite{poudelAIDrivenIntelligentAutoScaling2025a, tamminediAutomatingKubernetesOperations2024}.
+
+Für die technische Ausführung werden Cloud- und Plattform-Tools eingebunden, z. B. AWS Boto3 zur Anpassung von Instanzen und KEDA zur ereignis- bzw. metrikbasierten Pod-Skalierung in Kubernetes. 
+Für Modelltraining und -betrieb werden typische ML-Frameworks wie TensorFlow/PyTorch genutzt \cite{poudelAIDrivenIntelligentAutoScaling2025a, zaaloukCLOUDNATIVEARTIFICIAL, kankanalaAIMLDevOps2024}.
 
 \subsection{Muster 2: Intelligente CI/CD (Fehlervorhersage und adaptive Rollbacks)}
 \label{subsec:muster2-intelligente-cicd}
