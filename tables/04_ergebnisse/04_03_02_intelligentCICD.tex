@@ -1,36 +1,40 @@
+% --- Tabelle 2: Intelligente CI/CD (Fehlervorhersage & adaptive Rollbacks) ---
 \begin{table}[htbp]
-\caption{Intelligent CI/CD (Predictive Failure \& Adaptive Rollbacks)}
+\caption{Intelligente CI/CD (Fehlervorhersage \& adaptive Rollbacks)}
 \label{tab:pattern2-intelligent-cicd}
 \footnotesize
 \renewcommand{\arraystretch}{1.2}
 \setlength{\tabcolsep}{6pt}
 
-\begin{tabularx}{\linewidth}{p{4.2cm} Y p{3.0cm}}
+\begin{tabularx}{\linewidth}{p{4.2cm} Y p{3.2cm}}
 \toprule
-\textbf{Kategorie} & \textbf{Details} & \textbf{Quellen (IDs)} \\
+\textbf{Kategorie} & \textbf{Beschreibung} & \textbf{Beispielquellen} \\
 \midrule
 
-Plattform-Aufgabe &
+Plattformaufgabe &
 Vorhersage von Build-Fehlern; automatisierte Rollbacks bei Anomalien nach dem Deployment. &
 \cite{tamanampudiAIEnhancedContinuousIntegration}, \cite{enemosahEnhancingDevOpsEfficiency2025} \\
 
 Datenquellen &
-Logs: Build-Logs, Testresultate, Code-Metadaten (Commit-Historie), Fehler-Raten während des Rollouts. &
+Logs: Build-Logs, Testergebnisse, Code-Metadaten (Commit-Historie), Fehlerraten während des Rollouts. &
 \cite{tamanampudiAIEnhancedContinuousIntegration}, \cite{supritpattanayakIntegratingAIDevOps2024} \\
-Datenverwendung &
-Training von Modellen auf historischen Fehlermustern, um \glqq High-Risk\grqq{}-Änderungen frühzeitig zu stoppen. &
+
+Datennutzung &
+Training von Modellen auf historischen Fehlermustern, um risikoreiche Änderungen frühzeitig zu stoppen. &
 \cite{tamanampudiAIEnhancedContinuousIntegration} \\
 
-KI-Methoden &
-Supervised Learning (Random Forest, Decision Trees); Reinforcement Learning (DQN) für optimierte Rollback-Entscheidungen. &
+KI-/ML-Methoden &
+Supervised Learning (Random Forest, Entscheidungsbäume); Reinforcement Learning (DQN) zur Optimierung von Rollback-Entscheidungen. &
 \cite{tamanampudiAIEnhancedContinuousIntegration} \\
-Konkrete Tools &
+
+Werkzeuge (Tools) &
 Jenkins X (mit ML-Plugins), Spinnaker, StackStorm (für ereignisbasierte Automatisierung). &
 \cite{kankanalaAIMLDevOps2024}, \cite{supritpattanayakIntegratingAIDevOps2024} \\
 
-Vorteile (Ziele) &
+Ziele/Nutzen &
 Reduzierung der Deployment-Zeit um 30\%; Steigerung der Systemstabilität durch proaktive Fehlervermeidung. &
 \cite{kankanalaAIMLDevOps2024}, \cite{tamanampudiAIEnhancedContinuousIntegration} \\
+
 \bottomrule
 \end{tabularx}
 \end{table}

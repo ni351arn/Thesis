@@ -1,36 +1,40 @@
+% --- Tabelle 3: KI-gestützte Observability & Ursachenanalyse (AIOps) ---
 \begin{table}[htbp]
-\caption{AI-driven Observability \& Root Cause Analysis (AIOps)}
+\caption{KI-gestützte Observability \& Ursachenanalyse (AIOps)}
 \label{tab:pattern3-aiops-observability-rca}
 \footnotesize
 \renewcommand{\arraystretch}{1.2}
 \setlength{\tabcolsep}{6pt}
 
-\begin{tabularx}{\linewidth}{p{4.2cm} Y p{3.0cm}}
+\begin{tabularx}{\linewidth}{p{4.2cm} Y p{3.2cm}}
 \toprule
-\textbf{Kategorie} & \textbf{Details} & \textbf{Quellen (IDs)} \\
+\textbf{Kategorie} & \textbf{Beschreibung} & \textbf{Beispielquellen} \\
 \midrule
 
-Plattform-Aufgabe &
-Log-Anomalie-Erkennung; automatisierte Root Cause Analysis (RCA); Natural Language Interface für Cluster-Abfragen. &
+Plattformaufgabe &
+Log-basierte Anomalieerkennung; automatisierte Root-Cause-Analyse (RCA); natürlichsprachliche Schnittstelle für Cluster-Abfragen. &
 \cite{zaaloukCLOUDNATIVEARTIFICIAL}, \cite{tamminediAutomatingKubernetesOperations2024} \\
 
 Datenquellen &
-Telemetrie: System-Logs, Kubernetes Events, Traces (OpenTelemetry), Warnsignale von Sensoren/Nodes. &
+Telemetrie: System-Logs, Kubernetes-Events, Traces (OpenTelemetry), Warnsignale von Sensoren/Nodes. &
 \cite{zaaloukCLOUDNATIVEARTIFICIAL}, \cite{guptaCloudNativeMLArchitecting2024a} \\
-Datenverwendung &
+
+Datennutzung &
 Mustererkennung in unstrukturierten Log-Daten zur Korrelation von Fehlern über Microservices hinweg. &
 \cite{zaaloukCLOUDNATIVEARTIFICIAL} \\
 
-KI-Methoden &
-LLMs (Natural Language Processing) zur Interpretation von Fehlermeldungen; Clustering (K-Means) zur Gruppierung ähnlicher Alerts. &
+KI-/ML-Methoden &
+LLMs (Natural Language Processing) zur Interpretation von Fehlermeldungen; Clustering (K-Means) zur Bündelung ähnlicher Alerts. &
 \cite{zaaloukCLOUDNATIVEARTIFICIAL}, \cite{enemosahEnhancingDevOpsEfficiency2025} \\
-Konkrete Tools &
-K8sGPT, OpenLLMetry, Prometheus/Grafana mit KI-Extensions. &
+
+Werkzeuge (Tools) &
+K8sGPT, OpenLLMetry, Prometheus/Grafana mit KI-Erweiterungen. &
 \cite{zaaloukCLOUDNATIVEARTIFICIAL}, \cite{tamminediAutomatingKubernetesOperations2024} \\
 
-Vorteile (Ziele) &
-Erhöhung der MTTR (Mean Time To Resolution) um bis zu 39\%; Reduktion von False Positives in der Alarmierung. &
+Ziele/Nutzen &
+Reduktion der mittleren Zeit bis zur Fehlerbehebung (MTTR) um bis zu 39\%; Reduktion von Fehlalarmen (False Positives) in der Alarmierung. &
 \cite{tamminediAutomatingKubernetesOperations2024} \\
+
 \bottomrule
 \end{tabularx}
 \end{table}
