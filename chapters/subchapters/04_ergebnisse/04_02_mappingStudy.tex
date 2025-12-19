@@ -17,31 +17,33 @@ Die Häufigkeiten geben an, wie oft eine bestimmte Kombination in der Literatur 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_02_mapping/04_02_01_mapping.png}
-    \caption{Korrelation zwischen Anwendungsfelderen (Use Cases) und Herausforderungen}
+    \caption{Korrelation zwischen Anwendungsfelder (Use Cases) und Herausforderungen}
     \label{fig:04_02_01_mapping}
 \end{figure}
 
-Besonders deutlich wird die starke Verknüpfung der Use Cases Ressourcen- und Workload-Optimierung sowie Resilienz, Self-Healing und Predictive Maintenance mit nahezu allen Herausforderungskategorien. 
-Die Ressourcen- und Workload-Optimierung weist in allen Bereichen hohe Werte auf, je nach Herausforderung liegen diese zwischen n=13 und n=17.
-Dieser Anwendungsfall verdeutlicht ein Spannungsfeld zwischen hohem Ressourcenbedarf, Datenmanagement und Pipeline-Komplexität (bedingt durch große und heterogene Datenmengen) sowie Trade-offs zwischen Skalierbarkeit und Latenz, wie es auch in \cite{bajwaCLOUDNATIVEARCHITECTURESLARGESCALE2025} beschrieben wird.
-Ein ähnlich breites Muster zeigt sich im Bereich Self-Healing und Predictive Maintenance, der über alle Herausforderungskategorien hinweg hohe Häufigkeiten erreicht (zwischen n= 12 und n=17).
-Insgesamt deutet dies darauf hin, dass beide Use Cases in der Literatur als besonders relevante Einsatzfelder für KI-basierte Optimierungen betrachtet werden, da sie auf zentrale betriebliche Ziele wie Effizienz, Zuverlässigkeit und einen höheren Automatisierungsgrad in DevOps-Prozessen einzahlen \cite{kankanalaAIMLDevOps2024}.
+Besonders deutlich wird die starke Verknüpfung der Use Cases Ressource- und Workload-Optimierung sowie Betrieb und Orchestrierung mit nahezu allen Herausforderungskategorien.
+Die Ressourcen- und Workload-Optimierung weist über alle Bereiche hinweg hohe Werte auf (n=15, 13, 12, 12, 11). 
+Diese breite Korrelation ist plausibel, da Ressourcen- und Workload-Optimierung einen besonders direkten Bezug zu Kosten hat und sich Effekte häufig über die Cloud-Abrechnung unmittelbar sichtbar machen.
+KI-gesteuertes Auto-Scaling vermeidet die Überbereitstellung von Ressourcen und senkt dadurch die monatlichen Abrechnungskosten direkt \cite{poudelAIDrivenIntelligentAutoScaling2025a}.
+Gleichzeitig wird deutlich, dass Echtzeit-Inferenz zwar Genauigkeit und Latenz verbessert, jedoch durch höheren CPU-/Memory-Verbrauch die Ressourcen- und Kostenbelastung erhöht und damit eine Abwägung zwischen Modellqualität und Betriebsaufwand erforderlich macht \cite{guptaCloudNativeMLArchitecting2024a}.
 
-Der Use Case Sicherheits- und Bedrohungserkennung zeigt seine höchste Ausprägung im Bereich AI Governance, Datenschutz und Compliance (n=14) sowie bei Ressourcenverbrauch und Kosten (n=14). 
-Auch die übrigen Herausforderungen weisen hohe Werte auf (n=13, 11, 10). 
-Dies spiegelt wider, dass sicherheitsbezogene KI-Ansätze nicht nur regulatorische und organisatorische Fragen berühren, sondern ebenso Einfluss auf Monitoring, Ressourcenmanagement und Integrationsprozesse haben.
+Ein sehr ähnliches Muster zeigt sich im Bereich Betrieb \& Orchestrierung, der ebenfalls in allen Herausforderungskategorien hohe Häufigkeiten erreicht (n=15, 13, 13, 12, 11). 
+Das deutet darauf hin, dass KI im Plattformbetrieb häufig nicht als Einzellösung betrachtet wird. 
+Stattdessen ist sie meist in mehrere Betriebsbausteine eingebettet, z.B. Monitoring, Deployment, Orchestrierung und Governance.
+Damit werden in diesem Bereich oft mehrere Herausforderungen gleichzeitig berührt, etwa Kosten, Skalierung, Integration und datenbezogene Voraussetzungen.
 
-Die CI/CD- und Pipeline-Optimierung zeigt im Vergleich moderate, aber dennoch durchgehend hohe Werte über alle Herausforderungen hinweg (n=10, 9, 9, 9, 8). 
-Dies deutet darauf hin, dass KI-Anwendungen zur Optimierung von Build-, Test- und Deployment-Prozessen zwar breit diskutiert werden, aber weniger stark im Zentrum systemübergreifender Herausforderungen stehen als andere Anwendungsbereiche.
+Der Use Case Sicherheits- und Bedrohungserkennung zeigt seine höchste Ausprägung im Bereich KI-Governance, Datenschutz und Compliance (n=14) sowie bei Ressourcenverbrauch und Kosten (n=13). 
+Auch die übrigen Herausforderungen weisen weiterhin hohe Werte auf (n=11, 10, 10). 
+Dies deutet darauf hin, dass sicherheitsbezogene KI-Ansätze neben Governance-Themen häufig auch Monitoring, Integrationsprozesse und die zugrunde liegende Datenlage betreffen.
 
-Etwas weniger dominant, aber klar erkennbar, ist die Verteilung im Bereich Intelligente Bereitstellung (Edge-AI und Serverless). 
-Die Häufigkeiten liegen zwischen n=14 und n=11 und zeigen damit ein insgesamt konsistentes, jedoch weniger dominantes Muster als in den zuvor genannten Bereichen. 
-Dies legt nahe, dass dieses Anwendungsfeld im aktuellen Forschungsstand zwar relevant ist, jedoch nicht denselben Schwerpunkt bildet wie die großen Themenfelder Optimierung, Resilienz und Sicherheit.
+Die CI/CD- \& Pipeline-Optimierung zeigt insgesamt die niedrigsten Werte, bleibt aber über alle Herausforderungen hinweg relativ konstant (n=9, 7, 9, 8, 8). 
+KI wird hier vor allem eingesetzt, um einzelne Schritte wie Builds, Tests oder Deployments zu verbessern. 
+Im Vergleich zu ressourcen- oder betriebsnahen Use Cases werden jedoch weniger Herausforderungen gleichzeitig berührt. 
+Kosten, Tool-Abhängigkeiten und Governance-Fragen bleiben trotzdem relevant, etwa durch zusätzlichen Rechenaufwand und die notwendige Nachvollziehbarkeit automatisierter Entscheidungen \cite{tamanampudiAIEnhancedContinuousIntegration}.
 
-Insgesamt zeigt die Verteilung der Häufigkeiten, dass KI-Anwendungen im Platform Engineering besonders dort adressiert werden, wo Effizienz, Stabilität, Automatisierung und Sicherheitsaspekte zusammenwirken. 
-Die Häufungen bei einzelnen Anwendungsbereichen zeigen, welche Themen in der Forschung besonders im Fokus stehen.
-Dadurch wird verdeutlicht, in welchen Bereichen KI-Lösungen aktuell als besonders relevant angesehen werden.
-
+Insgesamt verdeutlicht die Verteilung der Häufigkeiten, dass KI-Anwendungen im Platform Engineering besonders dort adressiert werden, wo betriebliche Effizienz und Automatisierung direkt mit Kosten, Skalierung, Governance
+und Integrationsfragen zusammenwirken. 
+Die Häufungen zeigen somit, welche Themen in der Forschung besonders im Fokus stehen und in welchen Bereichen KI-Lösungen aktuell besonders häufig diskutiert werden.
 
 \subsection{Zusammenspiel der Lernparadigmen und Algorithmen}
 \label{subsec:mappingzwei}
@@ -90,7 +92,7 @@ Für Ressourcenverbrauch und Kosten sowie Skalierbarkeit, Latenz und Monitoring 
 In beiden Fällen treten ML/DL Frameworks \& Bibliotheken sowie Monitoring vergleichbar häufig auf (jeweils n=11).
 Das spricht dafür, dass diese Herausforderungen häufig zusammen mit Entwicklungs- und Betriebsaspekten diskutiert werden.
 
-Bei AI Governance, Datenschutz und Compliance zeigt sich ein ähnlicher Schwerpunkt.
+Bei KI-Governance, Datenschutz und Compliance zeigt sich ein ähnlicher Schwerpunkt.
 MLOps-Tools \& Orchestrierung werden hier am häufigsten zusammen mit dieser Herausforderung genannt (n=12), gefolgt von Monitoring (n=10).
 ML/DL Frameworks \& Bibliotheken treten etwas seltener auf (n=8).
 Insgesamt werden Governance- und Compliance-Themen damit eher auf Betriebs- als nur auf Modell- oder Trainingsebene verortet.
