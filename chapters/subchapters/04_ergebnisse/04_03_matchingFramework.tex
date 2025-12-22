@@ -12,7 +12,6 @@ Im Unterschied zu klassischem Auto-Scaling auf Basis statischer Schwellenwerte w
 Die Tabelle \ref{tab:predictiveAutoScaling} fasst die charakteristischen Merkmale dieses Musters zusammen.
 
 \input{tables/04_ergebnisse/04_03_01_matchingTabelle.tex}
-\FloatBarrier
 
 Die Daten stammen typischerweise aus Cloud- und Cluster-Monitoring, z. B. AWS CloudWatch oder Prometheus. 
 Relevante Metriken sind CPU-Auslastung, Arbeitsspeicher, Disk-I/O und Netzwerkverkehr \cite{poudelAIDrivenIntelligentAutoScaling2025a, zaaloukCLOUDNATIVEARTIFICIAL}.
@@ -26,20 +25,68 @@ Ergänzend wird Reinforcement Learning genutzt (z. B. Q-Learning, PPO), um eine 
 Für die technische Ausführung werden Cloud- und Plattform-Tools eingebunden, z. B. AWS Boto3 zur Anpassung von Instanzen und KEDA zur ereignis- bzw. metrikbasierten Pod-Skalierung in Kubernetes. 
 Für Modelltraining und -betrieb werden typische ML-Frameworks wie TensorFlow/PyTorch genutzt \cite{poudelAIDrivenIntelligentAutoScaling2025a, zaaloukCLOUDNATIVEARTIFICIAL, kankanalaAIMLDevOps2024}.
 
+
 \subsection{Muster 2: Intelligente CI/CD (Fehlervorhersage und adaptive Rollbacks)}
 \label{subsec:muster2-intelligente-cicd}
+Das zweite Architekturpattern konzentriert sich auf die intelligente CI/CD-Pipeline (Intelligent CI/CD). 
+Dabei werden die Prozesse der kontinuierlichen Integration und Bereitstellung durch prädiktive Fehlererkennung und adaptive Rollback-Mechanismen optimiert. 
+Während klassische Pipelines auf statischen Regeln basieren, ermöglichen KI-Modelle eine dynamische Reaktion auf Anomalien während des Release-Prozesses \cite{enemosahEnhancingDevOpsEfficiency2025,tamanampudiAIEnhancedContinuousIntegration,supritpattanayakIntegratingAIDevOps2024}.
+Die Tabelle \ref{tab:pattern2-intelligent-cicd} gibt einen detaillierten Überblick über die Komponenten dieses Patterns:
 
 \input{tables/04_ergebnisse/04_03_02_intelligentCICD.tex}
-\FloatBarrier
+
+Die prädiktive Fehlererkennung handelt konkret davon, KI-Modelle darauf zu trainieren, Muster in historischen Daten zu erkennen, die in der Vergangneheit, höufig zu Build- oder Deployment Fehler geführt haben. 
+Hierbei werden Code-Änderungen und Testresultate analysiert, wodurch die KI ein hohe Risiko vorhersagen kann bevor der Code in die Produktionsumgebung gelangt.
+Dies ermöglicht es Plattform-Engineerings, risikoreiche Änderungen frühzeitig zu stoppen und die Erfolgsrate von Buid signifikant zu steigern. 
+
+Anomalie-basierte Rollbacks ergänzen diese Funktionalität, indem die KI Echtzeit-Metriken unmittelbar nach einem Release überwacht. 
+Algorithmen wie Isolation FOrests oder Autoencoder identifizieren Abweichungen vom normalen Systemverhalten, wie etwas ungewöhnliche Latensptizen oder erhöhte Fehlerraten. 
+Wird eine Anomalie erkannt, triggert das System autonom einen Rollback auf einen stabilen Zustand, um die Auswirkungen auf Endnutzer zu minimieren \cite{tamanampudiAIEnhancedContinuousIntegration,supritpattanayakIntegratingAIDevOps2024,reddygopireddyIntegratingAIDevOps2022,enemosahEnhancingDevOpsEfficiency2025}.
+
+KI wird zudem eingesetzt um Testsequenz innerhalb der Pipeline intelligent zu priorisieren.
+Mittels Reinforcement Learning lernt das System, welche Tests die höchste Wahrscheinlichkeit haben, kritische Fehler in einer spezifischen Code-Änderung aufzudecken. 
+Dies reduziert die Gesamtlaufzeit der Pipeline, ohne die Qualitätssicherung zu beeinträchtigen \cite{kathiresanCybersecurityRiskModeling2025,reddygopireddyIntegratingAIDevOps2022}.
+
+Der Einsatz dieses Pttern führt zu einer Reduktion des manuellen Intervemtionsaufwands bei fehlgeschlagenen Deployments.
+Die Deployment-Zyklen werden durch automatisierte Entscheidungfindung um etwas 30\% verkürzt \cite{kankanalaAIMLDevOps2024}.
+Zudem verbessert sich die Systemstabilität, da die KI als "Sicherheitsnetz" fungiert und fehlerhafte Releases abfängt, bevor sie kritische Systemzustände verursachen \cite{tamanampudiAIEnhancedContinuousIntegration,reddygopireddyIntegratingAIDevOps2022}.
 
 \subsection{Muster 3: KI-gestützte Observability und Ursachenanalyse (AIOps)}
 \label{subsec:muster3-observability-rca}
+Das dritte Muster im Matching-Framework fokussiert sich auf KI-gestützte Observability und Ursachenanalyse, auch bekannt als AIOps (Artificial Intelligence for IT Operations).
+In modernen Cloud-native Umgebungen übersteigt die Menge der genreirten Telemetriedaten oft die Kapazitäten manueller Analyse.
+Klassische Monitoring-Ansätze sind häufig reaktiv und führen zu einer hohen Anzahl von Fehlalarmen.
+Durch den Einsatz von KI können Plattform-Engineers unstrukturierte Log-Daten ud komplexe Systemzustände in Echtzeit interpetieren.
+Die Tabelle \ref{tab:pattern3-aiops-observability-rca} fasst die wesentlichen Merkmale dieses Musters zusammen:
 
 \input{tables/04_ergebnisse/04_03_03_aiOps.tex}
-\FloatBarrier   
+
+Im Kern adressiert das Pattern operative Plattformaufgaben im AIOps-Kontext: Es erkennt Auffälligkeiten in Logs, unterstützt eine automatisierte Ursachenanalyse und ermöglicht zusätzlich natürlichsprachliche Abfragen an den Cluster, um Fehler schneller einzugrenzen \cite{zaaloukCLOUDNATIVEARTIFICIAL, tamminediAutomatingKubernetesOperations2024}.
+
+Als Datengrundlage werden verschiedene Telemetriequellen zusammengeführt, insbesondere System-Logs, Kubernetes-Events und verteilte Traces (z. B. OpenTelemetry) sowie Warnsignale aus der Infrastruktur. 
+Dadurch entsteht ein konsistenteres Bild des Systemzustands über mehrere Komponenten hinweg \cite{zaaloukCLOUDNATIVEARTIFICIAL, guptaCloudNativeMLArchitecting2024a}.
+
+Die Datennutzung fokussiert unstrukturierte Log-Daten: Muster werden erkannt und so korreliert, dass Zusammenhänge von Fehlern über Microservices hinweg sichtbar werden \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
+
+Methodisch werden große Sprachmodelle genutzt, um Fehlermeldungen verständlich zu interpretieren, während Clustering (z. B. K-Means) ähnliche Alarme bündelt und Alarmfluten reduziert \cite{zaaloukCLOUDNATIVEARTIFICIAL, enemosahEnhancingDevOpsEfficiency2025}.
+
+Auf Werkzeugebene wird das Pattern typischerweise durch K8sGPT (natürlichsprachliche Unterstützung), OpenLLMetry (herstellerneutrale Integration) sowie Prometheus/Grafana mit KI-Erweiterungen umgesetzt \cite{zaaloukCLOUDNATIVEARTIFICIAL, tamminediAutomatingKubernetesOperations2024}.
+
+Der operative Nutzen liegt vor allem in schnellerer Fehlerbehebung und besserer Alarmqualität; die Quellen berichten u. a. eine MTTR-Reduktion von bis zu 39 \% sowie weniger Fehlalarme in der Alarmierung \cite{tamminediAutomatingKubernetesOperations2024}.
 
 \subsection{Muster 4: Intelligente Sicherheit und Bedrohungserkennung}
 \label{subsec:muster4-security}
+Intelligente Sicherheit und Bedrohungserkennung beschreibt KI-gestützte Verfahren, um Sicherheitsereignisse in Cloud-Native-Plattformen frühzeitig zu erkennen und schneller einzuordnen. 
+Im Unterschied zu rein regelbasierten Ansätzen werden dabei Muster aus Betriebs- und Sicherheitsdaten gelernt, um Auffälligkeiten automatisch zu identifizieren. 
+Die Tabelle \ref{tab:pattern4-intelligent-security-threat-detection} fasst die Kernelemente dieses Patterns zusammen.
 
 \input{tables/04_ergebnisse/04_03_04_security.tex}
-\FloatBarrier
+
+Im Kern adressiert das Pattern die Erkennung von Angriffen (z. B. DDoS, Malware) sowie Anomalien im Netzwerkverkehr und im Benutzerverhalten. 
+Dazu werden IP- und Netzwerk-Traffic, System- und Cloud-Audit-Logs sowie Zugriffsmuster als Datenbasis zusammengeführt \cite{uddohAIBasedThreatDetection2021, govindarajanMachineLearningBased2025}.
+
+Die Datennutzung erfolgt häufig über den Abgleich von Echtzeit-Datenströmen mit Baselines für „normales“ Verhalten, sodass Ausreißer priorisiert und schneller untersucht werden können. 
+Als Methoden werden Deep-Learning-Verfahren (z. B. CNNs zur Mustererkennung) sowie Modelle wie XGBoost oder Random Forest eingesetzt, insbesondere um trotz Klassenungleichgewicht robuste Klassifikationen zu ermöglichen \cite{uddohAIBasedThreatDetection2021, govindarajanMachineLearningBased2025}.
+
+Auf Werkzeugebene werden Security-Plattformen wie IBM Watson AI oder Microsoft Sentinel genutzt und durch Scanner wie Trivy/Clair ergänzt, die Sicherheitsprüfungen in CI/CD-Pipelines integrieren. 
+Der operative Nutzen liegt in höherer Erkennungsleistung und weniger Sicherheitsvorfällen; die Literatur berichtet Detektionsraten von bis zu 95 \% bei fortgeschrittenen Bedrohungen \cite{kankanalaAIMLDevOps2024, uddohAIBasedThreatDetection2021, tamminediAutomatingKubernetesOperations2024}.
