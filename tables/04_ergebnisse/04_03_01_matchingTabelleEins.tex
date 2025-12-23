@@ -1,0 +1,36 @@
+\begin{table}[H]
+\caption{Übersicht zum Muster Proaktives Ressourcen-Management}
+\label{tab:proaktivesRessourcenmanagement}
+\footnotesize
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{7pt}
+
+\begin{tabularx}{\linewidth}{p{3.5cm} X}
+\toprule
+\textbf{Proaktives Ressourcen-Management} & \textbf{Beschreibung} \\
+\midrule
+
+Konkreter Plattform-Task &
+Automatisierte Anpassung von Instanztypen (EC2/RDS) oder Kubernetes-Pods (HPA) basierend auf der Vorhersage von CPU-/RAM-Spitzen.
+\\
+
+Empfohlene KI-Methode &
+Deep Learning (z..B. LSTM) zur Zeitreihenprognose oder Reinforcement Learning zur dynamischen Lastverteilung in Echtzeit.
+\\
+
+KPI/Mehrwert &
+Ressourcenauslastung bis zu +25\% (RL vs.\ Heuristik) \cite{poudelAIDrivenIntelligentAutoScaling2025a},
+Kosteneffizienz durch dynamische Allokation mit bis zu 55\% geringeren Cloud-Kosten \cite{karthikputhrayaRoleCloudNativeArchitectures2025}.
+\\
+
+Limitationen &
+Hoher Rechenaufwand für das Modelltraining (z..B. LSTMs), Cold-Start-Latenzen in Serverless-Umgebungen, benötigt ca.\ 2 Monate historische Daten \cite{amteCloudNativeAIChallenges2025,poudelAIDrivenIntelligentAutoScaling2025a}.
+\\
+
+Einsatzvoraussetzungen &
+Mind.\ 2 Monate historische Zeitreihen-Telemetrie (feingranular, z..B. 1-15 Minuten) aus CloudWatch/Prometheus sowie automatisierter API-Schreibzugriff für Instanz- bzw.\ Skalierungsanpassungen \cite{poudelAIDrivenIntelligentAutoScaling2025a}.
+\\
+
+\bottomrule
+\end{tabularx}
+\end{table}

@@ -1,0 +1,35 @@
+\begin{table}[H]
+\caption{Übersicht zum Muster Automatisierte Release-Absicherung}
+\label{tab:automatisierteReleaseAbsicherung}
+\footnotesize
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{7pt}
+
+\begin{tabularx}{\linewidth}{p{3.5cm} X}
+\toprule
+\textbf{Automatisierte Release-Absicherung} & \textbf{Beschreibung} \\
+\midrule
+
+Konkreter Plattform-Task &
+Automatisiertes Rollback bei Canary-Deployments (schrittweise Ausrollung) durch Überwachung von Abweichungen in Latenz und Fehlerraten (Release-Gating).
+\\
+
+Empfohlene KI-Methode &
+Unsupervised Learning (Autoencoder) zur Anomalieerkennung oder Reinforcement Learning (z.B.\ DQN) zur Optimierung des Rollback-Zeitpunkts \cite{tamanampudiAIEnhancedContinuousIntegration}.
+\\
+
+KPI/Mehrwert &
+MTTR (Mean Time To Recovery) bis zu -40\%; Systemverfügbarkeit bis zu +18\%; Vorfallerkennung um bis zu 35\% beschleunigt \cite{kankanalaAIMLDevOps2024,jossonpaulkalapparambathAdvancingDistributedSystems2025, tamanampudiAIEnhancedContinuousIntegration}.
+\\
+
+Limitationen &
+Risiko von False Positives (unnötige Rollbacks); zusätzlicher Validierungs- und Governance-Aufwand bei RL-Entscheidungen (z.B.\ Nachvollziehbarkeit/Erklärbarkeit).
+\\
+
+Einsatzvoraussetzungen &
+Etablierte Baseline für Normalverhalten in Service-Mesh-gestützten Telemetriedaten (Traffic-Steuerung \& Observability; Latenz, Fehlerraten, SLOs) sowie automatisierte Rollback-Mechanismen und Echtzeit-Streaming der Deployment-Metriken.
+\\
+
+\bottomrule
+\end{tabularx}
+\end{table}

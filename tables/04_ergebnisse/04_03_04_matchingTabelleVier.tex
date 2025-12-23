@@ -1,0 +1,35 @@
+\begin{table}[H]
+\caption{Übersicht zum Muster DevSecOps (Security Ops)}
+\label{tab:devsecops}
+\footnotesize
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{7pt}
+
+\begin{tabularx}{\linewidth}{p{3.5cm} X}
+\toprule
+\textbf{DevSecOps (Security Ops)} & \textbf{Beschreibung} \\
+\midrule
+
+Konkreter Plattform-Task &
+Priorisierung von Sicherheits-Scans sowie Echtzeit-Erkennung von Angriffen (z.B.\ DDoS, Malware) anhand von Netzwerk- und Audit-Telemetrie.
+\\
+
+Empfohlene KI-Methode &
+Deep Learning (z.B.\ CNNs auf flow-basierten Merkmalsrepr\"asentationen) oder Gradient Boosting (z.B.\ XGBoost) f\"ur unausgewogene Sicherheitsdaten \cite{uddohAIBasedThreatDetection2021}.
+\\
+
+KPI/Mehrwert &
+Erkennungsgenauigkeit bis ca.\ 95\%; Reduktion von Fehlalarmen um ca.\ 20\%; hohe Detektionsraten auch f\"ur neuartige Angriffsmuster (studienabh\"angig) \cite{uddohAIBasedThreatDetection2021}.
+\\
+
+Limitationen &
+Hoher Rechenbedarf (insbesondere bei Deep-Learning-Inferenz); Datenschutz- und Compliance-Risiken (DSGVO) bei der Analyse paketbasierter Protokolle und potenziell personenbezogener Daten.
+\\
+
+Einsatzvoraussetzungen &
+Echtzeit-Erfassung von Netzwerk-Flows (z.B.\ NetFlow/sFlow) und Logdaten (z.B.\ Cloud-Audit-Logs) sowie Integration von Threat-Intelligence-Informationen (z.B.\ MITRE ATT\&CK) zur Kontextualisierung und Priorisierung.
+\\
+
+\bottomrule
+\end{tabularx}
+\end{table}

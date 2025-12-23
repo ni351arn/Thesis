@@ -1,0 +1,35 @@
+\begin{table}[H]
+\caption{Übersicht zum Muster Intelligente Build-Fehlerdiagnose}
+\label{tab:intelligenteBuildFehlerdiagnose}
+\footnotesize
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{7pt}
+
+\begin{tabularx}{\linewidth}{p{3.5cm} X}
+\toprule
+\textbf{Intelligente Build-Fehlerdiagnose} & \textbf{Beschreibung} \\
+\midrule
+
+Konkreter Plattform-Task &
+Früherkennung von Build-Fehlschlägen durch Analyse von CI-Logs (z.B.\ Jenkins/Git) sowie automatisierte Clusterung/Filterung von Log-Signaturen zur Ursachenanalyse.
+\\
+
+Empfohlene KI-Methode &
+Supervised Learning (z.B.\ Random Forest, XGBoost) zur Klassifikation von Fehlerrisiken und Fehlertypen auf Basis historischer Build-Metadaten und Log-Features \cite{kankanalaAIMLDevOps2024,tamanampudiAIEnhancedContinuousIntegration}.
+\\
+
+KPI/Mehrwert &
+Deployment-Zeit bis zu -30\%; Vorhersagegenauigkeit ca.\ 87\%; Reduzierung der Fehlersuchzeit bis zu 40\% \cite{kankanalaAIMLDevOps2024,tamanampudiAIEnhancedContinuousIntegration}.
+\\
+
+Limitationen &
+Class Imbalance (wenige Fehlersamples); Konzeptdrift bei Änderungen an Build-Pipelines/Dependencies erfordert kontinuierliches Monitoring und Retraining.
+\\
+
+Einsatzvoraussetzungen &
+Zentralisierte und konsistent strukturierte Build- und Test-Logs sowie eine ausreichend große Historie gelabelter Daten (Erfolg vs.\ Fehlertyp) inklusive stabiler Referenz auf Commit, Pipeline-Stage und Artefaktversion.
+\\
+
+\bottomrule
+\end{tabularx}
+\end{table}
