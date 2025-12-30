@@ -2,7 +2,7 @@
 \label{sec:mapping-study-ergebnisse}
 
 Um die Beziehungen innerhalb der KI-Forschung im Platform Engineering weiter zu verdeutlichen, baut dieser Abschnitt auf den vorherigen Erkenntnissen auf und präsentiert detaillierte Kreuztabellenanalysen.
-Diese Zuordnungen untersuchen Beziehungen zwischen Anwendungsfeldern und Herausforderungen (Abschnitt 4.2.1), Lernparadigmen und Algorithmen (Abschnitt 4.2.2), Herausforderungen und KI-Technologien (Abschnitt 4.2.3) sowie Lernparadigmen, Algorithmen und Anwendungsfeldern (Abschnitt 4.2.4).
+Diese Zuordnungen untersuchen Beziehungen zwischen Anwendungsfeldern und Herausforderungen (Abschnitt 4.2.1), Lernparadigmen und Algorithmen (Abschnitt 4.2.2) sowie Anwendungsfelder und Datenquellen (Abschnitt 4.2.3).
 Die Ergebnisse werden als Bubble-Chart-Diagramme visualisiert, in denen die Blasengröße die Häufigkeit der jeweiligen Zuordnung (n) widerspiegelt.
 Die Häufigkeiten (n) geben an, in wie vielen der betrachteten Studien die jeweilige Zuordnung vorkommt. 
 Pro Studie wird eine Zuordnung je Kombination höchstens einmal gezählt, unabhängig davon, wie häufig sie im Text erwähnt wird.
@@ -74,46 +74,50 @@ Einzelne Arbeiten nutzen hierfür Deep-RL-Ansätze wie Deep Q-Networks \cite{jos
 Insgesamt bleibt die Zuordnung zu spezifischen Algorithmen jedoch begrenzt, weshalb viele Kombinationen in der Tabelle nicht belegt sind.
 
 
-\subsection{Zusammenspiel von Herausforderungen und KI-Technologien (Tools und Frameworks)}
+\subsection{Zusammenspiel der Anwendungsfelder und Datenquellen}
 \label{subsec:mappingDrei}
-Im Folgenden wird das Zusammenspiel von Herausforderungen und KI-Technologien (Tools \& Frameworks) anhand der Abbildung \ref{fig:04_02_03_mappingDrei} analysiert.
-Die Werte geben an, in wie vielen Publikationen (n) eine bestimmte Herausforderung gemeinsam mit einer Tool- bzw. Technologiekategorie adressiert wird.
+In diesem Unterkapitel wird analysiert, welche Datenquellen in den identifizierten Anwendungsfeldern (Use Cases) genutzt werden.
+Dafür wurden alle angesprochenen Anwendungsfelder pro Studie mit den jeweils verwendeten Datenquellen verknüpft.
+Abbildung \ref{fig:04_02_03_mappingDrei} zeigt die resultierenden Häufigkeiten (n) je Kombination.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_02_mapping/04_02_03_mappingDrei.png}
-    \caption{Korrelation zwischen Herausforderungen und KI-Technologie}
+    \caption{Korrelation zwischen Anwendungsfeldern und Datenquellen}
     \label{fig:04_02_03_mappingDrei}
 \end{figure}
-Deutlich wird, dass MLOps-Tools \& Orchestrierung über alle Herausforderungen hinweg am stärksten vertreten ist (zwischen n=11 und n=14).
-Damit zeigt sich, dass MLOps-nahe Technologien in den betrachteten Publikationen besonders häufig im Zusammenhang mit den Herausforderungen adressiert werden.
 
-Für Ressourcenverbrauch und Kosten sowie Skalierbarkeit, Latenz und Monitoring ergeben sich die höchsten Gesamtwerte über alle Tool-Kategorien hinweg.
-In beiden Fällen treten ML/DL Frameworks \& Bibliotheken sowie Monitoring vergleichbar häufig auf (jeweils n=11).
-Das spricht dafür, dass diese Herausforderungen häufig zusammen mit Entwicklungs- und Betriebsaspekten diskutiert werden.
+Metriken (z.\,B. Zeitreihen aus Prometheus oder CloudWatch) beschreiben den quantitativen Systemzustand wie CPU, Speicher oder Latenzen.
+Entsprechend treten sie in nahezu allen Use Cases stark auf, besonders in Betrieb/Orchestrierung (n=14) sowie Ressourcen- und Workload-Optimierung (n=12), da diese Aufgaben auf kontinuierlichem Monitoring und wiederkehrenden Lastmustern basieren \cite{kankanalaAIMLDevOps2024,poudelAIDrivenIntelligentAutoScaling2025a}.
 
-Bei KI-Governance, Datenschutz und Compliance zeigt sich ein ähnlicher Schwerpunkt.
-MLOps-Tools \& Orchestrierung werden hier am häufigsten zusammen mit dieser Herausforderung genannt (n=12), gefolgt von Monitoring (n=10).
-ML/DL Frameworks \& Bibliotheken treten etwas seltener auf (n=8).
-Insgesamt werden Governance- und Compliance-Themen damit eher auf Betriebs- als nur auf Modell- oder Trainingsebene verortet.
+Logs (System-, Pipeline- und Applikationslogs) sind ereignisbasierte, häufig unstrukturierte Daten und werden vor allem für Diagnose, Fehlerklassifikation und Ursachenanalyse genutzt.
+Im Mapping zeigen sie über nahezu alle Use Cases hinweg eine zentrale Rolle (typisch n=6-10), mit hohen Werten in Betrieb/Orchestrierung (n=10) und sicherheitsnahen Szenarien (n=9), da Betriebsstörungen, Fehlkonfigurationen oder Angriffsindikatoren meist zuerst in Logdaten sichtbar werden \cite{kathiresanCybersecurityRiskModeling2025}.
 
-Integrationskomplexität \& Abhängigkeiten wird zwar häufig als Herausforderung gennant (vgl. \ref{subsec:herausforderungen}), jedoch seltener explizit mit konkreten Toolkategorien in Verbindung gebracht.
-Auch hier liegt der Schwerpunkt bei MLOps-Tools \& Orchestrierung (n=12) und Monitoring (n=9).
-ML/DL Frameworks \& Bibliotheken (n=8) und Vektordatenbanken (n=4) treten seltener auf.
-Das verweist darauf, dass Integrations- und Abhängigkeitsfragen vor allem auf System- und Pipeline-Ebene diskutiert werden.
+Netzwerkdaten und Traces ergänzen diese Sicht um Kommunikationsbeziehungen und Laufzeitpfade verteilter Systeme (z.\,B. Flow-Daten oder OpenTelemetry-Traces).
+Die Ausprägung ist insgesamt niedriger als bei Metriken und Logs, aber konsistent in Betrieb/Orchestrierung (n=6) sowie Sicherheits- und Bedrohungserkennung (n=5) vorhanden. 
+Das deutet darauf hin, dass diese Daten vor allem dann relevant werden, wenn Ursachen nicht lokal erklärbar sind (z.\,B. in Microservice-Architekturen) oder wenn Anomalien über Kommunikationsmuster erkannt werden sollen \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
 
-Für Datenqualität, Datenverfügbarkeit und Heterogenität liegen die Werte im Mittelfeld.
-MLOps wird am häufigsten gemeinsam adressiert (n=11), während ML/DL Frameworks und Monitoring jeweils bei n=9 liegen.
-Vektordatenbanken sind hier vergleichsweise stärker vertreten (n=6).
+Code und Konfiguration (Quellcode, Container-Artefakte, IaC-Definitionen) werden insbesondere dann wichtig, wenn KI nicht nur Symptome, sondern Änderungen und Konfigurationsursachen bewerten soll.
+Im Mapping zeigt sich eine breite Nutzung über alle Use Cases (n=7-9). 
+Auffällig ist die hohe Ausprägung bei Betrieb/Orchestrierung und Security (je n=9), was zu typischen Plattformproblemen wie riskanten Änderungen, unsicheren Defaults oder Fehlkonfigurationen passt \cite{supritpattanayakIntegratingAIDevOps2024}.
 
-Zusammenfassend ist MLOps die am häufigsten vertretene Tool-Kategorie über alle Herausforderungen hinweg.
-Vektordatenbanken treten insgesamt seltener auf, sind jedoch insbesondere in datenbezogenen Kontexten sichtbar.
+Historische Test- und Deployment-Daten (Build-Historien, Testergebnisse, Deployment-Verläufe) sind erwartungsgemäß stark vertreten, da viele Ansätze aus wiederkehrenden Mustern der Vergangenheit lernen.
+Besonders Betrieb/Orchestrierung (n=12) sowie CI/CD-Optimierung (n=9) und Ressourcenoptimierung (n=10) zeigen hohe Werte. 
+Das ist plausibel, weil Stabilitäts- und Effizienzentscheidungen in der Praxis häufig auf Release-Historien, Fehlerraten und Zeitverläufen aufbauen \cite{tamanampudiAIEnhancedContinuousIntegration}.
 
+Sicherheits- und Schwachstellendaten (z.\,B. Vulnerability-Scans, Threat-Feeds, Policy-Checks, Verhaltensmuster) konzentrieren sich erwartungsgemäß auf Sicherheits- und Bedrohungserkennung (n=8).
+Gleichzeitig sind sie auch im Betrieb/Orchestrierung sichtbar (n=6), was darauf hinweist, dass Security in Plattformumgebungen zunehmend als Betriebsaufgabe mit Observability- und Lebenszyklusdaten zusammenwächst \cite{govindarajanMachineLearningBased2025}.
+
+Deutlich wird, dass der Use case Betrieb und Orchestrierung die stärksten Überschneidungen mit nahezu allen Datenquellen hat, weil hier Monitoring-Daten und Änderungsdaten zusammelaufen.
+Für die KI heißt das konkret, ohne diese Kombination entstehen eher Fehleralarme (Incidents), und die eigentliche Ursache lässt sich schlechter finden. 
+
+
+\begin{comment}
 \subsection{Mapping der zentralen Dimensionen}
 \label{subsec:mappingVier}
 In diesem Abschnitt wird das Zusammenspiel von Lernparadigmen, Algorithmen und den identifizierten Anwendungsfeldern betrachtet.
 In der Abbildung \ref{fig:04_02_04_mappingVier} wurden alle Kategorien miteinander dargestellt.
-Kombinationen ohne Nachweis in den betrachteten Studien werden als n=0 dargestellt (ohne Blase)
+Kombinationen ohne Nachweis in den betrachteten Studien werden als n=0 dargestellt (ohne Blase).
 
 \begin{figure}[H]
     \centering
@@ -141,6 +145,7 @@ Im Reinforcement Learning konzentrieren sich die Zuordnungen ausschließlich auf
 Die Häufigkeiten sind insgesamt geringer als im Supervised- und Unsupervised Learning. 
 Die höchsten Werte zeigen sich bei der Sicherheits- und Bedrohungserkennung (n=7) sowie bei der Ressourcen- und Workload-Optimierung (n=6). Für die Optimierung von CI/CD-Pipelines und Self-Healing/Predictive Maintenance liegen die Werte jeweils bei n=5, während Intelligente Bereitstellung am seltensten genannt wird (n=4).
 Andere Algorithmusklassen sind im RL-Kontext nicht belegt (n=0), was die enge Kopplung von RL an DL-basierte (Deep-RL) Ansätze in den betrachteten Publikationen unterstreicht.
+\end{comment}
 \par\bigskip
 Die Kreuztabellenanalysen machen sichtbar, welche Zusammenhänge in der Forschung wiederkehrend sind.
 Darauf aufbauend wird in Abschnitt 4.3 ein Matching-Framework abgeleitet, das die Ergebnisse strukturiert zusammenfasst.
