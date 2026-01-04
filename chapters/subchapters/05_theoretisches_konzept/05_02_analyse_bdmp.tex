@@ -1,1 +1,33 @@
 \section{Analyse der Bosch Digital Manufacturing Plattform}
+\label{sec:analyse_bmlp}
+
+Die Bosch Digital Manufacturing Plattform (BMLP) ist eine modular aufgebaute, Cloud-Native-Plattform zur Unterstützung von Fertigungs- und Logistikprozessen.
+Anwendungen werden als lose gekoppelte Services bereitgestellt und in verteilten Umgebungen betrieben.
+Dazu zählen Edge-Standorte in den Werken, zentrale Rechenzentren sowie cloudbasierte Instanzen.
+Die Plattform ist auf einen hybriden Betrieb ausgelegt und adressiert Anforderungen an Latenz, Verfügbarkeit und Compliance gleichermaßen.
+
+Cloud-Native ist die Plattform, da sie konsequent auf Container-Orchestrierung mit Kubernetes, deklarative Schnittstellen, automatisierte CI/CD-Prozesse sowie durchgängige Beobachtbarkeit setzt.
+Diese Eigenschaften bilden die technische Grundlage für eine hohe Änderungsfrequenz und einen standardisierten Plattformbetrieb.
+Gleichzeitig entstehen umfangreiche Betriebsdaten, die für KI-gestützte Verfahren im Plattformbetrieb nutzbar sind.
+
+\subsection{Architektur und Betriebsmodell}
+\label{sec:architektur}
+Pro Werk wird typischerweise eine eigene Plattforminstanz als Kubernetes-Cluster betrieben.
+Zentrale und cloudbasierte Instanzen ergänzen die Edge-Workloads.
+Ziel ist ein hybrider Multi-Cluster-Betrieb mit standardisierten Lebenszyklen, etwa für Provisionierung, Updates und Patches.
+
+Deployments sind auf häufige Änderungen ausgelegt.
+Dazu werden Zero-Downtime-Strategien wie Rolling Updates, Blue-Green oder Canary verwendet.
+
+Der Plattform-Stack wird hier bewusst nur auf hoher Ebene beschrieben.
+Die Basis bilden Kubernetes sowie grundlegende Infrastrukturbausteine wie Registry, Netzwerk, Storage und Secrets-Management.
+Darüber liegen zentrale Plattformfunktionen für Zugriff, Schnittstellen und Integration.
+Fachliche Anwendungen werden als eigenständige Services betrieben und kommunizieren über REST-Schnittstellen oder Events.
+
+
+\subsection{Entwicklungsmodell und Plattformstandards}
+\label{sec:entwicklungsmodell}
+
+
+\subsection{Operativer Stack und Datenbasis für AI for Ops}
+\label{sec:operativerStack}
