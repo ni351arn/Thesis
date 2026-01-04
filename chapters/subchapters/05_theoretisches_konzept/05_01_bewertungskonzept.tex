@@ -1,64 +1,76 @@
-\section{Bewertungskonzept/ Framework}
-\label{sec:framework}
+\section{Bewertungskonzept}
+\label{sec:bewertungskonzept}
 Aufbauend auf den zuvor identifizierten KI-Use-Cases wird im Folgenden ein Bewertungskonzept vorgestellt, das eine strukturierte Einordnung und Vergleichbarkeit dieser Anwendungsfälle ermöglicht.
-Ziel des Frameworks ist es, KI-Anwendungsfälle im Cloud-Native Plattform Engineering systematisch hinsichtlich ihres Implementierungsaufwands und ihres operativen Mehrwerts zu bewerten.
+Ziel des Frameworks ist es, KI-Anwendungsfälle im Cloud-Native Platform Engineering systematisch hinsichtlich ihres Implementierungsaufwands und ihres operativen Mehrwerts zu bewerten.
 Damit soll eine fundierte Entscheidungsgrundlage für die Priorisierung und Implementierung von KI-Lösungen geschaffen werden.
-Aspekte wie Datenzugang, Governance und organisatorische Voraussetzungen werden bewusst nicht in der X/Y-Achse abgebildet, sondern in den Zusatzdimensionen bewertet.
+
+Implementierungsaufwand beschreibt dabei den Aufwand, eine KI-Funktion robust, sicher und wartbar produktiv zu integrieren und zu betreiben.
+Operativer Mehrwert beschreibt den erwarteten Beitrag zur messbaren Verbesserung zentraler Betriebsziele, insbesondere der Betriebszuverlässigkeit (z.\,B. MTTR), der Effizienz sowie der Systemstabilität.
+Als weitere betriebliche Zielgrößen können Service Level Objectives (SLOs) herangezogen werden, die messbare Zielwerte für Servicequalität (z.\,B. Verfügbarkeit oder Latenz) definieren.
+Aspekte wie Datenzugang, Governance und organisatorische Voraussetzungen werden bewusst nicht in der X/Y-Achse abgebildet, sondern in zusätzlichen Dimensionen vertieft betrachtet.
 
 Die erste Bewertungsdimension ist der Implementierungsaufwand, der auf der X-Achse der Bewertungsmatrix abgebildet wird.
 Tabelle \ref{tab:xAchse} konkretisiert diese Dimension anhand der qualitativen Ausprägung von niedrig bis hoch.
-Berücksichtigt werden dabei insbesondere der Grad der erforderlichen Modellanpassungen, der Trainingsaufwand sowie die Komplexität des operativen Betriebs.
-Ein niedriger Implementierungsaufwand beschreibt demnach den Einsatz bestehender KI-Funktionen oder Standardwerkzeuge. 
-Ein hoher Aufwand hingegen ist mit eigenem Modelltraining sowie kontinuierlicher Überwachung und Wartung verbunden.
+Berücksichtigt werden dabei insbesondere der Grad der erforderlichen Modellanpassungen, der Trainings- und Anpassungsaufwand sowie die Komplexität des operativen Betriebs.
+Darüber hinaus fließen Integrations- und Betriebsaspekte in die Einordnung ein, z.\,B. Anforderungen an Datenpipelines, Security-Mechanismen, Observability, Evaluation und laufende Qualitätssicherung.
+Ein niedriger Implementierungsaufwand beschreibt demnach den Einsatz bestehender KI-Funktionen oder Standardwerkzeuge mit geringem Integrations- und Betriebsaufwand.
+Ein hoher Aufwand hingegen ist typischerweise mit umfangreicher Integration und eigener Anpassung (z.\,B. RAG mit Datenpipeline und Evaluation oder Modelltraining) sowie kontinuierlicher Überwachung, Wartung und Qualitätssicherung verbunden.
 \input{tables/05_framework/05_01_xAchse.tex}
 \par\bigskip
 
 Die zweite Dimension bildet der operative Mehrwert, der auf der Y-Achse dargestellt wird und in Tabelle \ref{tab:yAchse} näher beschrieben ist.
 Hier wird der tatsächliche Beitrag eines KI-Use-Cases zur Verbesserung des Plattformbetriebs erfasst.
-Ein niedriger operativer Mehrwert umfasst vor allem unterstützende Funktionen mit begrenztem Einfluss auf zentrale Betriebskennzahlen. 
-Ein hoher Mehrwert hingegen zeigt sich in deutlichen Verbesserungen wesentlicher KPIs wie MTTR, Kostenreduktion oder Systemstabilität.
+Ein niedriger operativer Mehrwert umfasst vor allem unterstützende Funktionen mit begrenztem Einfluss auf zentrale Betriebskennzahlen.
+Ein hoher Mehrwert hingegen zeigt sich in deutlichen Verbesserungen wesentlicher KPIs und Betriebsziele, z.\,B. MTTR, SLO-Erfüllung, Error-Budget-Verbrauch, Infrastrukturkosten oder Systemstabilität.
 \input{tables/05_framework/05_01_yAchse.tex}
 \par\bigskip
 
-Abbildung \ref{fig:05_01_bewertungsMatrix} führt beide Dimensionen in einer zweidimensionalen Bewertungsmatrix zusammen. 
+Abbildung \ref{fig:05_01_bewertungsMatrix} führt beide Dimensionen in einer zweidimensionalen Bewertungsmatrix zusammen.
 Hierfür wurde die Matrix in vier Quadranten unterteilt, wodurch eine qualitative Einordnung der KI-Use-Cases in Bezug auf das Verhältnis von Implementierungsaufwand und operativem Mehrwert ermöglicht wird.
-Anwendungsfälle mit hohem Mehrwert und niedrigem Aufwand stellen besonders attraktive Kandidaten für eine kurzfristige Umsetzung dar.
-Hingegen sollten Anwendungsfälle mit hohem Aufwand und geringem Mehrwert kritisch hinterfragt werden.
+Anwendungsfälle mit hohem Mehrwert und niedrigem Aufwand weisen ein günstiges Aufwand-Nutzen-Verhältnis auf und eignen sich als priorisierte Kandidaten für eine erste Umsetzung.
+Use Cases mit hohem Mehrwert und hohem Aufwand sind strategische Kandidaten, die typischerweise eine Roadmap, Vorarbeiten (z.\,B. Daten- und Integrationsgrundlagen) sowie ein risikobewusstes Vorgehen erfordern.
+Hingegen sollten Anwendungsfälle mit hohem Aufwand und geringem Mehrwert nur weiterverfolgt werden, wenn sie notwendige Vorstufen für höherwertige Use Cases darstellen oder klare Abhängigkeiten bestehen.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{figures/05_bewertung/05_01_bewertungsMatrix.png}
+    \includegraphics[width=0.8\textwidth]{figures/05_bewertung/05_01_bewertungsMatrix.png}
     \caption{Bewertungsmatrix zur Einordnung von KI-Use-Cases im Cloud-Native Platform Engineering entlang von Implementierungsaufwand und operativem Mehrwert}
     \label{fig:05_01_bewertungsMatrix}
 \end{figure}
 \par\bigskip
-Die zweidimensionale Bewertungsmatrix ermöglicht eine erste Priorisierung von KI-Use-Cases basierend auf dem Verhältnis von Implementierungsaufwand und operativem Mehrwert.
-Sie zeigt, welche Anwendungsfälle ein günstiges Verhältnis zwischen Implementierungsaufwand und operativem Mehrwert aufweisen.
 
-Für eine fundiertere Bewertung sollten jedoch weitere Faktoren berücksichtigt werden.
-Die zusätzlichen Dimensionen erweitern die Matrix nicht um weitere Achsen.
-Stattdessen dienen sie der vertiefenden Analyse einzelner Anwendungsfälle innerhalb der bestehenden Struktur.
-Sie adressieren insbesondere Aspekte der Umsetzbarkeit, der operativen Wirkung sowie regulatorische und organisatorische Rahmenbedingungen.
-Diese Faktoren lassen sich in einer rein zweidimensionalen Darstellung nur unzureichend abbilden, sind jedoch für die praktische Bewertung entscheidend.
+Die zweidimensionale Bewertungsmatrix ermöglicht eine erste Priorisierung von KI-Use-Cases anhand des Verhältnisses von Implementierungsaufwand und operativem Mehrwertpotenzial.
+Sie dient als Ausgangspunkt für eine vertiefende Bewertung entlang zusätzlicher Faktoren, die in einer rein zweidimensionalen Darstellung nur unzureichend abbildbar sind.
+Die zusätzlichen Dimensionen erweitern die Matrix dabei nicht um weitere Achsen, sondern dienen der kontextbezogenen Bewertung der Realisierbarkeit und der betrieblichen Einbettung einzelner Use Cases.
 \par\bigskip
 
 \textbf{Dimension 1: Umsetzbarkeit}
+
 Die erste zusätzliche Dimension beschreibt die technische und organisatorische Umsetzbarkeit eines KI-Use-Cases.
-Sie umfasst die Verfügbarkeit und Qualität geeigneter Datenquellen, den technischen Fit mit der bestehenden Plattformarchitektur sowie das erforderliche Know-how für Entwicklung, Betrieb und Wartung.
-Die Einordnung erfolgt qualitativ (niedrig/mittel/hoch) auf Basis der in Abschnitt 5.2 betrachteten Datenquellen, Architekturartefakte sowie Rollenkompetenzen.
+Sie umfasst (i) die Verfügbarkeit und Qualität geeigneter Datenquellen, (ii) den technischen Fit mit der bestehenden Plattformarchitektur sowie die Integrationsfähigkeit und (iii) das erforderliche Know-how für Entwicklung, Betrieb und Wartung.
+Für die Bewertung wird eine einheitliche dreistufige Skala (niedrig/mittel/hoch) verwendet.
+Niedrig liegt vor, wenn Datenzugang und Integrationspfade vorhanden sind und das erforderliche Know-how im Team verfügbar ist.
+Hoch liegt vor, wenn Datenlücken, fehlende Schnittstellen oder signifikanter Kompetenzaufbau erforderlich sind.
 \par\bigskip
 
-\textbf{Dimension 2: Operative Wirkung}
-Die zweite Dimension fokussiert auf die erwartete Wirkung eines KI-Use-Cases im operativen Betrieb.
-Hierbei werden Aspekte wie der direkte Einfluss auf den Plattformbetrieb und die Skalierbarkeit der Lösung über Services und Teams hinweg betrachtet.
-Die Bewertung erfolgt anhand des erwarteten Beitrags zu zentralen Betriebskennzahlen sowie der Übertragbarkeit auf weitere Services und Teams.
+\textbf{Dimension 2: Betriebswirksamkeit \& Skalierbarkeit}
+
+Die zweite Dimension bewertet, ob sich der erwartete operative Mehrwert eines KI-Use-Cases im täglichen Plattformbetrieb zuverlässig realisieren lässt.
+Zusätzlich wird betrachtet, ob die Lösung über Services und Teams hinweg skalierbar ist.
+Bewertet werden (i) die Betriebswirksamkeit, z.\,B. Robustheit der Ergebnisse, Fehlalarme, Drift-Risiken und laufender operativer Aufwand, sowie (ii) die Skalierbarkeit in Bezug auf Wiederverwendbarkeit und Rollout-Fähigkeit.
+Für die Bewertung wird eine einheitliche dreistufige Skala (niedrig/mittel/hoch) verwendet.
+Niedrig beschreibt einen lokalen, stark kontextabhängigen oder schwer reproduzierbaren Effekt mit begrenzter Skalierbarkeit.
+Hoch beschreibt eine im Betrieb verlässlich wirksame Lösung mit breiter Übertragbarkeit über Services und Teams hinweg.
 \par\bigskip
 
 \textbf{Dimension 3: Governance \& Reifegrad}
-Die dritte Dimension berücksichtigt regulatorische und organisatorische Rahmenbedingungen.
-Hier wird insbesondere auf Anforderungen an Compliance, Security und den Reifegrad der jeweiligen KI-Lösung eingegangen.
-Die Einordnung erfolgt anhand regulatorischer Vorgaben, Sicherheitsanforderungen sowie des Reifegrads (PoC vs. produktiv erprobt) der jeweiligen Lösung.
 
+Die dritte Dimension berücksichtigt Governance-Anforderungen im Sinne von Compliance- und Security-Vorgaben.
+Bewertet werden (i) Anforderungen an Datenzugriff, Datenschutz und Sicherheitsmaßnahmen sowie (ii) der Reifegrad der jeweiligen Lösung (Konzeptnachweis, Pilotierung oder produktiv erprobt).
+Zur Einordnung dienen regulatorische Vorgaben, Sicherheitsanforderungen und der Nachweis operativer Stabilität.
+Niedrig liegt vor, wenn geringe Compliance-Hürden bestehen und die Lösung produktiv erprobt ist.
+Hoch liegt vor, wenn sensible Daten, strenge Vorgaben oder ein niedriger Reifegrad (z.\,B. Konzeptnachweis) vorliegen.
 \par\bigskip
-In Abschnitt 5.2 werden die identifizierten KI-Use-Cases zunächst in die Bewertungsmatrix eingeordnet. 
-Anschließend werden sie entlang der drei Zusatzdimensionen qualitativ bewertet, um Umsetzbarkeit, Wirkung und Governance-Aspekte kontextbezogen einzuordnen. 
-Dadurch entsteht eine priorisierte und zugleich praxisnahe Grundlage für die Ableitung von Pain Points und Handlungsempfehlungen.
+
+In Abschnitt 5.2 werden die identifizierten KI-Use-Cases zunächst in die Bewertungsmatrix eingeordnet (X/Y).
+Anschließend werden sie entlang der drei Zusatzdimensionen qualitativ bewertet, um Umsetzbarkeit, Betriebswirksamkeit und Governance-Aspekte kontextbezogen zu prüfen.
+Dadurch entsteht eine priorisierte und zugleich praxisnahe Grundlage, um identifizierte Pain Points der Plattform gezielt mit geeigneten KI-Use-Cases zu adressieren und daraus Handlungsempfehlungen abzuleiten.
