@@ -9,25 +9,48 @@ Die Plattform ist auf einen hybriden Betrieb ausgelegt und adressiert Anforderun
 Cloud-Native ist die Plattform, da sie konsequent auf Container-Orchestrierung mit Kubernetes, deklarative Schnittstellen, automatisierte CI/CD-Prozesse sowie durchgängige Beobachtbarkeit setzt.
 Diese Eigenschaften bilden die technische Grundlage für eine hohe Änderungsfrequenz und einen standardisierten Plattformbetrieb.
 Gleichzeitig entstehen umfangreiche Betriebsdaten, die für KI-gestützte Verfahren im Plattformbetrieb nutzbar sind.
+Alle Informationen basierend auf interenen Plattformdokumentationen und Expertengesprächen (nicht öffentlich zugänglich).
 
 \subsection{Architektur und Betriebsmodell}
 \label{sec:architektur}
-Pro Werk wird typischerweise eine eigene Plattforminstanz als Kubernetes-Cluster betrieben.
-Zentrale und cloudbasierte Instanzen ergänzen die Edge-Workloads.
-Ziel ist ein hybrider Multi-Cluster-Betrieb mit standardisierten Lebenszyklen, etwa für Provisionierung, Updates und Patches.
+Fachliche Funktionen in der BMLP werden als eigenständige deploybare Module umgesetzt, auf Basis der verteilten und modularen Grundstruktur.
+Jedes Modul bringt typischerweise eigene Logik und eigene Datenhaltung mit, wodurch direkte Abhängigkeiten zwischen Modulen vermieden werden.
+Die Zusammenarbeit zwischen Modulen erfolgt überwiegend ereignisbasiert, während synchrone Schnittstellen nur für spezielle Anwendungsfälle genutzt werden.
 
-Deployments sind auf häufige Änderungen ausgelegt.
-Dazu werden Zero-Downtime-Strategien wie Rolling Updates, Blue-Green oder Canary verwendet.
+Für den werks- und organisationsübergreifenden Einsatz unterstützt die Plattform eine klare Trennung von Zugriffen und Verantwortlichkeiten.
+Diese wird durch zentrale Plattformdienste und ein gemeinsames Rollen- und Berechtigungsmodell umgesetzt.
+Dadurch können mehrere Organisationseinheiten dieselbe Plattform nutzen, ohne die Zugriffskontrolle zu verlieren.
 
-Der Plattform-Stack wird hier bewusst nur auf hoher Ebene beschrieben.
-Die Basis bilden Kubernetes sowie grundlegende Infrastrukturbausteine wie Registry, Netzwerk, Storage und Secrets-Management.
-Darüber liegen zentrale Plattformfunktionen für Zugriff, Schnittstellen und Integration.
-Fachliche Anwendungen werden als eigenständige Services betrieben und kommunizieren über REST-Schnittstellen oder Events.
-
+Im Betrieb werden zentrale Mechanismen möglichst vereinheitlicht.
+Dazu zählen gemeinsame Einstiegspunkte für Anwendungen sowie einheitliche Informationen zum Betriebszustand der Module.
+Monitoring und Supportprozesse bauen auf diesen Grundlagen auf und sind über die Plattform hinweg vergleichbar organisiert.
 
 \subsection{Entwicklungsmodell und Plattformstandards}
 \label{sec:entwicklungsmodell}
+Die Entwicklung der Module erfolgt intern und ist über mehrere Repositories organisiert.
+Zentrale Entwicklungsschritte wie Build, Tests, Container-Erstellung und Sicherheitsprüfungen sind in standardisierten CI-Pipelines automatisiert.
+Die daraus entstehenden Artefakte werden versioniert abgelegt und für den weiteren Betrieb bereitgestellt.
 
+Auch die Auslieferung folgt einem weitgehend automatisierten Ansatz.
+Ein wiederverwendbares Pipeline-Modell verbindet Artefaktverwaltung, Konfigurations- und Geheimnisverwaltung sowie deklarative Deployments zu einem durchgängigen Prozess.
+Ziel ist eine reproduzierbare und nachvollziehbare Bereitstellung, die zugleich regulatorische Anforderungen berücksichtigt.
 
-\subsection{Operativer Stack und Datenbasis für AI for Ops}
+Ergänzend definieren Plattformstandards zentrale Leitplanken für Entwicklung und Betrieb.
+Dazu zählen einheitliche Vorgaben für Container-Images und deklarative Infrastruktur.
+Schnittstellen werden nach gemeinsamen Gestaltungsregeln umgesetzt und konsistent dokumentiert, während die Kommunikation zwischen Modulen überwiegend ereignisbasiert erfolgt.
+Für den Betrieb werden einheitliche Logformate und durchgängige Korrelationskennungen genutzt, sodass Abläufe über mehrere Komponenten hinweg nachvollziehbar bleiben.
+
+\subsection{Operativer Stack und Datenbasis für AIOps}
 \label{sec:operativerStack}
+Für AIOps ist weniger die Tool-Landschaft entscheidend als die Daten, die im Plattformbetrieb entstehen.
+In der BMLP werden Betriebsdaten über Logs, Metriken, Traces sowie technische und fachliche Ereignisse erfasst und zentral nutzbar gemacht.
+Logs liegen in einem einheitlichen Format vor und enthalten neben Zeitstempel und Systemkontext auch Versions- und Instanzinformationen sowie Korrelationskennungen.
+Damit lassen sich Abläufe über mehrere Komponenten hinweg zusammenführen und automatisiert auswerten.
+
+Metriken und Traces ergänzen diese Sicht um messbare Größen wie Last, Latenz und Fehlerraten sowie um Ablaufspuren über Servicegrenzen hinweg.
+Ereignisdaten bilden Zustandswechsel und Prozessketten ab und unterstützen dadurch die Einordnung von Störungen.
+Zusätzlich entstehen Daten aus Build- und Rollout-Prozessen, etwa Testergebnisse, Sicherheitsprüfungen und Rollout-Verläufe, die Rückschlüsse auf Änderungsrisiken erlauben.
+Auch Änderungen an Konfigurationen können Hinweise auf Abweichungen zwischen geplantem und aktuellem Zustand liefern.
+
+Auf dieser Datenbasis lassen sich insbesondere Auffälligkeiten frühzeitig erkennen und Störungen schneller eingrenzen.
+Ebenso können Rollouts datenbasiert überwacht und Kapazitätsbedarfe besser abgeschätzt werden.
