@@ -1,0 +1,61 @@
+\section{Anwendung des Bewertungskonzepts}
+\label{sec:anwendung_bewertungskonzept}
+In diesem Abschnitt wird das aus Kapitel 5.1 entwickelte Bewertungskonzept auf ausgewählte Pain Points der BMLP angewendet.
+Dabei werden die identifizierten Pain Points zunächst allgemein beschrieben und anschließend auf passende KI-Use Cases aus Kapitel 4.3 gemappt.
+Anschließend erfolgt die tatsächliche Anwendung des Bewertungskonzepts, um Implementierungsaufwand und operativen Mehrwert zu bewerten.
+Darauf aufbauend werden die Ergebnisse der Literaturanalyse herangezogen und geschaut, welche konkrete Lösungen und Empfehlungen sich daraus ableiten lassen.
+
+\subsection{Proaktives Ressourcen-Management im Plattformbetrieb}
+\label{proaktiveRM}
+Der operative Betrieb cloud-nativer Plattformen ist in verteilten Szenarien stark heterogen.
+Je Werk bzw. Standort unterscheiden sich Lastprofile, Produktionszyklen und Wartungsfenster deutlich. 
+Dadurch entsteht kein „einheitlicher“ Plattformbetrieb, sondern ein Betrieb mit mehreren lokalen Dynamiken. 
+In der Praxis führt das dazu, dass Ressourcenauslastung und Kapazitätsbedarf nicht stabil vergleichbar sind und sich Peaks je nach Standort zu unterschiedlichen Zeiten und aus unterschiedlichen Gründen zeigen.
+
+Ein zentraler Pain Point ist die eingeschränkte Transparenz über die tatsächliche Ressourcennutzung über alle Kubernetes-Cluster hinweg. 
+Zwar liegen Metriken zur Auslastung vor, jedoch fehlt im laufenden Betrieb häufig eine konsistente Sicht, die (i) Auslastung, (ii) bereitgestellte Kapazität und (iii) die Auswirkungen auf Servicequalität gemeinsam betrachtet. 
+Das erschwert die Einordnung, ob ein Cluster „effizient“ arbeitet oder nur kurzfristig stabilisiert wird. 
+Zusätzlich tritt das Problem auf, dass lokale Engpässe nicht frühzeitig als Trend erkennbar sind, sondern erst sichtbar werden, wenn bereits Symptome auftreten (z. B. erhöhte Latenzen, steigende Fehlerraten oder Instabilitäten durch Ressourcenknappheit).
+
+Skalierungsentscheidungen erfolgen deshalb oft reaktiv. 
+Häufig werden Workloads anhand statischer Schwellenwerte oder kurzfristiger Beobachtungen angepasst. 
+Dieses Vorgehen erzeugt wiederkehrende Zielkonflikte. 
+Einerseits wird Überprovisionierung eingesetzt, um Lastspitzen abzufedern und Stabilität sicherzustellen. 
+Andererseits kommt es insbesondere in Edge-nahen Umgebungen zu Engpässen, wenn Ressourcen zu spät oder unzureichend bereitgestellt werden. 
+Das Problem verschärft sich, wenn Lastspitzen nicht nur durch „mehr Requests“, sondern durch betriebliche Randbedingungen beeinflusst werden, etwa durch begrenzte Knotenressourcen, verteilte Abhängigkeiten oder verzögerte Bereitstellung von Artefakten. 
+In Summe steigt der operative Aufwand, da Kapazitätsentscheidungen häufiger manuell validiert und im Störungsfall unter Zeitdruck getroffen werden.
+
+Der Pain Point lässt sich dem in Kapitel 4 abgeleiteten KI-Use-Case-Muster des proaktiven Ressourcen-Managements zuordnen. 
+Ziel des Musters ist es, zukünftige Ressourcenbedarfe frühzeitig abzuschätzen und Skalierungsentscheidungen auf eine vorausschauende Grundlage zu stellen. 
+Im Unterschied zu rein reaktiven Mechanismen werden dabei wiederkehrende Muster und zeitliche Zusammenhänge berücksichtigt, um Lastentwicklungen nicht erst im Ereignisfall, sondern bereits im Vorfeld zu antizipieren. 
+
+Technisch stützt sich dieser Use Case auf historische Betriebsdaten, insbesondere auf Metriken sowie weitere Telemetrie, wie sie in Abschnitt 5.2.3 als Datenbasis beschrieben wurde. 
+Der fachliche Kern liegt weniger in einzelnen Metriken, sondern in der konsistenten Nutzung historischer Verläufe, um Trends, wiederkehrende Peaks und standortspezifische Muster abzuleiten. 
+Dadurch entsteht eine belastbarere Grundlage für Entscheidungen zur Skalierung und Kapazitätsplanung auf Workload-, Knoten- oder Cluster-Ebene, ohne den Fokus auf einzelne Anwendungen zu verengen. 
+
+Im Bewertungskonzept ist der Implementierungsaufwand als mittel bis hoch einzuordnen. 
+Treiber sind vor allem Datenaufbereitung und die Einbettung in bestehende Betriebsprozesse. 
+Der operative Mehrwert ist hoch, da eine vorausschauende Steuerung sowohl Stabilität als auch Ressourceneffizienz unterstützt. 
+In der qualitativen Bewertung hängt die Umsetzbarkeit wesentlich von der Qualität und Verfügbarkeit historischer Betriebsdaten ab. 
+Governance-Anforderungen fallen vergleichsweise gering aus, da überwiegend technische Telemetriedaten verarbeitet werden.
+
+\subsection{Automatiserte Release-Absicherung}
+\label{automatisierteReleaseAbsicherung}
+
+\subsection{Risikobasiertes Schwachstellen- und Compliance-Management}
+\label{risikobasiertesSchwachstellenCompliance}
+
+
+
+
+Aufbau:
+
+Pain Point beschrieben
+
+Mapping auf USe case Muster
+
+Anwendung des Bewertungskonzepts
+
+Was sagt Literatur zu diesem Problem (Effekt, Tools, Übertragbarkeit)
+
+Handlungsempfehlung
