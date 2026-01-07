@@ -17,7 +17,7 @@ Zwar liegen Metriken zur Auslastung vor, jedoch fehlt im laufenden Betrieb häuf
 Das erschwert die Einordnung, ob ein Cluster „effizient“ arbeitet oder nur kurzfristig stabilisiert wird. 
 Zusätzlich tritt das Problem auf, dass lokale Engpässe nicht frühzeitig als Trend erkennbar sind, sondern erst sichtbar werden, wenn bereits Symptome auftreten (z. B. erhöhte Latenzen, steigende Fehlerraten oder Instabilitäten durch Ressourcenknappheit).
 
-Skalierungsentscheidungen erfolgen deshalb oft reaktiv. 
+Aus diesem Grund erfolgen Skalierungsentscheidungen oft reaktiv. 
 Häufig werden Workloads anhand statischer Schwellenwerte oder kurzfristiger Beobachtungen angepasst. 
 Dieses Vorgehen erzeugt wiederkehrende Zielkonflikte. 
 Einerseits wird Überprovisionierung eingesetzt, um Lastspitzen abzufedern und Stabilität sicherzustellen. 
@@ -41,19 +41,54 @@ Governance-Anforderungen fallen vergleichsweise gering aus, da überwiegend tech
 
 \subsection{Automatiserte Release-Absicherung}
 \label{automatisierteReleaseAbsicherung}
+Der Betrieb cloud-nativer Plattformen ist durch eine hohe Änderungsfrequenz gekennzeichnet.
+Über zahlreiche CI/CD-Pipelines werden Services kontinuierlich weiterentwickelt und ausgerollt, häufig parallel über mehrere Cluster und Umgebungen hinweg. 
+Diese Dynamik erhöht das Risiko, dass fehlerhafte Änderungen unbeabsichtigte Auswirkungen auf Stabilität und Verfügbarkeit haben, insbesondere wenn sich Effekte nicht mehr eindeutig auf einzelne Services oder Deployments begrenzen lassen.
+
+Ein zentraler Pain Point liegt in der begrenzten Aussagekraft klassischer Release-Gates. 
+Release-Entscheidungen basieren häufig auf festen Grenzwerten für Fehlerraten oder Latenzen, die den jeweiligen Betriebskontext nur unzureichend berücksichtigen. 
+Abweichungen können entweder unentdeckt bleiben oder zu Fehlalarmen führen, obwohl sie betrieblich erklärbar sind. 
+Zusätzlich erschwert eine uneinheitliche Ausprägung der Observability die Bewertung von Release-Auswirkungen. 
+Unterschiede in Korrelation oder Datenvollständigkeit führen dazu, dass fehlerhafte Änderungen teilweise erst verzögert erkannt oder nicht eindeutig einem konkreten Rollout zugeordnet werden können.
+
+Der beschriebene Pain Point lässt sich dem in Kapitel 4 abgeleiteten KI-Use-Case-Muster der automatisierten Release-Absicherung zuordnen. 
+Ziel dieses Musters ist es, atypisches Systemverhalten während eines Rollouts frühzeitig zu erkennen und die Auswirkungen fehlerhafter Änderungen gezielt zu begrenzen. 
+Im Fokus steht dabei die Absicherung des Plattformbetriebs unter realen Betriebsbedingungen und nicht die Optimierung einzelner Entwicklungsprozesse. 
+
+Technisch basiert dieser Use Case auf der gemeinsamen Auswertung mehrerer Signalschichten. 
+Metriken, Logs und verteilte Traces werden während eines Rollouts zusammengeführt und auf Abweichungen vom erwarteten Normalverhalten analysiert. 
+Relevante Hinweise ergeben sich dabei nicht nur aus einzelnen Kennzahlen, sondern aus der zeitlichen Korrelation von Telemetrie und Release-Ereignissen. 
+Die Herausforderung besteht darin, betriebliche Effekte konsistent einem konkreten Rollout zuzuordnen und von kontextbedingten Schwankungen abzugrenzen. 
+
+Im Bewertungskonzept ist der Implementierungsaufwand dieses Use Cases als mittel einzuordnen. 
+Voraussetzung ist eine belastbare Observability-Grundlage sowie die Integration in bestehende Rollout- und Freigabeprozesse. 
+Der operative Mehrwert ist hoch, da problematische Releases früher erkannt und ihre Auswirkungen begrenzt werden können. 
+Die qualitative Bewertung zeigt, dass die Umsetzbarkeit wesentlich von der Qualität und Vergleichbarkeit der Betriebsdaten abhängt, während die Governance-Anforderungen moderat sind, sofern automatisierte Bewertungen nachvollziehbar dokumentiert werden.
 
 \subsection{Risikobasiertes Schwachstellen- und Compliance-Management}
 \label{risikobasiertesSchwachstellenCompliance}
 
+Im operativen Plattformbetrieb fallen kontinuierlich sicherheits- und compliancebezogene Befunde an. 
+Sie entstehen u. a. durch Scans von Container-Images, Abhängigkeitsanalysen oder Konfigurationsprüfungen. 
+In verteilten Plattformlandschaften mit Randstandorten stehen diesen Befunden jedoch häufig begrenzte Wartungsfenster gegenüber. 
+Eine zeitnahe Bearbeitung aller identifizierten Schwachstellen ist dadurch in der Praxis kaum möglich.
 
+Der zentrale Engpass liegt in der Priorisierung. 
+Häufig erfolgt diese primär anhand technischer Schweregrade aus standardisierten Bewertungsskalen. 
+Dabei bleibt unberücksichtigt, wie stark eine Schwachstelle im laufenden Betrieb tatsächlich exponiert ist und welche Bedeutung der betroffene Dienst für den operativen Betrieb besitzt. 
+Dadurch werden Kapazitäten auf Befunde mit geringer praktischer Relevanz gebunden, während Risiken mit hoher betrieblicher Wirkung verzögert adressiert werden.
 
+Dieser Pain Point lässt sich dem KI-Use-Case-Muster einer risikobasierten Schwachstellen- und Compliance-Bewertung zuordnen. 
+Ziel ist es, technische Prüfergebnisse um betrieblichen Kontext zu ergänzen und so eine belastbarere Reihenfolge für die Abarbeitung abzuleiten. 
+Im Fokus steht damit die strukturierte Einordnung vorhandener Befunde im Plattformbetrieb, nicht die Erzeugung zusätzlicher Befunde.
 
-Aufbau:
+Technisch basiert der Use Case auf der Verknüpfung mehrerer Datenquellen. 
+Schwachstelleninformationen werden mit Betriebs- und Nutzungsdaten zusammengeführt, z. B. tatsächliche Exposition, Verbreitung über Umgebungen sowie Hinweise zu aktuellen Bedrohungslagen. 
+Daraus lässt sich eine kontextbezogene Risikoeinstufung ableiten, die über eine rein technische Bewertung hinausgeht. 
+Diese Priorisierung bildet anschließend die Grundlage für eine gezieltere Planung von Patch- und Wartungsmaßnahmen über Dienste, Umgebungen und Werke hinweg.
 
-Pain Point beschrieben
-
-Mapping auf USe case Muster
-
-Anwendung des Bewertungskonzepts
-
-Was sagt Literatur zu diesem Problem (Effekt, Tools, Übertragbarkeit)
+Im Bewertungskonzept ist der Implementierungsaufwand als mittel einzuordnen. 
+Der Hauptaufwand liegt in der Integration sowie in der Konsistenz der benötigten Sicherheits- und Betriebsdaten. 
+Der operative Mehrwert ist hoch, da Sicherheitsrisiken gezielter reduziert und Abstimmungsaufwände bei der Sichtung und Einordnung der Befunde verringert werden können. 
+In der qualitativen Bewertung hängt die Umsetzbarkeit stark von der Verfügbarkeit belastbarer Laufzeit- und Inventardaten ab. 
+Die Governance-Anforderungen sind erhöht, da sicherheitsrelevante Informationen verarbeitet werden und die Priorisierungslogik transparent sowie organisatorisch klar verankert sein muss
