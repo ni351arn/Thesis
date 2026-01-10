@@ -14,6 +14,7 @@
 \usepackage{pdflscape}
 \usepackage{biblatex}
 \usepackage{comment}
+\usepackage{setspace}
 \graphicspath{{./figures/}} 
 \newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
 
@@ -54,9 +55,11 @@
 \input{erklaerung}
 
 \cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{\contentsname}
+\begingroup
+\setstretch{1.0}
 \tableofcontents
+\endgroup
+
 
 %% Use Arabic numerals for the page numbers of the chapters.
 \mainmatter
