@@ -1,0 +1,74 @@
+\section{Beantwortung der Forschungsfragen}
+\label{sec:beantwortung-ff}
+
+\subsection{Beantwortung der Forschungsfrage RQ1}
+\label{rq1Antwort}
+Die erste Forschungsfrage zielt darauf ab, allgemeine Anwendungsfelder und Herausforderungen zu identifizieren, in denen KI-Technologien im Cloud-Native Platform Engineering eingesetzt werden können. 
+Die Ergebnisse der systematischen Literaturanalyse zeigen, dass sich mehrere wiederkehrende Anwendungsfelder klar abgrenzen lassen. 
+Diese treten nicht isoliert auf, sondern stehen in engem Zusammenhang mit spezifischen betrieblichen Herausforderungen.
+
+Ein zentrales Anwendungsfeld ist die ressourcen- und workloadbezogene Optimierung im Plattformbetrieb. 
+Ein Großteil der betrachteten Studien adressiert die Vorhersage von Lastverläufen, die dynamische Anpassung von Kapazitäten sowie die Stabilisierung des Betriebs unter wechselnden Bedingungen. 
+Eng damit verbunden ist das Anwendungsfeld Betrieb und Orchestrierung, das sich auf Überwachung, Fehlererkennung und die Unterstützung operativer Entscheidungen im laufenden Betrieb konzentriert. 
+Weitere identifizierte Anwendungsfelder betreffen die Absicherung von Änderungs- und Auslieferungsprozessen sowie sicherheits- und compliancebezogene Aufgaben, etwa die Priorisierung von Schwachstellen oder die Erkennung auffälliger Verhaltensmuster.
+
+Über alle Anwendungsfelder hinweg zeigen sich wiederkehrende Herausforderungen.
+Besonders häufig werden der zusätzliche Ressourcenverbrauch und die entstehenden Betriebskosten genannt. 
+KI-gestützte Verfahren sollen zwar Effizienzgewinne ermöglichen, erzeugen jedoch selbst zusätzlichen Aufwand durch Training, Inferenz und Datenverarbeitung. 
+Ebenfalls dominant sind Herausforderungen im Bereich Skalierbarkeit und Integration. Die Einbettung von KI in bestehende Plattformarchitekturen erfordert stabile Schnittstellen, konsistente Datenquellen und eine enge Verzahnung mit bestehenden Betriebsprozessen. In vielen Arbeiten wird zudem auf die Abhängigkeit von der Qualität, Verfügbarkeit und Heterogenität der zugrunde liegenden Betriebsdaten hingewiesen.
+
+Ein weiterer zentraler Aspekt betrifft Governance-, Datenschutz- und Compliance- Anforderungen. 
+Insbesondere bei der Verarbeitung von Betriebs-, Sicherheits- oder Konfigurationsdaten ergeben sich Anforderungen an Nachvollziehbarkeit, Zugriffskontrolle und regelkonforme Nutzung. 
+Diese Anforderungen begrenzen den Einsatz von KI in der Praxis häufig stärker als rein technische Fragestellungen. 
+Die Analyse zeigt zudem, dass viele Anwendungsfelder mehrere dieser Herausforderungen gleichzeitig berühren und dadurch Zielkonflikte zwischen Nutzen, Aufwand und Betriebssicherheit entstehen.
+
+Zusammenfassend lässt sich festhalten, dass KI im Platform Engineering vor allem dort eingesetzt wird, wo große Mengen an Betriebsdaten anfallen und Entscheidungen bislang überwiegend reaktiv getroffen werden. 
+Die identifizierten Anwendungsfelder adressieren konkrete betriebliche Problemstellungen, sind jedoch stets an strukturelle Voraussetzungen und wiederkehrende Herausforderungen gebunden. 
+Eine isolierte Betrachtung einzelner Use Cases ist daher nicht ausreichend. 
+Vielmehr ist eine systematische Einordnung notwendig, um den potenziellen Mehrwert von KI im Plattformbetrieb realistisch bewerten zu können.
+
+\subsection{Beantwortung der Forschungsfrage RQ2}
+\label{rq2Antwort}
+Die Forschungsfrage RQ2 untersucht, welche KI-Technologien sowie Lernparadigmen im Platform Engineering eingesetzt werden und in welchen Kontexten sie Anwendung finden. Die Ergebnisse der Literaturanalyse zeigen, dass in den betrachteten Arbeiten unterschiedliche Formen des maschinellen Lernens verwendet werden, deren Einsatz stark vom jeweiligen Anwendungsfeld und den verfügbaren Daten abhängt.
+
+Am dominantesten sind Supervised Learning Verfahren. 
+Dieses wird insbesondere dort eingesetzt, wo historische Betriebsdaten mit bekannten Ergebnissen vorliegen.
+Typische Beispiele hierfür sind die Vorhersage von Lastentwicklungen, die Klassifikation von Fehlersituationen oder die Bewertung von Änderungsrisiken. 
+Die Verfügbarkeit gelabelter Daten ermöglicht dabei eine vergleichsweise klare Bewertung der Modellgüte und erleichtert die Integration in bestehende Betriebsprozesse. 
+In vielen Publikationen wird das zugrunde liegende Lernparadigma jedoch nicht explizit benannt, sondern nur implizit über die beschriebenen Aufgaben und Methoden erkennbar.
+
+Unsupervised Learning wird vor allem in Szenarien eingesetzt, in denen Abweichungen vom Normalbetrieb erkannt werden sollen. 
+Typische Anwendungsfälle sind die Analyse von Log- und Monitoring-Daten sowie die Identifikation ungewöhnlicher Muster im Plattformbetrieb. 
+Diese Ansätze sind insbesondere dann relevant, wenn keine verlässlichen Zielgrößen oder Labels vorliegen. 
+Gleichzeitig zeigen die Ergebnisse, dass UL-Verfahren anfällig für Fehlalarme sind, insbesondere in dynamischen Umgebungen mit häufigen Änderungen, wodurch ihr praktischer Nutzen begrenzt sein kann.
+
+Reinforcement Learning wird in der Praxis eher seltener eingesetzt und konzentriert sich auf dynamische Steuerungs- und Optimierungsaufgaben. 
+Dazu zählen etwa Entscheidungen zur Lastverteilung oder zur Anpassung von Ressourcen unter wechselnden Rahmenbedingungen. 
+Die Literatur zeigt, dass diese Verfahren prinzipiell geeignet sind, komplexe Entscheidungsräume abzubilden. 
+Gleichzeitig ist ihr Einsatz mit einem hohen Implementierungs- und Betriebsaufwand verbunden, da sie umfangreiche Zustandsinformationen und kontinuierliches Feedback benötigen. 
+Vor allem im produktiven Plattformbetrieb stellt dies eine erhebliche Hürde dar, wodurch RL-Ansätze bislang nur begrenzt Anwendung finden.
+
+Bezogen auf die verwendeten Methoden zeigt sich ein deutliches Übergewicht komplexer Modellansätze, insbesondere bei der Verarbeitung heterogener Betriebsdaten wie Logs, Metriken und Ereignissen. 
+Klassische Verfahren zur Klassifikation oder Regression sowie ensemblebasierte Ansätze sind ebenfalls vertreten, werden jedoch seltener als eigenständiger Schwerpunkt behandelt. 
+Die Analyse legt nahe, dass die Wahl der Methode in vielen Arbeiten stärker von der Verfügbarkeit geeigneter Daten und weniger von einer systematischen Abwägung zwischen Modellkomplexität und betrieblichem Nutzen geprägt ist.
+
+Zusammenfassend zeigen die Ergebnisse, dass im Platform Engineering kein einheitlicher Technologieansatz vorherrscht. 
+Die Auswahl von Lernparadigmen und Methoden ist stark kontextabhängig und an die jeweilige Aufgabenstellung gebunden. 
+Die reine Betrachtung eingesetzter KI-Technologien reicht daher nicht aus, um deren Eignung im Plattformbetrieb zu beurteilen. 
+Vielmehr ist eine Einordnung erforderlich, die den Anwendungsfall, die Datenbasis und die betrieblichen Rahmenbedingungen gemeinsam berücksichtigt.
+
+
+\subsection{Beantwortung der Forschungsfrage RQ3}
+\label{rq3Antwort}
+
+Die Forschungsfrage RQ3 untersucht, wie sich identifizierte KI-Lösungen auf typische Anwendungsfälle im Platform Engineering übertragen und hinsichtlich ihres Mehrwerts und ihrer Umsetzbarkeit bewerten lassen. Die Ergebnisse dieser Arbeit zeigen, dass eine strukturierte Bewertung möglich ist, wenn technische Ansätze nicht isoliert betrachtet, sondern in einen betrieblichen Kontext eingeordnet werden.
+
+Als Grundlage dient das in Kapitel 5.1 entwickelte Bewertungskonzept, das zwei zentrale Dimensionen kombiniert. Die erste Dimension beschreibt den Implementierungsaufwand und wird auf der X-Achse abgebildet. Sie reicht von niedrigem bis hohem Aufwand und orientiert sich daran, in welchem Umfang bestehende Funktionen genutzt werden können, ob Anpassungen erforderlich sind oder ob ein eigenständiger Aufbau und kontinuierlicher Betrieb notwendig sind. Ein niedriger Implementierungsaufwand liegt vor, wenn vorhandene Werkzeuge oder Funktionen ohne eigenes Modelltraining eingesetzt werden können. Ein hoher Aufwand ist gegeben, wenn umfangreiche Integration, eigene Modellanpassungen sowie laufende Überwachung und Wartung erforderlich sind.
+
+Die zweite Dimension bildet den operativen Mehrwert ab und wird auf der Y-Achse dargestellt. Auch hier erfolgt die Einordnung von niedrig bis hoch. Maßgeblich ist, in welchem Umfang ein Use Case zur messbaren Verbesserung zentraler Betriebsziele beiträgt. Ein niedriger operativer Mehrwert liegt vor, wenn KI lediglich unterstützende Funktionen erfüllt. Ein hoher Mehrwert ist gegeben, wenn sich deutliche Verbesserungen in Bereichen wie Stabilität, Reaktionszeiten oder Ressourceneffizienz erwarten lassen.
+
+Zur Ergänzung dieser zweidimensionalen Einordnung wurden in Kapitel 5.1 zusätzliche Bewertungsdimensionen eingeführt. Die Dimension Umsetzbarkeit betrachtet, ob die notwendigen Datenquellen verfügbar sind, wie gut sich der Use Case in bestehende Plattformarchitekturen integrieren lässt und welches fachliche Know-how erforderlich ist. Die Dimension Betriebswirksamkeit und Skalierbarkeit bewertet, ob der erwartete Nutzen im laufenden Betrieb stabil erzielt werden kann und ob sich der Ansatz über mehrere Dienste oder Teams hinweg übertragen lässt. Die Dimension Governance und Reifegrad berücksichtigt Anforderungen an Datenschutz, Sicherheit und Nachvollziehbarkeit sowie den Entwicklungsstand der jeweiligen Lösung.
+
+Die Bewertung entlang aller Dimensionen erfolgt jeweils qualitativ in den Stufen niedrig, mittel und hoch. Diese Einordnung orientiert sich nicht an einzelnen Technologien, sondern an strukturellen Kriterien wie Datenverfügbarkeit, Integrationsaufwand und betrieblicher Wirkung. Dadurch wird eine vergleichbare Bewertung unterschiedlicher Anwendungsfälle ermöglicht, ohne konkrete Umsetzungen vorwegzunehmen.
+
+Insgesamt zeigt sich, dass die Übertragbarkeit von KI-Lösungen im Platform Engineering weniger von einzelnen Methoden abhängt als von einer konsistenten Betrachtung von Aufwand, Nutzen und betrieblichen Rahmenbedingungen. Das Bewertungskonzept ermöglicht es, generische Use-Case-Muster aus der Literatur systematisch auf konkrete Plattformkontexte zu beziehen und fundierte Priorisierungsentscheidungen vorzubereiten. Damit beantwortet die Arbeit die Forschungsfrage RQ3 auf einer strukturellen Ebene und schafft eine Brücke zwischen den Ergebnissen der Literaturanalyse und ihrer praktischen Einordnung.
