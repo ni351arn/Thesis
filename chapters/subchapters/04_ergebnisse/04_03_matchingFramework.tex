@@ -46,15 +46,15 @@ Zudem führen Änderungen an Pipeline-Schritten, Abhängigkeiten oder Build-Umge
 Voraussetzung für eine robuste Anwendung sind daher zentralisierte, konsistent strukturierte Protokolle sowie gelabelte Historien, die Builds zuverlässig mit Commit, Pipeline-Phase und Artefaktversion verknüpfen, sodass Fehlertypen eindeutig zugeordnet werden können.
 
 
-\subsection{DevSecOps (Security Ops)}
+\subsection{Risikobasiertes Schwachstellen- und Compliance-Management}
 \label{subsec:devsecops}
 
-Das Muster DevSecOps (Security Ops) beschreibt KI-gestützte Mechanismen, um Sicherheitsereignisse im Plattformbetrieb frühzeitig zu erkennen und Reaktionsmaßnahmen zu priorisieren.
+Das Muster Risikobasiertes Schwachstellen- und Compliance-Management wird in der Literatur häufig unter dem Begriff "DevSecOps oder SecurityOps" beschrieben und umfasst KI-gestützte Mechanismen, um Sicherheitsereignisse im Plattformbetrieb frühzeitig zu erkennen und Reaktionsmaßnahmen zu priorisieren.
 Tabelle \ref{tab:devsecops} fasst das Muster als Plattformaufgabe zusammen, bei der sowohl die Priorisierung von Sicherheits-Scans als auch die Echtzeit-Erkennung von Angriffen auf Basis von Netzwerk- und Audit-Telemetrie adressiert wird.
 
 \input{tables/04_ergebnisse/04_03_04_matchingTabelleVier.tex}
 
-Als methodische Grundlage werden in der Literatur sowohl Deep-Learning-Ans\"atze (z.B.\ CNNs) als auch Gradient-Boosting-Verfahren (z.B.\ XGBoost) diskutiert, wobei letzteres insbesondere bei unausgewogenen Sicherheitsdaten robuste Ergebnisse liefern kann \cite{govindarajanMachineLearningBased2025, uddohAIBasedThreatDetection2021}.
+Als methodische Grundlage werden in der Literatur sowohl Deep-Learning-Ansätze (z.B.\ CNNs) als auch Gradient-Boosting-Verfahren (z.B.\ XGBoost) diskutiert, wobei letzteres insbesondere bei unausgewogenen Sicherheitsdaten robuste Ergebnisse liefern kann \cite{govindarajanMachineLearningBased2025, uddohAIBasedThreatDetection2021}.
 Der operative Mehrwert besteht in einer verbesserten Detektionsleistung bei gleichzeitiger Reduktion von Fehlalarmen, wodurch Security-Teams weniger Zeit in manuelle Triage investieren müssen und kritische Ereignisse schneller eskaliert werden können \cite{uddohAIBasedThreatDetection2021}.
 Gleichzeitig ist die praktische Umsetzung an Grenzen gebunden, da Deep-Learning-Verfahren in der Inferenz einen erhöhten Rechenbedarf verursachen und damit zusätzliche Plattformkosten auslösen können.
 Darüber hinaus entstehen Datenschutz- und Compliance-Anforderungen, sobald paketbasierte Protokolle oder Logdaten potenziell personenbezogene Informationen enthalten und entsprechend nach DSGVO verarbeitet werden müssen.
