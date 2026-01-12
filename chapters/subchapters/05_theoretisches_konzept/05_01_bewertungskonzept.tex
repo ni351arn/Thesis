@@ -4,46 +4,49 @@ Aufbauend auf den zuvor identifizierten KI-Use-Cases wird im Folgenden ein Bewer
 Ziel des Frameworks ist es, KI-Anwendungsfälle im Cloud-Native Platform Engineering systematisch hinsichtlich ihres Implementierungsaufwands und ihres operativen Mehrwerts zu bewerten.
 Damit soll eine fundierte Entscheidungsgrundlage für die Priorisierung und Implementierung von KI-Lösungen geschaffen werden.
 
-Implementierungsaufwand beschreibt dabei den Aufwand, eine KI-Funktion robust, sicher und wartbar produktiv zu integrieren und zu betreiben.
-Operativer Mehrwert beschreibt den erwarteten Beitrag zur messbaren Verbesserung zentraler Betriebsziele, insbesondere der Betriebszuverlässigkeit (z.\,B. MTTR), der Effizienz sowie der Systemstabilität.
-Als weitere betriebliche Zielgrößen können Service Level Objectives (SLOs) herangezogen werden, die messbare Zielwerte für Servicequalität (z.\,B. Verfügbarkeit oder Latenz) definieren.
-Aspekte wie Datenzugang, Governance und organisatorische Voraussetzungen werden bewusst nicht in der X/Y-Achse abgebildet, sondern in zusätzlichen Dimensionen vertieft betrachtet.
+\subsection{Ziel und Einordnung der Bewertungslogik}
+\label{zielBewertungslogik}
+Der Implementierungsaufwand beschreibt den Aufwand, eine KI-Funktion robust, sicher und wartbar in den Betrieb zu integrieren.
+Der operative Mehrwert beschreibt den erwarteten Beitrag zur messbaren Verbesserung zentraler Betriebsziele.
+Dazu zählen insbesondere Betriebszuverlässigkeit (z.\,B. MTTR), Effizienz und Systemstabilität.
+Aspekte wie Datenzugang, Steuerung und organisatorische Voraussetzungen werden nicht in der X/Y-Achse abgebildet, sondern über zusätzliche Dimensionen betrachtet.
 
-Die erste Bewertungsdimension ist der Implementierungsaufwand, der auf der X-Achse der Bewertungsmatrix abgebildet wird.
-Tabelle \ref{tab:xAchse} konkretisiert diese Dimension anhand der qualitativen Ausprägung von niedrig bis hoch.
-Berücksichtigt werden dabei insbesondere der Grad der erforderlichen Modellanpassungen, der Trainings- und Anpassungsaufwand sowie die Komplexität des operativen Betriebs.
-Darüber hinaus fließen Integrations- und Betriebsaspekte in die Einordnung ein, z.\,B. Anforderungen an Datenpipelines, Security-Mechanismen, Observability, Evaluation und laufende Qualitätssicherung.
-Ein niedriger Implementierungsaufwand beschreibt demnach den Einsatz bestehender KI-Funktionen oder Standardwerkzeuge mit geringem Integrations- und Betriebsaufwand.
-Ein hoher Aufwand hingegen ist typischerweise mit umfangreicher Integration und eigener Anpassung (z.\,B. RAG mit Datenpipeline und Evaluation oder Modelltraining) sowie kontinuierlicher Überwachung, Wartung und Qualitätssicherung verbunden.
+Die X-Achse bildet den Implementierungsaufwand ab.
+Tabelle \ref{tab:xAchse} beschreibt die Ausprägungen von niedrig bis hoch.
+Niedrig bedeutet, dass sich der Use Case mit vorhandenen Funktionen oder Standardwerkzeugen umsetzen lässt und der Integrationsaufwand gering bleibt.
+Hoch bedeutet, dass zusätzliche Entwicklung, tiefere Integration und ein spürbarer Betriebsaufwand notwendig sind.
 \input{tables/05_framework/05_01_xAchse.tex}
 \par\bigskip
 
-Die zweite Dimension bildet der operative Mehrwert, der auf der Y-Achse dargestellt wird und in Tabelle \ref{tab:yAchse} näher beschrieben ist.
-Hier wird der tatsächliche Beitrag eines KI-Use-Cases zur Verbesserung des Plattformbetriebs erfasst.
-Ein niedriger operativer Mehrwert umfasst vor allem unterstützende Funktionen mit begrenztem Einfluss auf zentrale Betriebskennzahlen.
-Ein hoher Mehrwert hingegen zeigt sich in deutlichen Verbesserungen wesentlicher KPIs und Betriebsziele, z.\,B. MTTR, SLO-Erfüllung, Error-Budget-Verbrauch, Infrastrukturkosten oder Systemstabilität.
+Die Y-Achse bildet den operativen Mehrwert ab.
+Tabelle \ref{tab:yAchse} konkretisiert auch hier die Ausprägungen von niedrig bis hoch.
+Niedrig steht für unterstützende Funktionen, die zentrale Betriebsgrößen nur gering beeinflussen.
+Hoch liegt vor, wenn sich messbare Verbesserungen zeigen, etwa bei MTTR, Infrastrukturkosten oder der Systemstabilität.
 \input{tables/05_framework/05_01_yAchse.tex}
 \par\bigskip
 
-Abbildung \ref{fig:05_01_bewertungsMatrix} führt beide Dimensionen in einer zweidimensionalen Bewertungsmatrix zusammen.
-Hierfür wurde die Matrix in vier Quadranten unterteilt, wodurch eine qualitative Einordnung der KI-Use-Cases in Bezug auf das Verhältnis von Implementierungsaufwand und operativem Mehrwert ermöglicht wird.
-Anwendungsfälle mit hohem Mehrwert und niedrigem Aufwand weisen ein günstiges Aufwand-Nutzen-Verhältnis auf und eignen sich als priorisierte Kandidaten für eine erste Umsetzung.
-Use Cases mit hohem Mehrwert und hohem Aufwand sind strategische Kandidaten, die typischerweise eine Roadmap, Vorarbeiten (z.\,B. Daten- und Integrationsgrundlagen) sowie ein risikobewusstes Vorgehen erfordern.
-Hingegen sollten Anwendungsfälle mit hohem Aufwand und geringem Mehrwert nur weiterverfolgt werden, wenn sie notwendige Vorstufen für höherwertige Use Cases darstellen oder klare Abhängigkeiten bestehen.
+Abbildung \ref{fig:05_01_bewertungsMatrix} führt beide Dimensionen in einer Bewertungsmatrix zusammen.
+Die Matrix ist in vier Quadranten unterteilt, wodurch sich Anwendungsfälle qualitativ nach Aufwand und Mehrwert einordnen lassen.
+Anwendungsfälle mit hohem Mehrwert und niedrigem Aufwand eignen sich für eine frühe Umsetzung.
+Use Cases mit hohem Mehrwert und hohem Aufwand bleiben relevant, erfordern jedoch typischerweise Vorarbeiten, etwa bei Daten- und Integrationsgrundlagen.
+Anwendungsfälle mit hohem Aufwand und geringem Mehrwert sollten nur weiterverfolgt werden, wenn klare Abhängigkeiten bestehen.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{figures/05_bewertung/05_01_bewertungsMatrix.png}
-    \caption{Bewertungsmatrix zur Einordnung von KI-Use-Cases im Cloud-Native Platform Engineering entlang von Implementierungsaufwand und operativem Mehrwert}
+    \caption{Bewertungsmatrix zur Einordnung von KI-Use-Cases entlang von Implementierungsaufwand und operativem Mehrwert}
     \label{fig:05_01_bewertungsMatrix}
 \end{figure}
-\par\bigskip
 
+
+\subsection{Zusatzdimensionen und Bewertungsstufen}
+\label{zusatzdimensionenBewertung}
 Die zweidimensionale Bewertungsmatrix priorisiert KI-Use-Cases zunächst über das Verhältnis von Implementierungsaufwand (X) und operativem Mehrwert (Y). 
 Sie liefert damit eine erste Einordnung, greift aber zentrale Rahmenbedingungen des Plattformbetriebs nur indirekt auf.
 
 Daher werden ergänzend vier Zusatzdimensionen betrachtet. 
-Diese erweitern die Matrix nicht um weitere Achsen, sondern beschreiben Faktoren, die über Erfolg, Risiko und realistische Umsetzbarkeit eines Use Cases entscheiden. 
+Diese dienen als Bewertungsgrundlage, um Implementierungsaufwand (X) und operativen Mehrwert (Y) nachvollziehbar abzuleiten.
 Die Bewertung erfolgt je Unterdimension einheitlich auf einer dreistufigen Skala (niedrig/mittel/hoch).
+Die Zusatzdimensionen wirken nicht direkt auf die Achsen der Bewertungsmatrix, fließen jedoch in die spätere Einordnung der Use Cases ein.
 \par\bigskip
 \textbf{Dimension 1: Umsetzbarkeit}
 
@@ -89,17 +92,31 @@ Die Dimension Reifegrad bewertet den Entwicklungs- und Betriebsstand eines KI-Us
 Sie umfasst (i) die Technologiereife der Lösung sowie (ii) die Absicherung des dauerhaften Betriebs.
 Berücksichtigt werden unter anderem der Entwicklungsstatus, vorhandene Betriebserfahrungen und die organisatorische Absicherung.
 
-Niedrig bedeutet, dass die Lösung sich im Produktivbetrieb befindet und organisatorisch sowie technisch abgesichert ist.
+Niedrig bedeutet, dass der Use Case als Konzept oder Prototyp vorliegt und belastbare Erfahrungen im Regelbetrieb fehlen.
 
 Mittel bedeutet, dass der Use Case pilotiert oder eingeschränkt produktiv eingesetzt wurde, mit noch offenen Betriebsfragen.
 
-Hoch bedeutet, dass die Lösung als Konzept oder Prototyp vorliegt und belastbare Erfahrungen im Regelbetrieb fehlen.
+Hoch bedeutet, dass die Lösung produktiv im Einsatz ist und technisch sowie organisatorisch abgesichert betrieben wird.
 \par\bigskip
 
 Zur einheitlichen Anwendung der Zusatzdimensionen werden die qualitativen Bewertungen in Tabelle \ref{tab:zusatzdimensionen} zusammengefasst.
 \input{tables/05_framework/05_01_zusatzdimension.tex}
-\par\bigskip
 
-In Abschnitt 5.2 werden die identifizierten KI-Use-Cases zunächst in die Bewertungsmatrix eingeordnet (X/Y).
-Anschließend werden sie entlang der drei Zusatzdimensionen qualitativ bewertet, um Umsetzbarkeit, Betriebswirksamkeit und Governance-Aspekte kontextbezogen zu prüfen.
-Dadurch entsteht eine priorisierte und zugleich praxisnahe Grundlage, um identifizierte Pain Points der Plattform gezielt mit geeigneten KI-Use-Cases zu adressieren und daraus Handlungsempfehlungen abzuleiten.
+\subsection{Ableitung der X- und Y-Achse und Quadrantenzuordnung}
+\label{ableitungXYAchse}
+Die Einordnung eines KI-Use-Cases in der Bewertungsmatrix erfolgt auf Basis eines Bewertungsrasters.
+Das Raster umfasst die Unterdimensionen der vier Zusatzdimensionen aus Abschnitt \ref{zusatzdimensionenBewertung}.
+Für jede Unterdimension wird die zugehörige Leitfrage beantwortet und auf einer dreistufigen Skala bewertet (niedrig/mittel/hoch).
+Zur Auswertung werden die Stufen in Zahlenwerte überführt (niedrig = 1, mittel = 2, hoch = 3).
+
+Die Werte fpr X und Y ergeben sich aus den Einzelbewertungen der Unterdimensionen.
+Kriterien mit Bezug zum Implementierungsaufwand gehen in den X-Wert ein, Kriterien mit Bezug zum operativen Nutzen in den Y-Wert.
+Unterdimensionen, die beide Perspektiven betreffen, werden entsprechend in beiden Achsen berücksichtigt.
+
+Der Achsenwert ergibt sich je Use Case als Mittelwert der zugeordneten Unterdimensionen.
+Dadurch entsteht eine Position in der Bewertungsmatrix, die in das X/Y-Diagramm übertragen wird.
+Da Mittelwerte verwendet werden, kann die Position auch zwischen Quadranten liegen.
+Dies bildet gemischte Bewertungen ab, etwa wenn einzelne Voraussetzungen erfüllt sind, andere jedoch noch Vorarbeiten erfordern.
+
+Das Bewertungsraster ist als Excel-Vorlage umgesetzt und im Anhang dokumentiert.
+Es ermöglicht eine einheitliche, nachvollziehbare und reproduzierbare Einordnung der Use Cases.
