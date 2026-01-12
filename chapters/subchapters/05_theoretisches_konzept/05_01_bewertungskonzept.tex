@@ -38,37 +38,62 @@ Hingegen sollten Anwendungsfälle mit hohem Aufwand und geringem Mehrwert nur we
 \end{figure}
 \par\bigskip
 
-Die zweidimensionale Bewertungsmatrix ermöglicht eine erste Priorisierung von KI-Use-Cases anhand des Verhältnisses von Implementierungsaufwand und operativem Mehrwertpotenzial.
-Sie dient als Ausgangspunkt für eine vertiefende Bewertung entlang zusätzlicher Faktoren, die in einer rein zweidimensionalen Darstellung nur unzureichend abbildbar sind.
-Die zusätzlichen Dimensionen erweitern die Matrix dabei nicht um weitere Achsen, sondern dienen der kontextbezogenen Bewertung der Realisierbarkeit und der betrieblichen Einbettung einzelner Use Cases.
-\par\bigskip
+Die zweidimensionale Bewertungsmatrix priorisiert KI-Use-Cases zunächst über das Verhältnis von Implementierungsaufwand (X) und operativem Mehrwert (Y). 
+Sie liefert damit eine erste Einordnung, greift aber zentrale Rahmenbedingungen des Plattformbetriebs nur indirekt auf.
 
+Daher werden ergänzend vier Zusatzdimensionen betrachtet. 
+Diese erweitern die Matrix nicht um weitere Achsen, sondern beschreiben Faktoren, die über Erfolg, Risiko und realistische Umsetzbarkeit eines Use Cases entscheiden. 
+Die Bewertung erfolgt je Unterdimension einheitlich auf einer dreistufigen Skala (niedrig/mittel/hoch).
+\par\bigskip
 \textbf{Dimension 1: Umsetzbarkeit}
 
-Die erste zusätzliche Dimension beschreibt die technische und organisatorische Umsetzbarkeit eines KI-Use-Cases.
-Sie umfasst (i) die Verfügbarkeit und Qualität geeigneter Datenquellen, (ii) den technischen Fit mit der bestehenden Plattformarchitektur sowie die Integrationsfähigkeit und (iii) das erforderliche Know-how für Entwicklung, Betrieb und Wartung.
-Für die Bewertung wird eine einheitliche dreistufige Skala (niedrig/mittel/hoch) verwendet.
-Niedrig liegt vor, wenn Datenzugang und Integrationspfade vorhanden sind und das erforderliche Know-how im Team verfügbar ist.
-Hoch liegt vor, wenn Datenlücken, fehlende Schnittstellen oder signifikanter Kompetenzaufbau erforderlich sind.
+Die Dimension Umsetzbarkeit bewertet, wie realistisch ein KI-Use-Case technisch und organisatorisch umgesetzt werden kann. 
+Sie umfasst (i) Datenverfügbarkeit und -qualität, (ii) die Passung zur bestehenden Plattform- bzw. CI/CD-Architektur (inkl. Integration) sowie (iii) die verfügbaren Fachkenntnisse für Entwicklung, Betrieb und Wartung.
+
+Niedrig bedeutet, dass Daten ausreichend vorhanden sind, die Integration ohne größere Änderungen möglich ist und die nötige Expertise im Team verfügbar ist.
+
+Mittel bedeutet, dass einzelne Vorarbeiten nötig sind (z.B. Datenaufbereitung, kleinere Anpassungen in Schnittstellen/Prozessen oder gezielter Kompetenzaufbau).
+
+Hoch bedeutet, dass wesentliche Voraussetzungen fehlen (z.B. Datenlücken, fehlende Integrationsmöglichkeiten oder deutlicher Kompetenzaufbau), sodass der Use Case nur mit spürbarem Vorlauf realisierbar ist.
 \par\bigskip
 
 \textbf{Dimension 2: Betriebswirksamkeit \& Skalierbarkeit}
 
-Die zweite Dimension bewertet, ob sich der erwartete operative Mehrwert eines KI-Use-Cases im täglichen Plattformbetrieb zuverlässig realisieren lässt.
-Zusätzlich wird betrachtet, ob die Lösung über Services und Teams hinweg skalierbar ist.
-Bewertet werden (i) die Betriebswirksamkeit, z.\,B. Robustheit der Ergebnisse, Fehlalarme, Drift-Risiken und laufender operativer Aufwand, sowie (ii) die Skalierbarkeit in Bezug auf Wiederverwendbarkeit und Rollout-Fähigkeit.
-Für die Bewertung wird eine einheitliche dreistufige Skala (niedrig/mittel/hoch) verwendet.
-Niedrig beschreibt einen lokalen, stark kontextabhängigen oder schwer reproduzierbaren Effekt mit begrenzter Skalierbarkeit.
-Hoch beschreibt eine im Betrieb verlässlich wirksame Lösung mit breiter Übertragbarkeit über Services und Teams hinweg.
+Diese Dimension bewertet, ob ein KI-Use-Case im laufenden Plattformbetrieb zuverlässig einen operativen Nutzen entfaltet.
+Zusätzlich wird betrachtet, ob sich der Ansatz mit vertretbarem Aufwand auf weitere Services oder Teams übertragen lässt.
+Berücksichtigt werden (i) die Stabilität und Wirksamkeit im Betrieb sowie (ii) die Skalierbarkeit und Wiederverwendbarkeit der Lösung.
+
+Niedrig bedeutet, dass der Nutzen stark kontextabhängig, instabil oder auf einzelne Services begrenzt ist.
+
+Mittel bedeutet, dass ein erkennbarer Mehrwert im Betrieb entsteht, die Übertragbarkeit jedoch nur eingeschränkt gegeben ist oder zusätzlichen Anpassungsaufwand erfordert.
+
+Hoch bedeutet, dass die Lösung stabil im Betrieb wirkt und mit geringem Zusatzaufwand breit ausgerollt werden kann.
 \par\bigskip
 
-\textbf{Dimension 3: Governance \& Reifegrad}
+\textbf{Dimension 3: Compliance \& Governance}
 
-Die dritte Dimension berücksichtigt Governance-Anforderungen im Sinne von Compliance- und Security-Vorgaben.
-Bewertet werden (i) Anforderungen an Datenzugriff, Datenschutz und Sicherheitsmaßnahmen sowie (ii) der Reifegrad der jeweiligen Lösung (Konzeptnachweis, Pilotierung oder produktiv erprobt).
-Zur Einordnung dienen regulatorische Vorgaben, Sicherheitsanforderungen und der Nachweis operativer Stabilität.
-Niedrig liegt vor, wenn geringe Compliance-Hürden bestehen und die Lösung produktiv erprobt ist.
-Hoch liegt vor, wenn sensible Daten, strenge Vorgaben oder ein niedriger Reifegrad (z.\,B. Konzeptnachweis) vorliegen.
+Diese Dimension erfasst organisatorische und regulatorische Rahmenbedingungen für den Einsatz eines KI-Use-Cases.
+Bewertet werden (i) Anforderungen an Datenschutz, Datenklassifikation und Zugriffskontrolle sowie (ii) die organisatorische Verankerung durch klare Zuständigkeiten und Freigabeprozesse.
+Die Dimension dient dazu, Risiken und Abstimmungsbedarfe frühzeitig sichtbar zu machen.
+
+Niedrig bedeutet, dass geringe regulatorische Anforderungen bestehen und Verantwortlichkeiten klar geregelt sind.
+
+Mittel bedeutet, dass zusätzliche Abstimmungen oder formale Freigaben erforderlich sind, jedoch gut handhabbar.
+
+Hoch bedeutet, dass strenge Vorgaben, sensible Daten oder unklare Zuständigkeiten zu erhöhtem Abstimmungs- und Umsetzungsaufwand führen.
+\par\bigskip
+
+\textbf{Dimension 4: Reifegrad}
+
+Die Dimension Reifegrad bewertet den Entwicklungs- und Betriebsstand eines KI-Use-Cases.
+Sie umfasst (i) die Technologiereife der Lösung sowie (ii) die Absicherung des dauerhaften Betriebs.
+Berücksichtigt werden unter anderem der Entwicklungsstatus, vorhandene Betriebserfahrungen und die organisatorische Absicherung.
+
+Niedrig bedeutet, dass die Lösung sich im Produktivbetrieb befindet und organisatorisch sowie technisch abgesichert ist.
+
+Mittel bedeutet, dass der Use Case pilotiert oder eingeschränkt produktiv eingesetzt wurde, mit noch offenen Betriebsfragen.
+
+Hoch bedeutet, dass die Lösung als Konzept oder Prototyp vorliegt und belastbare Erfahrungen im Regelbetrieb fehlen.
 \par\bigskip
 
 Zur einheitlichen Anwendung der Zusatzdimensionen werden die qualitativen Bewertungen in Tabelle \ref{tab:zusatzdimensionen} zusammengefasst.

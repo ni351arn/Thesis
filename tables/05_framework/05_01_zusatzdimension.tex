@@ -1,37 +1,73 @@
+\begin{landscape}
 \begin{table}[H]
-\caption{Bewertungsskalen der Zusatzdimensionen}
+\caption{Zusatzdimensionen zur qualitativen Bewertung von KI-Use-Cases im Plattformbetrieb}
 \label{tab:zusatzdimensionen}
-\footnotesize
-\renewcommand{\arraystretch}{1.2}
-\setlength{\tabcolsep}{7pt}
+\scriptsize
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{4pt}
 
-\begin{tabularx}{\linewidth}{p{4.2cm} p{2.2cm} X}
+\begin{tabularx}{\linewidth}{p{3.1cm} p{4.1cm} Y C{1.4cm} p{1.8cm}}
 \toprule
-\textbf{Zusatzdimension} & \textbf{Ausprägung} & \textbf{Beschreibung} \\
+\textbf{Zusatzdimension} & \textbf{Unterdimension} & \textbf{Ziel / Leitfrage} & \textbf{Achse} & \textbf{Quelle} \\
 \midrule
 
-\makecell[l]{Umsetzbarkeit} & Niedrig &
-Daten, Integrationspfade und erforderliches Know-how sind vorhanden; Umsetzung ohne strukturelle Änderungen möglich. \\
-& Mittel &
-Vorarbeiten bei Datenverfügbarkeit, Integration oder Kompetenzen notwendig. \\
-& Hoch &
-Zentrale Daten, Schnittstellen oder Fähigkeiten fehlen aktuell und erfordern zusätzliche Vorarbeiten. \\
+\makecell[l]{Umsetzbarkeit} &
+Datenverfügbarkeit und -qualität &
+Sind ausreichend vollständige und historisch nutzbare Daten für Training und Betrieb vorhanden? &
+X &
+P2, P3, P14 \\
+
+&
+Technischer Fit &
+Lässt sich der Use Case realistisch in bestehende Plattform-, oder CI/CD-Architekturen integrieren? &
+X &
+P2, P4, P13 \\
+
+&
+Erforderliche Fachkenntnisse &
+Ist ausreichende Expertise für Entwicklung, Betrieb und Wartung KI-gestützter Funktionen vorhanden? &
+X &
+P15, P3 \\
 \midrule
 
-\makecell[l]{Betriebswirksamkeit\\\& Skalierbarkeit} & Niedrig &
-Wirkung lokal oder instabil; stark kontextabhängig und nur schwer auf weitere Services oder Teams übertragbar. \\
-& Mittel &
-Stabile Wirkung in mehreren Szenarien, jedoch mit begrenzter Skalierbarkeit oder erhöhtem operativem Aufwand. \\
-& Hoch &
-Zuverlässig wirksam im Plattformbetrieb und plattformweit skalierbar ohne individuellen Zusatzaufwand. \\
+\makecell[l]{Betriebswirksamkeit\\\& Skalierbarkeit} &
+Stabilität und operativer Nutzen &
+Erzielt die Lösung im laufenden Plattformbetrieb einen stabilen, messbaren Mehrwert? &
+Y &
+P19, P21 \\
+
+&
+Skalierbarkeit und Wiederverwendbarkeit &
+Lässt sich der Ansatz ohne hohen Individualaufwand auf weitere Services oder Teams übertragen? &
+Y &
+P13, P21 \\
 \midrule
 
-\makecell[l]{Governance\\\& Reifegrad} & Niedrig &
-Geringe Governance- und Compliance-Hürden bei produktiv erprobtem Reifegrad. \\
-& Mittel &
-Zusätzliche Anforderungen an Dokumentation, Compliance oder organisatorische Abstimmung erforderlich. \\
-& Hoch &
-Hohe regulatorische Anforderungen oder geringer Reifegrad (z.\,B.\ Proof of Concept oder Forschung). \\
+\makecell[l]{Compliance\\\& Governance} &
+Datenschutz und Datenzugriff &
+Welche Anforderungen ergeben sich aus Datenschutz, Datenklassifikation und Zugriffskontrolle? &
+X &
+P4, P12 \\
+
+&
+Organisatorische Verankerung &
+Sind Verantwortlichkeiten, Freigaben und Governance-Strukturen klar definiert und akzeptiert? &
+X &
+P3, P16, P21 \\
+\midrule
+
+\makecell[l]{Reifegrad} &
+Technologiereife &
+In welchem Stadium befindet sich die Lösung (Konzept, Pilot, Produktivbetrieb)? &
+X+Y &
+P8, P13 \\
+
+&
+Betriebsreife &
+Ist der dauerhafte Betrieb durch klare Zuständigkeiten, Überwachungsmechanismen und eine ausreichende Betriebsdokumentation abgesichert? &
+X+Y &
+P15, P21 \\
 \bottomrule
 \end{tabularx}
 \end{table}
+\end{landscape}
