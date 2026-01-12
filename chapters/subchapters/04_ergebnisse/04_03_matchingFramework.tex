@@ -7,55 +7,67 @@ Ziel ist es, die identifizierten KI-Ansätze in übertragbare Anwendungsmuster f
 \subsection{Proaktives Ressourcen-Management}
 \label{subsec:proaktives-ressourcenmanagement}
 Das Muster Proaktives Ressourcen-Management beschreibt KI-gestützte Verfahren, um Infrastrukturressourcen vorausschauend und automatisiert an die erwartete Last anzupassen.
-Tabelle \ref{tab:proaktivesRessourcenmanagement} fasst dieses Muster als konkrete Plattformaufgabe zusammen, bei der Instanztypen (EC2/RDS) oder Kubernetes-Pods (HPA) nicht reaktiv über statische Schwellwerte, sondern auf Basis prognostizierter CPU-/RAM-Spitzen gesteuert werden.
+Tabelle \ref{tab:proaktivesRessourcenmanagement} fasst dieses Muster als konkrete Plattformaufgabe zusammen, bei der Instanzen oder Kubernetes-Pods (z.\,B. per Autoscaling/HPA) nicht nur reaktiv gesteuert werden.
+Auf Basis historischer Betriebsdaten wie CPU- und Speicherauslastung werden wiederkehrende Lastmuster erkannt und die Anzahl von Pods oder Instanzen frühzeitig angepasst, bevor Engpässe auftreten.
 
 \input{tables/04_ergebnisse/04_03_01_matchingTabelleEins.tex}
 
-Als methodischer Kern werden in der Literatur insbesondere Zeitreihenmodelle (z.B.\ LSTM) sowie Reinforcement-Learning-Ansätze beschrieben, die Skalierungs- und Allokationsentscheidungen dynamisch ableiten \cite{poudelAIDrivenIntelligentAutoScaling2025a}.
-Der operative Nutzen zeigt sich in einer verbesserten Ressourcenauslastung gegenüber heuristischen Policies sowie in messbaren Kosteneffekten durch bedarfsgerechte Allokation \cite{karthikputhrayaRoleCloudNativeArchitectures2025}.
-Gleichzeitig ist die praktische Umsetzbarkeit an Voraussetzungen wie ausreichend historischer Telemetrie und automatisierten Eingriffsmöglichkeiten (API-Schreibzugriffe) gebunden.
-Zudem erhöhen Trainingsaufwand und Cold-Start-Effekte, insbesondere in serverlosen Umgebungen, die Implementierungs- und Betriebsanforderungen.
-
+In der Literatur werden dafür vor allem Verfahren zur Auswertung zeitlicher Verläufe sowie lernbasierte Ansätze zur Entscheidungsunterstützung beschrieben \cite{poudelAIDrivenIntelligentAutoScaling2025a}. 
+Diese unterstützen die Ableitung von Skalierungsentscheidungen auf Basis historischer Auslastungsdaten.
+Der Nutzen im Betrieb zeigt sich in einer gleichmäßigeren Ressourcennutzung und in geringeren Kosten, da Ressourcen bedarfsgerechter bereitgestellt werden \cite{karthikputhrayaRoleCloudNativeArchitectures2025}.
+Die Umsetzung setzt jedoch voraus, dass ausreichend Verlaufsdaten aus dem Betrieb vorliegen und Eingriffe in die Skalierung automatisiert möglich sind. 
+Zusätzlich steigt der Aufwand, wenn Modelle regelmäßig angepasst werden müssen oder Verzögerungen beim Start neuer Komponenten auftreten, etwa in serverlosen Umgebungen.
 
 \subsection{Automatisierte Release-Absicherung}
 \label{subsec:automatisierte-release-absicherung}
 
-Das Muster Automatisierte Release-Absicherung adressiert die Absicherung von Deployments, indem fehlerhafte Releases möglichst früh erkannt und automatisiert begrenzt werden.
-Tabelle \ref{tab:automatisierteReleaseAbsicherung} konkretisiert dieses Muster als Plattform-Task im Kontext von Canary-Deployments, bei denen neue Versionen schrittweise ausgerollt und anhand von Latenz- sowie Fehlerraten kontinuierlich überwacht werden.
+Das Muster Automatisierte Release-Absicherung adressiert die Absicherung von Ausrollungen, indem fehlerhafte Versionen möglichst früh erkannt und automatisiert begrenzt werden.
+Die Tabelle \ref{tab:automatisierteReleaseAbsicherung} fasst dieses Muster als Plattformaufgabe zusammen.
+Laufzeitdaten wie Latenz und Fehlerraten werden während der Ausrollung kontinuierlich ausgewertet und bei auffälligen Abweichungen wird automatisch gestoppt oder auf eine stabile Vorgängerversion zurückgesetzt.
 
 \input{tables/04_ergebnisse/04_03_02_matchingTabelleZwei.tex}
 
-Methodisch werden dafür insbesondere Anomalieerkennungsverfahren (z.B.\ Autoencoder) genutzt, um Abweichungen vom etablierten Normalverhalten zu detektieren, während Reinforcement Learning (z.B.\ DQN) eingesetzt werden kann, um den Rollback-Zeitpunkt unter Unsicherheit zu optimieren \cite{tamanampudiAIEnhancedContinuousIntegration}.
-Als operativer Mehrwert wird in den betrachteten Studien eine Reduktion der Mean Time To Recovery (MTTR) sowie eine höhere Systemverfügbarkeit berichtet, da fehlerhafte Releases schneller identifiziert und automatisiert zurückgenommen werden können \cite{kankanalaAIMLDevOps2024,jossonpaulkalapparambathAdvancingDistributedSystems2025, tamanampudiAIEnhancedContinuousIntegration}.
-Gleichzeitig zeigen sich in der Praxis Grenzen durch False Positives, die unnötige Rollbacks auslösen können, sowie durch zusätzlichen Validierungs- und Governance-Aufwand, insbesondere wenn RL-basierte Entscheidungen nachvollziehbar begründet werden müssen.
-Für eine robuste Umsetzung sind daher eine belastbare Baseline für Normalverhalten aus service-mesh-gestützten Telemetriedaten (Traffic-Steuerung und Observability) sowie automatisierte Rollback-Mechanismen und ein Echtzeit-Streaming der relevanten Deployment-Metriken erforderlich.
+Verfahren zur Erkennung von Abweichungen vom normalen Systemverhalten kommen zum Einsatz, um problematische Änderungen frühzeitig zu identifizieren \cite{tamanampudiAIEnhancedContinuousIntegration}.
+Als operativer Mehrwert wird in den betrachteten Studien eine verkürzte Wiederherstellungszeit sowie eine höhere Systemverfügbarkeit beschrieben, da fehlerhafte Versionen schneller erkannt und automatisiert zurückgenommen werden können \cite{kankanalaAIMLDevOps2024,jossonpaulkalapparambathAdvancingDistributedSystems2025,tamanampudiAIEnhancedContinuousIntegration}.
+In der Praxis zeigen sich jedoch Grenzen durch Fehlalarme, die unnötige Rücksetzungen auslösen können, sowie durch zusätzlichen Validierungs- und Abstimmungsaufwand.
+Für eine robuste Umsetzung sind daher eine stabile Referenz für das Normalverhalten sowie automatisierte Rücksetz-Mechanismen und eine kontinuierliche Erfassung relevanter Ausrollungsdaten erforderlich.
 
 
 \subsection{Intelligente Build-Fehlerdiagnose}
 \label{subsec:intelligente-build-fehlerdiagnose}
 
-Das Muster Intelligente Build-Fehlerdiagnose adressiert die Frage, wie CI-Pipelines Build-Fehlschläge frühzeitig erkennen und die Ursachenanalyse im Entwicklungsprozess beschleunigen können.
-Tabelle \ref{tab:intelligenteBuildFehlerdiagnose} fasst das Muster als Plattformaufgabe zusammen, bei der Build- und Testprotokolle aus der CI (z.B.\ Jenkins und Git) automatisiert ausgewertet werden, um typische Fehlermuster zu identifizieren und wiederkehrende Fehlerbilder zu gruppieren.
+Das Muster Intelligente Build-Fehlerdiagnose adressiert die Frage, wie Fehlschläge in CI-Pipelines frühzeitig erkannt und die Ursachenanalyse im Entwicklungsprozess unterstützt werden kann.
+Tabelle \ref{tab:intelligenteBuildFehlerdiagnose} fasst dieses Muster als Plattformaufgabe zusammen, bei der Build- und Testprotokolle aus der CI automatisiert ausgewertet werden, um wiederkehrende Fehlermuster zu erkennen und einzugrenzen.
+Durch die Auswertung historischer Build-Protokolle, Testergebnisse und Code-Merkmale werden Muster identifiziert, die auf bevorstehende Fehlschläge hinweisen, sodass Entwickler frühzeitig auf potenzielle Build-Probleme aufmerksam gemacht werden.
 
 \input{tables/04_ergebnisse/04_03_03_matchingTabelleDrei.tex}
 
-Als methodische Grundlage dominieren SL Verfahren wie Random Forest und XGBoost, die aus historischen Build-Metadaten und Protokollmerkmalen sowohl das Risiko eines Fehlschlags als auch häufig den zu erwartenden Fehlertyp ableiten \cite{kankanalaAIMLDevOps2024,govindarajanMachineLearningBased2025,tamanampudiAIEnhancedContinuousIntegration}.
-Der operative Mehrwert liegt in verkürzten Rückkopplungszyklen, da problematische Änderungen früher auffallen und die Fehlersuche durch eine automatisierte Vorselektion relevanter Protokollauszüge reduziert wird, was sich in den Studien u.a.\ in kürzeren Bereitstellungszeiten und einer deutlichen Reduktion der Fehlersuchzeit widerspiegelt \cite{kankanalaAIMLDevOps2024,tamanampudiAIEnhancedContinuousIntegration}.
-Gleichzeitig ist die Umsetzung anfällig für unausgewogene Klassenverteilungen, da Fehlschläge in der Praxis typischerweise deutlich seltener als erfolgreiche Builds auftreten und Modelle dadurch verzerrt lernen können.
-Zudem führen Änderungen an Pipeline-Schritten, Abhängigkeiten oder Build-Umgebungen häufig zu veränderten Datenmustern, wodurch ein kontinuierliches Überwachen und regelmäßiges Nachtrainieren erforderlich wird.
-Voraussetzung für eine robuste Anwendung sind daher zentralisierte, konsistent strukturierte Protokolle sowie gelabelte Historien, die Builds zuverlässig mit Commit, Pipeline-Phase und Artefaktversion verknüpfen, sodass Fehlertypen eindeutig zugeordnet werden können.
-
+Hier werden vor allem SL-Verfahren wie Random Forest und XGBoost eingesetzt. 
+Sie werten frühere Build-Daten und Build-Logs aus und schätzen damit sowohl das Risiko eines Build-Fehlers als auch häufig die Art des Fehlers ab \cite{kankanalaAIMLDevOps2024,govindarajanMachineLearningBased2025,tamanampudiAIEnhancedContinuousIntegration}.
+Der Nutzen im Betrieb liegt vor allem in schnelleren Rückmeldungen. 
+Fehleranfällige Änderungen fallen früher auf, und die Fehlersuche wird erleichtert, da relevante Logstellen automatisch vorausgewählt werden. 
+In den Studien zeigt sich dies unter anderem in kürzeren Bereitstellungszeiten und einer deutlich geringeren Zeit für die Fehlersuche \cite{kankanalaAIMLDevOps2024,tamanampudiAIEnhancedContinuousIntegration}.
+Eine Herausforderung ist die ungleiche Verteilung der Daten. Build-Fehler treten deutlich seltener auf als erfolgreiche Builds, wodurch die Verfahren fehlerhafte Builds schlechter erkennen können.
+Zusätzlich verändern sich typische Muster, wenn Pipeline-Schritte, Abhängigkeiten oder Build-Umgebungen angepasst werden. 
+In solchen Fällen müssen die Verfahren regelmäßig überprüft und erneut angepasst werden.
+Für einen stabilen Einsatz sind daher zentral gesammelte und einheitlich strukturierte Build- und Test-Logs notwendig. 
+Zudem wird eine ausreichende und große Historie benötigt, die Builds eindeutig mit Commit, Pipeline-Schritt und Artefaktversion verknüpft.
 
 \subsection{Risikobasiertes Schwachstellen- und Compliance-Management}
 \label{subsec:devsecops}
 
-Das Muster Risikobasiertes Schwachstellen- und Compliance-Management wird in der Literatur häufig unter dem Begriff "DevSecOps oder SecurityOps" beschrieben und umfasst KI-gestützte Mechanismen, um Sicherheitsereignisse im Plattformbetrieb frühzeitig zu erkennen und Reaktionsmaßnahmen zu priorisieren.
-Tabelle \ref{tab:devsecops} fasst das Muster als Plattformaufgabe zusammen, bei der sowohl die Priorisierung von Sicherheits-Scans als auch die Echtzeit-Erkennung von Angriffen auf Basis von Netzwerk- und Audit-Telemetrie adressiert wird.
-
+Das Muster Risikobasiertes Schwachstellen- und Compliance-Management wird in der Literatur häufig unter den Begriffen DevSecOps oder SecurityOps eingeordnet. 
+Es beschreibt KI-gestützte Ansätze, um Sicherheitsereignisse im Plattformbetrieb frühzeitig zu erkennen und Reaktionen gezielt zu priorisieren.
+Tabelle \ref{tab:devsecops} fasst das Muster als Plattformaufgabe zusammen. 
+Im Fokus stehen dabei sowohl die Priorisierung von Sicherheits-Scans als auch die laufende Auswertung von Log- und Netzwerkdaten. 
+Auf dieser Basis lassen sich sicherheitsrelevante Abweichungen früh erkennen und automatisierte Maßnahmen einleiten, etwa die gezielte Isolation betroffener Komponenten.
 \input{tables/04_ergebnisse/04_03_04_matchingTabelleVier.tex}
 
-Als methodische Grundlage werden in der Literatur sowohl Deep-Learning-Ansätze (z.B.\ CNNs) als auch Gradient-Boosting-Verfahren (z.B.\ XGBoost) diskutiert, wobei letzteres insbesondere bei unausgewogenen Sicherheitsdaten robuste Ergebnisse liefern kann \cite{govindarajanMachineLearningBased2025, uddohAIBasedThreatDetection2021}.
-Der operative Mehrwert besteht in einer verbesserten Detektionsleistung bei gleichzeitiger Reduktion von Fehlalarmen, wodurch Security-Teams weniger Zeit in manuelle Triage investieren müssen und kritische Ereignisse schneller eskaliert werden können \cite{uddohAIBasedThreatDetection2021}.
-Gleichzeitig ist die praktische Umsetzung an Grenzen gebunden, da Deep-Learning-Verfahren in der Inferenz einen erhöhten Rechenbedarf verursachen und damit zusätzliche Plattformkosten auslösen können.
-Darüber hinaus entstehen Datenschutz- und Compliance-Anforderungen, sobald paketbasierte Protokolle oder Logdaten potenziell personenbezogene Informationen enthalten und entsprechend nach DSGVO verarbeitet werden müssen.
-Für eine belastbare Anwendung sind daher eine Echtzeit-Erfassung von Netzwerk-Flows und relevanten Logdaten sowie eine Kontextualisierung über Threat-Intelligence-Informationen (z.B.\ MITRE ATT\&CK) erforderlich, um Funde priorisieren und automatisierte Reaktionen kontrolliert auslösen zu können.
+Als methodischer Ansatz werden in der Literatur sowohl Deep-Learning-Modelle (z.B.\ CNNs) als auch Gradient-Boosting-Verfahren (z.B.\ XGBoost) eingesetzt \cite{govindarajanMachineLearningBased2025, uddohAIBasedThreatDetection2021}. 
+XGBoost kann dabei besonders dann stabil funktionieren, wenn es nur wenige echte Sicherheitsvorfälle in den Daten gibt \cite{govindarajanMachineLearningBased2025, uddohAIBasedThreatDetection2021}.
+Der Nutzen im Betrieb liegt in einer besseren Erkennung bei weniger Fehlalarmen. 
+Dadurch verringert sich der manuelle Aufwand, und kritische Funde können schneller weiterbearbeitet werden \cite{uddohAIBasedThreatDetection2021}.
+Gleichzeitig kann der Betrieb aufwendig werden, weil Deep-Learning-Modelle beim Einsatz zusätzliche Rechenleistung benötigen und damit Kosten verursachen.
+Zusätzlich steigen die Anforderungen an Datenschutz und Compliance, sobald Log- oder Netzwerkdaten personenbezogene Informationen enthalten und nach DSGVO verarbeitet werden müssen.
+Für einen stabilen Einsatz ist daher eine verlässliche Erfassung von Netzwerk- und Logdaten erforderlich. 
+Diese Daten müssen so zusammengeführt werden, dass sicherheitsrelevante Ereignisse nachvollziehbar eingeordnet und automatisierte Reaktionen gezielt und kontrolliert ausgelöst werden können.
