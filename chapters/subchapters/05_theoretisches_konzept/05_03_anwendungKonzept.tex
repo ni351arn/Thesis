@@ -1,103 +1,67 @@
 \section{Anwendung des Bewertungskonzepts}
 \label{sec:anwendung_bewertungskonzept}
-In diesem Abschnitt wird das in Kapitel 5.1 entwickelte Bewertungskonzept auf ausgewählte Problemfelder der BMLP angewendet. 
-Die Problemfelder werden zunächst beschrieben und anschließend den Use-Case-Mustern aus Kapitel 4.3 zugeordnet. 
-Darauf aufbauend erfolgt die qualitative Bewertung entlang von Implementierungsaufwand, operativem Mehrwert und den drei Zusatzdimensionen. 
-Ziel ist eine konsistente Einordnung der Problemfelder auf Basis der zuvor abgeleiteten Muster.
+In diesem Abschnitt wird das in Kapitel 5.1 entwickelte Bewertungskonzept auf ein konkretes Problemfeld der Bosch Digital Manufacturing Plattform angewendet. 
+Ziel ist es, dieses Problemfeld systematisch einzuordnen und anhand der definierten Zusatzdimensionen zu bewerten. 
+Die Analyse folgt dabei den generischen Use-Case-Mustern aus Kapitel 4.3.
 \par\bigskip
-%\subsection{Proaktives Ressourcen-Management im Plattformbetrieb}
-%\label{proaktiveRM}
-Der operative Betrieb cloud-nativer Plattformen ist in verteilten Szenarien stark heterogen.
-Je Werk bzw. Standort unterscheiden sich Lastprofile, Produktionszyklen und Wartungsfenster deutlich. 
-Dadurch entsteht kein „einheitlicher“ Plattformbetrieb, sondern ein Betrieb mit mehreren lokalen Dynamiken. 
-In der Praxis führt das dazu, dass Ressourcenauslastung und Kapazitätsbedarf nicht stabil vergleichbar sind und sich Lastspitzen je nach Standort zu unterschiedlichen Zeiten und aus unterschiedlichen Gründen zeigen.
 
-Ein zentrales Problemfeld ist die eingeschränkte Transparenz über die tatsächliche Ressourcennutzung über alle Kubernetes-Cluster hinweg. 
-Zwar liegen Metriken zur Auslastung vor, jedoch fehlt im laufenden Betrieb häufig eine konsistente Sicht, die (i) Auslastung, (ii) bereitgestellte Kapazität und (iii) die Auswirkungen auf Servicequalität gemeinsam betrachtet. 
-Das erschwert die Einordnung, ob ein Cluster „effizient“ arbeitet oder nur kurzfristig stabilisiert wird. 
-Zusätzlich tritt das Problem auf, dass lokale Engpässe nicht frühzeitig als Trend erkennbar sind, sondern erst sichtbar werden, wenn bereits Symptome auftreten (z. B. erhöhte Latenzen, steigende Fehlerraten oder Instabilitäten durch Ressourcenknappheit).
-
-Aus diesem Grund erfolgen Skalierungsentscheidungen oft reaktiv. 
-Häufig werden Workloads anhand statischer Schwellenwerte oder kurzfristiger Beobachtungen angepasst. 
-Dieses Vorgehen erzeugt wiederkehrende Zielkonflikte. 
-Einerseits wird Überprovisionierung eingesetzt, um Lastspitzen abzufedern und Stabilität sicherzustellen. 
-Andererseits kommt es insbesondere in Edge-nahen Umgebungen zu Engpässen, wenn Ressourcen zu spät oder unzureichend bereitgestellt werden. 
-Das Problem verschärft sich, wenn Lastspitzen nicht nur durch „mehr Anfragen“, sondern durch betriebliche Randbedingungen beeinflusst werden, etwa durch begrenzte Knotenressourcen, verteilte Abhängigkeiten oder verzögerte Bereitstellung von Artefakten. 
-In Summe steigt der operative Aufwand, da Kapazitätsentscheidungen häufiger manuell validiert und im Störungsfall unter Zeitdruck getroffen werden.
-
-Das Problemfeld lässt sich dem in Kapitel 4 abgeleiteten KI-Use-Case-Muster des proaktiven Ressourcen-Managements zuordnen. 
-Ziel ist es, zukünftige Ressourcenbedarfe frühzeitig zu erkennen und Skalierungsentscheidungen nicht erst im Störungsfall zu treffen. 
-Statt reaktiver Schwellenwerte werden wiederkehrende Lastmuster und zeitliche Zusammenhänge berücksichtigt. 
-
-Technisch stützt sich dieser Use Case auf historische Betriebsdaten, insbesondere auf Metriken sowie weitere Telemetrie, wie sie in Abschnitt 5.2.3 als Datenbasis beschrieben wurde. 
-Der fachliche Kern liegt weniger in einzelnen Metriken, sondern in der konsistenten Nutzung historischer Verläufe, um Trends, wiederkehrende Lastspitzen und standortspezifische Muster abzuleiten. 
-Dadurch entsteht eine belastbarere Grundlage für Entscheidungen zur Skalierung und Kapazitätsplanung auf Workload-, Knoten- oder Cluster-Ebene, ohne den Fokus auf einzelne Anwendungen zu verengen. 
-
-Im Bewertungskonzept ist der Implementierungsaufwand als mittel bis hoch einzuordnen. 
-Treiber sind vor allem Datenaufbereitung und die Einbettung in bestehende Betriebsprozesse. 
-Der operative Mehrwert ist hoch, da eine vorausschauende Steuerung sowohl Stabilität als auch Ressourceneffizienz unterstützt. 
-In der qualitativen Bewertung hängt die Umsetzbarkeit wesentlich von der Qualität und Verfügbarkeit historischer Betriebsdaten ab. 
-Governance-Anforderungen fallen vergleichsweise gering aus, da überwiegend technische Telemetriedaten verarbeitet werden.
-\begin{comment}
-\subsection{Automatisierte Release-Absicherung}
-\label{automatisierteReleaseAbsicherung}
-
-    
-
-Der Betrieb cloud-nativer Plattformen ist durch eine hohe Änderungsfrequenz gekennzeichnet.
-Über zahlreiche CI/CD-Pipelines werden Services kontinuierlich weiterentwickelt und ausgerollt, häufig parallel über mehrere Cluster und Umgebungen hinweg. 
-Diese Dynamik erhöht das Risiko, dass fehlerhafte Änderungen unbeabsichtigte Auswirkungen auf Stabilität und Verfügbarkeit haben, insbesondere wenn sich Effekte nicht mehr eindeutig auf einzelne Services oder Deployments begrenzen lassen.
-
-Ein weiteres zentrales Problemfeld liegt in der begrenzten Aussagekraft klassischer Freigabekriterien. 
-Release-Entscheidungen basieren häufig auf festen Grenzwerten für Fehlerraten oder Latenzen, die den jeweiligen Betriebskontext nur unzureichend berücksichtigen. 
-Abweichungen können entweder unentdeckt bleiben oder zu Fehlalarmen führen, obwohl sie betrieblich erklärbar sind. 
-Zusätzlich erschwert eine uneinheitliche Ausprägung der Beobachtbarkeit die Bewertung von Release-Auswirkungen. 
-Unterschiede in Korrelation oder Datenvollständigkeit führen dazu, dass fehlerhafte Änderungen teilweise erst verzögert erkannt oder nicht eindeutig einem konkreten Rollout zugeordnet werden können.
-Dadurch nimmt der manuelle Analyse- und Abstimmungsaufwand zu, was Freigabeentscheidungen verzögert und Reaktionszeiten im Störungsfall verlängert.
-
-Das beschriebene Problemfeld lässt sich dem in Kapitel 4 abgeleiteten KI-Use-Case-Muster der automatisierten Release-Absicherung zuordnen. 
-Ziel dieses Musters ist es, untypisches Systemverhalten während eines Rollouts frühzeitig zu erkennen und die Auswirkungen fehlerhafter Änderungen gezielt zu begrenzen. 
-Im Fokus steht dabei die Absicherung des Plattformbetriebs unter realen Betriebsbedingungen und nicht die Optimierung einzelner Entwicklungsprozesse. 
-
-Technisch basiert dieser Use Case auf der gemeinsamen Auswertung mehrerer Signalschichten. 
-Metriken, Logs und verteilte Trace-Daten werden während eines Rollouts zusammengeführt und auf Abweichungen vom erwarteten Normalverhalten analysiert. 
-Relevante Hinweise ergeben sich dabei nicht nur aus einzelnen Kennzahlen, sondern aus der zeitlichen Korrelation von Telemetrie und Release-Ereignissen. 
-Die Herausforderung besteht darin, betriebliche Effekte konsistent einem konkreten Rollout zuzuordnen und von kontextbedingten Schwankungen abzugrenzen. 
-
-Im Bewertungskonzept ist der Implementierungsaufwand dieses Use Cases als mittel einzuordnen. 
-Voraussetzung ist eine belastbare Beobachtbarkeits Grundlage sowie die Integration in bestehende Rollout- und Freigabeprozesse. 
-Der operative Mehrwert ist hoch, da problematische Releases früher erkannt und ihre Auswirkungen begrenzt werden können. 
-Die qualitative Bewertung zeigt, dass die Umsetzbarkeit wesentlich von der Qualität und Vergleichbarkeit der Betriebsdaten abhängt, während die Governance-Anforderungen moderat sind, sofern automatisierte Bewertungen nachvollziehbar dokumentiert werden.
-
-\subsection{Risikobasiertes Schwachstellen- und Compliance-Management}
-\label{risikobasiertesSchwachstellenCompliance}
-    
-
-Im operativen Plattformbetrieb fallen kontinuierlich sicherheits- und compliancebezogene Befunde an. 
-Sie entstehen u. a. durch Scans von Container-Images, Abhängigkeitsanalysen oder Konfigurationsprüfungen. 
-In verteilten Plattformlandschaften mit Randstandorten stehen diesen Befunden jedoch häufig begrenzte Wartungsfenster gegenüber. 
-Eine zeitnahe Bearbeitung aller identifizierten Schwachstellen ist dadurch in der Praxis kaum möglich.
-
-Der zentrale Engpass liegt in der Priorisierung. 
-Häufig erfolgt diese primär anhand technischer Schweregrade aus standardisierten Bewertungsskalen. 
-Dabei bleibt unberücksichtigt, wie stark eine Schwachstelle im laufenden Betrieb tatsächlich exponiert ist und welche Bedeutung der betroffene Dienst für den operativen Betrieb besitzt. 
-Dadurch werden Kapazitäten auf Befunde mit geringer praktischer Relevanz gebunden, während Risiken mit hoher betrieblicher Wirkung verzögert adressiert werden.
-
-Dieses Problemfeld lässt sich dem KI-Use-Case-Muster einer risikobasierten Schwachstellen- und Compliance-Bewertung zuordnen. 
-Ziel ist es, technische Prüfergebnisse um betrieblichen Kontext zu ergänzen und so eine belastbarere Reihenfolge für die Abarbeitung abzuleiten. 
-Im Fokus steht damit die strukturierte Einordnung vorhandener Befunde im Plattformbetrieb, nicht die Erzeugung zusätzlicher Befunde.
-
-Technisch basiert der Use Case auf der Verknüpfung mehrerer Datenquellen. 
-Schwachstelleninformationen werden mit Betriebs- und Nutzungsdaten zusammengeführt, z. B. tatsächliche Exposition, Verbreitung über Umgebungen sowie Hinweise zu aktuellen Bedrohungslagen. 
-Daraus lässt sich eine kontextbezogene Risikoeinstufung ableiten, die über eine rein technische Bewertung hinausgeht. 
-Diese Priorisierung bildet anschließend die Grundlage für eine gezieltere Planung von Patch- und Wartungsmaßnahmen über Dienste, Umgebungen und Werke hinweg.
-
-Im Bewertungskonzept ist der Implementierungsaufwand als mittel einzuordnen. 
-Der Hauptaufwand liegt in der Integration sowie in der Konsistenz der benötigten Sicherheits- und Betriebsdaten. 
-Der operative Mehrwert ist hoch, da Sicherheitsrisiken gezielter reduziert und Abstimmungsaufwände bei der Sichtung und Einordnung der Befunde verringert werden können. 
-In der qualitativen Bewertung hängt die Umsetzbarkeit stark von der Verfügbarkeit belastbarer Laufzeit- und Inventardaten ab. 
-Die Governance-Anforderungen sind erhöht, da sicherheitsrelevante Informationen verarbeitet werden und die Priorisierungslogik transparent sowie organisatorisch klar verankert sein muss.
-\end{comment}
+Im Betrieb der Bosch Digital Manufacturing Plattform treten Abbrüche in Build- und Bereitstellungsprozessen immer wieder auf. 
+Sie entstehen im Rahmen automatisierter CI/CD-Pipelines und betreffen sowohl einzelne Module als auch verkettete Abläufe über mehrere Komponenten hinweg. 
+Auch wenn keine konsolidierten Kennzahlen zur Häufigkeit vorliegen, zeigen interne Analysen und Betriebserfahrungen, dass solche Abbrüche wiederkehrend auftreten und die Durchlaufzeiten von Änderungen spürbar verlängern. 
+Die Auswirkungen sind insbesondere in Umgebungen mit paralleler Entwicklung und hoher Änderungsfrequenz sichtbar, da fehlerhafte Builds nachgelagerte Schritte blockieren und erneute Pipeline-Läufe erforderlich machen. 
+Dadurch verschiebt sich die Bereitstellung von Funktionen, was die Geschwindigkeit der Änderungsbereitstellung der Plattform insgesamt beeinträchtigt.
 \par\bigskip
-Die drei Einordnungen zeigen, dass die identifzierten Problemfelder zwar unterschiedlichen Domänen zuzordnen sind, jedoch in ihren Abhängigkeiten von Datenqualität  Vergleichbarkeit und betrieblichem Kontext ähneln.
-Auf dieser Grundlage werden in Abschnitt 5.4 konkrete Handlungsempfehlungen abgeleitet und priorisiert.
+
+Der zentrale Aufwand entsteht nicht durch den Abbruch eines Builds an sich, sondern durch die anschließende Ursachenanalyse. 
+Fehlersituationen lassen sich häufig nicht eindeutig einem einzelnen Schritt oder einer einzelnen Komponente zuordnen. 
+Stattdessen müssen Informationen aus mehreren Quellen zusammengeführt werden, darunter Pipeline-Läufe, System- und Applikationsprotokolle sowie technische Ereignisse aus der Laufzeitumgebung. 
+Eine durchgängige Sicht über den gesamten Ablauf ist dabei nur eingeschränkt gegeben. 
+Detailinformationen stehen nicht dauerhaft zur Verfügung, sondern müssen bei Bedarf gezielt aktiviert werden. 
+Dies erhöht den manuellen Analyseaufwand und verlangsamt die Eingrenzung der eigentlichen Ursache.
+
+Zusätzlich zeigt sich, dass Build- und Bereitstellungsprozesse in der Praxis nicht vollständig unabhängig voneinander sind. 
+Entlang der Build- und Auslieferungsprozesse bestehen Abhängigkeiten, etwa durch gemeinsam genutzte Artefakte, feste Reihenfolgen bei der Initialisierung oder gegenseitige Startvoraussetzungen einzelner Komponenten.
+Obwohl eine möglichst unabhängige Ausführung einzelner Pipelines angestrebt wird, führen diese Kopplungen dazu, dass Fehlerfolgen über mehrere Schritte hinweg wirken. 
+Die Analyse erfordert dadurch ein Verständnis des Gesamtzusammenhangs und einen hohen manuellen Analyseaufwand für die beteiligten Teams.
+\par\bigskip
+
+Für die systematische Einordnung dieses Problemfelds liegt in der Plattform eine geeignete Datengrundlage vor. 
+Pipeline-Laufinformationen und Build-Protokolle werden erfasst und für Auswertungen bereitgestellt.
+Applikations- und Prozessprotokolle werden zusammengeführt und folgen einem einheitlichen, strukturierten Format mit standardisierten Feldern.
+Dadurch lassen sich relevante Informationen einheitlich auswerten und vergleichen, ohne dass jede Analyse bei null beginnt.
+
+Zudem ist eine historische Protokollierung vorgesehen. 
+Die Einträge enthalten unter anderem Zeitstempel sowie Angaben zu Umgebung, Systemkontext, Version und Instanz. 
+Pipeline-Ausführungen und Laufzeitereignisse lassen sich über gemeinsame Kennungen und Kontextinformationen miteinander in Beziehung setzen und im Nachgang nachvollziehen.
+Damit sind zentrale Voraussetzungen gegeben, um wiederkehrende Fehlermuster zu identifizieren. 
+Die Ursachen lassen sich systematischer eingrenzen, statt rein manuell von Einzelfall zu Einzelfall vorzugehen.
+\par\bigskip
+
+Das beschriebene Problemfeld wird dem in Abschnitt 4.3.3 abgeleiteten generischen Use Case der intelligenten Build-Fehlerdiagnose zugeordnet. 
+Auf dieser Grundlage erfolgt die Bewertung entlang der in Abschnitt 5.1.2 definierten Zusatzdimensionen.
+
+Bezüglich der Umsetzbarkeit sind die erforderlichen Build-, Pipeline- und Protokolldaten in strukturierter Form und mit historischer Tiefe verfügbar. 
+Auch der technische Fit zur bestehenden Plattform ist gegeben, da die Analyse an vorhandene Build- und Auslieferungsprozesse anknüpfen kann. 
+Zusätzlicher Aufwand entsteht durch die Einbettung in bestehende Abläufe sowie durch den Umgang mit Abhängigkeiten zwischen Komponenten und Pipelines. 
+Insgesamt ergibt sich eine mittlere Umsetzbarkeit.
+
+Durch die Auswertung historischer Build- und Protokolldaten kann der manuelle Analyseaufwand reduziert und die Eingrenzung von Fehlerursachen beschleunigt werden. 
+Eine Übertragung auf weitere Pipelines ist möglich, erfordert jedoch Anpassungen, wenn Abläufe eng miteinander verknüpft sind. 
+In der Gesamtsicht ergibt sich eine mittlere bis hohe Ausprägung.
+
+Da überwiegend technische Prozess- und Protokolldaten verarbeitet werden, entstehen keine zusätzlichen Anforderungen an Datenschutz oder Regulierung.
+Abstimmungsaufwände betreffen vor allem Zuständigkeiten und organisatorische Regelungen, nicht jedoch regulatorische Einschränkungen. 
+Die Dimension ist daher als niedrig bis mittel einzuordnen.
+
+Der Reifegrad des Use Case ist insgesamt als mittel einzuordnen. 
+In der Literatur wird der Ansatz über die reine Konzeptionsphase hinaus beschrieben und in ersten Werkzeugen sowie Pilotanwendungen praktisch eingesetzt.
+Gleichzeitig fehlt jedoch bislang eine breite Etablierung mit klar abgesicherten Betriebsmodellen und Verantwortlichkeiten für den dauerhaften Einsatz.
+\par\bigskip
+
+Abbildung \ref{fig:05_03_bewertungsraster} zeigt die Einordnung des Use Case in die Bewertungsmatrix auf Basis der in diesem Abschnitt durchgeführten Analyse und Anwendung des Bewertungsrasters.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/05_bewertung/05_03_bewertungsraster.png}
+    \caption{Einordnung des Use Case in die Bewertungsmatrix}
+    \label{fig:05_03_bewertungsraster}
+\end{figure}
