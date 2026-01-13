@@ -1,38 +1,37 @@
 \section{Handlungsempfehlung}
 \label{sec:handlungsempfehlung}
-In Kapitel 5.3 wurden die identifizierten Problemfelder analysiert und bewertet. 
-Darauf aufbauend werden in diesem Kapitel konkrete Handlungsempfehlungen für den Betrieb der Plattform abgeleitet.
-Die Empfehlungen orientieren sich an der priorisierten Einordnung entlang der in Kapitel 5.1 definierten Kriterien und Zusatzdimensionen.
-Ziel ist es, betriebliche Entscheidungen zu unterstützen und strukturelle Schwächen im Plattformbetrieb gezielt zu adressieren.
-Eine detaillierte technische Umsetzung oder die Auswahl konkreter Werkzeuge ist nicht Gegenstand dieses Abschnitts.
+Auf Basis der Einordnung und Bewertung aus Abschnitt 5.3 wird in diesem Kapitel eine konkrete Handlungsempfehlung abgeleitet.
+Der Use Case der intelligenten Build-Fehlerdiagnose wurde im Bewertungsraster als hoch hinsichtlich des operativen Mehrwerts und mit mittlerer Umsetzbarkeit eingestuft.
+Daraus ergibt sich die Empfehlung, diesen Use Case priorisiert zu adressieren.
 \par\bigskip
-%\subsection[Proaktives Ressourcenmanagement]{%
-%Handlungsempfehlung: Proaktives Ressourcenmanagement}
-%\label{handlungsempfehlungProaktivesRM}
-%Die folgende Handlungsempfehlung baut auf der Einordnung in Abschnitt 5.3.1 auf. 
-%Ziel ist es, Engpässe früher zu erkennen und Entscheidungen im Ressourcenmanagement zu stabilisieren.
 
-Ressourcenentscheidungen sollten nicht erst bei akuten Überlastsituationen getroffen werden. 
-Stattdessen ist eine vorausschauende Betrachtung der Kapazitätsentwicklung erforderlich, die Auslastung, Anfragevolumen und wiederkehrende Lastmuster berücksichtigt. 
-Dadurch lassen sich absehbare Engpässe frühzeitig erkennen, bevor Stabilität oder Verfügbarkeit betroffen sind.
+Auf Grundlage dieser Bewertung sollte die intelligente Build-Fehlerdiagnose als erster Anwendungsfall weiterverfolgt werden. 
+Der erwartete Nutzen ergibt sich insbesondere aus der Reduktion des manuellen Analyseaufwands sowie einer schnelleren Eingrenzung von Fehlerursachen in Build- und Bereitstellungsprozessen. 
+Gleichzeitig ist der erforderliche Aufwand überschaubar, da die notwendigen Datenquellen bereits vorhanden sind und keine grundlegenden Änderungen an bestehenden Abläufen erforderlich sind.
 
-Voraussetzung ist eine belastbare Datengrundlage aus dem Betrieb. 
-Relevant sind insbesondere Auslastungswerte, Nachfrageverläufe und zeitliche Nutzungsmuster. 
-Auf dieser Basis können Maßnahmen vorbereitet werden, ohne dass Skalierungsentscheidungen im Störungsfall unter Zeitdruck erfolgen.
+Eine priorisierte Umsetzung erlaubt es, das identifizierte Problemfeld gezielt zu adressieren und gleichzeitig Erfahrungen im Umgang mit datengetriebenen Analyseansätzen im Plattformbetrieb zu sammeln. 
+Der Use Case eignet sich damit sowohl zur operativen Verbesserung als auch als Ausgangspunkt für weitere, darauf aufbauende Anwendungsfälle.
+\par\bigskip
 
-Das Ressourcenmanagement sollte dabei nicht isoliert auf einzelne Komponenten begrenzt bleiben. 
-Entscheidend ist die Wirkung auf den Plattformbetrieb insgesamt. 
-Skalierungs- und Kapazitätsentscheidungen müssen nachvollziehbar in die Betriebsabläufe eingebettet sein, damit sie reproduzierbar angewendet werden können.
+Auf Basis der priorisierten Einordnung bietet sich der Einsatz von K8sGPT als beispielhafte Umsetzung des identifizierten Use Case an \cite{kankanalaAIMLDevOps2024}. 
+In der Literatur wird K8sGPT als Open-Source-Projekt beschrieben, das den Einsatz von KI zur Unterstützung des Betriebs containerbasierter Systeme adressiert.
 
-Die Empfehlung ist mit mittlerem Implementierungsaufwand verbunden, da sie auf vorhandenen Betriebsdaten und Prozessen aufsetzt. 
-Der operative Mehrwert ist hoch, weil Entscheidungen früher getroffen werden und der Betrieb weniger reaktiv agiert. 
-Die Empfehlung ist skalierbar, sofern die Datenerfassung plattformweit vergleichbar ist und Verantwortlichkeiten klar geregelt sind.
+Der Schwerpunkt des Werkzeugs liegt auf der Analyse technischer Betriebsinformationen, insbesondere von Protokolldaten aus Kubernetes-Umgebungen. 
+Ziel ist es, Betreiber bei der Ursachenanalyse von Fehlerzuständen zu unterstützen und wiederkehrende Probleme schneller nachvollziehbar zu machen. 
+Damit greift der Ansatz direkt das in Abschnitt 5.3 beschriebene Problemfeld der Build- und Fehlerdiagnose auf.
 
-%\subsection[Automatisierte Release-Absicherung]{%
-%Handlungsempfehlung: Automatisierte Release-Absicherung}
-%\label{handlungsempfehlungAutomatsierterRA}
+Der Einsatz von K8sGPT ist als ergänzende Unterstützung bestehender Betriebs- und Analyseprozesse zu verstehen. 
+Entscheidungen und Maßnahmen verbleiben weiterhin bei den verantwortlichen Teams. 
+Das Werkzeug eignet sich somit, um den identifizierten Use Case technisch umzusetzen, ohne bestehende Abläufe grundlegend zu verändern.
+\par\bigskip
+
+Architekturskizze (Abbildung):
+wo das Tool sitzt
+welche Daten es nutzt
+
+\par\bigskip
+Die Handlungsempfehlung beschreibt keinen vollständigen Zielzustand der Plattform. 
+Sie zeigt lediglich, wie der identifizierte Use Case beispielhaft umgesetzt werden kann.
 
 
-%\subsection[Risikobasiertes Schwachstellenmanagement]{%
-%Handlungsempfehlung: Risikobasiertes Schwachstellen- und Compliance-Management}
-%\label{handlungsempfehlungRisikobasiertesSuCM}
+
