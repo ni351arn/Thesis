@@ -4,9 +4,9 @@ In diesem Abschnitt wird das in Kapitel 5.1 entwickelte Bewertungskonzept auf au
 Die Problemfelder werden zunächst beschrieben und anschließend den Use-Case-Mustern aus Kapitel 4.3 zugeordnet. 
 Darauf aufbauend erfolgt die qualitative Bewertung entlang von Implementierungsaufwand, operativem Mehrwert und den drei Zusatzdimensionen. 
 Ziel ist eine konsistente Einordnung der Problemfelder auf Basis der zuvor abgeleiteten Muster.
-
-\subsection{Proaktives Ressourcen-Management im Plattformbetrieb}
-\label{proaktiveRM}
+\par\bigskip
+%\subsection{Proaktives Ressourcen-Management im Plattformbetrieb}
+%\label{proaktiveRM}
 Der operative Betrieb cloud-nativer Plattformen ist in verteilten Szenarien stark heterogen.
 Je Werk bzw. Standort unterscheiden sich Lastprofile, Produktionszyklen und Wartungsfenster deutlich. 
 Dadurch entsteht kein „einheitlicher“ Plattformbetrieb, sondern ein Betrieb mit mehreren lokalen Dynamiken. 
@@ -38,9 +38,12 @@ Treiber sind vor allem Datenaufbereitung und die Einbettung in bestehende Betrie
 Der operative Mehrwert ist hoch, da eine vorausschauende Steuerung sowohl Stabilität als auch Ressourceneffizienz unterstützt. 
 In der qualitativen Bewertung hängt die Umsetzbarkeit wesentlich von der Qualität und Verfügbarkeit historischer Betriebsdaten ab. 
 Governance-Anforderungen fallen vergleichsweise gering aus, da überwiegend technische Telemetriedaten verarbeitet werden.
-
+\begin{comment}
 \subsection{Automatisierte Release-Absicherung}
 \label{automatisierteReleaseAbsicherung}
+
+    
+
 Der Betrieb cloud-nativer Plattformen ist durch eine hohe Änderungsfrequenz gekennzeichnet.
 Über zahlreiche CI/CD-Pipelines werden Services kontinuierlich weiterentwickelt und ausgerollt, häufig parallel über mehrere Cluster und Umgebungen hinweg. 
 Diese Dynamik erhöht das Risiko, dass fehlerhafte Änderungen unbeabsichtigte Auswirkungen auf Stabilität und Verfügbarkeit haben, insbesondere wenn sich Effekte nicht mehr eindeutig auf einzelne Services oder Deployments begrenzen lassen.
@@ -68,6 +71,7 @@ Die qualitative Bewertung zeigt, dass die Umsetzbarkeit wesentlich von der Quali
 
 \subsection{Risikobasiertes Schwachstellen- und Compliance-Management}
 \label{risikobasiertesSchwachstellenCompliance}
+    
 
 Im operativen Plattformbetrieb fallen kontinuierlich sicherheits- und compliancebezogene Befunde an. 
 Sie entstehen u. a. durch Scans von Container-Images, Abhängigkeitsanalysen oder Konfigurationsprüfungen. 
@@ -93,7 +97,7 @@ Der Hauptaufwand liegt in der Integration sowie in der Konsistenz der benötigte
 Der operative Mehrwert ist hoch, da Sicherheitsrisiken gezielter reduziert und Abstimmungsaufwände bei der Sichtung und Einordnung der Befunde verringert werden können. 
 In der qualitativen Bewertung hängt die Umsetzbarkeit stark von der Verfügbarkeit belastbarer Laufzeit- und Inventardaten ab. 
 Die Governance-Anforderungen sind erhöht, da sicherheitsrelevante Informationen verarbeitet werden und die Priorisierungslogik transparent sowie organisatorisch klar verankert sein muss.
-
+\end{comment}
 \par\bigskip
 Die drei Einordnungen zeigen, dass die identifzierten Problemfelder zwar unterschiedlichen Domänen zuzordnen sind, jedoch in ihren Abhängigkeiten von Datenqualität  Vergleichbarkeit und betrieblichem Kontext ähneln.
 Auf dieser Grundlage werden in Abschnitt 5.4 konkrete Handlungsempfehlungen abgeleitet und priorisiert.
