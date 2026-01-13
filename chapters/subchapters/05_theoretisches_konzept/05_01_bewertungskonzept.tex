@@ -46,7 +46,7 @@ Sie liefert damit eine erste Einordnung, greift aber zentrale Rahmenbedingungen 
 Daher werden ergänzend vier Zusatzdimensionen betrachtet. 
 Diese dienen als Bewertungsgrundlage, um Implementierungsaufwand (X) und operativen Mehrwert (Y) nachvollziehbar abzuleiten.
 Die Bewertung erfolgt je Unterdimension einheitlich auf einer dreistufigen Skala (niedrig/mittel/hoch).
-Die Zusatzdimensionen wirken nicht direkt auf die Achsen der Bewertungsmatrix, fließen jedoch in die spätere Einordnung der Use Cases ein.
+Die Zusatzdimensionen sind nicht als separate Achsen dargestellt, sondern bilden die Grundlage zur Ableitung der X- und Y-Werte und damit zur Positionierung in der Matrix.
 \par\bigskip
 \textbf{Dimension 1: Umsetzbarkeit}
 
@@ -112,9 +112,11 @@ Zur Auswertung werden die Stufen in Zahlenwerte überführt (niedrig = 1, mittel
 Der Wert der X-Achse ergibt sich als Mittelwert aller Bewertungen, die der Achse X oder beiden Achsen zugeordnet sind.
 Analog wird der Wert der Y-Achse berechnet.
 Unterdimensionen, die beide Achsen betreffen, werden entsprechend in beiden Berechnungen berücksichtigt.
+Die Unterdimensionen können dabei unterschiedlich gewichtet werden, um ihre relative Bedeutung für Implementierungsaufwand bzw. operativen Mehrwert abzubilden. 
+In der Excel-Vorlage erfolgt dies über einen gewichteten Mittelwert, bei dem Standardgewichtungen auf 1 gesetzt und besonders relevante Kriterien höher gewichtet werden.
 
 Auf Basis der berechneten X- und Y-Werte wird ein Use Case in die Bewertungsmatrix eingeordnet.
-Zusätzlich erfolgt eine Klassifikation der Achsenwerte in niedrig oder hoch anhand eines definierten Schwellenwerts.
+Zusätzlich wurde ein Schwellenwert definiert, um die Quadranten klar abzugrenzen.
 Als hoch gilt ein Achsenwert ab 2,34, um eine klare Abgrenzung zwischen niedriger und hoher Ausprägung sicherzustellen und Verzerrungen durch einzelne Extrembewertungen zu vermeiden.
 Der resultierende Quadrant dient als Grundlage für die weitere qualitative Einordnung und Interpretation im folgenden Abschnitt.
 

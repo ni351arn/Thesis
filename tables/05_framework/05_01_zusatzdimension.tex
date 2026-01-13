@@ -6,67 +6,76 @@
 \renewcommand{\arraystretch}{1.12}
 \setlength{\tabcolsep}{4pt}
 
-\begin{tabularx}{\linewidth}{p{3.1cm} p{4.1cm} Y C{1.4cm} p{1.8cm}}
+\begin{tabularx}{\linewidth}{p{3.1cm} p{4.1cm} Y C{1.4cm} C{1.4cm} p{1.8cm}}
 \toprule
-\textbf{Zusatzdimension} & \textbf{Unterdimension} & \textbf{Ziel / Leitfrage} & \textbf{Achse} & \textbf{Quelle} \\
+\textbf{Zusatzdimension} & \textbf{Unterdimension} & \textbf{Ziel / Leitfrage} & \textbf{Achse} & \textbf{Gewichtung} & \textbf{Quelle} \\
 \midrule
 
 \makecell[l]{Umsetzbarkeit} &
 Datenverfügbarkeit und -qualität &
 Sind ausreichend vollständige und historisch nutzbare Daten für Training und Betrieb vorhanden? &
 X &
-P2, P3, P15\\
+2 &
+\cite{kankanalaAIMLDevOps2024,enemosahEnhancingDevOpsEfficiency2025,reddygopireddyIntegratingAIDevOps2022}\\
 
 &
 Technischer Fit &
 Lässt sich der Use Case realistisch in bestehende Plattform-, oder CI/CD-Architekturen integrieren? &
 X &
-P13, P21\\
+2 &
+\cite{poudelAIDrivenIntelligentAutoScaling2025a,tamminediAutomatingKubernetesOperations2024}\\
 
 &
 Erforderliche Fachkenntnisse &
 Ist ausreichende Expertise für Entwicklung, Betrieb und Wartung KI-gestützter Funktionen vorhanden? &
 X &
-P15, P3 \\
+1 &
+\cite{reddygopireddyIntegratingAIDevOps2022,enemosahEnhancingDevOpsEfficiency2025}\\
 \midrule
 
 \makecell[l]{Betriebswirksamkeit\\\& Skalierbarkeit} &
 Stabilität und operativer Nutzen &
 Erzielt die Lösung im laufenden Plattformbetrieb einen stabilen, messbaren Mehrwert? &
 Y &
-P13, P19, P21 \\
+2 &
+\cite{poudelAIDrivenIntelligentAutoScaling2025a,jossonpaulkalapparambathAdvancingDistributedSystems2025,tamminediAutomatingKubernetesOperations2024}\\
 
 &
 Skalierbarkeit und Wiederverwendbarkeit &
 Lässt sich der Ansatz ohne hohen Individualaufwand auf weitere Services oder Teams übertragen? &
 Y &
-P3, P4, P20 \\
+1 &
+\cite{enemosahEnhancingDevOpsEfficiency2025,kankanalaAIMLDevOps2024}\\
 \midrule
 
 \makecell[l]{Compliance\\\& Governance} &
 Datenschutz und Datenzugriff &
 Welche Anforderungen ergeben sich aus Datenschutz, Datenklassifikation und Zugriffskontrolle? &
 X &
-P4, P12 \\
+2 &
+\cite{kankanalaAIMLDevOps2024,uddohAIBasedThreatDetection2021} \\
 
 &
 Organisatorische Verankerung &
 Sind Verantwortlichkeiten, Freigaben und Governance-Strukturen klar definiert und akzeptiert? &
 X &
-P3, P15 \\
+1 &
+\cite{enemosahEnhancingDevOpsEfficiency2025,supritpattanayakIntegratingAIDevOps2024} \\
 \midrule
 
 \makecell[l]{Reifegrad} &
 Technologiereife &
 In welchem Stadium befindet sich die Lösung (Konzept, Pilot, Produktivbetrieb)? &
 X+Y &
-P8, P16 \\
+1 &
+\cite{govindarajanMachineLearningBased2025,supritpattanayakIntegratingAIDevOps2024}\\
 
 &
 Betriebsreife &
 Ist der dauerhafte Betrieb durch klare Zuständigkeiten, Überwachungsmechanismen und eine ausreichende Betriebsdokumentation abgesichert? &
 X+Y &
-P13, P2,  P21 \\
+1 &
+\cite{kankanalaAIMLDevOps2024,poudelAIDrivenIntelligentAutoScaling2025a,tamminediAutomatingKubernetesOperations2024} \\
 \bottomrule
 \end{tabularx}
 \end{table}
