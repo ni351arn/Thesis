@@ -106,17 +106,22 @@ Zur einheitlichen Anwendung der Zusatzdimensionen werden die qualitativen Bewert
 \label{ableitungXYAchse}
 Die Einordnung eines KI-Use-Cases in der Bewertungsmatrix erfolgt auf Basis eines Bewertungsrasters.
 Das Raster umfasst die Unterdimensionen der vier Zusatzdimensionen aus Abschnitt \ref{zusatzdimensionenBewertung}.
-Für jede Unterdimension wird die zugehörige Leitfrage beantwortet und auf einer dreistufigen Skala bewertet (niedrig/mittel/hoch).
+Für jede Unterdimension wird die zugehörige Leitfrage beantwortet und auf einer dreistufigen Skala (niedrig/mittel/hoch) bewertet, die auch in Tabelle \ref{tab:zusatzdimensionen} dargestellt ist.
 Zur Auswertung werden die Stufen in Zahlenwerte überführt (niedrig = 1, mittel = 2, hoch = 3).
 
-Die Werte fpr X und Y ergeben sich aus den Einzelbewertungen der Unterdimensionen.
-Kriterien mit Bezug zum Implementierungsaufwand gehen in den X-Wert ein, Kriterien mit Bezug zum operativen Nutzen in den Y-Wert.
-Unterdimensionen, die beide Perspektiven betreffen, werden entsprechend in beiden Achsen berücksichtigt.
+Der Wert der X-Achse ergibt sich als Mittelwert aller Bewertungen, die der Achse X oder beiden Achsen zugeordnet sind.
+Analog wird der Wert der Y-Achse berechnet.
+Unterdimensionen, die beide Achsen betreffen, werden entsprechend in beiden Berechnungen berücksichtigt.
 
-Der Achsenwert ergibt sich je Use Case als Mittelwert der zugeordneten Unterdimensionen.
-Dadurch entsteht eine Position in der Bewertungsmatrix, die in das X/Y-Diagramm übertragen wird.
+Auf Basis der berechneten X- und Y-Werte wird ein Use Case in die Bewertungsmatrix eingeordnet.
+Zusätzlich erfolgt eine Klassifikation der Achsenwerte in niedrig oder hoch anhand eines definierten Schwellenwerts.
+Als hoch gilt ein Achsenwert ab 2,34, um eine klare Abgrenzung zwischen niedriger und hoher Ausprägung sicherzustellen und Verzerrungen durch einzelne Extrembewertungen zu vermeiden.
+Der resultierende Quadrant dient als Grundlage für die weitere qualitative Einordnung und Interpretation im folgenden Abschnitt.
+
+Aus den Achsenwerten ergibt sich eine Position in der Bewertungsmatrix, die in das X/Y-Diagramm übertragen wird.
 Da Mittelwerte verwendet werden, kann die Position auch zwischen Quadranten liegen.
 Dies bildet gemischte Bewertungen ab, etwa wenn einzelne Voraussetzungen erfüllt sind, andere jedoch noch Vorarbeiten erfordern.
 
 Das Bewertungsraster ist als Excel-Vorlage umgesetzt und im Anhang dokumentiert.
 Es ermöglicht eine einheitliche, nachvollziehbare und reproduzierbare Einordnung der Use Cases.
+
