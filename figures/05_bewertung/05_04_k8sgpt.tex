@@ -1,0 +1,26 @@
+\begin{tikzpicture}[font=\small, node distance=18mm, >=latex]
+\tikzstyle{box} = [draw, rounded corners, align=center,
+minimum width=32mm, minimum height=10mm]
+
+% Obere Reihe (mehr Platz zwischen den Boxen)
+\node[box] (cicd) {CI/CD-Pipeline};
+\node[box, right=28mm of cicd] (k8s) {Kubernetes-Cluster};
+
+% Sammelpunkt
+\node[box, below=of k8s] (store) {Log-/Event-Sammlung};
+\node[box, below=of store] (k8sgpt) {K8sGPT\\Analyse};
+\node[box, below=of k8sgpt] (teams) {Teams};
+
+% Flüsse
+\draw[->] (cicd) -- node[above]{Bereitstellung} (k8s);
+\draw[->] (cicd) |- node[left]{Pipeline-Protokolle} (store);
+\draw[->] (k8s) -- node[right]{Logs / Events} (store);
+\draw[->] (store) -- node[right]{Datenbasis} (k8sgpt);
+\draw[->] (k8sgpt) -- node[right]{Hinweise} (teams);
+
+% Hinweis unter K8sGPT
+\node[align=left, right=6mm of k8sgpt]
+{\scriptsize nicht im kritischen Pfad\\\scriptsize nur unterstützend};
+\node[align=left, right=6mm of teams]
+{\scriptsize Plattformbetrieb\\\scriptsize + Entwicklung};
+\end{tikzpicture}
