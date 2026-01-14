@@ -7,12 +7,12 @@ minimum width=32mm, minimum height=10mm]
 \node[box, right=28mm of cicd] (k8s) {Kubernetes-Cluster};
 
 % Sammelpunkt
-\node[box, below=of k8s] (store) {Log-/Event-Sammlung};
+\node[box, below=of k8s] (store) {Logs/Events};
 \node[box, below=of store] (k8sgpt) {K8sGPT\\Analyse};
 \node[box, below=of k8sgpt] (teams) {Teams};
 
 % Flüsse
-\draw[->] (cicd) -- node[above]{Bereitstellung} (k8s);
+\draw[->, dashed] (cicd) -- node[above]{Sollzustand} node[below]{(pull-basiert)} (k8s);
 \draw[->] (cicd) |- node[left]{Pipeline-Protokolle} (store);
 \draw[->] (k8s) -- node[right]{Logs / Events} (store);
 \draw[->] (store) -- node[right]{Datenbasis} (k8sgpt);
@@ -20,7 +20,11 @@ minimum width=32mm, minimum height=10mm]
 
 % Hinweis unter K8sGPT
 \node[align=left, right=6mm of k8sgpt]
-{\scriptsize nicht im kritischen Pfad\\\scriptsize nur unterstützend};
+{\linespread{0.85}\selectfont
+{\scriptsize nicht im kritischen Pfad}\\
+{\scriptsize nur unterstützend}};
 \node[align=left, right=6mm of teams]
-{\scriptsize Plattformbetrieb\\\scriptsize + Entwicklung};
+{\linespread{0.85}\selectfont\
+{\scriptsize Plattformbetrieb}\\
+{\scriptsize + Entwicklung}};
 \end{tikzpicture}

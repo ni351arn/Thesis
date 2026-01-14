@@ -25,17 +25,19 @@ Entscheidungen und Maßnahmen verbleiben weiterhin bei den verantwortlichen Team
 Das Werkzeug eignet sich somit, um den identifizierten Use Case technisch umzusetzen, ohne bestehende Abläufe grundlegend zu verändern.
 \par\bigskip
 
+Abbildung \ref{fig:k8sgptEinordnung} zeigt eine einfache Architekturskizze, die die Einordnung von K8sGPT im Plattformbetrieb darstellt.
 \begin{figure}[H]
 \centering
 \input{figures/05_bewertung/05_04_k8sgpt.tex}
 \caption{Einordnung von K8sGPT im Plattformbetrieb}
 \label{fig:k8sgptEinordnung}
 \end{figure}
+Fehler entstehen entweder in der CI/CD-Pipeline oder in der Laufzeitumgebung des Kubernetes-Clusters.
+Die dabei anfallenden Logs, Ereignisse und Zustände werden zentral gesammelt und bilden die Datenbasis für die Analyse.
 
-
-Architekturskizze (Abbildung):
-wo das Tool sitzt
-welche Daten es nutzt
+K8sGPT wertet diese Daten aus und generiert darauf basierende Hinweise für die zuständigen Teams.
+Das Werkzeug ist nicht in den Auslieferungsprozess eingebunden und hat keinen Einfluss auf Build oder Bereistellung.
+Die Verantwortung für Entscheidungen und Maßnahmen verbleibt vollständig bei den beteiligten Teams.
 
 \par\bigskip
 Die Handlungsempfehlung beschreibt keinen vollständigen Zielzustand der Plattform. 
