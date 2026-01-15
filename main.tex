@@ -1,5 +1,42 @@
 \documentclass[german]{htwg-report}
 
+\usepackage[
+  activate={true,nocompatibility},
+  final,
+  tracking=true,
+  kerning=true,
+  spacing=true,
+  factor=1100,
+  stretch=10,
+  shrink=10
+]{microtype}
+
+% Bessere Silbentrennung für problematische Wörter
+\hyphenation{
+  Ska-lie-rungs-ent-schei-dung
+  Platt-form-ar-chi-tek-tur
+  An-wen-dungs-fel-der
+  Work-load-Op-ti-mie-rung
+  Be-wer-tungs-kon-zept
+  Im-ple-men-tie-rungs-auf-wand
+  Nut-zungs-sze-na-ri-en
+  Prio-ri-sie-rung
+  Ent-schei-dungs-grund-la-ge
+  Platt-form-be-trieb
+  ent-wi-ckelt
+  Ent-wick-lung
+  schneller
+  Res-sour-cen
+  Kon-fi-gu-ra-tion
+  Auto-ma-ti-sie-rung
+  Opti-mie-rung
+  Inf-ra-struk-tur
+}
+
+% Erlaube großzügigere Wortabstände bei Bedarf
+\tolerance=1500
+\emergencystretch=1.5em
+
 \usepackage{parskip} 
 \usepackage{booktabs}   
 \usepackage{tabularx}   
@@ -12,13 +49,12 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{pdflscape}
-\usepackage{biblatex}
+
 \usepackage{comment}
 \usepackage{setspace}
 \usepackage{multirow}
 \usepackage{tikz}
 \usetikzlibrary{positioning, arrows.meta}
-\usepackage{float}
 \graphicspath{{./figures/}} 
 \newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
@@ -26,6 +62,8 @@
 \addbibresource{./references.bib}
 
 \begin{document}
+
+\selectlanguage{ngerman}
 
 %% Use Roman numerals for the page numbers of the title pages and table of
 %% contents.

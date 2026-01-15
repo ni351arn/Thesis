@@ -46,7 +46,7 @@
 \RequirePackage[flushmargin,hang]{footmisc}
 \RequirePackage{ifpdf}
 \RequirePackage{ifxetex}
-\RequirePackage[hyphens]{url}
+\RequirePackage{xurl}
 \RequirePackage{listings}
 \RequirePackage{rotating}
 \RequirePackage[table]{xcolor}
@@ -86,10 +86,16 @@
 
 %% BIB
 \RequirePackage[
-	backend=biber,
-	style=numeric,
-	sorting=none
+    backend=biber,
+    style=numeric,
+    sorting=none
 ]{biblatex}
+
+% URL-Umbrüche verbessern
+\setcounter{biburllcpenalty}{100}
+\setcounter{biburlucpenalty}{100}
+\setcounter{biburlnumpenalty}{100}
+
 \if@german
 \DefineBibliographyStrings{german}{%
   bibliography = {Literaturverzeichnis},
