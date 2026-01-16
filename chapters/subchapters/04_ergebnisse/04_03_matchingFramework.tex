@@ -1,7 +1,7 @@
 \section{Matching-Framework}
 \label{sec:matching-framework}
 
-Aufbauend auf den quantitativen Ergebnissen aus Abschnitt 4.1 sowie den Mustern der Mapping Study in Abschnitt 4.2 wird in diesem Abschnitt ein konzeptionelles Matching-Framework abgeleitet.
+Aufbauend auf den quantitativen Ergebnissen aus Abschnitt 4.1 sowie den Mustern der Mapping-Studie in Abschnitt 4.2 wird in diesem Abschnitt ein konzeptionelles Matching-Framework abgeleitet.
 Ziel ist es, die identifizierten KI-Ansätze in übertragbare Anwendungsmuster für generische Use Cases im Platform Engineering zu strukturieren und damit eine nachvollziehbare Grundlage zu schaffen, um KI-Lösungen später hinsichtlich operativem Nutzen und Umsetzbarkeit einzuordnen.
 
 \subsection{Proaktives Ressourcen-Management}
@@ -43,7 +43,7 @@ Durch die Auswertung historischer Build-Protokolle, Testergebnisse und Code-Merk
 \input{tables/04_ergebnisse/04_03_03_matchingTabelleDrei.tex}
 
 Hier werden vor allem SL-Verfahren wie Random Forest und XGBoost eingesetzt. 
-Sie werten frühere Build-Daten und Build-Logs aus und schätzen damit sowohl das Risiko eines Build-Fehlers als auch häufig die Art des Fehlers ab \cite{kankanalaAIMLDevOps2024,govindarajanMachineLearningBased2025,tamanampudiAIEnhancedContinuousIntegration}.
+Sie werten frühere Build-Daten und Build-Logs aus und schätzen damit sowohl das Risiko eines Build-Fehlers als auch häufig die Art des Fehlers ab \cite{kankanalaAIMLDevOps2024,tamanampudiAIEnhancedContinuousIntegration,govindarajanMachineLearningBased2025}.
 Der Nutzen im Betrieb liegt vor allem in schnelleren Rückmeldungen. 
 Fehleranfällige Änderungen fallen früher auf, und die Fehlersuche wird erleichtert, da relevante Logstellen automatisch vorausgewählt werden. 
 In den Studien zeigt sich dies unter anderem in kürzeren Bereitstellungszeiten und einer deutlich geringeren Zeit für die Fehlersuche \cite{kankanalaAIMLDevOps2024,tamanampudiAIEnhancedContinuousIntegration}.
@@ -63,8 +63,8 @@ Im Fokus stehen dabei sowohl die Priorisierung von Sicher- heits-Scans als auch 
 Auf dieser Basis lassen sich sicherheitsrelevante Abweichungen früh erkennen und automatisierte Maßnahmen einleiten, etwa die gezielte Isolation betroffener Komponenten.
 \input{tables/04_ergebnisse/04_03_04_matchingTabelleVier.tex}
 
-Als methodischer Ansatz werden in der Literatur sowohl Deep-Learning-Modelle (z.B.\ CNNs) als auch Gradient-Boosting-Verfahren (z.B.\ XGBoost) eingesetzt \cite{govindarajanMachineLearningBased2025, uddohAIBasedThreatDetection2021}. 
-XGBoost kann dabei besonders dann stabil funktionieren, wenn es nur wenige echte Sicherheitsvorfälle in den Daten gibt \cite{govindarajanMachineLearningBased2025, uddohAIBasedThreatDetection2021}.
+Als methodischer Ansatz werden in der Literatur sowohl Deep-Learning-Modelle (z.B.\ CNNs) als auch Gradient-Boosting-Verfahren (z.B.\ XGBoost) eingesetzt.
+XGBoost kann dabei besonders dann stabil funktionieren, wenn es nur wenige echte Sicherheitsvorfälle in den Daten gibt \cite{uddohAIBasedThreatDetection2021,govindarajanMachineLearningBased2025}.
 Der Nutzen im Betrieb liegt in einer besseren Erkennung bei weniger Fehlalarmen. 
 Dadurch verringert sich der manuelle Aufwand, und kritische Funde können schneller weiterbearbeitet werden \cite{uddohAIBasedThreatDetection2021}.
 Gleichzeitig kann der Betrieb aufwendig werden, weil Deep-Learning-Modelle beim Einsatz zusätzliche Rechenleistung benötigen und damit Kosten verursachen.
