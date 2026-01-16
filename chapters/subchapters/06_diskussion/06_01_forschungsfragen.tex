@@ -14,13 +14,13 @@ Die KI wertet Auslastungs- und Latenzverläufe aus und leitet daraus eine Vorher
 Auf Basis dieser Vorhersage wird eine Skalierungsentscheidung früher getroffen als bei fester Zuteilung.
 Dadurch sinkt das Risiko, dass Services zu spät skalieren und unter Last instabil werden.
 Gleichzeitig wird eine Überbereitstellung reduziert, weil nicht zu viel Kapazität vorgehalten wird.
-Typische Herausforderungen entstehen, wenn nicht ausreichend historische Daten vorliegen oder Lastmuster sich häufig ändern \cite{poudelAIDrivenIntelligentAutoScaling2025a,tamminediAutomatingKubernetesOperations2024}.
+Typische Herausforderungen entstehen, wenn nicht ausreichend historische Daten vorliegen oder Lastmuster sich häufig ändern \cite{tamminediAutomatingKubernetesOperations2024,poudelAIDrivenIntelligentAutoScaling2025a}.
 
 Betrieb und Orchestrierung adressiert Störungen im laufenden Betrieb und die Eingrenzung ihrer Ursachen über mehrere Komponenten hinweg.
 Die Grundlage bilden Protokolle, Metriken und Ereignisse, die zu einen Hinweis geben, welche Komponente wahrscheinlich der Auslöser ist.
 Ein typisches Beispiel ist die Auswertung von Kubernetes-Events und Protokollen, um Fehlkonfigurationen oder wiederkehrende Fehlerbilder schneller zu erkennen.
 Der Mehrwert liegt in kürzerer Fehlersuche und einer schnelleren Einordnung, was wirklich relevant ist.
-Der Ansatz wird unzuverlässig, wenn sich das Normalverhalten durch Releases und Konfigurationsänderungen ständig verschiebt und dadurch viele Fehlalarme entstehen \cite{tamanampudiAIEnhancedContinuousIntegration, tamminediAutomatingKubernetesOperations2024}.
+Der Ansatz wird unzuverlässig, wenn sich das Normalverhalten durch Releases und Konfigurationsänderungen ständig verschiebt und dadurch viele Fehlalarme entstehen \cite{tamminediAutomatingKubernetesOperations2024,tamanampudiAIEnhancedContinuousIntegration}.
 
 Die Absicherung von Ausrollungen zielt darauf ab, fehlerhafte Versionen früh zu begrenzen.
 Während einer schrittweisen Ausrollung werden Fehlerraten und Antwortzeiten beobachtet und mit dem erwarteten Normalzustand verglichen.
@@ -32,7 +32,7 @@ Sicherheits- und Bedrohungserkennung umfasst die Anomalieerkennung, Echtzeiterke
 Ein greifbares Beispiel ist der Einsatz von SL-Algorithmen um erkannte Anomaliens als bösaritg oder gutartig einzustufen. 
 Ergänzend können Laufzeitdaten Hinweise liefern, ob ein Fund in der konkreten Nutzung überhaupt wirksam wird.
 Dadurch fließt weniger Zeit in unkritische Funde und relevante Punkte können schneller bearbeitet werden.
-Grenzen entstehen durch sensible Daten und Vorgaben, weil Protokolle und Sicherheitsdaten nicht beliebig ausgewertet und aufbewahrt werden dürfen \cite{uddohAIBasedThreatDetection2021,kankanalaAIMLDevOps2024}.
+Grenzen entstehen durch sensible Daten und Vorgaben, weil Protokolle und Sicherheitsdaten nicht beliebig ausgewertet und aufbewahrt werden dürfen \cite{kankanalaAIMLDevOps2024,uddohAIBasedThreatDetection2021}.
 
 Über alle Felder hinweg zeigen sich wiederkehrende Herausforderungen.
 Dazu zählen zusätzlicher Rechen- und Betriebsaufwand, Integrationsaufwand in bestehende Abläufe sowie Einschränkungen durch Datenschutz und Freigaben.
@@ -79,8 +79,8 @@ Damit lässt sich jedoch nur grob bewerten, ob ein Use Case prinzipiell attrakti
 Für eine belastbare Aussage zur praktischen Umsetzbarkeit und Wirkung sind ergänzende Dimensionen notwendig.
 
 Die Umsetzbarkeit lässt sich bewerten anhand der verfügbaren Datenqualität und -historie, des technischen Fits zur bestehenden Plattformarchitektur sowie des erforderlichen Fachwissens für Betrieb und Wartung \cite{enemosahEnhancingDevOpsEfficiency2025,reddygopireddyIntegratingAIDevOps2022}.
-Die betriebliche Wirksamkeit ergibt sich daraus, ob der Use Case im laufenden Betrieb stabil einen messbaren Nutzen entfaltet und mit vertretbarem Aufwand auf weitere Services übertragbar ist \cite{tamminediAutomatingKubernetesOperations2024,kankanalaAIMLDevOps2024}.
-Ergänzend beeinflussen Anforderungen aus Datenschutz und Governance sowie der Reifegrad der jeweiligen Lösung, ob ein Einsatz realistisch und dauerhaft tragfähig ist \cite{uddohAIBasedThreatDetection2021,supritpattanayakIntegratingAIDevOps2024}.
+Die betriebliche Wirksamkeit ergibt sich daraus, ob der Use Case im laufenden Betrieb stabil einen messbaren Nutzen entfaltet und mit vertretbarem Aufwand auf weitere Services übertragbar ist \cite{kankanalaAIMLDevOps2024,tamminediAutomatingKubernetesOperations2024}.
+Ergänzend beeinflussen Anforderungen aus Datenschutz und Governance sowie der Reifegrad der jeweiligen Lösung, ob ein Einsatz realistisch und dauerhaft tragfähig ist \cite{supritpattanayakIntegratingAIDevOps2024,uddohAIBasedThreatDetection2021}.
 
 Die qualitative Bewertung entlang einheitlicher Kriterien ermöglicht es, KI-Use-Cases systematisch einzuordnen und miteinander zu vergleichen.
 Dabei ist nicht entscheidend, welche konkrete KI-Methode oder welches Werkzeug eingesetzt wird.
