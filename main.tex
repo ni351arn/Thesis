@@ -1,5 +1,8 @@
 \documentclass[german]{htwg-report}
 
+\usepackage{cmap}            % Für durchsuchbare und kopierbare Umlaute
+\usepackage[T1]{fontenc}     % Verwendet echte Umlaute im Font (statt zusammengesetzte)
+
 \usepackage[
   activate={true,nocompatibility},
   final,
@@ -130,7 +133,7 @@
 %% Use letters for the chapter numbers of the appendices.
 \appendix
 
-%\input{appendix-a}
+\input{appendices/anhang}
 
 \nocite{*}
 \printbibliography[heading=bibintoc]
