@@ -32,7 +32,7 @@ Use Cases mit hohem Mehrwert und hohem Aufwand bleiben relevant, erfordern jedoc
 Anwendungsfälle mit hohem Aufwand und geringem Mehrwert sollten nur weiterverfolgt werden, wenn klare Abhängigkeiten bestehen.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{figures/05_bewertung/05_01_bewertungsMatrix.png}
+    \includegraphics[width=0.7\textwidth]{figures/05_bewertung/05_01_bewertungsMatrix.png}
     \caption{Bewertungsmatrix entlang von Implementierungsaufwand und operativem Mehrwert}
     \label{fig:05_01_bewertungsMatrix}
 \end{figure}
@@ -113,7 +113,7 @@ Der Wert der X-Achse ergibt sich als Mittelwert aller Bewertungen, die der Achse
 Analog wird der Wert der Y-Achse berechnet.
 Unterdimensionen, die beide Achsen betreffen, werden entsprechend in beiden Berechnungen berücksichtigt.
 Die Unterdimensionen können dabei unterschiedlich gewichtet werden, um ihre relative Bedeutung für Implementierungsaufwand bzw. operativen Mehrwert abzubilden. 
-In der Excel-Vorlage erfolgt dies über einen gewichteten Mittelwert, bei dem Standardgewichtungen auf 1 gesetzt und besonders relevante Kriterien höher gewichtet werden.
+Die Berechnung erfolgt über einen gewichteten Mittelwert, bei dem Standardgewichtungen auf 1 gesetzt und besonders relevante Kriterien höher gewichtet werden.
 
 Auf Basis der berechneten X- und Y-Werte wird ein Use Case in die Bewertungsmatrix eingeordnet.
 Zusätzlich wurde ein Schwellenwert definiert, um die Quadranten klar abzugrenzen.
@@ -124,6 +124,6 @@ Aus den Achsenwerten ergibt sich eine Position in der Bewertungsmatrix, die in d
 Da Mittelwerte verwendet werden, kann die Position auch zwischen Quadranten liegen.
 Dies bildet gemischte Bewertungen ab, etwa wenn einzelne Voraussetzungen erfüllt sind, andere jedoch noch Vorarbeiten erfordern.
 
-Das Bewertungsraster ist als Excel-Vorlage umgesetzt und im Anhang dokumentiert.
+Das Bewertungsraster ist als Python-Programm umgesetzt und im Anhang dokumentiert.
 Es ermöglicht eine einheitliche, nachvollziehbare und reproduzierbare Einordnung der Use Cases.
 
