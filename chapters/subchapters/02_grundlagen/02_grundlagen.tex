@@ -7,12 +7,12 @@ Anschließend werden relevante verwandte Arbeiten beschrieben und kritisch einge
 
 \section{Grundlagen}
 \label{sec:grundlagen}
-Ziel dieses Abschnitts ist es, die für die Arbeit relevanten Konzepte aus Cloud-Native-Technologien, DevOps sowie Künstlicher Intelligenz (KI) im Plattformbetrieb strukturiert darzustellen.
+Ziel dieses Abschnitts ist es, die für die Arbeit relevanten Konzepte aus Cloud-Native-Technologien, DevOps sowie KI im Plattformbetrieb strukturiert darzustellen.
 Die dargestellten Konzepte bilden die Basis für die anschließende Literaturanalyse und die Auswertung der KI-Anwendungen im Platform Engineering. 
 
 \subsection{Cloud Native Technologien und Platform Engineering}
 \label{subsec:cloud-native-platform-engineering}
-Cloud Native (CN) gewann ab 2013 insbesondere durch die Etablierung von Containertechnologien bis hin zu Kubernetes an Bedeutung. 
+Cloud Native gewann ab 2013 insbesondere durch die Etablierung von Containertechnologien bis hin zu Kubernetes an Bedeutung. 
 Im Kern beschreibt CN heute weniger eine einzelne Technologie, sondern ein Zielbild für modular aufgebaute Systeme (z.B. Microservices), die sich gut bereitstellen, skalieren und resilient betreiben lassen. 
 Die CNCF (Stiftung für Cloud-Native-Computing) fasst Cloud Native als Ansatz für skalierbare Anwendungen in dynamischen Cloud-Umgebungen zusammen \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
 
@@ -41,7 +41,7 @@ Die grundlegenden Lernparadigmen des maschinellen Lernens lassen sich in Supervi
 
 SL trainiert ein Modell anhand gelabelter Daten, sodass es eine Abbildung von Eingaben auf eine Ziel- bzw. Antwortvariable lernt \cite{enemosahEnhancingDevOpsEfficiency2025,valkenborgSupervisedLearning2023}.
 
-UL arbeitet mit ungelabelten Daten und zielt darauf ab, darin Strukturen, Cluster oder Auffälligkeiten zu erkennen, ohne dass eine explizite Zielvariable vorgegeben ist \cite{enemosahEnhancingDevOpsEfficiency2025,valkenborgUnsupervisedLearning2023}.
+UL arbeitet mit ungelabelten Daten und zielt darauf ab, Strukturen, Cluster oder Zusammenhänge zu erkennen, ohne dass eine explizite Zielvariable vorgegeben ist \cite{enemosahEnhancingDevOpsEfficiency2025,valkenborgUnsupervisedLearning2023}.
 
 RL beschreibt Verfahren, bei denen ein Agent durch Interaktion mit einer Umgebung Handlungen lernt, um eine langfristige (kumulative) Belohnung zu maximieren \cite{enemosahEnhancingDevOpsEfficiency2025,ghasemiIntroductionReinforcementLearning2024}.
 
@@ -51,15 +51,13 @@ Tabelle \ref{tab:tabelleMethodenAlgorithmen} fasst die in dieser Arbeit betracht
 \input{tables/02_grundlagen/02_01_03_algorithmen.tex}
 \FloatBarrier 
 
-In der Analyse wurden Lernparadigmen zudem auch dann zugeordnet, wenn sie in den Publikationen nicht explizit benannt waren, sondern nur über typische Aufgabenstellungen erkennbar wurden. 
-Solche Aufgabenstellungen werden in den in diesem Abschnitt zitierten Quellen ausführlicher beschrieben.
-
 \subsection{AIOps und verwandte Konzepte}
 \label{subsec:aiops}
-AIOps (Artificial Intelligence for IT Operations) bezeichnet den Einsatz von KI-Technologien zur Automatisierung und Optimierung von IT-Betriebsprozessen.
-Im Kontext dieser Arbeit liegt der Fokus auf "AI for Ops", also der Anwendung von KI zur Überwachung, Analyse und Optimierung von Cloud-native Plattformen und deren Betrieb.
-Im Gegensatz zu klassischen Monitoring-Ansätzen, die überwiegend auf statischen Schwellenwerten basieren, ermöglichen KI-gestützte Verfahren eine proaktive Erkennung von Anomalien und betrieblichen Mustern auf Basis großer, heterogener Betriebsdaten.
-AIOps ist dabei klar von MLOps abzugrenzen, das primär die Entwicklung, das Training und den Lebenszyklus von KI-Modellen adressiert, während AIOps den stabilen und effizienten Plattformbetrieb unterstützt \cite{kankanalaAIMLDevOps2024,supritpattanayakIntegratingAIDevOps2024}.
+AIOps (Artificial Intelligence for IT Operations) bezeichnet den Einsatz von KI-Technologien zur Automatisierung und Optimierung von IT-Betriebsprozessen \cite{kankanalaAIMLDevOps2024,supritpattanayakIntegratingAIDevOps2024}.
+Im Kontext dieser Arbeit liegt der Fokus auf der Anwendung von KI zur Überwachung, Analyse und Optimierung von Cloud-Native Plattformen.
+Im Gegensatz zu klassischen Monitoring-Ansätzen, die überwiegend auf statischen Schwellenwerten basieren, ermöglichen KI-gestützte Verfahren eine proaktive Erkennung von Anomalien und betrieblichen Mustern auf Basis heterogener Betriebsdaten.
+Zur Einordnung wird AIOps von Machine Learning Operations (MLOps) abgegrenzt.
+\footnote{MLOps bezeichnet Ansätze und Praktiken zur Entwicklung, zum Training, zur Bereitstellung und zum Betrieb von Modellen des maschinellen Lernens und adressiert primär den Lebenszyklus von KI-Modellen.}
 
 \section{Verwandte Arbeiten}
 \label{sec:verwandte-arbeiten}
@@ -70,7 +68,7 @@ Im Mittelpunkt steht KI-gestützter Plattformbetrieb (AI for Ops) als operative 
 Ein Teil der Literatur untersucht KI zur Automatisierung von Kubernetes- und Cloud-Plattformen.
 Dabei werden manuelle Betriebsaufgaben reduziert und Ressourcen effizienter zugeteilt \cite{kankanalaAIMLDevOps2024,tamminediAutomatingKubernetesOperations2024}
 Weitere Arbeiten adressieren prädiktive Skalierung, um Lastverläufe vorherzusagen und Ressourcen vorausschauend anzupassen \cite{poudelAIDrivenIntelligentAutoScaling2025a}.
-Auch Reinforcement Learning wird zur dynamischen Steuerung der Lastverteilung und zur Erhöhung der Fehlertoleranz eingesetzt \cite{jossonpaulkalapparambathAdvancingDistributedSystems2025}.
+Auch RL wird zur dynamischen Steuerung der Lastverteilung und zur Erhöhung der Fehlertoleranz eingesetzt \cite{jossonpaulkalapparambathAdvancingDistributedSystems2025}.
 
 Ein weiterer Schwerpunkt liegt auf KI in DevOps- und CI/CD-Prozessen.
 Hierzu zählen die Vorhersage von Fehlern in Build- und Bereitstellungsprozessen sowie automatisierte Gegenmaßnahmen wie Rücknahme oder Anomaliealarme \cite{enemosahEnhancingDevOpsEfficiency2025,tamanampudiAIEnhancedContinuousIntegration,reddygopireddyIntegratingAIDevOps2022}.
@@ -79,6 +77,6 @@ Sicherheitsbezogene Aspekte werden von \textcite{uddohAIBasedThreatDetection2021
 Das CNCF-Whitepaper verortet diese Richtung als „AI for Cloud Native Operations“ und beschreibt Assistenzwerkzeuge im operativen Cloud-Native Betrieb \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
 
 Kritisch ist festzuhalten, dass viele Arbeiten einzelne Anwendungsfälle isoliert betrachten oder stark werkzeug- bzw. monitoringgetrieben sind.
-Zudem existieren thematisch nahe Beiträge mit MLOps- oder Datenpipeline-Fokus, die den Plattformbetrieb aus Sicht von Platform Engineers nur indirekt adressieren und daher bewusst ausgeklammert wurden.
+Zudem existieren thematisch nahe Beiträge mit MLOps- oder Datenpipeline-Fokus, die den Plattformbetrieb aus Sicht von Platform Engineers nur indirekt adressieren und daher ausgeklammert wurden.
 Eine systematische, übergreifende Einordnung entlang typischer Aufgaben im Platform Engineering sowie eine Bewertung von Übertragbarkeit und praktischem Nutzen bleibt häufig offen.
 An dieser Stelle setzt die vorliegende Arbeit an.
