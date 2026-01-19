@@ -14,7 +14,7 @@ Die Abbildung \ref{fig:04_02_01_mapping} zeigt das Zusammenspiel zwischen den id
 Im Gegensatz zur Abbildung \ref{fig:04_01_01_useCases} wurden hier alle in den analysierten Studien genannten Anwendungsbereiche berücksichtigt und den jeweils adressierten Herausforderungen zugeordnet. 
 Die Häufigkeiten geben an, wie oft eine bestimmte Kombination in der Literatur thematisiert wurde.
 
-\begin{figure}[htb]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_02_mapping/04_02_01_mapping.png}
     \caption{Korrelation zwischen Anwendungsfelder und Herausforderungen}
@@ -44,13 +44,14 @@ Kosten, Tool-Abhängigkeiten und Governance-Fragen bleiben trotzdem relevant, et
 Insgesamt verdeutlicht die Verteilung der Häufigkeiten, dass KI-Anwendungen im Platform Engineering besonders dort adressiert werden, wo betriebliche Effizienz und Automatisierung direkt mit Kosten, Skalierung, Governance
 und Integrationsfragen zusammenwirken. 
 Die Häufungen zeigen somit, welche Themen in der Forschung besonders im Fokus stehen und in welchen Bereichen KI-Lösungen aktuell besonders häufig diskutiert werden.
+\FloatBarrier
 
 \subsection{Zusammenspiel der Lernparadigmen und Algorithmen}
 \label{subsec:mappingzwei}
 Die Abbildung \ref{fig:04_02_02_mappingZwei} visualisiert die Korrelation zwischen den in den analysierten Studien verwendeten Lernparadigmen des maschinellen Lernens und den eingesetzten Algorithmen.
 Einige Kombinationen werden in der Darstellung nicht ausgewiesen ($n=0$ bzw. ohne Blase), da sie in den betrachteten Studien nicht eindeutig als eigenständige Zuordnung berichtet wurden.
 
-\begin{figure}[htb]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_02_mapping/04_02_02_mappingZwei.png}
     \caption{Korrelation zwischen Lernparadigmen und Algorithmen}
@@ -76,6 +77,7 @@ Einzelne Arbeiten nutzen hierfür Deep-RL-Ansätze wie Deep Q-Networks \cite{jos
 Ein zentrales Problem von RL ist jedoch die hohe Komplexität bei der Modellierung interagierender Systemkomponenten sowie der damit verbundene Rechenaufwand, wodurch eine Überführung in den produktiven Betrieb häufig erschwert wird \cite{jossonpaulkalapparambathAdvancingDistributedSystems2025}.
 Dies verdeutlicht, warum Reinforcement-Learning-Verfahren in der Praxis bislang nur begrenzt eingesetzt werden.
 Insgesamt bleibt die Zuordnung zu spezifischen Algorithmen jedoch begrenzt, weshalb viele Kombinationen in der Tabelle nicht belegt sind.
+\FloatBarrier
 
 
 \subsection{Zusammenspiel der Anwendungsfelder und Datenquellen}
@@ -84,7 +86,7 @@ In diesem Unterkapitel wird analysiert, welche Datenquellen in den identifiziert
 Dafür wurden alle angesprochenen Anwendungsfelder pro Studie mit den jeweils verwendeten Datenquellen verknüpft.
 Abbildung \ref{fig:04_02_03_mappingDrei} zeigt die resultierenden Häufigkeiten (n) je Kombination.
 
-\begin{figure}[htbp]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_02_mapping/04_02_03_mappingDrei.png}
     \caption{Korrelation zwischen Anwendungsfeldern und Datenquellen}
@@ -113,7 +115,7 @@ Im Mapping zeigen sich erhöhte Werte bei Betrieb/Orchestrierung ($n=12$), Resso
 Deutlich wird, dass Betrieb/Orchestrierung die stärksten Überschneidungen mit nahezu allen Datenquellen aufweist, weil hier Monitoring-Daten und Änderungsdaten zusammenlaufen.
 Ohne dieses Gesamtbild gelingt eine saubere Steuerung KI-gestützter Abläufe nur eingeschränkt.
 Das erhöht die Wahrscheinlichkeit von Fehlalarmen und erschwert die Eingrenzung der eigentlichen Ursache.
-
+\FloatBarrier
 
 
 \begin{comment}
