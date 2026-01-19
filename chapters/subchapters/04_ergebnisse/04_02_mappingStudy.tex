@@ -3,8 +3,8 @@
 
 In diesem Abschnitt werden die Ergebnisse vertieft und mit einer Kreuztabellenanalyse präsentiert.
 Diese Zuordnungen untersuchen Beziehungen zwischen Anwendungsfeldern und Herausforderungen (Abschnitt 4.2.1), Lernparadigmen und Algorithmen (Abschnitt 4.2.2) sowie Anwendungsfelder und Datenquellen (Abschnitt 4.2.3).
-Die Ergebnisse werden als Bubble-Chart-Diagramme visualisiert, in denen die Blasengröße die Häufigkeit der jeweiligen Zuordnung (n) widerspiegelt.
-Die Häufigkeiten (n) geben an, in wie vielen der betrachteten Studien die jeweilige Zuordnung vorkommt. 
+Die Ergebnisse werden als Bubble-Chart-Diagramme visualisiert, in denen die Blasengröße die Häufigkeit der jeweiligen Zuordnung ($n$) widerspiegelt.
+Die Häufigkeiten ($n$) geben an, in wie vielen der betrachteten Studien die jeweilige Zuordnung vorkommt. 
 Pro Studie wird eine Zuordnung je Kombination höchstens einmal gezählt, unabhängig davon, wie häufig sie im Text erwähnt wird.
 Ziel ist es, durch diese systematischen Mappings tiefere Einblicke in Struktur und Schwerpunkte der aktuellen Forschung zu gewinnen.
 
@@ -14,7 +14,7 @@ Die Abbildung \ref{fig:04_02_01_mapping} zeigt das Zusammenspiel zwischen den id
 Im Gegensatz zur Abbildung \ref{fig:04_01_01_useCases} wurden hier alle in den analysierten Studien genannten Anwendungsbereiche berücksichtigt und den jeweils adressierten Herausforderungen zugeordnet. 
 Die Häufigkeiten geben an, wie oft eine bestimmte Kombination in der Literatur thematisiert wurde.
 
-\begin{figure}[H]
+\begin{figure}[htb]
     \centering
     \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_02_mapping/04_02_01_mapping.png}
     \caption{Korrelation zwischen Anwendungsfelder und Herausforderungen}
@@ -22,21 +22,21 @@ Die Häufigkeiten geben an, wie oft eine bestimmte Kombination in der Literatur 
 \end{figure}
 
 Besonders deutlich wird die starke Verknüpfung der Use Cases Ressource- und Workload-Optimierung sowie Betrieb und Orchestrierung mit nahezu allen Herausforderungskategorien.
-Die Ressourcen- und Workload-Optimierung weist über alle Bereiche hinweg hohe Werte auf (n=15, 13, 12, 12, 11). 
+Die Ressourcen- und Workload-Optimierung weist über alle Bereiche hinweg hohe Werte auf ($n=15, 13, 12, 12, 11$). 
 Diese breite Korrelation ist plausibel, da Ressourcen- und Workload-Optimierung einen besonders direkten Bezug zu Kosten hat und sich Effekte häufig über die Cloud-Abrechnung unmittelbar sichtbar machen.
 KI-gesteuertes Auto-Scaling vermeidet die Überbereitstellung von Ressourcen und senkt dadurch die monatlichen Abrechnungskosten direkt \cite{poudelAIDrivenIntelligentAutoScaling2025a}.
-Gleichzeitig wird deutlich, dass Echtzeit-Inferenz zwar Genauigkeit und Latenz verbessert, jedoch durch höheren CPU-/Memory-Verbrauch die Ressourcen- und Kostenbelastung erhöht und damit eine Abwägung zwischen Modellqualität und Betriebsaufwand erforderlich macht \cite{guptaCloudNativeMLArchitecting2024a}.
+Gleichzeitig wird deutlich, dass Echtzeit-Inferenz die Reaktionszeit verkürzt, jedoch durch höheren CPU- und Speicherverbrauch die Ressourcen- und Kostenbelastung erhöht und damit eine Abwägung zwischen Reaktionszeit und Betriebsaufwand erforderlich macht \cite{guptaCloudNativeMLArchitecting2024a}.
 
-Ein sehr ähnliches Muster zeigt sich im Bereich Betrieb \& Orchestrierung, der ebenfalls in allen Herausforderungskategorien hohe Häufigkeiten erreicht (n=15, 13, 13, 12, 11). 
+Ein sehr ähnliches Muster zeigt sich im Bereich Betrieb \& Orchestrierung, der ebenfalls in allen Herausforderungskategorien hohe Häufigkeiten erreicht ($n=15, 13, 13, 12, 11$). 
 Das deutet darauf hin, dass KI im Plattformbetrieb häufig nicht als Einzellösung betrachtet wird. 
 Stattdessen ist sie meist in mehrere Betriebsbausteine eingebettet, z.B. Monitoring, Deployment, Orchestrierung und Governance.
 Damit werden in diesem Bereich oft mehrere Herausforderungen gleichzeitig berührt, etwa Kosten, Skalierung, Integration und datenbezogene Voraussetzungen.
 
-Der Use Case Sicherheits- und Bedrohungserkennung zeigt seine höchste Ausprägung im Bereich KI-Governance, Datenschutz und Compliance (n=14) sowie bei Ressourcenverbrauch und Kosten (n=13). 
-Auch die übrigen Herausforderungen weisen weiterhin hohe Werte auf (n=11, 10, 10). 
+Der Use Case Sicherheits- und Bedrohungserkennung zeigt seine höchste Ausprägung im Bereich KI-Governance, Datenschutz und Compliance ($n=14$) sowie bei Ressourcenverbrauch und Kosten ($n=13$). 
+Auch die übrigen Herausforderungen weisen weiterhin hohe Werte auf ($n=11, 10, 10$). 
 Dies deutet darauf hin, dass sicherheitsbezogene KI-Ansätze neben Governance-Themen häufig auch Monitoring, Integrationsprozesse und die zugrunde liegende Datenlage betreffen.
 
-Die CI/CD- \& Pipeline-Optimierung zeigt insgesamt die niedrigsten Werte, bleibt aber über alle Herausforderungen hinweg relativ konstant (n=9, 7, 9, 8, 8). 
+Die CI/CD- \& Pipeline-Optimierung zeigt insgesamt die niedrigsten Werte, bleibt aber über alle Herausforderungen hinweg relativ konstant ($n=9, 7, 9, 8, 8$). 
 KI wird hier vor allem eingesetzt, um einzelne Schritte wie Builds, Tests oder Deployments zu verbessern. 
 Im Vergleich zu ressourcen- oder betriebsnahen Use Cases werden jedoch weniger Herausforderungen gleichzeitig berührt. 
 Kosten, Tool-Abhängigkeiten und Governance-Fragen bleiben trotzdem relevant, etwa durch zusätzlichen Rechenaufwand und die notwendige Nachvollziehbarkeit automatisierter Entscheidungen \cite{tamanampudiAIEnhancedContinuousIntegration}.
@@ -48,9 +48,9 @@ Die Häufungen zeigen somit, welche Themen in der Forschung besonders im Fokus s
 \subsection{Zusammenspiel der Lernparadigmen und Algorithmen}
 \label{subsec:mappingzwei}
 Die Abbildung \ref{fig:04_02_02_mappingZwei} visualisiert die Korrelation zwischen den in den analysierten Studien verwendeten Lernparadigmen des maschinellen Lernens und den eingesetzten Algorithmen.
-Einige Kombinationen werden in der Darstellung nicht ausgewiesen (n=0 bzw. ohne Blase), da sie in den betrachteten Studien nicht eindeutig als eigenständige Zuordnung berichtet wurden.
+Einige Kombinationen werden in der Darstellung nicht ausgewiesen ($n=0$ bzw. ohne Blase), da sie in den betrachteten Studien nicht eindeutig als eigenständige Zuordnung berichtet wurden.
 
-\begin{figure}[H]
+\begin{figure}[htb]
     \centering
     \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_02_mapping/04_02_02_mappingZwei.png}
     \caption{Korrelation zwischen Lernparadigmen und Algorithmen}
@@ -59,12 +59,12 @@ Einige Kombinationen werden in der Darstellung nicht ausgewiesen (n=0 bzw. ohne 
 
 Supervised Learning weist die größte Bandbreite an möglichen Algorithmen auf. 
 Dies liegt daran, dass überwachte Lernverfahren sowohl tiefen neuronalen Netzen als auch klassischen Klassifikations- und Regressionsmodellen sowie ensemblebasierten Ansätzen zugrunde liegen. 
-Der hohe Anteil an SL-Kombinationen (n=14 DL/NN, n=8 Klassifikation/Regression, n=7 Ensemble/baum-basiert) zeigt, dass SL sehr flexibel einsetbar ist.
+Der hohe Anteil an SL-Kombinationen ($n=14$ DL/NN, $n=8$ Klassifikation/Regression, $n=7$ Ensemble/baum-basiert) zeigt, dass SL sehr flexibel einsetbar ist.
 Solange gelabelte Daten vorliegen, können verschiedene Algorithmen angewendet werden.
 Ein wesentlicher Grund für die Dominanz neuronaler Netze ist ihre Fähigkeit, komplexe und nicht-lineare Beziehungen in großen Datenmengen zu erfassen, die für einfachere Modelle nicht erkennbar sind \cite{tamanampudiAIEnhancedContinuousIntegration}.
 
 Unsupervised Learning zeigt hingegen ein engeres Spektrum. 
-Die Ergebnisse verdeutlichen, dass UL hauptsächlich in Kombination mit Deep Learning eingesetzt wird (n=9) oder mit Clustering-Methoden (n=6). 
+Die Ergebnisse verdeutlichen, dass UL hauptsächlich in Kombination mit Deep Learning eingesetzt wird ($n=9$) oder mit Clustering-Methoden ($n=6$). 
 Dies ist erwartungsgemäß, da UL in den untersuchten Studien vor allem zur Mustererkennung und Anomalieanalyse eingesetzt wird und Clustering hierbei eine zentrale Rolle einnimmt, wie in \cite{enemosahEnhancingDevOpsEfficiency2025} beschrieben.
 Der praktische Einsatz ist jedoch erschwert, da sich das als „normal“ erlernte Systemverhalten in dynamischen CI/CD-Umgebungen durch neue Funktionen oder Architekturänderungen häufig verschiebt und dadurch vermehrt Fehlalarme ausgelöst werden können, was den operativen Nutzen solcher Ansätze einschränkt \cite{tamanampudiAIEnhancedContinuousIntegration}.
 
@@ -84,36 +84,36 @@ In diesem Unterkapitel wird analysiert, welche Datenquellen in den identifiziert
 Dafür wurden alle angesprochenen Anwendungsfelder pro Studie mit den jeweils verwendeten Datenquellen verknüpft.
 Abbildung \ref{fig:04_02_03_mappingDrei} zeigt die resultierenden Häufigkeiten (n) je Kombination.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{figures/04_ergebnisse/04_02_mapping/04_02_03_mappingDrei.png}
     \caption{Korrelation zwischen Anwendungsfeldern und Datenquellen}
     \label{fig:04_02_03_mappingDrei}
 \end{figure}
 
-Metriken (z.\,B. Zeitreihen aus Prometheus oder CloudWatch) beschreiben den quantitativen Systemzustand wie CPU, Speicher oder Latenzen.
-Entsprechend treten sie in nahezu allen Use Cases stark auf, besonders in Betrieb/Orchestrierung (n=14) sowie Ressourcen- und Workload-Optimierung (n=12), da diese Aufgaben auf kontinuierlichem Monitoring und wiederkehrenden Lastmustern basieren \cite{kankanalaAIMLDevOps2024,poudelAIDrivenIntelligentAutoScaling2025a}.
+Metriken beschreiben den quantitativen Systemzustand, etwa CPU, Speicher oder Latenzen.
+Sie stammen häufig aus Monitoring-Systemen wie Prometheus\footnote{\url{https://prometheus.io/docs/introduction/overview/}} oder CloudWatch\footnote{\url{https://aws.amazon.com/de/cloudwatch/}}.
+Entsprechend treten sie in nahezu allen Use Cases stark auf.
+Besonders ausgeprägt sind sie in Betrieb/Orchestrierung ($n=14$) sowie in der Ressourcen- und Workload-Optimierung ($n=12$) \cite{kankanalaAIMLDevOps2024,poudelAIDrivenIntelligentAutoScaling2025a}.
 
 Logs (System-, Pipeline- und Applikationslogs) sind ereignisbasierte, häufig unstrukturierte Daten und werden vor allem für Diagnose, Fehlerklassifikation und Ursachenanalyse genutzt.
-Im Mapping zeigen sie über nahezu alle Use Cases hinweg eine zentrale Rolle (typisch n=6-10), mit hohen Werten in Betrieb/Orchestrierung (n=10) und sicherheitsnahen Szenarien (n=9), da Betriebsstörungen, Fehlkonfigurationen oder Angriffsindikatoren meist zuerst in Logdaten sichtbar werden \cite{kathiresanCybersecurityRiskModeling2025}.
+Im Mapping zeigen sie über nahezu alle Use Cases hinweg eine zentrale Rolle ($n=[6,10]$), mit hohen Werten in Betrieb/Orchestrierung ($n=10$) und sicherheitsnahen Szenarien ($n=9$), da Betriebsstörungen, Fehlkonfigurationen oder Angriffsindikatoren meist zuerst in Logdaten sichtbar werden \cite{kathiresanCybersecurityRiskModeling2025}.
 
-Netzwerkdaten und Traces ergänzen diese Sicht um Kommunikationsbeziehungen und Laufzeitpfade verteilter Systeme (z.\,B. Flow-Daten oder OpenTelemetry-Traces).
-Die Ausprägung ist insgesamt niedriger als bei Metriken und Logs, aber konsistent in Betrieb/Orchestrierung (n=6) sowie Sicherheits- und Bedrohungserkennung (n=5) vorhanden. 
-Das deutet darauf hin, dass diese Daten vor allem dann relevant werden, wenn Ursachen nicht lokal erklärbar sind (z.\,B. in Microservice-Architekturen) oder wenn Anomalien über Kommunikationsmuster erkannt werden sollen \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
+Netzwerkdaten und Traces ergänzen diese Sicht um Kommunikationsbeziehungen und Laufzeitpfade verteilter Systeme (z.\,B. Flow-Daten oder OpenTelemetry-Traces\footnote{\url{https://opentelemetry.io}}).
+Die Ausprägung ist insgesamt niedriger als bei Metriken und Logs, aber konsistent in Betrieb/Orchestrierung ($n=6$) sowie Sicherheits- und Bedrohungserkennung ($n=5$) vorhanden. 
+Das deutet darauf hin, dass diese Daten vor allem dann relevant werden, wenn Ursachen nicht lokal erklärbar sind (z.\,B. in Mikroservice-Architekturen) oder wenn Anomalien über Kommunikationsmuster erkannt werden sollen \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
 
-Code und Konfiguration (Quellcode, Container-Artefakte, IaC-Definitionen) werden insbesondere dann wichtig, wenn KI nicht nur Symptome, sondern Änderungen und Konfigurationsursachen bewerten soll.
-Im Mapping zeigt sich eine breite Nutzung über alle Use Cases (n=7-9). 
-Auffällig ist die hohe Ausprägung bei Betrieb/Orchestrierung und Security (je n=9), was zu typischen Plattformproblemen wie riskanten Änderungen, unsicheren Defaults oder Fehlkonfigurationen passt \cite{supritpattanayakIntegratingAIDevOps2024}.
+Code und Konfiguration (Quellcode, Container-Artefakte, Infrastructure as Code (IaC)-Definitionen) werden wichtig, wenn KI nicht nur Symptome bewertet, sondern Änderungen und Konfigurationsstände einbezieht.
+Im Mapping zeigt sich eine breite Nutzung über alle Use Cases ($n=[7,9]$).
+Auffällig ist die hohe Ausprägung bei Betrieb/Orchestrierung und Security (je $n=9$), was zu riskanten Änderungen, unsicheren Voreinstellungen oder Fehlkonfigurationen passt \cite{supritpattanayakIntegratingAIDevOps2024}.
 
-Historische Test- und Deployment-Daten (Build-Historien, Testergebnisse, Deployment-Verläufe) sind erwartungsgemäß stark vertreten, da viele Ansätze aus wiederkehrenden Mustern der Vergangenheit lernen.
-Besonders Betrieb/Orchestrierung (n=12) sowie CI/CD-Optimierung (n=9) und Ressourcenoptimierung (n=10) zeigen hohe Werte. 
-Das ist plausibel, weil Stabilitäts- und Effizienzentscheidungen in der Praxis häufig auf Release-Historien, Fehlerraten und Zeitverläufen aufbauen \cite{tamanampudiAIEnhancedContinuousIntegration}.
+Historische Test- und Deployment-Daten (Build-Historien, Testergebnisse, Deployment-Verläufe) treten vor allem dort auf, wo Verfahren aus vergangenen Ausführungen lernen.
+Im Mapping zeigen sich erhöhte Werte bei Betrieb/Orchestrierung ($n=12$), Ressourcenoptimierung ($n=10$) und CI/CD-Optimierung ($n=9$) \cite{tamanampudiAIEnhancedContinuousIntegration}.
 
-Sicherheits- und Schwachstellendaten (z.\,B. Vulnerability-Scans, Threat-Feeds, Policy-Checks, Verhaltensmuster) konzentrieren sich erwartungsgemäß auf Sicherheits- und Bedrohungserkennung (n=8).
-Gleichzeitig sind sie auch im Betrieb/Orchestrierung sichtbar (n=6), was darauf hinweist, dass Security in Plattformumgebungen zunehmend als Betriebsaufgabe mit Observability- und Lebenszyklusdaten zusammenwächst \cite{govindarajanMachineLearningBased2025}.
+Deutlich wird, dass Betrieb/Orchestrierung die stärksten Überschneidungen mit nahezu allen Datenquellen aufweist, weil hier Monitoring-Daten und Änderungsdaten zusammenlaufen.
+Ohne dieses Gesamtbild gelingt eine saubere Steuerung KI-gestützter Abläufe nur eingeschränkt.
+Das erhöht die Wahrscheinlichkeit von Fehlalarmen und erschwert die Eingrenzung der eigentlichen Ursache.
 
-Deutlich wird, dass der Use case Betrieb und Orchestrierung die stärksten Überschneidungen mit nahezu allen Datenquellen hat, weil hier Monitoring-Daten und Änderungsdaten zusammelaufen.
-Für die KI heißt das konkret, ohne diese Kombination entstehen eher Fehleralarme (Incidents), und die eigentliche Ursache lässt sich schlechter finden. 
 
 
 \begin{comment}

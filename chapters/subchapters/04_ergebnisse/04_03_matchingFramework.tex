@@ -2,7 +2,7 @@
 \label{sec:matching-framework}
 
 Aufbauend auf den quantitativen Ergebnissen aus Abschnitt 4.1 sowie den Mustern der Mapping-Studie in Abschnitt 4.2 wird in diesem Abschnitt ein konzeptionelles Matching-Framework abgeleitet.
-Ziel ist es, die identifizierten KI-Ansätze in übertragbare Anwendungsmuster für generische Use Cases im Platform Engineering zu strukturieren und damit eine nachvollziehbare Grundlage zu schaffen, um KI-Lösungen später hinsichtlich operativem Nutzen und Umsetzbarkeit einzuordnen.
+Ziel ist es, die identifizierten KI-Ansätze zu übertragbaren Anwendungsmustern für generische Use Cases zu überführen.
 
 \subsection{Proaktives Ressourcen-Management}
 \label{subsec:proaktives-ressourcenmanagement}
@@ -21,17 +21,16 @@ Zusätzlich steigt der Aufwand, wenn Modelle regelmäßig angepasst werden müss
 \subsection{Automatisierte Release-Absicherung}
 \label{subsec:automatisierte-release-absicherung}
 
-Das Muster Automatisierte Release-Absicherung adressiert die Absicherung von Ausrollungen, indem fehlerhafte Versionen möglichst früh erkannt und automatisiert begrenzt werden.
+Das Muster Automatisierte Release-Absicherung adressiert die Absicherung von Rollouts, indem fehlerhafte Versionen möglichst früh erkannt und automatisiert begrenzt werden.
 Die Tabelle \ref{tab:automatisierteReleaseAbsicherung} fasst dieses Muster als Plattformaufgabe zusammen.
-Laufzeitdaten wie Latenz und Fehlerraten werden während der Ausrollung kontinuierlich ausgewertet und bei auffälligen Abweichungen wird automatisch gestoppt oder auf eine stabile Vorgängerversion zurückgesetzt.
+Laufzeitdaten wie Latenz und Fehlerraten werden während des Rollouts kontinuierlich ausgewertet und bei auffälligen Abweichungen wird automatisch gestoppt oder auf eine stabile Vorgängerversion zurückgesetzt.
 
 \input{tables/04_ergebnisse/04_03_02_matchingTabelleZwei.tex}
 
 Verfahren zur Erkennung von Abweichungen vom normalen Systemverhalten kommen zum Einsatz, um problematische Änderungen frühzeitig zu identifizieren \cite{tamanampudiAIEnhancedContinuousIntegration}.
 Als operativer Mehrwert wird in den betrachteten Studien eine verkürzte Wiederherstellungszeit sowie eine höhere Systemverfügbarkeit beschrieben, da fehlerhafte Versionen schneller erkannt und automatisiert zurückgenommen werden können \cite{kankanalaAIMLDevOps2024,jossonpaulkalapparambathAdvancingDistributedSystems2025,tamanampudiAIEnhancedContinuousIntegration}.
 In der Praxis zeigen sich jedoch Grenzen durch Fehlalarme, die unnötige Rücksetzungen auslösen können, sowie durch zusätzlichen Validierungs- und Abstimmungsaufwand.
-Für eine robuste Umsetzung sind daher eine stabile Referenz für das Normalverhalten sowie automatisierte Rücksetz-Mechanismen und eine kontinuierliche Erfassung relevanter Ausrollungsdaten erforderlich.
-
+Für eine robuste Umsetzung sind eine stabile Referenz für das Normalverhalten sowie automatisierte Abbruch- und Wiederherstellungsmechanismen und eine kontinuierliche Erfassung relevanter Rollout-Metriken erforderlich.
 
 \subsection{Intelligente Build-Fehlerdiagnose}
 \label{subsec:intelligente-build-fehlerdiagnose}
