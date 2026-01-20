@@ -58,25 +58,20 @@ Einige Kombinationen werden in der Darstellung nicht ausgewiesen ($n=0$ bzw. ohn
     \label{fig:04_02_02_mappingZwei}
 \end{figure}
 
-Supervised Learning weist die größte Bandbreite an möglichen Algorithmen auf. 
-Dies liegt daran, dass überwachte Lernverfahren sowohl tiefen neuronalen Netzen als auch klassischen Klassifikations- und Regressionsmodellen sowie ensemblebasierten Ansätzen zugrunde liegen. 
-Der hohe Anteil an SL-Kombinationen ($n=14$ DL/NN, $n=8$ Klassifikation/Regression, $n=7$ Ensemble/baum-basiert) zeigt, dass SL sehr flexibel einsetzbar ist.
-Solange gelabelte Daten vorliegen, können verschiedene Algorithmen angewendet werden.
-Ein wesentlicher Grund für die Dominanz neuronaler Netze ist ihre Fähigkeit, komplexe und nicht-lineare Beziehungen in großen Datenmengen zu erfassen, die für einfachere Modelle nicht erkennbar sind \cite{tamanampudiAIEnhancedContinuousIntegration}.
+SL weist im Mapping die größte Bandbreite auf.
+Es wird am häufigsten mit Deep Learning/ neuronalen Netzen kombiniert ($n=14$), gefolgt von Klassifikation/ Regression ($n=8$) sowie Ensemble- und baum-basierten Verfahren ($n=7$).
+Damit dominiert SL sowohl in der Anzahl der Nennungen als auch in der Vielfalt der berichteten Verfahren.
+Mehrere Arbeiten beschreiben SL als zentralen Ansatz zur Optimierung einzelner Pipeline-Schritte, etwa für Test-, Build- oder Deploy-Entscheidungen \cite{enemosahEnhancingDevOpsEfficiency2025,tamanampudiAIEnhancedContinuousIntegration}.
 
-Unsupervised Learning zeigt hingegen ein engeres Spektrum. 
-Die Ergebnisse verdeutlichen, dass UL hauptsächlich in Kombination mit Deep Learning eingesetzt wird ($n=9$) oder mit Clustering-Methoden ($n=6$). 
-Dies ist erwartungsgemäß, da UL in den untersuchten Studien vor allem zur Mustererkennung und Anomalieanalyse eingesetzt wird und Clustering hierbei eine zentrale Rolle einnimmt, wie in \cite{enemosahEnhancingDevOpsEfficiency2025} beschrieben.
-Der praktische Einsatz ist jedoch erschwert, da sich das als „normal“ erlernte Systemverhalten in dynamischen CI/CD-Umgebungen durch neue Funktionen oder Architekturänderungen häufig verschiebt und dadurch vermehrt Fehlalarme ausgelöst werden können, was den operativen Nutzen solcher Ansätze einschränkt \cite{tamanampudiAIEnhancedContinuousIntegration}.
+UL zeigt hingegen ein engeres Spektrum.
+Im Mapping dominieren Deep-Learning-basierte Ansätze ($n=9$) sowie Clustering ($n=6$).
+Der Schwerpunkt liegt dabei auf der Muster- und Anomalieerkennung.
+Mehrere Arbeiten zeigen, dass sich das erlernte Normalverhalten in dynamischen Plattformumgebungen häufig verändert und ohne Anpassung der Modelle vermehrt Fehlalarme entstehen \cite{enemosahEnhancingDevOpsEfficiency2025,tamanampudiAIEnhancedContinuousIntegration}.
 
-Reinforcement Learning tritt zwar in mehreren Studien auf, wird jedoch selten algorithmisch konkretisiert. 
-RL wird vor allem für dynamische Optimierungsaufgaben eingesetzt. 
-Durch das Lernen auf Basis beobachteter Systemzustände und Feedback können RL-Modelle geeignete Aktionen auswählen. 
-Dadurch können sie zur Stabilisierung des Betriebs und zur Verbesserung der Systemleistung beitragen.
-Einzelne Arbeiten nutzen hierfür Deep-RL-Ansätze wie Deep Q-Networks \cite{jossonpaulkalapparambathAdvancingDistributedSystems2025}, insbesondere wenn komplexe Zustandsräume berücksichtigt werden müssen. 
-Ein zentrales Problem von RL ist jedoch die hohe Komplexität bei der Modellierung interagierender Systemkomponenten sowie der damit verbundene Rechenaufwand, wodurch eine Überführung in den produktiven Betrieb häufig erschwert wird \cite{jossonpaulkalapparambathAdvancingDistributedSystems2025}.
-Dies verdeutlicht, warum Reinforcement-Learning-Verfahren in der Praxis bislang nur begrenzt eingesetzt werden.
-Insgesamt bleibt die Zuordnung zu spezifischen Algorithmen jedoch begrenzt, weshalb viele Kombinationen in der Tabelle nicht belegt sind.
+RL tritt in mehreren Studien auf, wird jedoch selten algorithmisch konkretisiert.
+Berichtet werden ausschließlich Kombinationen mit Deep Learning/ neuronalen Netzen ($n=7$).
+Zwar werden in einzelnen Arbeiten konkrete RL-Algorithmen genannt, zugleich beschreiben die Studien jedoch einen hohen Rechen- und Zeitaufwand sowie eine komplexe Implementierung als zentrale Herausforderungen. \cite{enemosahEnhancingDevOpsEfficiency2025,jossonpaulkalapparambathAdvancingDistributedSystems2025}
+Insgesamt bleibt die Zuordnung zu spezifischen Algorithmen begrenzt, weshalb viele Kombinationen in der Tabelle nicht belegt sind.
 \FloatBarrier
 
 
