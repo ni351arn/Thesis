@@ -9,7 +9,7 @@ Dadurch werden die in Kapitel 3.2 formulierten Fragen detailliert adressiert und
 Die Literaturanalyse zeigt vier wiederkehrende Anwendungsfelder, in denen KI einen Mehrwert bringt und gleichzeitig auch Herausforderungen mit sich bringt.
 Diese lassen sich entlang konkreter betrieblicher Aufgaben abgrenzen: (1) Ressourcen- und Workload-Optimierung, (2) Betrieb und Orchestrierung der Plattform, (3) Optimierung von CI/CD-Pipelines sowie (4) Sicherheits- und Bedrohungserkennung. 
 
-Das Proaktiven Ressourcen-Management thematisiert die Skalierung von Workloads, zum Beispiel um die Anzahl von Kubernetes-Pods bei schwankender Last.
+Das Proaktive Ressourcen-Management thematisiert die Skalierung von Workloads, zum Beispiel um die Anzahl von Kubernetes-Pods bei schwankender Last.
 Die KI wertet Auslastungs- und Latenzverläufe aus und leitet daraus eine Vorhersage für die nächste Lastphase ab.
 Auf Basis dieser Vorhersage wird eine Skalierungsentscheidung früher getroffen als bei fester Zuteilung.
 Dadurch sinkt das Risiko, dass Services zu spät skalieren und unter Last instabil werden.
@@ -17,7 +17,7 @@ Gleichzeitig wird eine Überbereitstellung reduziert, weil nicht zu viel Kapazit
 Typische Herausforderungen entstehen, wenn nicht ausreichend historische Daten vorliegen oder Lastmuster sich häufig ändern \cite{tamminediAutomatingKubernetesOperations2024,poudelAIDrivenIntelligentAutoScaling2025a}.
 
 Betrieb und Orchestrierung adressiert Störungen im laufenden Betrieb und die Eingrenzung ihrer Ursachen über mehrere Komponenten hinweg.
-Die Grundlage bilden Protokolle, Metriken und Ereignisse, die zu einen Hinweis geben, welche Komponente wahrscheinlich der Auslöser ist.
+Die Grundlage bilden Protokolle, Metriken und Ereignisse, die einen Hinweis geben, welche Komponente wahrscheinlich der Auslöser ist.
 Ein typisches Beispiel ist die Auswertung von Kubernetes-Events und Protokollen, um Fehlkonfigurationen oder wiederkehrende Fehlerbilder schneller zu erkennen.
 Der Mehrwert liegt in kürzerer Fehlersuche und einer schnelleren Einordnung, was wirklich relevant ist.
 Der Ansatz wird unzuverlässig, wenn sich das Normalverhalten durch Releases und Konfigurationsänderungen ständig verschiebt und dadurch viele Fehlalarme entstehen \cite{tamminediAutomatingKubernetesOperations2024,tamanampudiAIEnhancedContinuousIntegration}.
@@ -26,7 +26,7 @@ Die Absicherung von Rollouts zielt darauf ab, fehlerhafte Versionen früh zu beg
 Während einer schrittweisen Rollout-Phase werden Fehlerraten und Antwortzeiten beobachtet und mit dem erwarteten Normalzustand verglichen.
 Bei auffälligen Abweichungen kann ein Rollout gestoppt oder auf die vorige Version zurückgesetzt werden.
 Das ist relevant, weil Rollouts regelmäßig sind und Fehler sonst erst sichtbar werden, wenn sie bereits breiter wirken.
-Probelmatisch wird es, wenn normale Schwankungen nicht sauber von echten Fehlern getrennt werden und dadurch unnötige Rücksetzungen ausgelöst werden \cite{tamanampudiAIEnhancedContinuousIntegration}.
+Problematisch wird es, wenn normale Schwankungen nicht sauber von echten Fehlern getrennt werden und dadurch unnötige Rücksetzungen ausgelöst werden \cite{tamanampudiAIEnhancedContinuousIntegration}.
 
 Sicherheits- und Bedrohungserkennung umfasst die Anomalieerkennung, Echtzeiterkennung von Angriffen sowie die Klassifikation von Bedrohungen.
 Ein konkretes Beispiel ist der Einsatz von SL-Algorithmen, um erkannte Anomalien als bösartig oder gutartig einzustufen. 
