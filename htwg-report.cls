@@ -88,7 +88,9 @@
 \RequirePackage[
     backend=biber,
     style=numeric,
-    sorting=none
+    sorting=none,
+    maxnames=2,
+    minnames=1
 ]{biblatex}
 
 % URL-Umbrüche verbessern
