@@ -18,6 +18,13 @@ Der Nutzen im Betrieb zeigt sich in einer gleichmäßigeren Ressourcennutzung un
 Die Umsetzung setzt jedoch voraus, dass ausreichend Verlaufsdaten aus dem Betrieb vorliegen und Eingriffe in die Skalierung automatisiert möglich sind. 
 Zusätzlich steigt der Aufwand, wenn Modelle regelmäßig angepasst werden müssen oder Verzögerungen beim Start neuer Komponenten auftreten, etwa in serverlosen Umgebungen.
 
+Es wird zwischen Betrieb auf eigener Infrastruktur (On-Premises) und Betrieb in externen Cloud-Umgebungen (Public Cloud) unterschieden.
+Die praktische Relevanz des Musters hängt vom Betriebsmodell ab.
+In der Public Cloud fängt automatische Skalierung viele Lastspitzen bereits ab, da zusätzliche Kapazität kurzfristig bereitgestellt werden kann.
+Im On-Premises-Betrieb ist der Ansatz häufig relevanter.
+Feste Kapazitätsgrenzen und längere Beschaffungszeiten lassen Fehlentscheidungen bei der Ressourcendimensionierung stärker wirken.
+
+
 \subsection{Automatisierte Release-Absicherung}
 \label{subsec:automatisierte-release-absicherung}
 
