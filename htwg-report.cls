@@ -93,11 +93,6 @@
     minnames=1
 ]{biblatex}
 
-% URL-Umbrüche verbessern
-\setcounter{biburllcpenalty}{100}
-\setcounter{biburlucpenalty}{100}
-\setcounter{biburlnumpenalty}{100}
-
 \if@german
 \DefineBibliographyStrings{german}{%
   bibliography = {Literaturverzeichnis},
