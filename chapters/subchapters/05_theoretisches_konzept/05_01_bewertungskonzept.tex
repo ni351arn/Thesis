@@ -1,12 +1,12 @@
 \section{Bewertungskonzept}
 \label{sec:bewertungskonzept}
-Aufbauend auf den zuvor identifizierten KI-Use-Cases wird im Folgenden ein Bewertungskonzept vorgestellt, das eine strukturierte Einordnung und Vergleichbarkeit dieser Anwendungsfälle ermöglicht.
-Ziel des Frameworks ist es, KI-Anwendungsfälle im Cloud-Native Platform Engineering systematisch hinsichtlich ihres Implementierungsaufwands und ihres operativen Mehrwerts zu bewerten.
-Damit soll eine fundierte Entscheidungsgrundlage für die Priorisierung und Implementierung von KI-Lösungen geschaffen werden.
+Aufbauend auf den zuvor identifizierten \gls{ki}-Use-Cases wird im Folgenden ein Bewertungskonzept vorgestellt, das eine strukturierte Einordnung und Vergleichbarkeit dieser Anwendungsfälle ermöglicht.
+Ziel des Frameworks ist es, \gls{ki}-Anwendungsfälle im Cloud-Native Platform Engineering systematisch hinsichtlich ihres Implementierungsaufwands und ihres operativen Mehrwerts zu bewerten.
+Damit soll eine fundierte Entscheidungsgrundlage für die Priorisierung und Implementierung von \gls{ki}-Lösungen geschaffen werden.
 
 \subsection{Ziel und Einordnung der Bewertungslogik}
 \label{zielBewertungslogik}
-Der Implementierungsaufwand beschreibt den Aufwand, eine KI-Funktion robust, sicher und wartbar in den Betrieb zu integrieren.
+Der Implementierungsaufwand beschreibt den Aufwand, eine \gls{ki}-Funktion robust, sicher und wartbar in den Betrieb zu integrieren.
 Der operative Mehrwert beschreibt den erwarteten Beitrag zur messbaren Verbesserung zentraler Betriebsziele.
 Dazu zählen insbesondere Betriebszuverlässigkeit (z.\,B. MTTR), Effizienz und Systemstabilität.
 Aspekte wie Datenzugang, Steuerung und organisatorische Voraussetzungen werden nicht in der X/Y-Achse abgebildet, sondern über zusätzliche Dimensionen betrachtet.
@@ -40,7 +40,7 @@ Anwendungsfälle mit hohem Aufwand und geringem Mehrwert sollten nur weiterverfo
 
 \subsection{Zusatzdimensionen und Bewertungsstufen}
 \label{zusatzdimensionenBewertung}
-Die zweidimensionale Bewertungsmatrix priorisiert KI-Use-Cases zunächst über das Verhältnis von Implementierungsaufwand (X) und operativem Mehrwert (Y). 
+Die zweidimensionale Bewertungsmatrix priorisiert \gls{ki}-Use-Cases zunächst über das Verhältnis von Implementierungsaufwand (X) und operativem Mehrwert (Y). 
 Sie liefert damit eine erste Einordnung, greift aber zentrale Rahmenbedingungen des Plattformbetriebs nur indirekt auf.
 
 Daher werden ergänzend vier Zusatzdimensionen betrachtet. 
@@ -50,8 +50,8 @@ Die Zusatzdimensionen sind nicht als separate Achsen dargestellt, sondern bilden
 \par\bigskip
 \textbf{Dimension 1: Umsetzbarkeit}
 
-Die Dimension Umsetzbarkeit bewertet, wie realistisch ein KI-Use-Case technisch und organisatorisch umgesetzt werden kann. 
-Sie umfasst (i) Datenverfügbarkeit und -qualität, (ii) die Passung zur bestehenden Plattform- bzw. CI/CD-Architektur (inkl. Integration) sowie (iii) die verfügbaren Fachkenntnisse für Entwicklung, Betrieb und Wartung.
+Die Dimension Umsetzbarkeit bewertet, wie realistisch ein \gls{ki}-Use-Case technisch und organisatorisch umgesetzt werden kann. 
+Sie umfasst (i) Datenverfügbarkeit und -qualität, (ii) die Passung zur bestehenden Plattform- bzw. \gls{ci}/\gls{cd}-Architektur (inkl. Integration) sowie (iii) die verfügbaren Fachkenntnisse für Entwicklung, Betrieb und Wartung.
 
 Niedrig bedeutet, dass Daten ausreichend vorhanden sind, die Integration ohne größere Änderungen möglich ist und die nötige Expertise im Team verfügbar ist.
 
@@ -62,7 +62,7 @@ Hoch bedeutet, dass wesentliche Voraussetzungen fehlen (z.B. Datenlücken, fehle
 
 \textbf{Dimension 2: Betriebswirksamkeit \& Skalierbarkeit}
 
-Diese Dimension bewertet, ob ein KI-Use-Case im laufenden Plattformbetrieb zuverlässig einen operativen Nutzen entfaltet.
+Diese Dimension bewertet, ob ein \gls{ki}-Use-Case im laufenden Plattformbetrieb zuverlässig einen operativen Nutzen entfaltet.
 Zusätzlich wird betrachtet, ob sich der Ansatz mit vertretbarem Aufwand auf weitere Services oder Teams übertragen lässt.
 Berücksichtigt werden (i) die Stabilität und Wirksamkeit im Betrieb sowie (ii) die Skalierbarkeit und Wiederverwendbarkeit der Lösung.
 
@@ -75,7 +75,7 @@ Hoch bedeutet, dass die Lösung stabil im Betrieb wirkt und mit geringem Zusatza
 
 \textbf{Dimension 3: Compliance \& Governance}
 
-Diese Dimension erfasst organisatorische und regulatorische Rahmenbedingungen für den Einsatz eines KI-Use-Cases.
+Diese Dimension erfasst organisatorische und regulatorische Rahmenbedingungen für den Einsatz eines \gls{ki}-Use-Cases.
 Bewertet werden (i) Anforderungen an Datenschutz, Datenklassifikation und Zugriffskontrolle sowie (ii) die organisatorische Verankerung durch klare Zuständigkeiten und Freigabeprozesse.
 Die Dimension dient dazu, Risiken und Abstimmungsbedarfe frühzeitig sichtbar zu machen.
 
@@ -88,7 +88,7 @@ Hoch bedeutet, dass strenge Vorgaben, sensible Daten oder unklare Zuständigkeit
 
 \textbf{Dimension 4: Reifegrad}
 
-Die Dimension Reifegrad bewertet den Entwicklungs- und Betriebsstand eines KI-Use-Cases.
+Die Dimension Reifegrad bewertet den Entwicklungs- und Betriebsstand eines \gls{ki}-Use-Cases.
 Sie umfasst (i) die Technologiereife der Lösung sowie (ii) die Absicherung des dauerhaften Betriebs.
 Berücksichtigt werden unter anderem der Entwicklungsstatus, vorhandene Betriebserfahrungen und die organisatorische Absicherung.
 
@@ -104,7 +104,7 @@ Zur einheitlichen Anwendung der Zusatzdimensionen werden die qualitativen Bewert
 
 \subsection{Ableitung der X- und Y-Achse und Quadrantenzuordnung}
 \label{ableitungXYAchse}
-Die Einordnung eines KI-Use-Cases in der Bewertungsmatrix erfolgt auf Basis eines Bewertungsrasters.
+Die Einordnung eines \gls{ki}-Use-Cases in der Bewertungsmatrix erfolgt auf Basis eines Bewertungsrasters.
 Das Raster umfasst die Unterdimensionen der vier Zusatzdimensionen aus Abschnitt \ref{zusatzdimensionenBewertung}.
 Für jede Unterdimension wird die zugehörige Leitfrage beantwortet und auf einer dreistufigen Skala (niedrig/mittel/hoch) bewertet, die auch in Tabelle \ref{tab:zusatzdimensionen} dargestellt ist.
 Zur Auswertung werden die Stufen in Zahlenwerte überführt (niedrig = 1, mittel = 2, hoch = 3).

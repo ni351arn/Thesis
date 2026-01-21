@@ -2,13 +2,13 @@
 \label{sec:matching-framework}
 
 Aufbauend auf den quantitativen Ergebnissen aus Abschnitt 4.1 sowie den Mustern der Mapping-Studie in Abschnitt 4.2 wird in diesem Abschnitt ein konzeptionelles Matching-Framework abgeleitet.
-Ziel ist es, die identifizierten KI-Ansätze zu übertragbaren Anwendungsmustern für generische Use Cases zu überführen.
+Ziel ist es, die identifizierten \gls{ki}-Ansätze zu übertragbaren Anwendungsmustern für generische Use Cases zu überführen.
 
 \subsection{Proaktives Ressourcen-Management}
 \label{subsec:proaktives-ressourcenmanagement}
-Das Muster Proaktives Ressourcen-Management beschreibt KI-gestützte Verfahren, um Infrastrukturressourcen vorausschauend und automatisiert an die erwartete Last anzupassen.
+Das Muster Proaktives Ressourcen-Management beschreibt \gls{ki}-gestützte Verfahren, um Infrastrukturressourcen vorausschauend und automatisiert an die erwartete Last anzupassen.
 Tabelle \ref{tab:proaktivesRessourcenmanagement} fasst dieses Muster als konkrete Plattformaufgabe zusammen, bei der Instanzen oder Kubernetes-Pods (z.\,B. per Autoscaling/HPA) nicht nur reaktiv gesteuert werden.
-Auf Basis historischer Betriebsdaten wie CPU- und Speicherauslastung werden wiederkehrende Lastmuster erkannt und die Anzahl von Pods oder Instanzen frühzeitig angepasst, bevor Engpässe auftreten.
+Auf Basis historischer Betriebsdaten wie \gls{cpu}- und Speicherauslastung werden wiederkehrende Lastmuster erkannt und die Anzahl von Pods oder Instanzen frühzeitig angepasst, bevor Engpässe auftreten.
 
 \input{tables/04_ergebnisse/04_03_01_matchingTabelleEins.tex}
 
@@ -43,7 +43,7 @@ Für eine robuste Umsetzung sind eine stabile Referenz für das Normalverhalten 
 \label{subsec:intelligente-build-fehlerdiagnose}
 
 Das Muster Intelligente Build-Fehlerdiagnose adressiert die Frage, wie Fehlschläge in CI-Pipelines frühzeitig erkannt und die Ursachenanalyse im Entwicklungsprozess unterstützt werden kann.
-Tabelle \ref{tab:intelligenteBuildFehlerdiagnose} fasst dieses Muster als Plattformaufgabe zusammen, bei der Build- und Testprotokolle aus der CI automatisiert ausgewertet werden, um wiederkehrende Fehlermuster zu erkennen und einzugrenzen.
+Tabelle \ref{tab:intelligenteBuildFehlerdiagnose} fasst dieses Muster als Plattformaufgabe zusammen, bei der Build- und Testprotokolle aus der \gls{ci} automatisiert ausgewertet werden, um wiederkehrende Fehlermuster zu erkennen und einzugrenzen.
 Durch die Auswertung historischer Build-Protokolle, Testergebnisse und Code-Merkmale werden Muster identifiziert, die auf bevorstehende Fehlschläge hinweisen, sodass Entwickler frühzeitig auf potenzielle Build-Probleme aufmerksam gemacht werden.
 
 \input{tables/04_ergebnisse/04_03_03_matchingTabelleDrei.tex}
@@ -64,16 +64,16 @@ Zudem wird eine ausreichende und große Historie benötigt, die Builds eindeutig
 \label{subsec:devsecops}
 
 Das Muster Risikobasiertes Schwachstellen- und Compliance-Management wird in der Literatur häufig unter den Begriffen DevSecOps oder SecurityOps eingeordnet. 
-Es beschreibt KI-gestützte Ansätze, um Sicherheitsereignisse im Plattformbetrieb frühzeitig zu erkennen und Reaktionen gezielt zu priorisieren.
+Es beschreibt \gls{ki}-gestützte Ansätze, um Sicherheitsereignisse im Plattformbetrieb frühzeitig zu erkennen und Reaktionen gezielt zu priorisieren.
 Tabelle \ref{tab:devsecops} fasst das Muster als Plattformaufgabe zusammen. 
 Im Fokus stehen dabei sowohl die Priorisierung von Sicher- heits-Scans als auch die laufende Auswertung von Log- und Netzwerkdaten. 
 Auf dieser Basis lassen sich sicherheitsrelevante Abweichungen früh erkennen und automatisierte Maßnahmen einleiten, etwa die gezielte Isolation betroffener Komponenten.
 
-Als methodischer Ansatz werden in der Literatur sowohl Deep-Learning-Modelle (z.B. CNNs) als auch Gradient-Boosting-Verfahren (z.B. XGBoost) eingesetzt.
+Als methodischer Ansatz werden in der Literatur sowohl \gls{dl}-Modelle (z.B. CNNs) als auch Gradient-Boosting-Verfahren (z.B. XGBoost) eingesetzt.
 XGBoost kann dabei besonders dann stabil funktionieren, wenn es nur wenige echte Sicherheitsvorfälle in den Daten gibt \cite{uddohAIBasedThreatDetection2021,govindarajanMachineLearningBased2025}.
 Der Nutzen im Betrieb liegt in einer besseren Erkennung bei weniger Fehlalarmen. 
 Dadurch verringert sich der manuelle Aufwand, und kritische Funde können schneller weiterbearbeitet werden \cite{uddohAIBasedThreatDetection2021}.
-Gleichzeitig kann der Betrieb aufwendig werden, weil Deep-Learning-Modelle beim Einsatz zusätzliche Rechenleistung benötigen und damit Kosten verursachen.
+Gleichzeitig kann der Betrieb aufwendig werden, weil \gls{dl}-Modelle beim Einsatz zusätzliche Rechenleistung benötigen und damit Kosten verursachen.
 Zusätzlich steigen die Anforderungen an Datenschutz und Compliance, sobald Log- oder Netzwerkdaten personenbezogene Informationen enthalten und nach DSGVO verarbeitet werden müssen.
 Für einen stabilen Einsatz ist daher eine verlässliche Erfassung von Netzwerk- und Logdaten erforderlich. 
 Diese Daten müssen so zusammengeführt werden, dass sicherheitsrelevante Ereignisse nachvollziehbar eingeordnet und automatisierte Reaktionen gezielt und kontrolliert ausgelöst werden können.

@@ -1,16 +1,16 @@
 \section{Beantwortung der Forschungsfragen}
 \label{sec:beantwortung-ff}
 In diesem Abschnitt werden die drei Forschungsfragen der Arbeit (RQ1, RQ2, RQ3) auf Basis der erarbeiteten Ergebnisse beantwortet. 
-Die Antworten beziehen sich auf die in der Literaturanalyse identifizierten Anwendungsfelder und Herausforderungen (RQ1), die untersuchten KI-Methoden und -Werkzeuge (RQ2) sowie das entwickelte Bewertungskonzept und Erkenntnisse aus Fallstudien (RQ3). 
+Die Antworten beziehen sich auf die in der Literaturanalyse identifizierten Anwendungsfelder und Herausforderungen (RQ1), die untersuchten \gls{ki}-Methoden und -Werkzeuge (RQ2) sowie das entwickelte Bewertungskonzept und Erkenntnisse aus Fallstudien (RQ3). 
 Dadurch werden die in Kapitel 3.2 formulierten Fragen detailliert adressiert und die Erkenntnisse in den Gesamtkontext des Cloud-Native Platform Engineerings eingeordnet.
 
 \subsection{Beantwortung der Forschungsfrage RQ1}
 \label{rq1Antwort}
-Die Literaturanalyse zeigt vier wiederkehrende Anwendungsfelder, in denen KI einen Mehrwert bringt und gleichzeitig auch Herausforderungen mit sich bringt.
-Diese lassen sich entlang konkreter betrieblicher Aufgaben abgrenzen: (1) Ressourcen- und Workload-Optimierung, (2) Betrieb und Orchestrierung der Plattform, (3) Optimierung von CI/CD-Pipelines sowie (4) Sicherheits- und Bedrohungserkennung. 
+Die Literaturanalyse zeigt vier wiederkehrende Anwendungsfelder, in denen \gls{ki} einen Mehrwert bringt und gleichzeitig auch Herausforderungen mit sich bringt.
+Diese lassen sich entlang konkreter betrieblicher Aufgaben abgrenzen: (1) Ressourcen- und Workload-Optimierung, (2) Betrieb und Orchestrierung der Plattform, (3) Optimierung von \gls{ci}/\gls{cd}-Pipelines sowie (4) Sicherheits- und Bedrohungserkennung. 
 
 Das Proaktive Ressourcen-Management thematisiert die Skalierung von Workloads, zum Beispiel um die Anzahl von Kubernetes-Pods bei schwankender Last.
-Die KI wertet Auslastungs- und Latenzverläufe aus und leitet daraus eine Vorhersage für die nächste Lastphase ab.
+Die \gls{ki} wertet Auslastungs- und Latenzverläufe aus und leitet daraus eine Vorhersage für die nächste Lastphase ab.
 Auf Basis dieser Vorhersage wird eine Skalierungsentscheidung früher getroffen als bei fester Zuteilung.
 Dadurch sinkt das Risiko, dass Services zu spät skalieren und unter Last instabil werden.
 Gleichzeitig wird eine Überbereitstellung reduziert, weil nicht zu viel Kapazität vorgehalten wird.
@@ -43,28 +43,28 @@ Am häufigsten limitiert jedoch die Datenbasis, weil unvollständige oder uneinh
 Die Literatur zeigt kein einheitliches Lernparadigma, Werkzeug oder Algorithmus, der für alle Anwendungsfälle gleichermaßen geeignet ist.
 Die Wahl hängt vor allem vom Anwendungsfall, von der verfügbaren Datenbasis und von der Systemarchitektur der Plattform ab.
 
-Am häufigsten werden Supervised Learning Verfahren thematisiert und eingesetzt.
+Am häufigsten werden \gls{sl}-Verfahren thematisiert und eingesetzt.
 Sie passen dort, wo historische Daten mit bekannten Ergebnissen vorliegen, zum Beispiel erfolgreiche und fehlgeschlagene Builds oder klassifizierte Störungen.
 Damit lassen sich Vorhersagen für Lastverläufe erstellen oder Fehlertypen aus Protokollen einordnen.
-Auch die Bewertung von Änderungsrisiken in CI/CD-Pipelines wird so umgesetzt, indem frühere Pipeline-Verläufe als Trainingsgrundlage dienen \cite{enemosahEnhancingDevOpsEfficiency2025}.
+Auch die Bewertung von Änderungsrisiken in \gls{ci}/\gls{cd}-Pipelines wird so umgesetzt, indem frühere Pipeline-Verläufe als Trainingsgrundlage dienen \cite{enemosahEnhancingDevOpsEfficiency2025}.
 
-Unsupervised Learning Verfahren werden dementsprechend dort eingesetzt, wo solche Zuordnungen fehlen.
+\gls{ul}-Verfahren werden dementsprechend dort eingesetzt, wo solche Zuordnungen fehlen.
 Typisch ist die Erkennung von Abweichungen in Metriken oder Protokollen, ohne dass vorher markiert wurde, was ein Fehler ist.
 Das ist im Betrieb hilfreich, führt aber in dynamischen Umgebungen oft zu Fehlalarmen, weil sich das Normalverhalten durch Releases und Konfigurationsänderungen verschiebt \cite{enemosahEnhancingDevOpsEfficiency2025}.
 
-Etwas weniger thematisiert aber trotzdem relevant sind Reinforcement Learning Ansätze.
+Etwas weniger thematisiert aber trotzdem relevant sind \gls{rl}-Ansätze.
 Diese werden vor allem für Steuerungsentscheidungen beschrieben, zum Beispiel für Skalierung oder Rollout-Entscheidungen unter wechselnden Bedingungen.
 Der Aufwand ist hoch, weil Training und Rückkopplung sauber abgebildet werden müssen, daher ist der Einsatz in produktiven Umgebungen bislang begrenzt \cite{jossonpaulkalapparambathAdvancingDistributedSystems2025,kathiresanCybersecurityRiskModeling2025}.
 
-Bei den Methoden dominieren komplexe Modelle, besonders neuronale Netze.
+Bei den Methoden dominieren komplexe Modelle, besonders \gls{nn}.
 Das liegt daran, dass sie mit heterogenen Betriebsdaten umgehen können, zum Beispiel mit Protokollen, Metriken und Ereignissen \cite{enemosahEnhancingDevOpsEfficiency2025}.
 Daneben werden auch klassische Verfahren genutzt, etwa baumbasierte Modelle für Klassifikation und Prognosen, oder Clustering für die Gruppierung ähnlicher Fehlerbilder.
 In mehreren Arbeiten wird deutlich, dass einfachere und besser nachvollziehbare Verfahren in manchen Fällen ausreichen würden, in der Forschung aber seltener im Fokus stehen \cite{govindarajanMachineLearningBased2025}.
 
 Bei den Werkzeugen zeigt sich ein ähnliches Bild.
-Viele Ansätze bauen auf bestehenden Plattform- und Betriebswerkzeugen auf und ergänzen diese um KI-Funktionen.
+Viele Ansätze bauen auf bestehenden Plattform- und Betriebswerkzeugen auf und ergänzen diese um \gls{ki}-Funktionen.
 Im Kubernetes-Umfeld betrifft das zum Beispiel Autoscaling und die Auswertung von Events und Protokollen.
-Im CI/CD-Kontext werden Werkzeuge wie K8sGPT \cite{zaaloukCLOUDNATIVEARTIFICIAL}, Jenkins X \cite{kankanalaAIMLDevOps2024} oder DeepCode \cite{supritpattanayakIntegratingAIDevOps2024} genannt, um Build- und Analyseaufgaben zu unterstützen.
+Im \gls{ci}/\gls{cd}-Kontext werden Werkzeuge wie K8sGPT \cite{zaaloukCLOUDNATIVEARTIFICIAL}, Jenkins X \cite{kankanalaAIMLDevOps2024} oder DeepCode \cite{supritpattanayakIntegratingAIDevOps2024} genannt, um Build- und Analyseaufgaben zu unterstützen.
 Für Rollout-Absicherung und Betrieb werden auch Plattformen wie Spinnaker oder Dynatrace \cite{supritpattanayakIntegratingAIDevOps2024} beschrieben, die Daten aus dem Betrieb auswerten und Hinweise ableiten.
 Im Sicherheitskontext werden Werkzeuge wie Trivy \cite{kankanalaAIMLDevOps2024}, Snyk \cite{sikhaCloudNativeApplicationDevelopment2023} oder Falco \cite{sikhaCloudNativeApplicationDevelopment2023} genannt, die Funde aus Scans und Laufzeitdaten priorisieren.
 
@@ -73,7 +73,7 @@ Insgesamt zeigen die Ergebnisse, dass Verfahren und Werkzeuge nur dann sinnvoll 
 
 \subsection{Beantwortung der Forschungsfrage RQ3}
 \label{rq3Antwort}
-Eine qualitative Bewertung und Priorisierung von KI-Use-Cases ist möglich, wenn KI-Ansätze nicht isoliert betrachtet werden, sondern systematisch in den betrieblichen Kontext eingeordnet werden.
+Eine qualitative Bewertung und Priorisierung von \gls{ki}-Use-Cases ist möglich, wenn \gls{ki}-Ansätze nicht isoliert betrachtet werden, sondern systematisch in den betrieblichen Kontext eingeordnet werden.
 Als Ausgangspunkt dient die Einordnung nach Implementierungsaufwand und operativem Mehrwert \cite{tamminediAutomatingKubernetesOperations2024}.
 Damit lässt sich jedoch nur grob bewerten, ob ein Use Case prinzipiell attraktiv wirkt.
 Für eine belastbare Aussage zur praktischen Umsetzbarkeit und Wirkung sind ergänzende Dimensionen notwendig.
@@ -82,15 +82,15 @@ Die Umsetzbarkeit lässt sich bewerten anhand der verfügbaren Datenqualität un
 Die betriebliche Wirksamkeit ergibt sich daraus, ob der Use Case im laufenden Betrieb stabil einen messbaren Nutzen entfaltet und mit vertretbarem Aufwand auf weitere Services übertragbar ist \cite{kankanalaAIMLDevOps2024,tamminediAutomatingKubernetesOperations2024}.
 Ergänzend beeinflussen Anforderungen aus Datenschutz und Governance sowie der Reifegrad der jeweiligen Lösung, ob ein Einsatz realistisch und dauerhaft tragfähig ist \cite{supritpattanayakIntegratingAIDevOps2024,uddohAIBasedThreatDetection2021}.
 
-Die qualitative Bewertung entlang einheitlicher Kriterien ermöglicht es, KI-Use-Cases systematisch einzuordnen und miteinander zu vergleichen.
-Dabei ist nicht entscheidend, welche konkrete KI-Methode oder welches Werkzeug eingesetzt wird.
+Die qualitative Bewertung entlang einheitlicher Kriterien ermöglicht es, \gls{ki}-Use-Cases systematisch einzuordnen und miteinander zu vergleichen.
+Dabei ist nicht entscheidend, welche konkrete \gls{ki}-Methode oder welches Werkzeug eingesetzt wird.
 Maßgeblich ist vielmehr, in welchem Verhältnis Implementierungsaufwand, erwarteter Nutzen und betriebliche Rahmenbedingungen zueinander stehen.
-Die Übertragbarkeit von KI-Lösungen ergibt sich damit nicht aus der Technologie selbst, sondern aus ihrer Passung zur Datenbasis, zu bestehenden Betriebsprozessen und zur organisatorischen Struktur der Plattform.
+Die Übertragbarkeit von \gls{ki}-Lösungen ergibt sich damit nicht aus der Technologie selbst, sondern aus ihrer Passung zur Datenbasis, zu bestehenden Betriebsprozessen und zur organisatorischen Struktur der Plattform.
 
 Die Anwendung des Bewertungskonzepts auf die Bosch Digital Manufacturing Plattform zeigt, dass sich generische Use-Case-Muster aus der Literatur auf einen konkreten Plattformkontext übertragen lassen.
 Use Cases mit vorhandener Datenbasis und klarer Anbindung an bestehende Prozesse lassen sich nachvollziehbar bewerten und priorisieren.
 Gleichzeitig werden Anwendungsfälle sichtbar, deren Umsetzung zwar theoretisch möglich ist, deren Aufwand oder betriebliche Risiken jedoch aktuell überwiegen.
 Damit wird eine fundierte Entscheidungsgrundlage geschaffen, die über eine rein werkzeug- oder technologiegetriebene Betrachtung hinausgeht.
 
-Insgesamt zeigt die Arbeit, dass sich identifizierte KI-Lösungen mithilfe des entwickelten Bewertungsschemas strukturiert auf typische Anwendungsfälle im Cloud-Native Platform Engineering übertragen lassen.
-Die Forschungsfrage RQ3 wird damit beantwortet, indem ein nachvollziehbarer Zusammenhang zwischen KI-Ansätzen, konkreten Plattform-Use-Cases und deren praktischer Umsetzbarkeit hergestellt wird.
+Insgesamt zeigt die Arbeit, dass sich identifizierte \gls{ki}-Lösungen mithilfe des entwickelten Bewertungsschemas strukturiert auf typische Anwendungsfälle im Cloud-Native Platform Engineering übertragen lassen.
+Die Forschungsfrage RQ3 wird damit beantwortet, indem ein nachvollziehbarer Zusammenhang zwischen \gls{ki}-Ansätzen, konkreten Plattform-Use-Cases und deren praktischer Umsetzbarkeit hergestellt wird.

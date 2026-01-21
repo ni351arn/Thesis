@@ -6,9 +6,9 @@ Anwendungen werden als lose gekoppelte Services bereitgestellt und in verteilten
 Der Betrieb umfasst Edge-Standorte in den Werken, zentrale Rechenzentren sowie cloudbasierte Instanzen innerhalb der Bosch-internen Cloud-Infrastruktur.
 Die Plattform ist auf einen hybriden Betrieb ausgelegt und adressiert Anforderungen an Latenz, Verfügbarkeit und Compliance gleichermaßen.
 
-Technisch basiert die Plattform auf Container-Orchestrierung mit Kubernetes, deklarativen Schnittstellen sowie automatisierten CI/CD-Prozessen und durchgängiger Beobachtbarkeit.
+Technisch basiert die Plattform auf Container-Orchestrierung mit Kubernetes, deklarativen Schnittstellen sowie automatisierten \gls{ci}/\gls{cd}-Prozessen und durchgängiger Beobachtbarkeit.
 Diese Eigenschaften bilden die technische Grundlage für eine hohe Änderungsfrequenz und einen standardisierten Plattformbetrieb.
-Gleichzeitig entstehen umfangreiche Betriebsdaten, die für KI-gestützte Verfahren im Plattformbetrieb nutzbar sind.
+Gleichzeitig entstehen umfangreiche Betriebsdaten, die für \gls{ki}-gestützte Verfahren im Plattformbetrieb nutzbar sind.
 Alle Informationen basieren auf internen Plattformdokumentationen und Expertengesprächen (nicht öffentlich zugänglich).
 
 \subsection{Architektur und Betriebsmodell}
@@ -19,7 +19,7 @@ Die Zusammenarbeit zwischen Modulen erfolgt überwiegend ereignisbasiert, währe
 
 In jedem Werk wird ein eigenständiges Kubernetes-Cluster betrieben.
 Ergänzend existieren zentrale Cluster für übergreifende Plattformdienste sowie separate Werks-Cluster für latenzkritische Funktionen.
-Dadurch bleiben lokale Funktionen auch bei Netzstörungen unabhängig vom zentralen Betrieb verfügbar.
+So werden Echtzeitanforderungen sichergestellt und zentrale Cluster im Multi-Tenant-Betrieb genutzt.
 
 Für den werks- und organisationsübergreifenden Einsatz unterstützt die Plattform eine klare Trennung von Zugriffen und Verantwortlichkeiten.
 Diese wird durch zentrale Plattformdienste und ein gemeinsames Rollen- und Berechtigungsmodell umgesetzt.
@@ -45,8 +45,8 @@ Schnittstellen werden nach gemeinsamen Gestaltungsregeln umgesetzt und konsisten
 Für den Betrieb werden einheitliche Logformate und durchgängige Referenzen genutzt, sodass Abläufe über mehrere Komponenten hinweg nachvollziehbar bleiben.
 
 \subsection{Operativer Stack und Datenbasis für AIOps}
-\label{sec:operativerStack}
-Für AIOps ist weniger die Tool-Landschaft entscheidend als die Daten, die im Plattformbetrieb entstehen.
+\label{subsec:operativerStack}
+Für \gls{aiops} ist weniger die Tool-Landschaft entscheidend als die Daten, die im Plattformbetrieb entstehen.
 In der BMLP werden Betriebsdaten über Logs, Metriken, Traces sowie technische und fachliche Ereignisse erfasst und zentral nutzbar gemacht.
 Logs liegen in einem einheitlichen Format vor und enthalten neben Zeitstempel und Systemkontext auch Versions- und Instanzinformationen sowie Korrelationskennungen.
 Damit lassen sich Abläufe über mehrere Komponenten hinweg zusammenführen und automatisiert auswerten.

@@ -17,26 +17,26 @@ Die Häufigkeiten geben an, wie oft eine bestimmte Kombination in der Literatur 
 Besonders deutlich wird die starke Verknüpfung der Use Cases Ressourcen- und Workload-Optimierung sowie Betrieb und Orchestrierung mit nahezu allen Herausforderungskategorien.
 Die Ressourcen- und Workload-Optimierung weist über alle Bereiche hinweg hohe Werte auf ($n=15, 13, 12, 12, 11$). 
 Diese breite Korrelation ist plausibel, da Ressourcen- und Workload-Optimierung einen besonders direkten Bezug zu Kosten hat und sich Effekte häufig über die Cloud-Abrechnung unmittelbar sichtbar machen.
-KI-gesteuertes Auto-Scaling vermeidet die Überbereitstellung von Ressourcen und senkt dadurch die monatlichen Abrechnungskosten direkt \cite{poudelAIDrivenIntelligentAutoScaling2025a}.
-Gleichzeitig wird deutlich, dass Echtzeit-Inferenz die Reaktionszeit verkürzt, jedoch durch höheren CPU- und Speicherverbrauch die Ressourcen- und Kostenbelastung erhöht und damit eine Abwägung zwischen Reaktionszeit und Betriebsaufwand erforderlich macht \cite{guptaCloudNativeMLArchitecting2024a}.
+\gls{ki}-gesteuertes Auto-Scaling vermeidet die Überbereitstellung von Ressourcen und senkt dadurch die monatlichen Abrechnungskosten direkt \cite{poudelAIDrivenIntelligentAutoScaling2025a}.
+Echtzeit-Inferenz verkürzt die Reaktionszeit. Gleichzeitig steigt durch höheren Verbrauch von \gls{cpu} und Speicher der Ressourcen- und Kostenaufwand \cite{guptaCloudNativeMLArchitecting2024a}.
 
 Ein sehr ähnliches Muster zeigt sich im Bereich Betrieb \& Orchestrierung, der ebenfalls in allen Herausforderungskategorien hohe Häufigkeiten erreicht ($n=15, 13, 13, 12, 11$). 
-Das deutet darauf hin, dass KI im Plattformbetrieb häufig nicht als Einzellösung betrachtet wird. 
+Das deutet darauf hin, dass \gls{ki} im Plattformbetrieb häufig nicht als Einzellösung betrachtet wird. 
 Stattdessen ist sie meist in mehrere Betriebsbausteine eingebettet, z.B. Monitoring, Deployment, Orchestrierung und Governance.
 Damit werden in diesem Bereich oft mehrere Herausforderungen gleichzeitig berührt, etwa Kosten, Skalierung, Integration und datenbezogene Voraussetzungen.
 
-Der Use Case Sicherheits- und Bedrohungserkennung zeigt seine höchste Ausprägung im Bereich KI-Governance, Datenschutz und Compliance ($n=14$) sowie bei Ressourcenverbrauch und Kosten ($n=13$). 
+Der Use Case Sicherheits- und Bedrohungserkennung zeigt seine höchste Ausprägung im Bereich \gls{ki}-Governance, Datenschutz und Compliance ($n=14$) sowie bei Ressourcenverbrauch und Kosten ($n=13$). 
 Auch die übrigen Herausforderungen weisen weiterhin hohe Werte auf ($n=11, 10, 10$). 
-Dies deutet darauf hin, dass sicherheitsbezogene KI-Ansätze neben Governance-Themen häufig auch Monitoring, Integrationsprozesse und die zugrunde liegende Datenlage betreffen.
+Dies deutet darauf hin, dass sicherheitsbezogene \gls{ki}-Ansätze neben Governance-Themen häufig auch Monitoring, Integrationsprozesse und die zugrunde liegende Datenlage betreffen.
 
-Die CI/CD- \& Pipeline-Optimierung zeigt insgesamt die niedrigsten Werte, bleibt aber über alle Herausforderungen hinweg relativ konstant ($n=9, 7, 9, 8, 8$). 
-KI wird hier vor allem eingesetzt, um einzelne Schritte wie Builds, Tests oder Deployments zu verbessern. 
+Die \gls{ci}/\gls{cd}- \& Pipeline-Optimierung zeigt insgesamt die niedrigsten Werte, bleibt aber über alle Herausforderungen hinweg relativ konstant ($n=9, 7, 9, 8, 8$). 
+\gls{ki} wird hier vor allem eingesetzt, um einzelne Schritte wie Builds, Tests oder Deployments zu verbessern. 
 Im Vergleich zu ressourcen- oder betriebsnahen Use Cases werden jedoch weniger Herausforderungen gleichzeitig berührt. 
 Kosten, Tool-Abhängigkeiten und Governance-Fragen bleiben trotzdem relevant, etwa durch zusätzlichen Rechenaufwand und die notwendige Nachvollziehbarkeit automatisierter Entscheidungen \cite{tamanampudiAIEnhancedContinuousIntegration}.
 
-Insgesamt verdeutlicht die Verteilung der Häufigkeiten, dass KI-Anwendungen im Platform Engineering besonders dort adressiert werden, wo betriebliche Effizienz und Automatisierung direkt mit Kosten, Skalierung, Governance
+Insgesamt verdeutlicht die Verteilung der Häufigkeiten, dass \gls{ki}-Anwendungen im Platform Engineering besonders dort adressiert werden, wo betriebliche Effizienz und Automatisierung direkt mit Kosten, Skalierung, Governance
 und Integrationsfragen zusammenwirken. 
-Die Häufungen zeigen somit, welche Themen in der Forschung besonders im Fokus stehen und in welchen Bereichen KI-Lösungen aktuell besonders häufig diskutiert werden.
+Die Häufungen zeigen somit, welche Themen in der Forschung besonders im Fokus stehen und in welchen Bereichen \gls{ki}-Lösungen aktuell besonders häufig diskutiert werden.
 
 \begin{figure}[!htbp]
     \centering
@@ -58,19 +58,19 @@ Einige Kombinationen werden in der Darstellung nicht ausgewiesen ($n=0$ bzw. ohn
     \label{fig:04_02_02_mappingZwei}
 \end{figure}
 
-SL weist im Mapping die größte Bandbreite auf.
-Es wird am häufigsten mit Deep Learning/ neuronalen Netzen kombiniert ($n=14$), gefolgt von Klassifikation/ Regression ($n=8$) sowie Ensemble- und baum-basierten Verfahren ($n=7$).
-Damit dominiert SL sowohl in der Anzahl der Nennungen als auch in der Vielfalt der berichteten Verfahren.
-Mehrere Arbeiten beschreiben SL als zentralen Ansatz zur Optimierung einzelner Pipeline-Schritte, etwa für Test-, Build- oder Deploy-Entscheidungen \cite{enemosahEnhancingDevOpsEfficiency2025,tamanampudiAIEnhancedContinuousIntegration}.
+\gls{sl} weist im Mapping die größte Bandbreite auf.
+Es wird am häufigsten mit \gls{dl} / \gls{nn} kombiniert ($n=14$), gefolgt von Klassifikation/ Regression ($n=8$) sowie Ensemble- und baum-basierten Verfahren ($n=7$).
+Damit dominiert \gls{sl} sowohl in der Anzahl der Nennungen als auch in der Vielfalt der berichteten Verfahren.
+Mehrere Arbeiten beschreiben \gls{sl} als zentralen Ansatz zur Optimierung einzelner Pipeline-Schritte, etwa für Test-, Build- oder Deploy-Entscheidungen \cite{enemosahEnhancingDevOpsEfficiency2025,tamanampudiAIEnhancedContinuousIntegration}.
 
-UL zeigt hingegen ein engeres Spektrum.
-Im Mapping dominieren Deep-Learning-basierte Ansätze ($n=9$) sowie Clustering ($n=6$).
+\gls{ul} zeigt hingegen ein engeres Spektrum.
+Im Mapping dominieren \gls{dl}-basierte Ansätze ($n=9$) sowie Clustering ($n=6$).
 Der Schwerpunkt liegt dabei auf der Muster- und Anomalieerkennung.
 Mehrere Arbeiten zeigen, dass sich das erlernte Normalverhalten in dynamischen Plattformumgebungen häufig verändert und ohne Anpassung der Modelle vermehrt Fehlalarme entstehen \cite{enemosahEnhancingDevOpsEfficiency2025,tamanampudiAIEnhancedContinuousIntegration}.
 
-RL tritt in mehreren Studien auf, wird jedoch selten algorithmisch konkretisiert.
-Berichtet werden ausschließlich Kombinationen mit Deep Learning/ neuronalen Netzen ($n=7$).
-Zwar werden in einzelnen Arbeiten konkrete RL-Algorithmen genannt, zugleich beschreiben die Studien jedoch einen hohen Rechen- und Zeitaufwand sowie eine komplexe Implementierung als zentrale Herausforderungen. \cite{enemosahEnhancingDevOpsEfficiency2025,jossonpaulkalapparambathAdvancingDistributedSystems2025}
+\gls{rl} tritt in mehreren Studien auf, wird jedoch selten algorithmisch konkretisiert.
+Berichtet werden ausschließlich Kombinationen mit \gls{dl} / \gls{nn} ($n=7$).
+Zwar werden in einzelnen Arbeiten konkrete \gls{rl}-Algorithmen genannt, zugleich beschreiben die Studien jedoch einen hohen Rechen- und Zeitaufwand sowie eine komplexe Implementierung als zentrale Herausforderungen. \cite{enemosahEnhancingDevOpsEfficiency2025,jossonpaulkalapparambathAdvancingDistributedSystems2025}
 Insgesamt bleibt die Zuordnung zu spezifischen Algorithmen begrenzt, weshalb viele Kombinationen in der Tabelle nicht belegt sind.
 \FloatBarrier
 
@@ -88,7 +88,7 @@ Abbildung \ref{fig:04_02_03_mappingDrei} zeigt die resultierenden Häufigkeiten 
     \label{fig:04_02_03_mappingDrei}
 \end{figure}
 
-Metriken beschreiben den quantitativen Systemzustand, etwa CPU, Speicher oder Latenzen.
+Metriken beschreiben den quantitativen Systemzustand, etwa \gls{cpu}, Speicher oder Latenzen.
 Sie stammen häufig aus Monitoring-Systemen wie Prometheus\footnote{\url{https://prometheus.io/docs/introduction/overview/}} oder CloudWatch\footnote{\url{https://aws.amazon.com/de/cloudwatch/}}.
 Entsprechend treten sie in nahezu allen Use Cases stark auf.
 Besonders ausgeprägt sind sie in Betrieb/Orchestrierung ($n=14$) sowie in der Ressourcen- und Workload-Optimierung ($n=12$) \cite{kankanalaAIMLDevOps2024,poudelAIDrivenIntelligentAutoScaling2025a}.
@@ -100,15 +100,15 @@ Netzwerkdaten und Traces ergänzen diese Sicht um Kommunikationsbeziehungen und 
 Die Ausprägung ist insgesamt niedriger als bei Metriken und Logs, aber konsistent in Betrieb/Orchestrierung ($n=6$) sowie Sicherheits- und Bedrohungserkennung ($n=5$) vorhanden. 
 Das deutet darauf hin, dass diese Daten vor allem dann relevant werden, wenn Ursachen nicht lokal erklärbar sind (z.\,B. in Mikroservice-Architekturen) oder wenn Anomalien über Kommunikationsmuster erkannt werden sollen \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
 
-Code und Konfiguration (Quellcode, Container-Artefakte, Infrastructure as Code (IaC)-Definitionen) werden wichtig, wenn KI nicht nur Symptome bewertet, sondern Änderungen und Konfigurationsstände einbezieht.
+Code und Konfiguration (Quellcode, Container-Artefakte, Infrastructure-as-Code-Definitionen) werden wichtig, wenn \gls{ki} nicht nur Symptome bewertet, sondern Änderungen und Konfigurationsstände einbezieht.
 Im Mapping zeigt sich eine breite Nutzung über alle Use Cases ($n=[7,9]$).
 Auffällig ist die hohe Ausprägung bei Betrieb/Orchestrierung und Security (je $n=9$), was zu riskanten Änderungen, unsicheren Voreinstellungen oder Fehlkonfigurationen passt \cite{supritpattanayakIntegratingAIDevOps2024}.
 
 Historische Test- und Deployment-Daten (Build-Historien, Testergebnisse, Deployment-Verläufe) treten vor allem dort auf, wo Verfahren aus vergangenen Ausführungen lernen.
-Im Mapping zeigen sich erhöhte Werte bei Betrieb/Orchestrierung ($n=12$), Ressourcenoptimierung ($n=10$) und CI/CD-Optimierung ($n=9$) \cite{tamanampudiAIEnhancedContinuousIntegration}.
+Im Mapping zeigen sich erhöhte Werte bei Betrieb/Orchestrierung ($n=12$), Ressourcenoptimierung ($n=10$) und \gls{ci}/\gls{cd}-Optimierung ($n=9$) \cite{tamanampudiAIEnhancedContinuousIntegration}.
 
 Deutlich wird, dass Betrieb/Orchestrierung die stärksten Überschneidungen mit nahezu allen Datenquellen aufweist, weil hier Monitoring-Daten und Änderungsdaten zusammenlaufen.
-Ohne dieses Gesamtbild gelingt eine saubere Steuerung KI-gestützter Abläufe nur eingeschränkt.
+Ohne dieses Gesamtbild gelingt eine saubere Steuerung \gls{ki}-gestützter Abläufe nur eingeschränkt.
 Das erhöht die Wahrscheinlichkeit von Fehlalarmen und erschwert die Eingrenzung der eigentlichen Ursache.
 \FloatBarrier
 
@@ -127,23 +127,23 @@ Kombinationen ohne Nachweis in den betrachteten Studien werden als n=0 dargestel
     \label{fig:04_02_04_mappingVier}
 \end{figure}
 
-Im Supervised Learning dominiert die Kombination aus DL \& neuronalen Netzen in allen Anwendungsfeldern. 
+Im \gls{sl} dominiert die Kombination aus \gls{dl} \& \gls{nn} in allen Anwendungsfeldern. 
 Besonders häufig wird sie bei Ressourcen- und Workload-Optimierung sowie Self-Healing/Predictive Maintenance genannt (jeweils n=12), gefolgt von Sicherheits- und Bedrohungserkennung (n=11) und Intelligenter Bereitstellung (n=10).
-Auch die Optimierung von CI/CD-Pipelines wird häufig mit DL adressiert (n=7). 
-Insgesamt zeigt sich damit, dass Supervised Learning in der betrachteten Literatur vor allem in Verbindung mit DL und neuronalen Netzen eingesetzt wird.
+Auch die Optimierung von \gls{ci}/\gls{cd}-Pipelines wird häufig mit \gls{dl} adressiert (n=7). 
+Insgesamt zeigt sich damit, dass \gls{sl} in der betrachteten Literatur vor allem in Verbindung mit \gls{dl} und neuronalen Netzen eingesetzt wird.
 
-Neben DL werden im Supervised Learning auch Ensemble- und baum-basierte Methoden sowie klassische Klassifikations- und Regressionsverfahren erwähnt, jedoch mit deutlich geringeren Häufigkeiten. 
+Neben \gls{dl} werden im \gls{sl} auch Ensemble- und baum-basierte Methoden sowie klassische Klassifikations- und Regressionsverfahren erwähnt, jedoch mit deutlich geringeren Häufigkeiten. 
 Ensemble- und baum-basierte Ansätze liegen je nach Anwendungsfeld zwischen n=3 und n=5, während klassische Klassifikation/Regression insbesondere bei Ressourcen- und Workload-Optimierung (n=6) etwas häufiger vorkommt. 
 Ansonsten sind die Werte ebenfalls geringer und liegen zwischen n=2 und n=5. 
-Clustering wird im Kontext von Supervised Learning nicht beobachtet, sodass diese Zuordnungen nicht belegt sind (n=0).
+Clustering wird im Kontext von \gls{sl} nicht beobachtet, sodass diese Zuordnungen nicht belegt sind (n=0).
 
-Für Unsupervised Learning zeigt sich ein anderes Muster. Auch hier wird die Kombination aus DL \& neuronalen Netzen über alle Anwendungsfelder hinweg am häufigsten genannt (n=6–8). 
+Für \gls{ul} zeigt sich ein anderes Muster. Auch hier wird die Kombination aus \gls{dl} \& \gls{nn} über alle Anwendungsfelder hinweg am häufigsten genannt (n=6–8). 
 Clustering-Verfahren treten als zweite zentrale Kategorie auf, werden jedoch deutlich seltener thematisiert (n=3–5).
-Insgesamt deutet dies darauf hin, dass Unsupervised Learning hauptsächlich dort eingesetzt wird, wo Abweichungen und Muster ohne gelabelte Daten erkannt werden sollen (z.B. bei Anomalien oder Wartungsvorhersagen).
-Andere Algorithmusklassen (z.B. Ensemble- bzw. klassische Klassifikations-/Regressionsverfahren) sind im Unsupervised-Learning-Kontext nicht belegt (n=0), wodurch sich eine klare Fokussierung auf DL/NN und Clustering ergibt.
+Insgesamt deutet dies darauf hin, dass \gls{ul} hauptsächlich dort eingesetzt wird, wo Abweichungen und Muster ohne gelabelte Daten erkannt werden sollen (z.B. bei Anomalien oder Wartungsvorhersagen).
+Andere Algorithmusklassen (z.B. Ensemble- bzw. klassische Klassifikations-/Regressionsverfahren) sind im \gls{ul}-Kontext nicht belegt (n=0), wodurch sich eine klare Fokussierung auf \gls{dl}/\gls{nn} und Clustering ergibt.
 
-Im Reinforcement Learning konzentrieren sich die Zuordnungen ausschließlich auf Deep Learning und neuronale Netze. 
-Die Häufigkeiten sind insgesamt geringer als im Supervised- und Unsupervised Learning. 
-Die höchsten Werte zeigen sich bei der Sicherheits- und Bedrohungserkennung (n=7) sowie bei der Ressourcen- und Workload-Optimierung (n=6). Für die Optimierung von CI/CD-Pipelines und Self-Healing/Predictive Maintenance liegen die Werte jeweils bei n=5, während Intelligente Bereitstellung am seltensten genannt wird (n=4).
-Andere Algorithmusklassen sind im RL-Kontext nicht belegt (n=0), was die enge Kopplung von RL an DL-basierte (Deep-RL) Ansätze in den betrachteten Publikationen unterstreicht.
+Im \gls{rl} konzentrieren sich die Zuordnungen ausschließlich auf \gls{dl} und \gls{nn}. 
+Die Häufigkeiten sind insgesamt geringer als im \gls{sl}- und \gls{ul}. 
+Die höchsten Werte zeigen sich bei der Sicherheits- und Bedrohungserkennung (n=7) sowie bei der Ressourcen- und Workload-Optimierung (n=6). Für die Optimierung von \gls{ci}/\gls{cd}-Pipelines und Self-Healing/Predictive Maintenance liegen die Werte jeweils bei n=5, während Intelligente Bereitstellung am seltensten genannt wird (n=4).
+Andere Algorithmusklassen sind im \gls{rl}-Kontext nicht belegt (n=0), was die enge Kopplung von \gls{rl} an \gls{dl}-basierte (Deep-RL) Ansätze in den betrachteten Publikationen unterstreicht.
 \end{comment}
