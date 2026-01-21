@@ -53,6 +53,11 @@
 \usepackage{graphicx}
 \usepackage{pdflscape}
 
+\usepackage[acronym,toc]{glossaries}
+\makeglossaries
+\glsdisablehyper % Deaktiviert Hyperlinks (und damit die blaue Farbe) für Abkürzungen
+\input{acronyms}
+
 \usepackage{comment}
 \usepackage{setspace}
 \usepackage{multirow}
@@ -128,6 +133,8 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
+
+\printglossary[type=\acronymtype,title={Abkürzungsverzeichnis}]
 
 
 %% Use letters for the chapter numbers of the appendices.
