@@ -1,7 +1,7 @@
 \section{Analyse der Bosch Digital Manufacturing Plattform}
 \label{sec:analyse_bmlp}
 
-Die Bosch Digital Manufacturing Plattform (BMLP) ist eine modular aufgebaute, Cloud-Native-Plattform zur Unterstützung von Fertigungs- und Logistikprozessen.
+Die \gls{bmlp} ist eine modular aufgebaute, Cloud-Native-Plattform zur Unterstützung von Fertigungs- und Logistikprozessen.
 Anwendungen werden als lose gekoppelte Services bereitgestellt und in verteilten Umgebungen betrieben.
 Der Betrieb umfasst Edge-Standorte in den Werken, zentrale Rechenzentren sowie cloudbasierte Instanzen innerhalb der Bosch-internen Cloud-Infrastruktur.
 Die Plattform ist auf einen hybriden Betrieb ausgelegt und adressiert Anforderungen an Latenz, Verfügbarkeit und Compliance gleichermaßen.
@@ -13,7 +13,7 @@ Alle Informationen basieren auf internen Plattformdokumentationen und Expertenge
 
 \subsection{Architektur und Betriebsmodell}
 \label{sec:architektur}
-Fachliche Funktionen in der BMLP werden als eigenständige Module in einer verteilten und modularen Grundstruktur umgesetzt.
+Fachliche Funktionen in der \gls{bmlp} werden als eigenständige Module in einer verteilten und modularen Grundstruktur umgesetzt.
 Jedes Modul bringt typischerweise eigene Logik und eigene Datenhaltung mit, wodurch direkte Abhängigkeiten zwischen Modulen vermieden werden.
 Die Zusammenarbeit zwischen Modulen erfolgt überwiegend ereignisbasiert, während synchrone Schnittstellen nur für spezielle Anwendungsfälle genutzt werden.
 
@@ -47,7 +47,7 @@ Für den Betrieb werden einheitliche Logformate und durchgängige Referenzen gen
 \subsection{Operativer Stack und Datenbasis für AIOps}
 \label{subsec:operativerStack}
 Für \gls{aiops} ist weniger die Tool-Landschaft entscheidend als die Daten, die im Plattformbetrieb entstehen.
-In der BMLP werden Betriebsdaten über Logs, Metriken, Traces sowie technische und fachliche Ereignisse erfasst und zentral nutzbar gemacht.
+In der \gls{bmlp} werden Betriebsdaten über Logs, Metriken, Traces sowie technische und fachliche Ereignisse erfasst und zentral nutzbar gemacht.
 Logs liegen in einem einheitlichen Format vor und enthalten neben Zeitstempel und Systemkontext auch Versions- und Instanzinformationen sowie Korrelationskennungen.
 Damit lassen sich Abläufe über mehrere Komponenten hinweg zusammenführen und automatisiert auswerten.
 
