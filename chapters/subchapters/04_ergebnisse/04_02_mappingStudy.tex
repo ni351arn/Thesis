@@ -91,23 +91,23 @@ Abbildung \ref{fig:04_02_03_mappingDrei} zeigt die resultierenden Häufigkeiten 
 Metriken beschreiben den quantitativen Systemzustand, etwa \gls{cpu}, Speicher oder Latenzen.
 Sie stammen häufig aus Monitoring-Systemen wie Prometheus\footnote{\url{https://prometheus.io/docs/introduction/overview/}} oder CloudWatch\footnote{\url{https://aws.amazon.com/de/cloudwatch/}}.
 Entsprechend treten sie in nahezu allen Use Cases stark auf.
-Besonders ausgeprägt sind sie in Betrieb/Orchestrierung ($n=14$) sowie in der Ressourcen- und Workload-Optimierung ($n=12$) \cite{kankanalaAIMLDevOps2024,poudelAIDrivenIntelligentAutoScaling2025a}.
+Besonders ausgeprägt sind sie in Betrieb/ Orchestrierung ($n=14$) sowie in der Ressourcen- und Workload-Optimierung ($n=12$) \cite{kankanalaAIMLDevOps2024,poudelAIDrivenIntelligentAutoScaling2025a}.
 
 Logs (System-, Pipeline- und Applikationslogs) sind ereignisbasierte, häufig unstrukturierte Daten und werden vor allem für Diagnose, Fehlerklassifikation und Ursachenanalyse genutzt.
-Im Mapping zeigen sie über nahezu alle Use Cases hinweg eine zentrale Rolle ($n=[6,10]$), mit hohen Werten in Betrieb/Orchestrierung ($n=10$) und sicherheitsnahen Szenarien ($n=9$), da Betriebsstörungen, Fehlkonfigurationen oder Angriffsindikatoren meist zuerst in Logdaten sichtbar werden \cite{kathiresanCybersecurityRiskModeling2025}.
+Im Mapping zeigen sie über nahezu alle Use Cases hinweg eine zentrale Rolle ($n=[6,10]$), mit hohen Werten in Betrieb/ Orchestrierung ($n=10$) und sicherheitsnahen Szenarien ($n=9$), da Betriebsstörungen, Fehlkonfigurationen oder Angriffsindikatoren meist zuerst in Logdaten sichtbar werden \cite{kathiresanCybersecurityRiskModeling2025}.
 
 Netzwerkdaten und Traces ergänzen diese Sicht um Kommunikationsbeziehungen und Laufzeitpfade verteilter Systeme (z.\,B. Flow-Daten oder OpenTelemetry-Traces\footnote{\url{https://opentelemetry.io}}).
-Die Ausprägung ist insgesamt niedriger als bei Metriken und Logs, aber konsistent in Betrieb/Orchestrierung ($n=6$) sowie Sicherheits- und Bedrohungserkennung ($n=5$) vorhanden. 
+Die Ausprägung ist insgesamt niedriger als bei Metriken und Logs, aber konsistent in Betrieb/ Orchestrierung ($n=6$) sowie Sicherheits- und Bedrohungserkennung ($n=5$) vorhanden. 
 Das deutet darauf hin, dass diese Daten vor allem dann relevant werden, wenn Ursachen nicht lokal erklärbar sind (z.\,B. in Mikroservice-Architekturen) oder wenn Anomalien über Kommunikationsmuster erkannt werden sollen \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
 
 Code und Konfiguration (Quellcode, Container-Artefakte, Infrastructure-as-Code-Definitionen) werden wichtig, wenn \gls{ki} nicht nur Symptome bewertet, sondern Änderungen und Konfigurationsstände einbezieht.
 Im Mapping zeigt sich eine breite Nutzung über alle Use Cases ($n=[7,9]$).
-Auffällig ist die hohe Ausprägung bei Betrieb/Orchestrierung und Security (je $n=9$), was zu riskanten Änderungen, unsicheren Voreinstellungen oder Fehlkonfigurationen passt \cite{supritpattanayakIntegratingAIDevOps2024}.
+Auffällig ist die hohe Ausprägung bei Betrieb/ Orchestrierung und Security (je $n=9$), was zu riskanten Änderungen, unsicheren Voreinstellungen oder Fehlkonfigurationen passt \cite{supritpattanayakIntegratingAIDevOps2024}.
 
 Historische Test- und Deployment-Daten (Build-Historien, Testergebnisse, Deployment-Verläufe) treten vor allem dort auf, wo Verfahren aus vergangenen Ausführungen lernen.
-Im Mapping zeigen sich erhöhte Werte bei Betrieb/Orchestrierung ($n=12$), Ressourcenoptimierung ($n=10$) und \gls{ci}/\gls{cd}-Optimierung ($n=9$) \cite{tamanampudiAIEnhancedContinuousIntegration}.
+Im Mapping zeigen sich erhöhte Werte bei Betrieb/ Orchestrierung ($n=12$), Ressourcenoptimierung ($n=10$) und \gls{ci}/\gls{cd}-Optimierung ($n=9$) \cite{tamanampudiAIEnhancedContinuousIntegration}.
 
-Deutlich wird, dass Betrieb/Orchestrierung die stärksten Überschneidungen mit nahezu allen Datenquellen aufweist, weil hier Monitoring-Daten und Änderungsdaten zusammenlaufen.
+Deutlich wird, dass Betrieb/ Orchestrierung die stärksten Überschneidungen mit nahezu allen Datenquellen aufweist, weil hier Monitoring-Daten und Änderungsdaten zusammenlaufen.
 Ohne dieses Gesamtbild gelingt eine saubere Steuerung \gls{ki}-gestützter Abläufe nur eingeschränkt.
 Das erhöht die Wahrscheinlichkeit von Fehlalarmen und erschwert die Eingrenzung der eigentlichen Ursache.
 \FloatBarrier
