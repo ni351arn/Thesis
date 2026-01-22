@@ -5,22 +5,25 @@ Ziel ist es, dieses Problemfeld systematisch einzuordnen und anhand der definier
 Die Analyse folgt dabei den generischen Use-Case-Mustern aus Kapitel 4.3.
 \par\bigskip
 
-Im Betrieb der \gls{bmlp} treten Abbrüche in Build- und Bereitstellungsprozessen immer wieder auf. 
-Sie entstehen im Rahmen automatisierter \gls{ci}/\gls{cd}-Pipelines und betreffen sowohl einzelne Module als auch verkettete Abläufe über mehrere Komponenten hinweg. 
-Auch wenn keine konsolidierten Kennzahlen zur Häufigkeit vorliegen, zeigen interne Analysen und Betriebserfahrungen, dass solche Abbrüche wiederkehrend auftreten und die Durchlaufzeiten von Änderungen spürbar verlängern. 
-Die Auswirkungen sind insbesondere in Umgebungen mit paralleler Entwicklung und hoher Änderungsfrequenz sichtbar, da fehlerhafte Builds nachgelagerte Schritte blockieren und erneute Pipeline-Läufe erforderlich machen. 
-Dadurch verschiebt sich die Bereitstellung von Funktionen, was die Geschwindigkeit der Änderungsbereitstellung der Plattform insgesamt beeinträchtigt.
+Im Betrieb der \gls{bmlp} treten Abbrüche in Build- und Bereitstellungsprozessen immer wieder auf.
+Sie entstehen im Rahmen automatisierter \gls{ci}/\gls{cd}-Pipelines und betreffen sowohl einzelne Module als auch verkettete Abläufe über mehrere Komponenten hinweg.
+Auch ohne konsolidierte Kennzahlen zeigen Betriebserfahrungen, dass diese Abbrüche wiederkehrend auftreten.
+Die Auswirkungen sind insbesondere in Umgebungen mit paralleler Entwicklung und hoher Änderungsfrequenz sichtbar.
+Fehlerhafte Builds blockieren nachgelagerte Schritte und machen erneute Pipeline-Läufe erforderlich.
+Dadurch verschiebt sich die Bereitstellung von Funktionen und beeinträchtigt die Änderungsbereitstellung der Plattform insgesamt.
 \par\bigskip
 
 Der zentrale Aufwand entsteht nicht durch den Abbruch eines Builds an sich, sondern durch die anschließende Ursachenanalyse. 
 Fehlersituationen lassen sich häufig nicht eindeutig einem einzelnen Schritt oder einer einzelnen Komponente zuordnen. 
-Stattdessen müssen Informationen aus mehreren Quellen zusammengeführt werden, darunter Pipeline-Läufe, System- und Applikationsprotokolle sowie technische Ereignisse aus der Laufzeitumgebung. 
+Stattdessen müssen Informationen aus mehreren Quellen zusammengeführt werden. 
+Dazu zählen Pipeline-Läufe, System- und Applikationsprotokolle sowie technische Ereignisse aus der Laufzeitumgebung.
 Eine durchgängige Sicht über den gesamten Ablauf ist dabei nur eingeschränkt gegeben. 
 Detailinformationen stehen nicht dauerhaft zur Verfügung, sondern müssen bei Bedarf gezielt aktiviert werden. 
 Dies erhöht den manuellen Analyseaufwand und verlangsamt die Eingrenzung der eigentlichen Ursache.
 
 Zusätzlich zeigt sich, dass Build- und Bereitstellungsprozesse in der Praxis nicht vollständig unabhängig voneinander sind. 
-Entlang der Build- und Auslieferungsprozesse bestehen Abhängigkeiten, etwa durch gemeinsam genutzte Artefakte, feste Reihenfolgen bei der Initialisierung oder gegenseitige Startvoraussetzungen einzelner Komponenten.
+Entlang der Build- und Auslieferungsprozesse bestehen Abhängigkeiten zwischen einzelnen Komponenten und Schritten.
+Beispiele hierfür sind gemeinsam genutzte Artefakte, feste Reihenfolgen bei der Initialisierung oder gegenseitige Startvoraussetzungen einzelner Komponenten.
 Obwohl eine möglichst unabhängige Ausführung einzelner Pipelines angestrebt wird, führen diese Kopplungen dazu, dass Fehlerfolgen über mehrere Schritte hinweg wirken. 
 Die Analyse erfordert dadurch ein Verständnis des Gesamtzusammenhangs und einen hohen manuellen Analyseaufwand für die beteiligten Teams.
 \par\bigskip
@@ -58,7 +61,7 @@ In der Literatur wird der Ansatz über die reine Konzeptionsphase hinaus beschri
 Gleichzeitig fehlt jedoch bislang eine breite Etablierung mit klar abgesicherten Betriebsmodellen und Verantwortlichkeiten für den dauerhaften Einsatz.
 \par\bigskip
 
-Abbildung \ref{fig:05_03_bewertungsraster} zeigt die Einordnung des Use Case in die Bewertungsmatrix auf Basis der in diesem Abschnitt durchgeführten Analyse und Anwendung des Bewertungsrasters.
+Abbildung \ref{fig:05_03_bewertungsraster} zeigt die Einordnung des Use Case in die Bewertungsmatrix auf Basis der durchgeführten Analyse und Anwendung des Bewertungsrasters.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/05_bewertung/05_03_bewertungsraster.png}
