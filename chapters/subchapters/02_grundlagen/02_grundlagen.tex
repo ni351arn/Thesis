@@ -14,7 +14,7 @@ Sie bilden die fachliche Grundlage für die anschließende Literaturanalyse und 
 \label{subsec:cloud-native-platform-engineering}
 Cloud-Native gewann ab 2013 insbesondere durch die Etablierung von Containertechnologien bis hin zu Kubernetes an Bedeutung. 
 Im Kern beschreibt Cloud-Native heute weniger eine einzelne Technologie, sondern ein Zielbild für modular aufgebaute Systeme (z.B. Mikroservices), die sich gut bereitstellen, skalieren und resilient betreiben lassen. 
-Die \gls{cncf} (Stiftung für Cloud-Native-Computing) fasst Cloud-Native als Ansatz für skalierbare Anwendungen in dynamischen Cloud-Umgebungen zusammen \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
+Die Cloud Native Computing Foundation, eine Stiftung für Cloud-Native-Computing, fasst Cloud-Native als Ansatz für skalierbare Anwendungen in dynamischen Cloud-Umgebungen zusammen \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
 
 Kubernetes hat sich dabei als zentrale Plattform etabliert. 
 Es dient als portable, erweiterbare Open-Source-Lösung zur Verwaltung containerisierter Workloads und unterstützt insbesondere deklarative Konfiguration und Automatisierung.
@@ -26,7 +26,7 @@ Damit soll die Lieferfähigkeit, Compliance und Betrieb verbessert werden \cite{
 \subsection{DevOps und CI/CD}
 \label{subsec:devops-ci-cd}
 Development und Operations (DevOps) ist ein kultureller und organisatorischer Ansatz, bei dem Entwicklung und Betrieb gemeinsam Verantwortung für den gesamten Software-Lebenszyklus tragen.
-DevOps entstand vor allem als Antwort auf längere Release-Zyklen und Silos zwischen Entwicklung und Betrieb, die schnelle Änderungen in produktiven Systemen erschwerten.
+DevOps entstand als Antwort auf längere Release-Zyklen und Silos zwischen Entwicklung und Betrieb, die schnelle Änderungen in produktiven Systemen erschwerten.
 Ziel ist es, Zusammenarbeit und Kommunikation zu stärken und Abläufe so zu gestalten, dass Änderungen häufiger, zuverlässiger und mit klaren Verantwortlichkeiten bereitgestellt werden können.
 Der DevOps-Ansatz entstand im Kontext verteilter Plattformumgebungen, in denen klassische Trennungen zwischen Entwicklung und Betrieb an ihre Grenzen stießen \cite{WasIstDevOps, atlassianWasIstDevOps}.
 
@@ -63,7 +63,7 @@ Zur Einordnung wird \gls{aiops} von \gls{mlops}\footnote{\gls{mlops} bezeichnet 
 \label{sec:verwandte-arbeiten}
 
 Dieser Abschnitt ordnet zentrale Arbeiten zur \gls{ki}-Integration im Cloud-Native Platform Engineering ein und grenzt den Fokus der Arbeit ab.
-Im Mittelpunkt steht \gls{ki}-gestützter Plattformbetrieb (AI for Ops) als operative Unterstützung für Platform Engineers, nicht \gls{mlops} als Infrastruktur für datenwissenschaftliche Arbeitsabläufe.
+Im Mittelpunkt steht \gls{aiops} als operative Unterstützung für Platform Engineers, nicht \gls{mlops} als Infrastruktur für datenwissenschaftliche Arbeitsabläufe.
 
 Ein Teil der Literatur untersucht \gls{ki} zur Automatisierung von Kubernetes- und Cloud-Plattformen.
 Dabei werden manuelle Betriebsaufgaben reduziert und Ressourcen effizienter zugeteilt \cite{kankanalaAIMLDevOps2024,tamminediAutomatingKubernetesOperations2024}.
@@ -71,10 +71,10 @@ Weitere Arbeiten adressieren prädiktive Skalierung, um Lastverläufe vorherzusa
 Auch \gls{rl} wird zur dynamischen Steuerung der Lastverteilung und zur Erhöhung der Fehlertoleranz eingesetzt \cite{jossonpaulkalapparambathAdvancingDistributedSystems2025}.
 
 Ein weiterer Schwerpunkt liegt auf \gls{ki} in DevOps- und \gls{ci}/\gls{cd}-Prozessen.
-Hierzu zählen die Vorhersage von Fehlern in Build- und Bereitstellungsprozessen sowie automatisierte Gegenmaßnahmen wie Rücknahme oder Anomaliealarme \cite{enemosahEnhancingDevOpsEfficiency2025,tamanampudiAIEnhancedContinuousIntegration,reddygopireddyIntegratingAIDevOps2022}.
+Hierzu zählen die Vorhersage von Fehlern in Build- und Bereitstellungsprozessen sowie automatisierte Gegenmaßnahmen wie Rollbacks oder Anomaliealarme \cite{enemosahEnhancingDevOpsEfficiency2025,tamanampudiAIEnhancedContinuousIntegration,reddygopireddyIntegratingAIDevOps2022}.
 Ergänzend wird \gls{aiops} als Ansatz beschrieben, um komplexe Cloud-Infrastrukturen durch automatisierte Analyse und Monitoring besser beherrschbar zu machen \cite{supritpattanayakIntegratingAIDevOps2024,luComputingEraLarge2024a}.
 Sicherheitsbezogene Aspekte werden von \textcite{uddohAIBasedThreatDetection2021} ebenfalls aufgegriffen, etwa durch \gls{ki}-basierte Erkennung von Bedrohungen und automatisierte Reaktionen im Plattformbetrieb.
-Das \gls{cncf}-Whitepaper verortet diese Richtung als „AI for Cloud Native Operations“ und beschreibt Assistenzwerkzeuge im operativen Cloud-Native Betrieb \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
+Das Whitepaper der Cloud Native Computing Foundation verortet diese Richtung als „AI for Cloud Native Operations“ und beschreibt Assistenzwerkzeuge im operativen Cloud-Native Betrieb \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
 
 Kritisch ist festzuhalten, dass viele Arbeiten einzelne Anwendungsfälle isoliert betrachten oder stark werkzeug- bzw. monitoring-getrieben sind.
 Zudem existieren thematisch nahe Beiträge mit \gls{mlops}- oder Datenpipeline-Fokus, die den Plattformbetrieb aus Sicht von Platform Engineers nur indirekt adressieren und daher ausgeklammert wurden.
