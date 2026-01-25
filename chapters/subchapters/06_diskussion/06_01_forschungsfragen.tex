@@ -6,10 +6,10 @@ Dadurch werden die in Kapitel 3.2 formulierten Fragen detailliert adressiert und
 
 \subsection{Beantwortung der Forschungsfrage RQ1}
 \label{rq1Antwort}
-Die Literaturanalyse zeigt vier wiederkehrende Anwendungsfelder, in denen \gls{ki} einen Mehrwert bringt und gleichzeitig auch Herausforderungen mit sich bringt.
+Die Literaturanalyse zeigt vier wiederkehrende Anwendungsfelder, in denen \gls{ki} einen Mehrwert bringt und gleichzeitig Herausforderungen auftreten.
 Diese lassen sich entlang konkreter betrieblicher Aufgaben abgrenzen: (1) Ressourcen- und Workload-Optimierung, (2) Betrieb und Orchestrierung der Plattform, (3) Optimierung von \gls{ci}/\gls{cd}-Pipelines sowie (4) Sicherheits- und Bedrohungserkennung. 
 
-Das Proaktive Ressourcen-Management thematisiert die Skalierung von Workloads, zum Beispiel um die Anzahl von Kubernetes-Pods bei schwankender Last.
+Das Proaktive Ressourcen-Management thematisiert die Skalierung von Workloads, zum Beispiel die Anpassung der Anzahl von Kubernetes-Pods bei schwankender Last.
 Die \gls{ki} wertet Auslastungs- und Latenzverläufe aus und leitet daraus eine Vorhersage für die nächste Lastphase ab.
 Auf Basis dieser Vorhersage wird eine Skalierungsentscheidung früher getroffen als bei fester Zuteilung.
 Dadurch sinkt das Risiko, dass Services zu spät skalieren und unter Last instabil werden.
@@ -17,7 +17,7 @@ Gleichzeitig wird eine Überbereitstellung reduziert, weil nicht zu viel Kapazit
 Typische Herausforderungen entstehen, wenn nicht ausreichend historische Daten vorliegen oder Lastmuster sich häufig ändern \cite{tamminediAutomatingKubernetesOperations2024,poudelAIDrivenIntelligentAutoScaling2025a}.
 
 Betrieb und Orchestrierung adressiert Störungen im laufenden Betrieb und die Eingrenzung ihrer Ursachen über mehrere Komponenten hinweg.
-Die Grundlage bilden Protokolle, Metriken und Ereignisse, die einen Hinweis geben, welche Komponente wahrscheinlich der Auslöser ist.
+Die Grundlage bilden Protokolle, Metriken und Ereignisse, die Hinweise geben, welche Komponente wahrscheinlich der Auslöser ist.
 Ein typisches Beispiel ist die Auswertung von Kubernetes-Events und Protokollen, um Fehlkonfigurationen oder wiederkehrende Fehlerbilder schneller zu erkennen.
 Der Mehrwert liegt in kürzerer Fehlersuche und einer schnelleren Einordnung, was relevant ist.
 Der Ansatz wird unzuverlässig, wenn sich das Normalverhalten durch Releases und Konfigurationsänderungen ständig verschiebt und dadurch viele Fehlalarme entstehen \cite{tamminediAutomatingKubernetesOperations2024,tamanampudiAIEnhancedContinuousIntegration}.
@@ -41,16 +41,17 @@ Am häufigsten limitiert jedoch die Datenbasis, weil unvollständige oder uneinh
 \subsection{Beantwortung der Forschungsfrage RQ2}
 \label{rq2Antwort}
 Die Literatur zeigt kein einheitliches Lernparadigma, Werkzeug oder Algorithmus, der für alle Anwendungsfälle gleichermaßen geeignet ist.
-Die Wahl hängt vor allem vom Anwendungsfall, von der verfügbaren Datenbasis und von der Systemarchitektur der Plattform ab.
+Die Wahl hängt vom Anwendungsfall, von der verfügbaren Datenbasis und von der Systemarchitektur der Plattform ab.
 
 Am häufigsten werden \gls{sl}-Verfahren thematisiert und eingesetzt.
-Sie passen dort, wo historische Daten mit bekannten Ergebnissen vorliegen, zum Beispiel erfolgreiche und fehlgeschlagene Builds oder klassifizierte Störungen.
+Sie eignen sich, wo historische Daten mit bekannten Ergebnissen vorliegen, zum Beispiel erfolgreiche und fehlgeschlagene Builds oder klassifizierte Störungen.
 Damit lassen sich Vorhersagen für Lastverläufe erstellen oder Fehlertypen aus Protokollen einordnen.
 Auch die Bewertung von Änderungsrisiken in \gls{ci}/\gls{cd}-Pipelines wird so umgesetzt, indem frühere Pipeline-Verläufe als Trainingsgrundlage dienen \cite{enemosahEnhancingDevOpsEfficiency2025}.
 
-\gls{ul}-Verfahren werden dementsprechend dort eingesetzt, wo solche Zuordnungen fehlen.
+\gls{ul}-Verfahren werden dort eingesetzt, wo solche Zuordnungen fehlen.
 Typisch ist die Erkennung von Abweichungen in Metriken oder Protokollen, ohne dass vorher markiert wurde, was ein Fehler ist.
-Das ist im Betrieb hilfreich, führt aber in dynamischen Umgebungen oft zu Fehlalarmen, weil sich das Normalverhalten durch Releases und Konfigurationsänderungen verschiebt \cite{enemosahEnhancingDevOpsEfficiency2025}.
+Das ist im Betrieb hilfreich, erfordert aber saubere Referenzwerte und robuste Schwellen. 
+Ohne diese sinkt die Trefferqualität und es entstehen mehr Fehlalarme \cite{tamanampudiAIEnhancedContinuousIntegration}.
 
 Etwas weniger thematisiert aber trotzdem relevant sind \gls{rl}-Ansätze.
 Diese werden vor allem für Steuerungsentscheidungen beschrieben, zum Beispiel für Skalierung oder Rollout-Entscheidungen unter wechselnden Bedingungen.
@@ -61,14 +62,11 @@ Das liegt daran, dass sie mit heterogenen Betriebsdaten umgehen können, zum Bei
 Daneben werden auch klassische Verfahren genutzt, etwa baumbasierte Modelle für Klassifikation und Prognosen, oder Clustering für die Gruppierung ähnlicher Fehlerbilder.
 In mehreren Arbeiten wird deutlich, dass einfachere und besser nachvollziehbare Verfahren in manchen Fällen ausreichen würden, in der Forschung aber seltener im Fokus stehen \cite{govindarajanMachineLearningBased2025}.
 
-Bei den Werkzeugen zeigt sich ein ähnliches Bild.
-Viele Ansätze bauen auf bestehenden Plattform- und Betriebswerkzeugen auf und ergänzen diese um \gls{ki}-Funktionen.
+Bei den Werkzeugen zeigt sich, dass viele Ansätze auf bestehenden Plattform- und Betriebswerkzeugen aufbauen und diese um \gls{ki}-Funktionen ergänzen.
 Im Kubernetes-Umfeld betrifft das zum Beispiel Autoscaling und die Auswertung von Events und Protokollen.
 Im \gls{ci}/\gls{cd}-Kontext werden Werkzeuge wie K8sGPT \cite{zaaloukCLOUDNATIVEARTIFICIAL}, Jenkins X \cite{kankanalaAIMLDevOps2024} oder DeepCode \cite{supritpattanayakIntegratingAIDevOps2024} genannt, um Build- und Analyseaufgaben zu unterstützen.
 Für Rollout-Absicherung und Betrieb werden auch Plattformen wie Spinnaker oder Dynatrace \cite{supritpattanayakIntegratingAIDevOps2024} beschrieben, die Daten aus dem Betrieb auswerten und Hinweise ableiten.
 Im Sicherheitskontext werden Werkzeuge wie Trivy \cite{kankanalaAIMLDevOps2024}, Snyk \cite{sikhaCloudNativeApplicationDevelopment2023} oder Falco \cite{sikhaCloudNativeApplicationDevelopment2023} genannt, die Funde aus Scans und Laufzeitdaten priorisieren.
-
-Insgesamt zeigen die Ergebnisse, dass Verfahren und Werkzeuge nur dann sinnvoll einzuordnen sind, wenn der konkrete Use Case und die zugrunde liegende Datenbasis mitbetrachtet werden.
 
 
 \subsection{Beantwortung der Forschungsfrage RQ3}
@@ -78,7 +76,7 @@ Als Ausgangspunkt dient die Einordnung nach Implementierungsaufwand und operativ
 Damit lässt sich jedoch nur grob bewerten, ob ein Use Case prinzipiell attraktiv wirkt.
 Für eine belastbare Aussage zur praktischen Umsetzbarkeit und Wirkung sind ergänzende Dimensionen notwendig.
 
-Die Umsetzbarkeit lässt sich bewerten anhand der verfügbaren Datenqualität und -historie, des technischen Fits zur bestehenden Plattformarchitektur sowie des erforderlichen Fachwissens für Betrieb und Wartung \cite{enemosahEnhancingDevOpsEfficiency2025,reddygopireddyIntegratingAIDevOps2022}.
+Die Umsetzbarkeit lässt sich anhand der verfügbaren Datenqualität und -historie, des technischen Fits zur bestehenden Plattformarchitektur sowie des erforderlichen Fachwissens für Betrieb und Wartung bewerten \cite{enemosahEnhancingDevOpsEfficiency2025,reddygopireddyIntegratingAIDevOps2022}.
 Die betriebliche Wirksamkeit ergibt sich daraus, ob der Use Case im laufenden Betrieb stabil einen messbaren Nutzen entfaltet und mit vertretbarem Aufwand auf weitere Services übertragbar ist \cite{kankanalaAIMLDevOps2024,tamminediAutomatingKubernetesOperations2024}.
 Ergänzend beeinflussen Anforderungen aus Datenschutz und Governance sowie der Reifegrad der jeweiligen Lösung, ob ein Einsatz realistisch und dauerhaft tragfähig ist \cite{supritpattanayakIntegratingAIDevOps2024,uddohAIBasedThreatDetection2021}.
 
@@ -92,5 +90,4 @@ Use Cases mit vorhandener Datenbasis und klarer Anbindung an bestehende Prozesse
 Gleichzeitig werden Anwendungsfälle sichtbar, deren Umsetzung zwar theoretisch möglich ist, deren Aufwand oder betriebliche Risiken jedoch aktuell überwiegen.
 Damit wird eine fundierte Entscheidungsgrundlage geschaffen, die über eine rein werkzeug- oder technologiegetriebene Betrachtung hinausgeht.
 
-Insgesamt zeigt die Arbeit, dass sich identifizierte \gls{ki}-Lösungen mithilfe des entwickelten Bewertungsschemas strukturiert auf typische Anwendungsfälle im Cloud-Native Platform Engineering übertragen lassen.
-Die Forschungsfrage RQ3 wird damit beantwortet, indem ein nachvollziehbarer Zusammenhang zwischen \gls{ki}-Ansätzen, konkreten Plattform-Use-Cases und deren praktischer Umsetzbarkeit hergestellt wird.
+RQ3 wird damit beantwortet, indem ein nachvollziehbarer Zusammenhang zwischen \gls{ki}-Ansätzen, konkreten Plattform-Use-Cases und deren Umsetzbarkeit hergestellt wird.
