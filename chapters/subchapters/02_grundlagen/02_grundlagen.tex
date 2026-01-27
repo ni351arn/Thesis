@@ -2,7 +2,7 @@
 \label{ch:grundlagenUndVerwandteArbeiten}
 
 In diesem Kapitel werden die theoretischen Grundlagen dargestellt, die für das Verständnis der Arbeit notwendig sind.
-Zentrale Begriffe aus dem Bereich Cloud-Native Platform Engineering, DevOps, CI/CD, den Lernparadigmen des maschinellen Lernens sowie AIOps werden in \autoref{sec:grundlagen} erläutert.
+Zentrale Begriffe aus dem Bereich Cloud-Native Platform Engineering, DevOps, CI/CD, den Lernparadigmen von \gls{ml} sowie AIOps werden in \autoref{sec:grundlagen} erläutert.
 Anschließend werden in \autoref{sec:verwandte-arbeiten} relevante verwandte Arbeiten beschrieben und kritisch eingeordnet.
 
 \section{Grundlagen}
@@ -33,14 +33,14 @@ Der DevOps-Ansatz entstand im Kontext verteilter Plattformumgebungen, in denen k
 \gls{ci} und \gls{cd} sind zentrale Praktiken innerhalb von DevOps.
 \gls{ci} beschreibt die regelmäßige und automatisierte Integration von Codeänderungen in ein gemeinsames Repository inklusive Build und Tests.
 \gls{cd} baut darauf auf und automatisiert die Auslieferung. 
-Continuous Delivery endet vor dem automatischen Produktiv-Deployment, während Continuous Deployment diesen Schritt ebenfalls automatisiert \cite{WasIstCI2025,rzigEmpiricalAnalysisCI2024}.
+\gls{cd} endet vor dem automatischen Produktiv-Deployment, während Continuous Deployment diesen Schritt ebenfalls automatisiert \cite{WasIstCI2025,rzigEmpiricalAnalysisCI2024}.
 
 
 \subsection{Lernparadigmen des maschinellen Lernens}
 \label{subsec:lernparadigmen}
-Die grundlegenden Lernparadigmen des maschinellen Lernens lassen sich in \gls{sl}, \gls{ul} und \gls{rl} einteilen.
+Die grundlegenden Lernparadigmen von \gls{ml} lassen sich in \gls{sl}, \gls{ul} und \gls{rl} einteilen.
 
-\gls{sl} trainiert ein Modell anhand gelabelter Daten, sodass es eine Abbildung von Eingaben auf eine Ziel- bzw. Antwortvariable lernt \cite{enemosahEnhancingDevOpsEfficiency2025,valkenborgSupervisedLearning2023}.
+\gls{sl} trainiert ein Modell anhand gelabelter Daten, sodass es den Zusammenhang zwischen Eingaben und einer Zielvariable lernt \cite{enemosahEnhancingDevOpsEfficiency2025,valkenborgSupervisedLearning2023}.
 
 \gls{ul} arbeitet mit ungelabelten Daten und zielt darauf ab, Strukturen, Cluster oder Zusammenhänge zu erkennen, ohne dass eine explizite Zielvariable vorgegeben ist \cite{enemosahEnhancingDevOpsEfficiency2025,valkenborgUnsupervisedLearning2023}.
 
@@ -56,14 +56,15 @@ Tabelle \ref{tab:tabelleMethodenAlgorithmen} fasst die in dieser Arbeit betracht
 \label{subsec:aiops}
 \gls{aiops} bezeichnet den Einsatz von \gls{ki}-Technologien zur Automatisierung und Optimierung von IT-Betriebsprozessen \cite{kankanalaAIMLDevOps2024,supritpattanayakIntegratingAIDevOps2024}.
 Im Kontext dieser Arbeit liegt der Fokus auf der Anwendung von \gls{ki} zur Überwachung, Analyse und Optimierung von Cloud-Native Plattformen.
-Im Gegensatz zu klassischen Monitoring-Ansätzen, die überwiegend auf statischen Schwellenwerten basieren, ermöglichen \gls{ki}-gestützte Verfahren eine proaktive Erkennung von Anomalien und betrieblichen Mustern auf Basis heterogener Betriebsdaten.
-Zur Einordnung wird \gls{aiops} von \gls{mlops}\footnote{\gls{mlops} bezeichnet Ansätze und Praktiken zur Entwicklung, zum Training, zur Bereitstellung und zum Betrieb von Modellen des maschinellen Lernens und adressiert primär den Lebenszyklus von \gls{ki}-Modellen.} abgegrenzt.
+Klassische Monitoring-Ansätze basieren überwiegend auf statischen Schwellenwerten. 
+\gls{ki}-gestützte Verfahren erkennen Anomalien und betriebliche Muster proaktiv auf Basis heterogener Betriebsdaten.
+Zur Einordnung wird \gls{aiops} von \gls{mlops}\footnote{\gls{mlops} bezeichnet Ansätze und Praktiken zur Entwicklung, zum Training, zur Bereitstellung und zum Betrieb von \gls{ml}-Modellen und adressiert primär den Lebenszyklus von \gls{ki}-Modellen.} abgegrenzt.
 
 \section{Verwandte Arbeiten}
 \label{sec:verwandte-arbeiten}
 
 Dieser Abschnitt ordnet zentrale Arbeiten zur \gls{ki}-Integration im Cloud-Native Platform Engineering ein und grenzt den Fokus der Arbeit ab.
-Im Mittelpunkt steht \gls{aiops} als operative Unterstützung für Platform Engineers, nicht \gls{mlops} als Infrastruktur für datenwissenschaftliche Arbeitsabläufe.
+Im Mittelpunkt steht \gls{aiops} als operative Unterstützung für Plattformverantwortliche, nicht \gls{mlops} als Infrastruktur für datenwissenschaftliche Arbeitsabläufe.
 
 Ein Teil der Literatur untersucht \gls{ki} zur Automatisierung von Kubernetes- und Cloud-Plattformen.
 Dabei werden manuelle Betriebsaufgaben reduziert und Ressourcen effizienter zugeteilt \cite{kankanalaAIMLDevOps2024,tamminediAutomatingKubernetesOperations2024}.
@@ -77,5 +78,5 @@ Sicherheitsbezogene Aspekte werden von \textcite{uddohAIBasedThreatDetection2021
 Das Whitepaper der Cloud Native Computing Foundation verortet diese Richtung als „AI for Cloud Native Operations“ und beschreibt Assistenzwerkzeuge im operativen Cloud-Native Betrieb \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
 
 Kritisch ist festzuhalten, dass viele Arbeiten einzelne Anwendungsfälle isoliert betrachten oder stark werkzeug- bzw. monitoring-getrieben sind.
-Zudem existieren thematisch nahe Beiträge mit \gls{mlops}- oder Datenpipeline-Fokus, die den Plattformbetrieb aus Sicht von Platform Engineers nur indirekt adressieren und daher ausgeklammert wurden.
+Zudem existieren thematisch nahe Beiträge mit \gls{mlops}- oder Datenpipeline-Fokus, die den Plattformbetrieb aus Sicht von Plattformverantwortlichen nur indirekt adressieren und daher ausgeklammert wurden.
 Eine systematische, übergreifende Einordnung entlang typischer Aufgaben im Platform Engineering sowie eine Bewertung von Übertragbarkeit und praktischem Nutzen bleibt häufig offen.
