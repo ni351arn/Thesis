@@ -7,19 +7,19 @@ Ziel ist es, die identifizierten \gls{ki}-Ansätze zu übertragbaren Anwendungsm
 \subsection{Intelligente Betriebsautomatisierung und Orchestrierung}
 \label{subsec:intelligente-betriebsautomatisierung}
 Das Muster Intelligente Betriebsautomatisierung und Orchestrierung beschreibt den Einsatz von \gls{ki} im laufenden Plattformbetrieb.
-Der Schwerpunkt liegt auf der automatisierten Steuerung von Systemzuständen, um Stabilität und Verfügbarkeit der Plattform sicherzustellen.
+Der Schwerpunkt liegt auf der Bewertung von Systemzuständen und der Ableitung von Handlungsempfehlungen, um Stabilität und Verfügbarkeit der Plattform sicherzustellen.
 Tabelle \ref{tab:betriebOrchestrierung} ordnet das Muster als konkrete Plattformaufgabe im Plattformbetrieb ein und fasst zentrale Ausprägungen zusammen.
 
 \input{tables/04_ergebnisse/04_03_01_matchingTabelleEins.tex}
 
-Verarbeitet werden Metriken, Logs und Zustandsinformationen aus dem Cluster (z. B. \gls{cpu}-Auslastung), die aus dem laufenden Betrieb anfallen.
+Verarbeitet werden Metriken, Protokolle und Zustandsinformationen aus dem Cluster (z. B. \gls{cpu}-Auslastung), die aus dem laufenden Betrieb anfallen.
 Anhand historischer Verläufe werden typische Lastmuster und Abweichungen vom Normalbetrieb erkannt.
-Darauf aufbauend werden operative Maßnahmen abgeleitet, die automatisiert ausgeführt werden können.
+Darauf aufbauend werden operative Maßnahmen abgeleitet und als Handlungsempfehlungen bereitgestellt.
 Prädiktives Auto-Scaling stellt einen Teilaspekt des Musters dar.
 Der Fokus liegt auf der Orchestrierung im Betrieb, bei der Lastverteilung und Reaktionen auf bekannte Fehlerbilder koordiniert werden \cite{zaaloukCLOUDNATIVEARTIFICIAL,jossonpaulkalapparambathAdvancingDistributedSystems2025}.
-Der Nutzen zeigt sich in einer Reduktion manueller Betriebseingriffe sowie in stabileren Laufzeiteigenschaften der Plattform.
+Der Nutzen zeigt sich in einer Reduktion manueller Analysearbeit sowie in stabileren Laufzeiteigenschaften der Plattform.
 Die Qualität der Entscheidungen hängt dabei von der Verlässlichkeit der zugrunde liegenden Betriebsdaten ab \cite{tamminediAutomatingKubernetesOperations2024,reddygopireddyIntegratingAIDevOps2022}.
-Die Umsetzung erfordert eine durchgängige Erfassung von Betriebsdaten sowie automatisierbare Eingriffsmöglichkeiten in die Plattform.
+Die Umsetzung erfordert eine durchgängige Erfassung von Betriebsdaten sowie definierte Schnittstellen für operative Maßnahmen.
 Zusätzlich entstehen Herausforderungen durch die eingeschränkte Nachvollziehbarkeit lernbasierter Entscheidungen und den erhöhten Integrationsaufwand \cite{supritpattanayakIntegratingAIDevOps2024,uddohAIBasedThreatDetection2021}.
 
 \subsection{Automatisierte Release-Absicherung}
