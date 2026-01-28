@@ -1,68 +1,64 @@
 \section{Anwendung des Bewertungskonzepts}
 \label{sec:anwendung_bewertungskonzept}
-In diesem Abschnitt wird das in Kapitel 5.1 entwickelte Bewertungskonzept auf ein konkretes Problemfeld der \gls{bmlp} angewendet. 
-Ziel ist es, dieses Problemfeld systematisch einzuordnen und anhand der definierten Zusatzdimensionen zu bewerten. 
+In diesem Abschnitt wird das in \autoref{sec:bewertungskonzept} entwickelte Bewertungskonzept auf ein konkretes Problemfeld der \gls{bmlp} angewendet. 
+Das Problemfeld wird systematisch eingeordnet und anhand der definierten Zusatzdimensionen bewertet.
 Die Analyse folgt dabei den generischen Use-Case-Mustern aus \autoref{sec:matching-framework}.
 \par\bigskip
 
-Im Betrieb der \gls{bmlp} treten Abbrüche in Build- und Bereitstellungsprozessen immer wieder auf.
-Sie entstehen im Rahmen automatisierter \gls{ci}/\gls{cd}-Pipelines und betreffen sowohl einzelne Module als auch verkettete Abläufe über mehrere Komponenten hinweg.
+Im Betrieb der \gls{bmlp} treten wiederkehrend Störungen und Fehlerzustände in der Laufzeitumgebung auf.
+Sie betreffen einzelne Module sowie verkettete Abläufe über mehrere Komponenten hinweg und wirken sich direkt auf Stabilität und Verfügbarkeit aus.
 Es liegen keine konsolidierten Kennzahlen vor.
-Aus Betriebserfahrungen ergibt sich, dass diese Abbrüche wiederkehrend auftreten.
-Die Auswirkungen sind insbesondere in Umgebungen mit paralleler Entwicklung und hoher Änderungsfrequenz sichtbar.
-Fehlerhafte Builds blockieren nachgelagerte Schritte und machen erneute Pipeline-Läufe erforderlich.
-Dadurch verzögert sich die Bereitstellung von Funktionen und die Änderungsbereitstellung der Plattform wird beeinträchtigt.
+Aus Betriebserfahrungen ergibt sich, dass diese Störungen regelmäßig auftreten, insbesondere bei hoher Änderungsfrequenz.
+Die Auswirkungen zeigen sich in wiederholten Neustarts, nicht startenden Workloads oder Servicezuständen.
+Dadurch entstehen Verzögerungen in operativen Abläufen und ein erhöhter Aufwand im Plattformbetrieb.
 \par\bigskip
 
-Der zentrale Aufwand entsteht nicht durch den Abbruch eines Builds an sich, sondern durch die anschließende Ursachenanalyse. 
-Fehlersituationen lassen sich häufig nicht eindeutig einem einzelnen Schritt oder einer einzelnen Komponente zuordnen. 
-Stattdessen müssen Informationen aus mehreren Quellen zusammengeführt werden. 
-Dazu zählen Pipeline-Läufe, System- und Applikationsprotokolle sowie technische Ereignisse aus der Laufzeitumgebung.
-Eine durchgängige Sicht über den gesamten Ablauf ist dabei nur eingeschränkt gegeben. 
-Detailinformationen stehen nicht dauerhaft zur Verfügung, sondern müssen bei Bedarf gezielt aktiviert werden. 
+Der zentrale Aufwand entsteht nicht durch das Auftreten eines Fehlzustands an sich, sondern durch die anschließende Eingrenzung der Ursache.
+Fehlersituationen lassen sich häufig nicht eindeutig einer einzelnen Komponente zuordnen.
+Stattdessen müssen Informationen aus mehreren Quellen zusammengeführt werden.
+Dazu zählen Kubernetes-Events und Zustandsinformationen, Applikations- und Systemprotokolle sowie Metriken und Traces aus der Beobachtbarkeit.
+Eine durchgängige Sicht über den gesamten Ablauf ist dabei nur eingeschränkt gegeben.
+Detailinformationen stehen nicht dauerhaft in ausreichender Tiefe zur Verfügung, sondern müssen bei Bedarf gezielt herangezogen werden.
 Dies erhöht den manuellen Analyseaufwand und verlangsamt die Eingrenzung der eigentlichen Ursache.
-
-Zusätzlich zeigt sich, dass Build- und Bereitstellungsprozesse in der Praxis nicht vollständig unabhängig voneinander sind. 
-Entlang der Build- und Auslieferungsprozesse bestehen Abhängigkeiten zwischen einzelnen Komponenten und Schritten.
-Beispiele hierfür sind gemeinsam genutzte Artefakte, feste Reihenfolgen bei der Initialisierung oder gegenseitige Startvoraussetzungen einzelner Komponenten.
-Obwohl eine möglichst unabhängige Ausführung einzelner Pipelines angestrebt wird, führen diese Kopplungen dazu, dass Fehlerfolgen über mehrere Schritte hinweg wirken. 
-Die Analyse erfordert dadurch ein Verständnis des Gesamtzusammenhangs und einen hohen manuellen Analyseaufwand für die beteiligten Teams.
 \par\bigskip
 
-Für die systematische Einordnung dieses Problemfelds liegt in der Plattform eine geeignete Datengrundlage vor. 
-Pipeline-Laufinformationen und Build-Protokolle werden erfasst und für Auswertungen bereitgestellt.
-Applikations- und Prozessprotokolle werden zusammengeführt und folgen einem einheitlichen, strukturierten Format mit standardisierten Feldern.
-Dadurch lassen sich relevante Informationen einheitlich auswerten und vergleichen, ohne dass jede Analyse bei null beginnt.
-
-Zudem ist eine historische Protokollierung vorgesehen. 
-Die Einträge enthalten unter anderem Zeitstempel sowie Angaben zu Umgebung, Systemkontext, Version und Instanz. 
-Pipeline-Ausführungen und Laufzeitereignisse lassen sich über gemeinsame Kennungen und Kontextinformationen miteinander in Beziehung setzen und im Nachgang nachvollziehen.
-Damit sind zentrale Voraussetzungen gegeben, um wiederkehrende Fehlermuster zu identifizieren. 
-Die Ursachen lassen sich systematischer eingrenzen, statt rein manuell von Einzelfall zu Einzelfall vorzugehen.
+Zusätzlich zeigt sich, dass Störungen im Plattformbetrieb selten isoliert entstehen.
+Abhängigkeiten zwischen Komponenten, Konfigurationen und Plattformdiensten führen dazu, dass sich Fehler über mehrere Komponenten hinweg auswirken.
+Beispiele sind fehlende Konfigurationswerte, Ressourcenkonflikte, fehlerhafte Netzwerkrouten oder nicht erfüllte Startvoraussetzungen.
+Dadurch reicht eine lokale Betrachtung einzelner Logs häufig nicht aus.
+Die Analyse erfordert ein Verständnis des Gesamtzusammenhangs und verursacht hohen manuellen Aufwand für die beteiligten Teams.
 \par\bigskip
 
-Das beschriebene Problemfeld wird dem in Abschnitt 4.3.3 abgeleiteten generischen Use Case der intelligenten Build-Fehlerdiagnose zugeordnet. 
+Für die systematische Einordnung dieses Problemfelds liegt in der Plattform eine geeignete Datengrundlage vor.
+Logs, Metriken, Traces sowie technische Ereignisse werden zentral erfasst und folgen einheitlichen Formaten mit standardisierten Feldern.
+Die Einträge enthalten Zeitstempel sowie Angaben zu Umgebung, Systemkontext, Version und Instanz.
+Abläufe über mehrere Komponenten hinweg lassen sich über Korrelationskennungen miteinander in Beziehung setzen und im Nachgang nachvollziehen.
+Damit sind zentrale Voraussetzungen gegeben, um wiederkehrende Fehlerbilder zu erkennen und Ursachen systematischer einzugrenzen.
+\par\bigskip
+
+Das beschriebene Problemfeld wird dem in Abschnitt 4.3.1 abgeleiteten generischen Use Case der intelligenten Betriebsautomatisierung und Orchestrierung zugeordnet.
 Auf dieser Grundlage erfolgt die Bewertung entlang der in Abschnitt 5.1.2 definierten Zusatzdimensionen.
 
-Bezüglich der Umsetzbarkeit sind die erforderlichen Build-, Pipeline- und Protokolldaten in strukturierter Form und mit historischer Tiefe verfügbar. 
-Auch der technische Fit zur bestehenden Plattform ist gegeben, da die Analyse an vorhandene Build- und Auslieferungsprozesse anknüpfen kann. 
-Zusätzlicher Aufwand entsteht durch die Einbettung in bestehende Abläufe sowie durch den Umgang mit Abhängigkeiten zwischen Komponenten und Pipelines. 
+Bezüglich der Umsetzbarkeit sind die erforderlichen Betriebsdaten in strukturierter Form und mit historischer Tiefe verfügbar.
+Der technische Fit zur bestehenden Plattform ist gegeben, da die Analyse an die vorhandene Beobachtbarkeit sowie an Zustands- und Eventdaten aus dem Cluster anknüpfen kann.
+Zusätzlicher Aufwand entsteht durch die Integration in bestehende Betriebsabläufe sowie durch die Abgrenzung von Analyse und operativer Umsetzung.
 Insgesamt ergibt sich eine mittlere Umsetzbarkeit.
 
-Durch die Auswertung historischer Build- und Protokolldaten kann der manuelle Analyseaufwand reduziert und die Eingrenzung von Fehlerursachen beschleunigt werden. 
-Eine Übertragung auf weitere Pipelines ist möglich, erfordert jedoch Anpassungen, wenn Abläufe eng miteinander verknüpft sind. 
-In der Gesamtsicht ergibt sich eine mittlere bis hohe Ausprägung.
+Durch die Auswertung von Betriebszuständen und historischen Verläufen kann der manuelle Analyseaufwand reduziert und die Eingrenzung von Störungen beschleunigt werden.
+Eine Übertragung auf weitere Cluster und Module ist grundsätzlich möglich, erfordert jedoch stabile Datenqualität und konsistente Konventionen bei Logging und Event-Erfassung.
+Im Bewertungsschema wird die Übertragbarkeit als mittel bis hoch eingeordnet.
 
-Da überwiegend technische Prozess- und Protokolldaten verarbeitet werden, entstehen keine zusätzlichen Anforderungen an Datenschutz oder Regulierung.
-Abstimmungsaufwände betreffen vor allem Zuständigkeiten und organisatorische Regelungen, nicht jedoch regulatorische Einschränkungen. 
+Da überwiegend technische Betriebsdaten verarbeitet werden, ergeben sich nur geringe Anforderungen an Datenschutz oder Regulierung.
+Abstimmungsaufwände betreffen vor allem Zuständigkeiten, Zugriffsrechte und operative Freigaben im Plattformbetrieb.
 Die Dimension ist daher als niedrig bis mittel einzuordnen.
 
-Der Reifegrad des Use Case ist insgesamt als mittel einzuordnen. 
-In der Literatur wird der Ansatz über die reine Konzeptionsphase hinaus beschrieben und in ersten Werkzeugen sowie Pilotanwendungen praktisch eingesetzt.
+Der Reifegrad des Use Case ist insgesamt als mittel einzuordnen.
+In der Literatur wird der Ansatz über die reine Konzeptionsphase hinaus beschrieben und in ersten Werkzeugen sowie Pilotanwendungen beschrieben.
 Gleichzeitig fehlt jedoch bislang eine breite Etablierung mit klar abgesicherten Betriebsmodellen und Verantwortlichkeiten für den dauerhaften Einsatz.
 \par\bigskip
 
 Abbildung \ref{fig:05_03_bewertungsraster} zeigt die Einordnung des Use Case in die Bewertungsmatrix auf Basis der durchgeführten Analyse und Anwendung des Bewertungsrasters.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/05_bewertung/05_03_bewertungsraster.png}
