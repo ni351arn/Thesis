@@ -17,13 +17,12 @@ Fachliche Funktionen in der \gls{bmlp} werden als eigenständige Module in einer
 Jedes Modul bringt typischerweise eigene Logik und eigene Datenhaltung mit, wodurch direkte Abhängigkeiten zwischen Modulen vermieden werden.
 Die Zusammenarbeit zwischen Modulen erfolgt überwiegend ereignisbasiert, während synchrone Schnittstellen nur für spezielle Anwendungsfälle genutzt werden.
 
-In jedem Werk wird ein eigenständiges Kubernetes-Cluster betrieben.
-Ergänzend existieren zentrale Cluster für übergreifende Plattformdienste sowie separate Werks-Cluster für latenzkritische Funktionen.
-So werden Echtzeitanforderungen sichergestellt und zentrale Cluster im Multi-Tenant-Betrieb genutzt.
+Jedes Fertigungswerk kann je nach Anforderungen ein Cluster im lokalen Rechenzentrum für latenzkritische Anwendungen betreiben.
+Für nicht latenzkritische Anwendungen werden zentrale oder regionale Rechenzentren genutzt.
+Daraus ergibt sich ein hybrides Betriebsmodell, dessen Ausprägung von den jeweiligen Werksanforderungen abhängt.
 
 Für den werks- und organisationsübergreifenden Einsatz unterstützt die Plattform eine klare Trennung von Zugriffen und Verantwortlichkeiten.
 Diese wird durch zentrale Plattformdienste und ein gemeinsames Rollen- und Berechtigungsmodell umgesetzt.
-Dadurch können mehrere Organisationseinheiten dieselbe Plattform nutzen, ohne die Zugriffskontrolle zu verlieren.
 
 Im Betrieb werden zentrale Mechanismen möglichst vereinheitlicht.
 Dazu zählen gemeinsame Einstiegspunkte für Anwendungen sowie einheitliche Informationen zum Betriebszustand der Module.
@@ -37,11 +36,11 @@ Die daraus entstehenden Artefakte werden versioniert abgelegt und für den weite
 
 Auch die Auslieferung folgt einem weitgehend automatisierten Ansatz.
 Ein wiederverwendbares Pipeline-Modell verbindet Artefaktverwaltung, Konfigurationsverwaltung sowie die Verwaltung von Schlüsseln und Zugangsdaten zu einem durchgängigen Prozess.
-Die Bereitstellung erfolgt reproduzierbar und nachvollziehbar unter Berücksichtigung regulatorischer Anforderungen.
+Die Bereitstellung erfolgt nach dem GitOps-Ansatz.
 
 Ergänzend definieren Plattformstandards zentrale Leitplanken für Entwicklung und Betrieb.
 Dazu zählen einheitliche Vorgaben für Container-Images und deklarative Infrastruktur.
-Schnittstellen werden nach gemeinsamen Gestaltungsregeln umgesetzt und konsistent dokumentiert, während die Kommunikation zwischen Modulen überwiegend ereignisbasiert erfolgt.
+Die Kommunikation zwischen Modulen erfolgt über öffentliche APIs, während interne Modulkommunikation ereignisbasiert umgesetzt ist.
 Für den Betrieb werden einheitliche Logformate und durchgängige Referenzen genutzt, sodass Abläufe über mehrere Komponenten hinweg nachvollziehbar bleiben.
 
 \subsection{Operativer Stack und Datenbasis für AIOps}
