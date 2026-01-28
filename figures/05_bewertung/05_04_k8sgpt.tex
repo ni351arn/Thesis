@@ -1,39 +1,39 @@
 \begin{tikzpicture}[font=\small, node distance=14mm, >=latex]
 \tikzstyle{box} = [draw, rounded corners, align=center,
-minimum width=32mm, minimum height=10mm]
+minimum width=34mm, minimum height=10mm]
 
 % Linke Spalte
-\node[box] (gitops) {GitOps-Repo};
+\node[box] (gitops) {GitOps-Repo\\{\scriptsize Sollzustand}};
 \node[box, below=22mm of gitops] (runbooks) {Runbooks\\{\scriptsize Fehlerbilder + Lösungsschritte}};
-\node[box, below=22mm of runbooks] (k8sgpt) {K8sGPT\\Analyse};
+\node[box, below=22mm of runbooks] (k8sgpt) {K8sGPT\\{\scriptsize Analyse}};
 
 % Mittlere Spalte
-\node[box, right=24mm of gitops] (k8s) {Kubernetes-Cluster};
-\node[box, below=22mm of k8s] (opsdata) {Betriebsdaten\\{\scriptsize Ereignisse / Protokolle}};
+\node[box, right=26mm of gitops] (k8s) {Kubernetes-Cluster};
+\node[box, below=22mm of k8s] (obs) {Beobachtbarkeit\\{\scriptsize Metriken / Logs / Events}};
 
-% Rechte Spalte (max. 2 Boxen rechts)
-\node[box, right=44mm of k8sgpt] (llm) {Sprachmodell};
-\node[box, below=22mm of llm] (teams) {Teams};
+% Rechte Spalte
+\node[box, right=44mm of k8sgpt] (llm) {Sprachmodell\\{\scriptsize optional}};
+\node[box, below=22mm of llm] (user) {Benutzer};
 
-% Fluesse
-\draw[->, dashed] (gitops) -- node[above]{Sollzustand} node[below]{(Pull)} (k8s);
+% GitOps: Pull vom Cluster (kein Push)
+\draw[->] (k8s) -- node[midway, above, fill=white, inner sep=2pt]{Pull} (gitops);
 
-\draw[->] (k8s) -- node[right]{Ereignisse / Protokolle} (opsdata);
+% Betriebsdatenfluss
+\draw[->] (k8s) -- node[midway, right, fill=white, inner sep=2pt]{Betriebsdaten} (obs);
+\draw[->] (obs) -- node[midway, below, fill=white, inner sep=2pt]{Datenbasis} (k8sgpt);
 
-\draw[->] (opsdata) -- node[fill=white, inner sep=2pt, below]{Datenbasis} (k8sgpt);
+% Runbooks -> K8sGPT (gerade, gestrichelt)
+\draw[->, dashed] (runbooks) -- node[midway, right, fill=white, inner sep=2pt]{Kontext} (k8sgpt);
 
-\draw[->, dashed] (runbooks) -- node[right]{Kontext} (k8sgpt);
+% GitOps -> K8sGPT (links um Runbooks herum)
+\draw[->, dashed] (gitops.south) -- ++(-15mm,0) -- ++(0,-54mm) -- ++(15mm,0)
+node[pos=0.50, left, fill=white, inner sep=2pt]{Sollzustand};
 
-\draw[<->] (k8sgpt) -- node[above]{Erklärung / Hinweise} (llm);
+% Sprachmodell nur zur Aufbereitung/Erklärung
+\draw[<->, dashed] (k8sgpt) -- node[midway, above, fill=white, inner sep=2pt]{Erklärung / Aufbereitung} (llm);
 
-\draw[->] (k8sgpt) -- node[right]{Handlungshinweise} (teams);
-
-% Optionaler direkter Pfeil vom Cluster zur Analyse (wenn du ihn willst)
-% \draw[->, dashed] (k8s) |- node[pos=0.25, right]{Clusterzustand} (k8sgpt);
-
-% Hinweis rechts neben K8sGPT
-\node[align=right, left=4mm of k8sgpt]
-{\scriptsize nicht im kritischen Pfad\\
-\scriptsize nur unterstützend};
+% Ergebnis
+\draw[->] (k8sgpt.east) -- (user.west)
+node[midway, above, fill=white, inner sep=2pt]{Hinweise};
 
 \end{tikzpicture}
