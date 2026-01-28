@@ -1,30 +1,39 @@
-\begin{tikzpicture}[font=\small, node distance=18mm, >=latex]
+\begin{tikzpicture}[font=\small, node distance=14mm, >=latex]
 \tikzstyle{box} = [draw, rounded corners, align=center,
 minimum width=32mm, minimum height=10mm]
 
-% Obere Reihe (mehr Platz zwischen den Boxen)
-\node[box] (cicd) {CI/CD-Pipeline};
-\node[box, right=28mm of cicd] (k8s) {Kubernetes-Cluster};
+% Linke Spalte
+\node[box] (gitops) {GitOps-Repo};
+\node[box, below=22mm of gitops] (runbooks) {Runbooks\\{\scriptsize Fehlerbilder + Lösungsschritte}};
+\node[box, below=22mm of runbooks] (k8sgpt) {K8sGPT\\Analyse};
 
-% Sammelpunkt
-\node[box, below=of k8s] (store) {Logs/Events};
-\node[box, below=of store] (k8sgpt) {K8sGPT\\Analyse};
-\node[box, below=of k8sgpt] (teams) {Teams};
+% Mittlere Spalte
+\node[box, right=24mm of gitops] (k8s) {Kubernetes-Cluster};
+\node[box, below=22mm of k8s] (opsdata) {Betriebsdaten\\{\scriptsize Ereignisse / Protokolle}};
 
-% Flüsse
-\draw[->, dashed] (cicd) -- node[above]{Sollzustand} node[below]{(pull-basiert)} (k8s);
-\draw[->] (cicd) |- node[left]{Pipeline-Protokolle} (store);
-\draw[->] (k8s) -- node[right]{Logs / Events} (store);
-\draw[->] (store) -- node[right]{Datenbasis} (k8sgpt);
-\draw[->] (k8sgpt) -- node[right]{Hinweise} (teams);
+% Rechte Spalte (max. 2 Boxen rechts)
+\node[box, right=44mm of k8sgpt] (llm) {Sprachmodell};
+\node[box, below=22mm of llm] (teams) {Teams};
 
-% Hinweis unter K8sGPT
-\node[align=left, right=6mm of k8sgpt]
-{\linespread{0.85}\selectfont
-{\scriptsize nicht im kritischen Pfad}\\
-{\scriptsize nur unterstützend}};
-\node[align=left, right=6mm of teams]
-{\linespread{0.85}\selectfont\
-{\scriptsize Plattformbetrieb}\\
-{\scriptsize + Entwicklung}};
+% Fluesse
+\draw[->, dashed] (gitops) -- node[above]{Sollzustand} node[below]{(Pull)} (k8s);
+
+\draw[->] (k8s) -- node[right]{Ereignisse / Protokolle} (opsdata);
+
+\draw[->] (opsdata) -- node[fill=white, inner sep=2pt, below]{Datenbasis} (k8sgpt);
+
+\draw[->, dashed] (runbooks) -- node[right]{Kontext} (k8sgpt);
+
+\draw[<->] (k8sgpt) -- node[above]{Erklärung / Hinweise} (llm);
+
+\draw[->] (k8sgpt) -- node[right]{Handlungshinweise} (teams);
+
+% Optionaler direkter Pfeil vom Cluster zur Analyse (wenn du ihn willst)
+% \draw[->, dashed] (k8s) |- node[pos=0.25, right]{Clusterzustand} (k8sgpt);
+
+% Hinweis rechts neben K8sGPT
+\node[align=right, left=4mm of k8sgpt]
+{\scriptsize nicht im kritischen Pfad\\
+\scriptsize nur unterstützend};
+
 \end{tikzpicture}

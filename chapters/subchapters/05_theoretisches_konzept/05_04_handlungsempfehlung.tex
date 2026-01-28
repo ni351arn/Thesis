@@ -1,48 +1,40 @@
 \section{Handlungsempfehlung}
 \label{sec:handlungsempfehlung}
-Auf Basis der Einordnung und Bewertung aus Abschnitt 5.3 wird in diesem Kapitel eine konkrete Handlungsempfehlung abgeleitet.
-Der Use Case der intelligenten Build-Fehlerdiagnose wurde im Bewertungsraster als hoch hinsichtlich des operativen Mehrwerts und mit mittlerer Umsetzbarkeit eingestuft.
-Daraus ergibt sich die Empfehlung, diesen Use Case priorisiert zu adressieren.
+Auf Basis der Bewertung in \autoref{sec:anwendung_bewertungskonzept} wird eine Umsetzung des Use Case im Plattformbetrieb empfohlen.
+Der Schwerpunkt liegt auf der Unterstützung bei der Analyse und Einordnung von Störungen, wobei automatisierte Eingriffe in den Cluster nicht vorgesehen sind.
 \par\bigskip
 
-Auf Grundlage dieser Bewertung sollte die intelligente Build-Fehlerdiagnose als erster Anwendungsfall weiterverfolgt werden. 
-Der erwartete Nutzen ergibt sich insbesondere aus der Reduktion des manuellen Analyseaufwands sowie einer schnelleren Eingrenzung von Fehlerursachen in Build- und Bereitstellungsprozessen. 
-Gleichzeitig ist der erforderliche Aufwand überschaubar.
-Die notwendigen Datenquellen sind bereits vorhanden, und es sind keine grundlegenden Änderungen an bestehenden Abläufen erforderlich.
-
-Eine priorisierte Umsetzung erlaubt es, das identifizierte Problemfeld gezielt zu adressieren und gleichzeitig Erfahrungen im Umgang mit datengetriebenen Analyseansätzen im Plattformbetrieb zu sammeln. 
-Der Use Case eignet sich damit sowohl zur operativen Verbesserung als auch als Ausgangspunkt für weitere, darauf aufbauende Anwendungsfälle.
+Im ersten Schritt sollte die vorhandene Datengrundlage gezielt für Analysezwecke genutzt werden.
+Dazu zählen Kubernetes-Ereignisse, Zustandsinformationen sowie Applikations- und Systemprotokolle, die im Betrieb bereits zentral erfasst werden.
+Die Auswertung erfolgt übergreifend, indem zeitliche und funktionale Zusammenhänge zwischen den Einträgen berücksichtigt werden.
 \par\bigskip
 
-Auf Basis der priorisierten Einordnung bietet sich der Einsatz von K8sGPT\footnote{\url{https://k8sgpt.ai}} als beispielhafte Umsetzung des identifizierten Use Cases an \cite{kankanalaAIMLDevOps2024}. 
-In der Literatur wird K8sGPT als Open-Source-Projekt beschrieben, das den Einsatz von \gls{ki} zur Unterstützung des Betriebs containerbasierter Systeme adressiert.
-
-Der Schwerpunkt des Werkzeugs liegt auf der Analyse technischer Betriebsinformationen, insbesondere von Protokolldaten aus Kubernetes-Umgebungen. 
-Ziel ist es, Betreiber bei der Ursachenanalyse von Fehlerzuständen zu unterstützen und wiederkehrende Probleme schneller nachvollziehbar zu machen. 
-Damit greift der Ansatz direkt das in Abschnitt 5.3 beschriebene Problemfeld der Build- und Fehlerdiagnose auf.
-
-Der Einsatz von K8sGPT ist als ergänzende Unterstützung bestehender Betriebs- und Analyseprozesse zu verstehen. 
-Entscheidungen und Maßnahmen verbleiben weiterhin bei den verantwortlichen Teams. 
-Das Werkzeug eignet sich somit, um den identifizierten Use Case technisch umzusetzen, ohne bestehende Abläufe grundlegend zu verändern.
+Damit die Ergebnisse im Betrieb nutzbar sind, sollten Hinweise in einer einheitlichen Form bereitgestellt werden.
+Dazu gehören Ursachenhinweise, betroffene Komponenten sowie priorisierte Handlungshinweise, die sich in bestehende Betriebsabläufe übernehmen lassen.
+Entscheidungen und Maßnahmen verbleiben bei den verantwortlichen Teams, sodass die Kontrolle über operative Eingriffe erhalten bleibt.
 \par\bigskip
 
-Abbildung \ref{fig:k8sgptEinordnung} zeigt eine einfache Architekturskizze, die die Einordnung von K8sGPT im Plattformbetrieb darstellt.
+Als beispielhafte Umsetzung wird der Einsatz von K8sGPT\footnote{\url{https://k8sgpt.ai}} empfohlen.
+Das Werkzeug wird als Open-Source-Lösung beschrieben, die Kubernetes-Cluster analysiert und Hinweise zur Diagnose und Einordnung von Fehlerzuständen bereitstellt \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
+Der Schwerpunkt liegt auf der Auswertung technischer Betriebsinformationen, insbesondere von Ereignissen, Zuständen und Protokolldaten aus dem Cluster. 
+Dadurch wird der manuelle Aufwand bei der Ursachenanalyse reduziert.
+\par\bigskip
+
+Abbildung \ref{fig:k8sgptEinordnung} ordnet K8sGPT im Plattformbetrieb ein und zeigt, welche Informationsquellen für die Analyse herangezogen werden.
+Als Datenbasis dienen Ereignisse und Protokolle aus dem Kubernetes-Cluster, während das GitOps-Repository als Referenz für den gewünschten Systemzustand genutzt wird.
+Ein Sprachmodell kann die erzeugten Hinweise erklären und einheitlich aufbereiten, wobei die Ausgabe auf Handlungshinweise beschränkt bleibt.
+\par\bigskip
+
+Der Einsatz von K8sGPT ist als Ergänzung bestehender Betriebs- und Analyseprozesse zu verstehen, da das Werkzeug nicht im kritischen Pfad eingesetzt wird.
+Es liefert ausschließlich Hinweise, während Entscheidungen und Maßnahmen bei den verantwortlichen Teams verbleiben.
+\par\bigskip
+
+Die Handlungsempfehlung beschreibt keinen vollständigen Zielzustand der Plattform.
+Sie zeigt, wie der betrachtete Use Case schrittweise umgesetzt werden kann, ohne bestehende Abläufe grundlegend zu verändern.
+
 \begin{figure}[H]
 \centering
 \input{figures/05_bewertung/05_04_k8sgpt.tex}
 \caption{Einordnung von K8sGPT im Plattformbetrieb}
 \label{fig:k8sgptEinordnung}
 \end{figure}
-Fehler entstehen entweder in der \gls{ci}/\gls{cd}-Pipeline oder in der Laufzeitumgebung des Kubernetes-Clusters.
-Die dabei anfallenden Logs, Ereignisse und Zustände werden zentral gesammelt und bilden die Datenbasis für die Analyse.
-
-K8sGPT wertet diese Daten aus und generiert darauf basierende Hinweise für die zuständigen Teams.
-Das Werkzeug ist nicht in den Auslieferungsprozess eingebunden und hat keinen Einfluss auf Build oder Bereitstellung.
-Die Verantwortung für Entscheidungen und Maßnahmen verbleibt vollständig bei den beteiligten Teams.
-
-\par\bigskip
-Die Handlungsempfehlung beschreibt keinen vollständigen Zielzustand der Plattform. 
-Sie zeigt lediglich, wie der identifizierte Use Case beispielhaft umgesetzt werden kann.
-
-
-
