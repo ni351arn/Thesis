@@ -1,38 +1,37 @@
 \begin{table}[!htbp]
-\caption{Übersicht zum Muster Proaktives Ressourcen-Management}
-\label{tab:proaktivesRessourcenmanagement}
+\caption{Übersicht zum Muster Intelligente Betriebsautomatisierung und Orchestrierung}
+\label{tab:betriebOrchestrierung}
 \footnotesize
 \renewcommand{\arraystretch}{1.2}
 \setlength{\tabcolsep}{7pt}
 
 \begin{tabularx}{\linewidth}{p{3.5cm} X}
 \toprule
-\textbf{Proaktives Ressourcen-Management} & \textbf{Beschreibung} \\
+\textbf{Intelligente Betriebsautomatisierung und Orchestrierung} & \textbf{Beschreibung} \\
 \midrule
 
 Konkrete Plattform-\newline aufgabe &
-Automatisierte Anpassung von Instanztypen (EC2/RDS) oder Kubernetes-Pods (HPA) basierend auf der Vorhersage von \gls{cpu}-/RAM-Spitzen.
+Ganzheitliche autonome Cluster-Steuerung im Betrieb, die Skalierung, Lastverteilung und Selbstheilung kombiniert.
 \\
 
 Empfohlene \gls{ki}-Methode &
-\gls{dl} zur Zeitreihenprognose oder \gls{rl} zur dynamischen Lastverteilung in Echtzeit.
+Sprachmodelle zur Analyse von Betriebszuständen, \gls{rl} zur Optimierung operativer Maßnahmen sowie \gls{dl} zur Vorhersage von Lastverläufen \cite{zaaloukCLOUDNATIVEARTIFICIAL,enemosahEnhancingDevOpsEfficiency2025,jossonpaulkalapparambathAdvancingDistributedSystems2025}.
 \\
 
 KPI/Mehrwert &
-Ressourcenauslastung bis zu +25 \% (RL vs.\ Heuristik) \cite{poudelAIDrivenIntelligentAutoScaling2025a},
-Kosteneffizienz durch dynamische Allokation mit bis zu 55 \% geringeren Cloud-Kosten \cite{karthikputhrayaRoleCloudNativeArchitectures2025}.
+52 \% weniger manuelle Betriebseingriffe, 40 \% schnellere Fehlerbehebung (MTTR) sowie ca.\ 30 \% Kostenreduktion \cite{tamminediAutomatingKubernetesOperations2024,jossonpaulkalapparambathAdvancingDistributedSystems2025}.
 \\
 
 Limitationen &
-Hoher Rechenaufwand für das Modelltraining, Startverzögerungen bei initialer Bereitstellung (serverlos), benötigt ca.\ 2 Monate historische Daten \cite{poudelAIDrivenIntelligentAutoScaling2025a,amteCloudNativeAIChallenges2025}.
+Hohe Modellkomplexität, eingeschränkte Nachvollziehbarkeit (Black-Box) sowie hoher Rechenaufwand für Training und Betrieb.
 \\
 
 Einsatzvoraussetzungen &
-Mind.\ 2 Monate historische Zeitreihen-Telemetrie aus CloudWatch/Prometheus sowie automatisierter API-Schreibzugriff für Instanz- bzw.\ Skalierungsanpassungen \cite{poudelAIDrivenIntelligentAutoScaling2025a}.
+Durchgängige Beobachtbarkeits-Pipeline (Logs und Metriken), hochwertige historische Betriebsdaten sowie automatisierbarer Zugriff auf die Kubernetes-API \cite{zaaloukCLOUDNATIVEARTIFICIAL,reddygopireddyIntegratingAIDevOps2022}.
 \\
 
 Konkrete Tools &
-AWS CloudWatch, Boto3 SDK, Kubernetes HPA, KEDA (Event-Driven Autoscaling), Knative, Megalix \cite{zaaloukCLOUDNATIVEARTIFICIAL,supritpattanayakIntegratingAIDevOps2024,poudelAIDrivenIntelligentAutoScaling2025a,bajwaCLOUDNATIVEARCHITECTURESLARGESCALE2025}.
+K8sGPT, KEDA, StackStorm, Dynatrace, Ananke, Sentry \cite{zaaloukCLOUDNATIVEARTIFICIAL,supritpattanayakIntegratingAIDevOps2024,reddygopireddyIntegratingAIDevOps2022,sikhaCloudNativeApplicationDevelopment2023}.
 \\
 
 \bottomrule
