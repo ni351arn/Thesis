@@ -1,39 +1,72 @@
-\begin{tikzpicture}[font=\small, node distance=14mm, >=latex]
-\tikzstyle{box} = [draw, rounded corners, align=center,
-minimum width=34mm, minimum height=10mm]
-
-% Linke Spalte
-\node[box] (gitops) {GitOps-Repo\\{\scriptsize Sollzustand}};
-\node[box, below=22mm of gitops] (runbooks) {Runbooks\\{\scriptsize Fehlerbilder + Lösungsschritte}};
-\node[box, below=22mm of runbooks] (k8sgpt) {K8sGPT\\{\scriptsize Analyse}};
-
-% Mittlere Spalte
-\node[box, right=26mm of gitops] (k8s) {Kubernetes-Cluster};
-\node[box, below=22mm of k8s] (obs) {Beobachtbarkeit\\{\scriptsize Metriken / Logs / Events}};
-
-% Rechte Spalte
-\node[box, right=44mm of k8sgpt] (llm) {Sprachmodell\\{\scriptsize optional}};
-\node[box, below=22mm of llm] (user) {Benutzer};
-
-% GitOps: Pull vom Cluster (kein Push)
-\draw[->] (k8s) -- node[midway, above, fill=white, inner sep=2pt]{Pull} (gitops);
-
-% Betriebsdatenfluss
-\draw[->] (k8s) -- node[midway, right, fill=white, inner sep=2pt]{Betriebsdaten} (obs);
-\draw[->] (obs) -- node[midway, below, fill=white, inner sep=2pt]{Datenbasis} (k8sgpt);
-
-% Runbooks -> K8sGPT (gerade, gestrichelt)
-\draw[->, dashed] (runbooks) -- node[midway, right, fill=white, inner sep=2pt]{Kontext} (k8sgpt);
-
-% GitOps -> K8sGPT (links um Runbooks herum)
-\draw[->, dashed] (gitops.south) -- ++(-15mm,0) -- ++(0,-54mm) -- ++(15mm,0)
-node[pos=0.50, left, fill=white, inner sep=2pt]{Sollzustand};
-
-% Sprachmodell nur zur Aufbereitung/Erklärung
-\draw[<->, dashed] (k8sgpt) -- node[midway, above, fill=white, inner sep=2pt]{Erklärung / Aufbereitung} (llm);
-
-% Ergebnis
-\draw[->] (k8sgpt.east) -- (user.west)
-node[midway, above, fill=white, inner sep=2pt]{Hinweise};
-
+\begin{tikzpicture}[
+  font=\sffamily,
+  box/.style={draw, rounded corners=2pt, minimum width=3.2cm, minimum height=1.1cm, align=center},
+  bigbox/.style={box, minimum width=4.2cm},
+  arrow/.style={-Latex, line width=0.9pt},
+  note/.style={font=\scriptsize, align=center},
+  node distance=12mm and 18mm
+]
+ 
+% --- Nodes (Layout ähnlich deiner Skizze) ---
+\node[box] (gitops) at (-4.8, 3.6) {GitOps\\Repo};
+ 
+\node[box] (runbooks) at (0, 3.6) {Runbooks};
+\node[note] at (0, 4.55) {Dort halten wir\\Fehler fest und\\beschreiben die\\L\"osungsschritte};
+ 
+\node[box] (k8s) at (6.0, 3.6) {K8S\\Cluster};
+ 
+\node[box] (obs) at (3.2, 1.9) {Observability\\Tools};
+ 
+\node[box] (k8sgpt) at (6.0, 0.7) {K8sGPT};
+ 
+\node[box] (rag) at (0, 1.0) {RAG};
+ 
+\node[bigbox] (llmclient) at (0, -1.0) {LLM Client\\z.\,B.\ MCP Client};
+ 
+\node[box] (llm) at (-6.0, -1.0) {Standard LLM};
+ 
+\node[box] (user) at (0, -3.0) {User};
+ 
+% --- Arrows / Beziehungen ---
+% User <-> LLM Client
+\draw[arrow] (user) -- (llmclient);
+ 
+% LLM Client -> Standard LLM
+\draw[arrow] (llmclient) -- (llm);
+ 
+% RAG -> LLM Client (Kontext in Prompt)
+\draw[arrow] (rag) -- (llmclient);
+ 
+% Runbooks -> RAG
+\draw[arrow] (runbooks) -- (rag);
+ 
+% GitOps -> RAG (Inhalt/Quelle der Wahrheit für Kontext)
+\draw[arrow] (gitops) -- (llmclient); % optional: direkter Zugriff/Metadaten
+\draw[arrow] (gitops) to[bend left=12] (rag);
+ 
+% Observability -> RAG (Ist-Zustand als Kontext)
+\draw[arrow] (obs) -- (rag);
+ 
+% K8s -> Observability (Signals/Telemetry)
+\draw[arrow] (k8s) -- (obs);
+ 
+% K8sGPT -> K8s (Cluster Pull / Analyse über API)
+\draw[arrow] (k8sgpt) -- node[note, right, xshift=4pt] {Cluster Pull} (k8s);
+ 
+% K8sGPT -> LLM Client (Findings/Diagnose an Assistent)
+\draw[arrow] (k8sgpt) -- (llmclient);
+ 
+% LLM Client -> K8sGPT (Analyse anstoßen / Fragen)
+\draw[arrow] (llmclient) to[bend left=12] (k8sgpt);
+ 
+% Observability <-> K8sGPT (optional: K8sGPT nutzt/prüft Betriebsdaten)
+\draw[arrow] (obs) to[bend left=10] (k8sgpt);
+ 
+% GitOps als Ziel für Änderungen (PR/Commit) – hier bewusst vom User/LLM Client
+\draw[arrow] (llmclient) to[bend left=10] node[note, above, yshift=2pt] {PR/Commit} (gitops);
+ 
+% Cluster pullt desired state aus GitOps
+\draw[arrow] (k8s) to[bend left=15] node[note, above] {Pull desired state} (gitops);
+ 
 \end{tikzpicture}
+
