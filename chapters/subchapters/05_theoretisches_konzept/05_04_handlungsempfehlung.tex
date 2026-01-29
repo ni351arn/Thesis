@@ -1,6 +1,7 @@
 \section{Handlungsempfehlung}
 \label{sec:handlungsempfehlung}
 Auf Basis der Bewertung in \autoref{sec:anwendung_bewertungskonzept} wird eine Umsetzung des Use Case im Plattformbetrieb empfohlen.
+Der Use Case baut auf den bereits etablierten Daten- und Supportprozessen auf und wird durch K8sGPT gezielt ergänzt.
 Der Schwerpunkt liegt auf der Unterstützung bei der Analyse und Einordnung von Störungen, wobei automatisierte Eingriffe in den Cluster nicht vorgesehen sind.
 \par\bigskip
 
@@ -17,18 +18,18 @@ Entscheidungen und Maßnahmen verbleiben bei den verantwortlichen Teams, sodass 
 
 Als beispielhafte Umsetzung wird der Einsatz von K8sGPT\footnote{\url{https://k8sgpt.ai}} empfohlen.
 Das Werkzeug wird als Open-Source-Lösung beschrieben, die Kubernetes-Cluster analysiert und Hinweise zur Diagnose und Einordnung von Fehlerzuständen bereitstellt \cite{zaaloukCLOUDNATIVEARTIFICIAL}.
-Der Schwerpunkt liegt auf der Auswertung technischer Betriebsinformationen, insbesondere von Ereignissen, Zuständen und Protokolldaten aus dem Cluster. 
-Dabei werden direkt verfügbare Zustände und Ereignisse aus dem Cluster mit zentralen Betriebsdaten zusammengeführt. 
-Der manuelle Aufwand bei der Ursachenanalyse wird dadurch reduziert.
+K8sGPT wertet technische Betriebsinformationen aus, insbesondere Zustände und Ereignisse aus dem Cluster sowie zentral erfasste Betriebsdaten.
+Die Analyse ist abfragebasiert und erfolgt ohne dauerhafte Anbindung an den Cluster.
+Dadurch wird der manuelle Aufwand bei der Ursachenanalyse reduziert.
 \par\bigskip
 
 Abbildung \ref{fig:k8sgptEinordnung} ordnet K8sGPT im Plattformbetrieb ein und zeigt die für die Analyse genutzten Informationsquellen.
-Im dargestellten Zielbild werden Ereignisse und Protokolle aus dem Kubernetes-Cluster als Analysegrundlage herangezogen.
-Das GitOps-Repository dient dabei als Referenz für den gewünschten Systemzustand.
-Zur verständlichen Aufbereitung der Analyseergebnisse kann ein Sprachmodell unterstützend eingesetzt werden.
-Die notwendige Kontextanreicherung erfolgt über eine vorgeschaltete Schnittstelle, die Hinweise aus K8sGPT sowie optionalen Kontext aus GitOps und Runbooks zusammenführt.
+Im dargestellten Zielbild nutzt K8sGPT Status- und Ereignisinformationen aus dem Cluster abfragebasiert sowie zentral erfasste Betriebsdaten als Analysegrundlage.
+GitOps-Repository und Runbooks werden als Wissensquellen über eine lokale KI (RAG) kontextbezogen aufbereitet und als Zustandskontext an K8sGPT übergeben.
+Runbooks ergänzen diese Sicht um bekannte Fehlerbilder und Lösungsschritte.
+Der Kontext aus GitOps und Runbooks wird in der lokalen RAG-Komponente zusammengeführt und als Zustandskontext an K8sGPT übergeben.
 Die Ausgabe ist auf erklärende Handlungshinweise beschränkt.
-Kontextanreicherung und Sprachmodell sind dabei ausschließlich als unterstützende Bausteine zu verstehen.
+Die RAG-Komponente ist dabei ausschließlich als unterstützender Baustein zu verstehen.
 Eine eigenständige Analyse oder Entscheidungslogik ist nicht vorgesehen und wird in dieser Arbeit nicht weiter betrachtet.
 \par\bigskip
 
@@ -41,16 +42,7 @@ Sie zeigt, wie der betrachtete Use Case schrittweise umgesetzt werden kann, ohne
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=\textwidth]{figures/05_bewertung/05_04_k8sgptEinordnung2.pdf}
+  \includegraphics[width=\textwidth]{figures/05_bewertung/05_04_einordnungK8sGPT.pdf}
   \caption{Einordnung von K8sGPT im Plattformbetrieb}
   \label{fig:k8sgptEinordnung}
 \end{figure}
-
-
-% \begin{figure}[H]
-% \centering
-% \input{figures/05_bewertung/05_04_k8sgpt.tex}
-% \caption{Einordnung von K8sGPT im Plattformbetrieb}
-% \label{fig:k8sgptEinordnung}
-% \end{figure}
-
