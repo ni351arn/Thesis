@@ -25,11 +25,9 @@ Dadurch wird der manuelle Aufwand bei der Ursachenanalyse reduziert.
 
 Abbildung \ref{fig:k8sgptEinordnung} ordnet K8sGPT im Plattformbetrieb ein und zeigt die für die Analyse genutzten Informationsquellen.
 Im dargestellten Zielbild nutzt K8sGPT Status- und Ereignisinformationen aus dem Cluster abfragebasiert sowie zentral erfasste Betriebsdaten als Analysegrundlage.
-GitOps-Repository und Runbooks werden als Wissensquellen über eine lokale KI (RAG) kontextbezogen aufbereitet und als Zustandskontext an K8sGPT übergeben.
-Runbooks ergänzen diese Sicht um bekannte Fehlerbilder und Lösungsschritte.
-Der Kontext aus GitOps und Runbooks wird in der lokalen RAG-Komponente zusammengeführt und als Zustandskontext an K8sGPT übergeben.
-Die Ausgabe ist auf erklärende Handlungshinweise beschränkt.
-Die RAG-Komponente ist dabei ausschließlich als unterstützender Baustein zu verstehen.
+GitOps-Repository und Runbooks werden über eine lokale KI (RAG) kontextbezogen aufbereitet und als Zustandskontext an K8sGPT übergeben.
+Die Ausgabe ist auf erklärende Handlungshinweise beschränkt. 
+Die lokale KI (RAG) ist dabei ausschließlich als unterstützender Baustein zu verstehen. 
 Eine eigenständige Analyse oder Entscheidungslogik ist nicht vorgesehen und wird in dieser Arbeit nicht weiter betrachtet.
 \par\bigskip
 
